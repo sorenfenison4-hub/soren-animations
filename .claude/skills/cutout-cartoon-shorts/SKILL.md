@@ -301,5 +301,9 @@ Per video:
 4. Sounds: the shared sfx first; a new ElevenLabs sfx (50 credits) only for a sound the library does not have, and
    then add it to `public/library/sfx/`.
 5. Contact sheet + pop scan, then render 1080x1920 (about 5 min on CPU; 4K on CPU takes hours - only on a GPU).
+6. Loop ending (every video): render the scene as a function of time, then wrap it in
+   `<LoopOut t={t} total={DURATION} start={<Scene t={0} />}>` (kit.tsx; see Template.tsx) and add a whoosh cue at
+   `DURATION - LOOP_DUR`. The last frame then equals frame 0. Check with `node scripts/check-loop.mjs <CompId>`
+   (copied with the kit): it must print "seamless loop".
 
 Budget per video: Higgsfield 0-10 credits, ElevenLabs ~250-400 credits. Starter plan: max 4 Higgsfield jobs at once.

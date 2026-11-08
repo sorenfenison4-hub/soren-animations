@@ -249,9 +249,36 @@ export const arcY = (y0: number, y1: number, T: number, ta: number) => {
   return (tau: number) => ya + 0.5 * g * (tau - ta) * (tau - ta);
 };
 
+// ---------- seamless loop ending ----------
+/** Seconds the loop push takes. Make the composition about LOOP_DUR + 0.3 s longer than the voice. */
+export const LOOP_DUR = 0.5;
+/**
+ * Every video ends with this. In the last `dur` seconds the final shot slides out sideways while the opening shot
+ * (the same scene rendered at t = 0, passed as `start`) slides in, like a comic-panel push with an ink seam.
+ * On the very last frame `start` is exactly in place, so the last frame equals frame 0 and a looping player
+ * (Shorts, Reels, TikTok) jumps between two identical frames. Hard edges only, never a fade.
+ * Wrap the picture only (not the SoundLayer) and add a whoosh cue at `total - dur`.
+ */
+export const LoopOut: React.FC<{t: number; total: number; start: React.ReactNode; children: React.ReactNode; dur?: number; dir?: 1 | -1}> =
+  ({t, total, start, children, dur = LOOP_DUR, dir = 1}) => {
+    const {width} = useVideoConfig();
+    const tLast = (Math.round(total * FPS) - 1) / FPS; // time of the last rendered frame
+    if (t < tLast - dur) return <>{children}</>;
+    const u = eio(seg(t, tLast - dur, tLast));
+    const startX = dir * width * (1 - u), endX = -dir * width * u;
+    const seamX = dir === 1 ? startX : startX + width;
+    return (
+      <AbsoluteFill style={{overflow: 'hidden'}}>
+        <AbsoluteFill style={{transform: `translateX(${endX}px)`}}>{children}</AbsoluteFill>
+        <AbsoluteFill style={{transform: `translateX(${startX}px)`}}>{start}</AbsoluteFill>
+        {u < 1 ? <div style={{position: 'absolute', top: 0, bottom: 0, left: seamX - 8, width: 16, background: INK}} /> : null}
+      </AbsoluteFill>
+    );
+  };
+
 // ---------- sound ----------
 export type Cue = {f: string; at: number; db: number};
-/** Shared effects in public/library/sfx: whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 */
+/** Shared effects in public/library/sfx: whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

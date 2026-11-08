@@ -1,11 +1,13 @@
 // TEMPLATE: copy this file for each new video. It shows every kit piece in an 8-second gag:
 // a rock falls next to the guy, he gets scared, the rock opens its eyes, looks smug, and they both laugh.
 // Replace T, the camera keys, the scene and the cues; drop the voice in public/<short>/vo/take1.mp3.
+// Every video ends with LoopOut: the last frame is the opening frame again, so the Short loops seamlessly.
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {FPS, Layer, camAt, Sky, Ground, Guy, swap, ContactShadow, Ball, ObjectFace, FACE0, Face, Puffs, Star, Badge,
-  SoundLayer, Cue, arcY, seg, popIn, spring, shake, hit, lerp, WideFit} from './lib/kit';
+  SoundLayer, Cue, arcY, seg, popIn, spring, shake, hit, lerp, WideFit, LoopOut, LOOP_DUR} from './lib/kit';
 
+// with a voice: DURATION = voice end + LOOP_DUR + ~0.3 s, so the loop push starts after the last word
 export const DURATION = 8;
 // every beat as a constant (from the voice's word times)
 const T = {fall: 1.0, land: 1.7, eyes: 2.4, smug: 3.2, wow: 3.3, pull: 4.2, laugh: 5.0};
@@ -18,8 +20,8 @@ const rockFace = (t: number): Face => {
   return f;
 };
 
-export const Template: React.FC = () => {
-  const t = useCurrentFrame() / FPS;
+// the whole picture as a function of time, so LoopOut can draw the opening shot (t = 0) at the end
+const TemplateScene: React.FC<{t: number}> = ({t}) => {
   const cam = camAt([
     {t: 0, x: 0, y: -260, k: 1.5}, {t: T.pull, x: 0, y: -260, k: 1.5},
     {t: T.pull + 1.2, x: 120, y: -320, k: 0.95}, {t: DURATION, x: 120, y: -330, k: 0.92},
@@ -37,10 +39,6 @@ export const Template: React.FC = () => {
   const sq = 1 + spring(t, T.land, -0.18, 3, 7);
   const sh = shake(t, hit(t, T.land, 12));
   const dof = 2.8 * (1 - seg(t, T.pull, T.pull + 0.8));
-  const cues: Cue[] = [
-    {f: 'whoosh.wav', at: T.fall, db: -24}, {f: 'pop.wav', at: T.land, db: -12}, {f: 'twang.mp3', at: T.land, db: -22},
-    {f: 'pop.wav', at: T.eyes, db: -20}, {f: 'ding.mp3', at: T.laugh, db: -20},
-  ];
   return (
     <AbsoluteFill style={{background: '#B7E0FF', overflow: 'hidden'}}>
       <AbsoluteFill style={{transform: `translate(${sh.x}px, ${sh.y}px) scale(1.012)`}}>
@@ -63,8 +61,24 @@ export const Template: React.FC = () => {
           </div>
           {[0, 1, 2].map((i) => <Star key={i} x={X1 - 120 + i * 120} y={-300 - (i % 2) * 60} s={popIn(t, T.laugh + i * 0.08, 0.25) * (1 - seg(t, T.laugh + 1.2, T.laugh + 1.5))} rot={t * 90} />)}
         </Layer>
-        <Badge text="TEMPLATE" s={popIn(t, T.pull + 0.6) * (1 - seg(t, DURATION - 0.4, DURATION))} />
+        <Badge text="TEMPLATE" s={popIn(t, T.pull + 0.6) * (1 - seg(t, DURATION - LOOP_DUR - 0.35, DURATION - LOOP_DUR - 0.1))} />
       </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};
+
+export const Template: React.FC = () => {
+  const t = useCurrentFrame() / FPS;
+  const cues: Cue[] = [
+    {f: 'whoosh.wav', at: T.fall, db: -24}, {f: 'pop.wav', at: T.land, db: -12}, {f: 'twang.mp3', at: T.land, db: -22},
+    {f: 'pop.wav', at: T.eyes, db: -20}, {f: 'ding.mp3', at: T.laugh, db: -20},
+    {f: 'whoosh.wav', at: DURATION - LOOP_DUR - 0.05, db: -26}, // the loop push back to the opening shot
+  ];
+  return (
+    <AbsoluteFill style={{background: '#B7E0FF', overflow: 'hidden'}}>
+      <LoopOut t={t} total={DURATION} start={<TemplateScene t={0} />}>
+        <TemplateScene t={t} />
+      </LoopOut>
       <SoundLayer cues={cues} />
     </AbsoluteFill>
   );

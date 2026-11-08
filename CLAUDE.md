@@ -10,6 +10,11 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
   would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
 - Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator
   phrases. The first line names what frame 0 shows. Every fact verified against reliable sources.
+- Every video loops seamlessly: wrap the picture in `LoopOut` from `kit.tsx` (the final shot slides out and the
+  opening shot slides back in, so the last frame is exactly frame 0) and add a whoosh cue on the push. Make the
+  composition about 0.8 s longer than the voice so the push starts after the last word. Where it reads naturally,
+  write the last line so it leads back into the first. Before rendering, run `node scripts/check-loop.mjs <CompId>`
+  in the video folder; it must report "seamless loop".
 - Voice: ElevenLabs connector, "James - Natural. Conversational, Warm" (c1rY2UegY9FCAFayo2PO), eleven_v4, one take.
 - Output: 1080x1920 60 fps MP4 only (no 4K - there is no GPU). Offer a 1920x1080 version and thumbnails when asked
   (1280x720 for regular videos, 1080x1920 cover). Keep yellow + black-outlined Inter 900 text as the thumbnail style.

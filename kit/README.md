@@ -4,6 +4,8 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 
 - `src/lib/kit.tsx` - camera (2.5D multiplane), layers, the guy with 13 poses, squash pose swaps, object faces,
   sweat, smoke/steam puffs, arrows, stars, badges, code-drawn props (Box, Ball, Rope), projectile arcs, shake, sound layer.
+- `LoopOut` (in kit.tsx) - every video ends by sliding back to its opening shot, so the last frame equals frame 0 and
+  the Short loops seamlessly. `node scripts/check-loop.mjs <CompositionId>` checks it.
 - `src/Template.tsx` - an 8-second example that uses all of it. Copy it for each new video.
 - `public/library/char/` - 13 Higgsfield poses (trimmed). Measurements in `src/lib/library.json`.
 - `public/library/sfx/` - whoosh, pop, ding, twang, strain, whir.

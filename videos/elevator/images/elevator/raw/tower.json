@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-07T03:19:36.904649Z",
+    "display_name": "GPT Image 2.5",
+    "id": "af4340e4-cdee-44f8-996a-dffeb724d535",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031936_af4340e4-cdee-44f8-996a-dffeb724d535_min.webp",
+    "params": {
+      "aspect_ratio": "9:16",
+      "background": "transparent",
+      "height": 3840,
+      "medias": [
+        {
+          "data": {
+            "id": "131149b0-905c-4e65-87b5-013393b38aed",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/131149b0-905c-4e65-87b5-013393b38aed_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "A single very tall, narrow supertall skyscraper seen straight from the front as a flat elevation: light blue glass with a simple even grid of windows, two small setbacks narrowing near the top and a thin spire on top, a plain glass entrance door at the bottom centre. The tower fills the full height of the image, centred, with a margin at the sides. Flat 2D cartoon in exactly the same drawing style as the reference images: thick smooth black outlines of even weight, flat colours with one simple soft shade, clean vector-like linework, no texture, no text, no border, no characters. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2160
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031936_af4340e4-cdee-44f8-996a-dffeb724d535.png",
+    "status": "completed"
+  }
+]

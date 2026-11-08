@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-07T03:19:36.346538Z",
+    "display_name": "GPT Image 2.5",
+    "id": "3584f911-25a1-498a-aa00-8311a7b12060",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031936_3584f911-25a1-498a-aa00-8311a7b12060_min.webp",
+    "params": {
+      "aspect_ratio": "3:4",
+      "background": "transparent",
+      "height": 3312,
+      "medias": [
+        {
+          "data": {
+            "id": "72cdff3f-7a5c-4ef7-b624-ae48d5c6fba9",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/72cdff3f-7a5c-4ef7-b624-ae48d5c6fba9_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "Front view of an elevator car drawn as a simple box: warm yellow metal body with a darker yellow frame, a big open doorway in the front showing an empty bright cream interior with a simple handrail on the back wall, the doors slid fully open out of sight, a small steel hitch on the top centre where a cable attaches. Centred, whole object in frame with a margin. Flat 2D cartoon in exactly the same drawing style as the reference images: thick smooth black outlines of even weight, flat colours with one simple soft shade, clean vector-like linework, no texture, no text, no border, no characters. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2480
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031936_3584f911-25a1-498a-aa00-8311a7b12060.png",
+    "status": "completed"
+  }
+]

@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-07T03:18:44.535458Z",
+    "display_name": "GPT Image 2.5",
+    "id": "6db96b06-8aee-4c4e-bd36-0f69a7f21618",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031844_6db96b06-8aee-4c4e-bd36-0f69a7f21618_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "background": "transparent",
+      "height": 2336,
+      "medias": [
+        {
+          "data": {
+            "id": "a96e83fe-5262-4e7d-bbe7-97656bb938df",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/a96e83fe-5262-4e7d-bbe7-97656bb938df_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "A wide row of simple distant city buildings of different heights standing side by side, flat pale blue-grey colours, simple rows of small window squares, a flat straight bottom edge. Flat 2D cartoon in exactly the same drawing style as the reference images: thick smooth black outlines of even weight, flat colours with one simple soft shade, clean vector-like linework, no texture, no text, no border, no characters. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3504
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031844_6db96b06-8aee-4c4e-bd36-0f69a7f21618.png",
+    "status": "completed"
+  }
+]

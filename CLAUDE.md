@@ -1,0 +1,31 @@
+# Soren Animations - standing instructions
+
+Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical cartoon Shorts with the white round-head guy.
+
+## How every video is made
+- Use the `cutout-cartoon-shorts` skill (in `.claude/skills/`) and its section 12 daily workflow.
+- Start a new video by copying `kit/` to `videos/<short-name>/` (the kit is a Remotion 4 project: `src/lib/kit.tsx`,
+  `src/Template.tsx`, `public/library/char` = 14 poses, `public/library/sfx` = 8 sounds). Run `npm install` there.
+- Reuse first: library poses, code-drawn props from `kit.tsx`, shared sounds. A new Higgsfield picture only when code
+  would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
+- Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator
+  phrases. The first line names what frame 0 shows. Every fact verified against reliable sources.
+- Voice: ElevenLabs connector, "James - Natural. Conversational, Warm" (c1rY2UegY9FCAFayo2PO), eleven_v4, one take.
+- Output: 1080x1920 60 fps MP4 only (no 4K - there is no GPU). Offer a 1920x1080 version and thumbnails when asked
+  (1280x720 for regular videos, 1080x1920 cover). Keep yellow + black-outlined Inter 900 text as the thumbnail style.
+- Do not include sources or links in replies or video descriptions; still verify facts behind the scenes.
+- Don't stop to ask questions; choose sensible defaults and report choices and credits at the end.
+
+## Saving Claude usage
+- One video per session. Keep replies short. One contact sheet + one pop scan per video unless something looks off.
+
+## Accounts
+- Higgsfield starter plan: max 4 image jobs at once; monthly credits do not roll over. Cloud login: run
+  `higgsfield auth login` in the background (default port 8765), give the user the sign-in URL from
+  `/root/higgsfield-auth-*/sign-in.html`, they paste back the localhost callback URL, curl it, then
+  `higgsfield workspace set 129a981e-8802-4e4d-88c8-4072f355ebb1`.
+- ElevenLabs: use the connector (the saved API key is rejected).
+
+## Progress
+- `PLAN.md` lists the next videos: take the next unchecked one, then tick it and commit.
+- Finished files go in `videos/<short-name>/renders/` and are committed.

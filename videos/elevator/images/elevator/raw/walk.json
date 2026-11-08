@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-07T03:18:44.303554Z",
+    "display_name": "GPT Image 2.5",
+    "id": "ac101695-407d-478d-8e07-5b0e4641679f",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031844_ac101695-407d-478d-8e07-5b0e4641679f_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "background": "transparent",
+      "height": 3504,
+      "medias": [
+        {
+          "data": {
+            "id": "e433c2ab-6847-4407-a400-31a4db6f25ba",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/e433c2ab-6847-4407-a400-31a4db6f25ba_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "Full body, side view facing to the right, doing a happy little hop forward in mid-stride, cheerful open-mouth smile with a pink tongue, arms swinging. Whole body in frame with a margin. Flat 2D cartoon in exactly the same drawing style as the reference images: the same simple white character with a big round head, a small soft body, noodle arms with simple four-finger hands and short legs with rounded feet, thick smooth black outlines of even weight, flat white fill with a very soft pale-grey shade on one side, small solid black oval eyes, simple curved black eyebrows, no nose, no hair, no clothes, a pink tongue only when the mouth is open. Clean vector-like linework, flat colours, no texture, no text, no border. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2336
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031844_ac101695-407d-478d-8e07-5b0e4641679f.png",
+    "status": "completed"
+  }
+]

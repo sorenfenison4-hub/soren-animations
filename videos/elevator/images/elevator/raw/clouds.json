@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-07T03:20:13.760663Z",
+    "display_name": "GPT Image 2.5",
+    "id": "6204c550-3eac-4f6e-9b74-9b9925e80597",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_032013_6204c550-3eac-4f6e-9b74-9b9925e80597_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "background": "transparent",
+      "height": 2336,
+      "medias": [
+        {
+          "data": {
+            "id": "06f67c09-873b-4c45-87f8-17167d85a71a",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/06f67c09-873b-4c45-87f8-17167d85a71a_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "Three separate fluffy cartoon clouds in a row with clear space between them, each a cluster of round puffs with one merged outline, white fill with a very soft pale-blue shade on the bottom. Flat 2D cartoon in exactly the same drawing style as the reference images: thick smooth black outlines of even weight, flat colours with one simple soft shade, clean vector-like linework, no texture, no text, no border, no characters. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3504
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_032013_6204c550-3eac-4f6e-9b74-9b9925e80597.png",
+    "status": "completed"
+  }
+]

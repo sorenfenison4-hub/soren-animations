@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-07T03:18:44.137883Z",
+    "display_name": "GPT Image 2.5",
+    "id": "d462b60f-a8ef-45a3-9b96-532d51cd44d1",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031844_d462b60f-a8ef-45a3-9b96-532d51cd44d1_min.webp",
+    "params": {
+      "aspect_ratio": "1:1",
+      "background": "transparent",
+      "height": 2880,
+      "medias": [
+        {
+          "data": {
+            "id": "63654ba9-2bc4-4478-b480-065889ce26b5",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/63654ba9-2bc4-4478-b480-065889ce26b5_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "Front view of an elevator hoist pulley: one big round grey steel wheel with a deep groove around its rim and a simple round hub, a plain smooth wheel face with no spokes and no markings, mounted on a short dark-grey bracket on top. Centred, whole object in frame with a margin. Flat 2D cartoon in exactly the same drawing style as the reference images: thick smooth black outlines of even weight, flat colours with one simple soft shade, clean vector-like linework, no texture, no text, no border, no characters. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2880
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261107_031844_d462b60f-a8ef-45a3-9b96-532d51cd44d1.png",
+    "status": "completed"
+  }
+]

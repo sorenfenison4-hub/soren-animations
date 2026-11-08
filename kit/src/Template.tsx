@@ -21,7 +21,7 @@ const rockFace = (t: number): Face => {
 };
 
 // the whole picture as a function of time, so LoopOut can draw the opening shot (t = 0) at the end
-const TemplateScene: React.FC<{t: number}> = ({t}) => {
+export const TemplateScene: React.FC<{t: number}> = ({t}) => {
   const cam = camAt([
     {t: 0, x: 0, y: -260, k: 1.5}, {t: T.pull, x: 0, y: -260, k: 1.5},
     {t: T.pull + 1.2, x: 120, y: -320, k: 0.95}, {t: DURATION, x: 120, y: -330, k: 0.92},

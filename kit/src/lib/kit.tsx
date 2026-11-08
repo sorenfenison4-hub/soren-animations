@@ -48,13 +48,20 @@ export const camAt = (keys: Key[], t: number): Cam => {
 /** How much of the vertical framing a landscape render keeps (0.5625 = all of it). Wrap a scene in a Provider to change it. */
 export const WideFit = React.createContext(0.5625);
 const useFit = () => { const {width, height} = useVideoConfig(); const wf = React.useContext(WideFit); return {cx: width / 2, cy: height / 2, kf: width > height ? wf : 1, wide: width > height}; };
+/**
+ * SIGNATURE STYLE part 1 - cut paper. Everything in a Layer gets a white paper edge and casts a soft shadow onto
+ * the layers behind it, so every scene reads as a paper diorama. paper={false} for a layer that should stay flat.
+ */
+export const paperFilter = (edge = 6, lift = 1) =>
+  `drop-shadow(${edge}px 0 0 #FFFDF6) drop-shadow(-${edge}px 0 0 #FFFDF6) drop-shadow(0 ${edge}px 0 #FFFDF6) drop-shadow(0 -${edge}px 0 #FFFDF6) ` +
+  `drop-shadow(${4 * lift}px ${10 * lift}px ${7 * lift}px rgba(70,45,20,0.30))`;
 /** A flat layer at depth z. Near layers (small z) move and grow faster than far ones. blur is in screen px. */
-export const Layer: React.FC<{cam: Cam; z: number; blur?: number; children: React.ReactNode}> = ({cam, z, blur = 0, children}) => {
+export const Layer: React.FC<{cam: Cam; z: number; blur?: number; paper?: boolean; children: React.ReactNode}> = ({cam, z, blur = 0, paper = true, children}) => {
   const fit = useFit(); const d = z - cam.z;
   if (d < 250) return null;
   const k = (1000 / d) * fit.kf;
   return (
-    <AbsoluteFill style={{filter: blur > 0.05 ? `blur(${blur}px)` : undefined}}>
+    <AbsoluteFill style={{filter: [paper ? paperFilter() : '', blur > 0.05 ? `blur(${blur}px)` : ''].join(' ').trim() || undefined}}>
       <div style={{position: 'absolute', left: 0, top: 0, transformOrigin: '0 0',
         transform: `translate(${fit.cx}px, ${fit.cy}px) scale(${k}) translate(${-cam.x}px, ${-cam.y}px)`}}>{children}</div>
     </AbsoluteFill>
@@ -83,8 +90,8 @@ export const POSES = Object.keys(LIB) as Pose[];
 /** world head radius shared by every pose, so pose swaps never change the head size (guy is ~300 world units tall) */
 export const HEAD_R = 64;
 /** The guy standing with his feet at (x, y). flip = mirror (point_right -> pointing left). Breathes by default. */
-export const Guy: React.FC<{pose: Pose; x: number; y: number; t: number; size?: number; sx?: number; sy?: number; rot?: number; flip?: boolean; breathe?: boolean; tremble?: number; curl?: boolean}> =
-  ({pose, x, y, t, size = 1, sx = 1, sy = 1, rot = 0, flip, breathe = true, tremble = 0, curl = true}) => {
+export const Guy: React.FC<{pose: Pose; x: number; y: number; t: number; size?: number; sx?: number; sy?: number; rot?: number; flip?: boolean; breathe?: boolean; tremble?: number}> =
+  ({pose, x, y, t, size = 1, sx = 1, sy = 1, rot = 0, flip, breathe = true, tremble = 0}) => {
     const m = (LIB as any)[pose]; const s = (HEAD_R * size) / m.head[2];
     const b = breathe ? 1 + 0.009 * Math.sin(2 * Math.PI * 0.6 * t) : 1;
     const tx = tremble * Math.sin(t * 2 * Math.PI * 17) * 1.5;
@@ -92,30 +99,10 @@ export const Guy: React.FC<{pose: Pose; x: number; y: number; t: number; size?: 
     return (
       <div style={{position: 'absolute', left: x + tx - ax * s, top: y - ay * s, width: m.w * s, height: m.h * s,
         transformOrigin: `${ax * s}px ${ay * s}px`, transform: `rotate(${rot}deg) scale(${(flip ? -1 : 1) * sx}, ${sy * b})`}}>
-        {curl ? <Curl x={m.head[0] * s} y={(m.head[1] - m.head[2] * 0.97) * s} k={(m.head[2] * s) / HEAD_R}
-          t={t} flip={flip} perk={(sy * b - 1) * 900 + tremble * 6 * Math.sin(t * 2 * Math.PI * 9)} /> : null}
         <Img src={staticFile(`library/char/${pose}.png`)} style={{position: 'absolute', left: 0, top: 0, width: m.w * s, height: m.h * s}} />
       </div>
     );
   };
-/**
- * The channel's signature: one springy "?"-shaped curl on top of the guy's head (yellow ribbon, ink outline).
- * Drawn behind the head so its root tucks under the outline. It sways gently, and perk (deg) leans it, e.g. on
- * squash-swaps. Always on unless <Guy curl={false}>. Use it standalone (k = world scale) for icons and thumbnails.
- */
-export const Curl: React.FC<{x: number; y: number; k?: number; t: number; flip?: boolean; perk?: number}> = ({x, y, k = 1, t, flip, perk = 0}) => {
-  const a = 6 * Math.sin(2 * Math.PI * 0.7 * t) + 2.5 * Math.sin(2 * Math.PI * 1.9 * t + 1) + perk;
-  // "?" hook: stem rises from the crown, bends over and curls down to the right
-  const d = 'M 0 14 C 0 -6 -6 -20 -2 -38 C 2 -56 26 -62 34 -46 C 41 -32 28 -20 16 -26';
-  return (
-    <svg style={{position: 'absolute', left: x, top: y, overflow: 'visible'}} width={1} height={1}>
-      <g transform={`scale(${(flip ? -1 : 1) * k}, ${k}) rotate(${a}) `}>
-        <path d={d} stroke={INK} strokeWidth={17} fill="none" strokeLinecap="round" strokeLinejoin="round" />
-        <path d={d} stroke={C.yellow} strokeWidth={8} fill="none" strokeLinecap="round" strokeLinejoin="round" />
-      </g>
-    </svg>
-  );
-};
 /** Squash-swap helper: returns the pose to show and the squash scales for a swap at tSwap (turn = narrow, act = anticipation + stretch). */
 export const swap = (t: number, tSwap: number, before: Pose, after: Pose, kind: 'turn' | 'act' = 'act') => {
   const pose = t < tSwap ? before : after;
@@ -264,13 +251,8 @@ export const Rope: React.FC<{x0: number; y0: number; x1: number; y1: number; w?:
 };
 
 // ---------- backgrounds ----------
-/** Signature sky: teal at the top, warm cream at the horizon, with big soft halftone dots fading out downwards. */
-export const Sky: React.FC = () => (
-  <AbsoluteFill style={{background: `linear-gradient(${C.skyTop} 0%, ${C.skyMid} 58%, ${C.skyLow} 100%)`}}>
-    <AbsoluteFill style={{backgroundImage: 'radial-gradient(rgba(255,255,255,0.16) 26%, transparent 28%)', backgroundSize: '40px 40px',
-      WebkitMaskImage: 'linear-gradient(#000 0%, transparent 55%)', maskImage: 'linear-gradient(#000 0%, transparent 55%)'}} />
-  </AbsoluteFill>
-);
+/** Signature sky: blank notebook paper (the ruled lines come from Boil). Draw your own backdrop for night / space scenes. */
+export const Sky: React.FC = () => <AbsoluteFill style={{background: '#FBF7EC'}} />;
 /**
  * Signature finish, laid over the whole frame in every video (outside LoopOut, under nothing): static paper grain
  * plus a soft warm vignette. It never moves, so it cannot break the loop.
@@ -295,6 +277,55 @@ export const arcY = (y0: number, y1: number, T: number, ta: number) => {
   return (tau: number) => ya + 0.5 * g * (tau - ta) * (tau - ta);
 };
 
+// ---------- signature style part 2: line boil ----------
+/** How many times a second the drawing re-wobbles, how many different wobbles, and how far lines move (screen px). */
+export const BOIL = {rate: 8, frames: 3, px: 5};
+const BoilDefs: React.FC = () => (
+  <svg width={0} height={0} style={{position: 'absolute'}}>
+    {Array.from({length: BOIL.frames}, (_, i) => (
+      <filter key={i} id={`boil${i}`} x="-5%" y="-5%" width="110%" height="110%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves={2} seed={3 + i * 17} result="n" />
+        <feDisplacementMap in="SourceGraphic" in2="n" scale={BOIL.px * 2} xChannelSelector="R" yChannelSelector="G" />
+      </filter>))}
+  </svg>
+);
+/**
+ * SIGNATURE STYLE part 2 - line boil. Wraps a scene so its lines wobble like a hand-drawn, re-traced cartoon,
+ * stepping BOIL.rate times a second (motion stays smooth at 60 fps; only the wobble steps). LoopOut applies it,
+ * so every video gets it; wrap thumbnails in <Boil t={0}> too so they match.
+ */
+/** Notebook doodle: blue-ruled paper with a red margin; colours become streaky felt-tip marker that lets the rules show through. */
+const NotebookOver: React.FC = () => (
+  <AbsoluteFill style={{pointerEvents: 'none'}}>
+    <svg width="100%" height="100%" style={{position: 'absolute', inset: 0, mixBlendMode: 'multiply', opacity: 0.55}}>
+      <filter id="marker"><feTurbulence type="fractalNoise" baseFrequency="0.003 0.09" numOctaves={2} seed={5} />
+        <feColorMatrix values="0 0 0 0 0.75  0 0 0 0 0.72  0 0 0 0 0.70  0 0 0 -1.4 1.1" /></filter>
+      <rect width="100%" height="100%" filter="url(#marker)" />
+    </svg>
+    <AbsoluteFill style={{mixBlendMode: 'multiply', opacity: 0.7,
+      backgroundImage: 'linear-gradient(90deg, transparent 118px, #F08A8A 118px, #F08A8A 122px, transparent 122px), repeating-linear-gradient(transparent 0 62px, #9CC3E8 62px 65px)'}} />
+    {[0.22, 0.5, 0.78].map((f) => <div key={f} style={{position: 'absolute', left: 34, top: `calc(${f * 100}% - 24px)`, width: 48, height: 48, borderRadius: '50%',
+      background: '#E9E4D8', boxShadow: 'inset 0 5px 7px rgba(60,45,25,0.35)'}} />)}
+  </AbsoluteFill>
+);
+/**
+ * SIGNATURE STYLE - notebook doodle. Wraps a scene: line boil (lines wobble like a re-traced hand drawing, stepping
+ * BOIL.rate times a second while motion stays smooth), then lined notebook paper, red margin, hole punches and
+ * felt-tip marker streaks over everything. Together with the cut-paper Layers it looks like stickers in a notebook. LoopOut applies it, so every video gets it; wrap
+ * thumbnails in <Boil t={0}> too so they match.
+ */
+export const Boil: React.FC<{t: number; children: React.ReactNode}> = ({t, children}) => {
+  const i = Math.floor(t * BOIL.rate + 1e-6) % BOIL.frames;
+  const boiled = <AbsoluteFill style={{filter: `url(#boil${i})`, transform: 'scale(1.012)'}}>{children}</AbsoluteFill>;
+  return (
+    <AbsoluteFill style={{overflow: 'hidden'}}>
+      <BoilDefs />
+      {boiled}
+      <NotebookOver />
+    </AbsoluteFill>
+  );
+};
+
 // ---------- seamless loop ending ----------
 /** Seconds the loop push takes. Make the composition about LOOP_DUR + 0.3 s longer than the voice. */
 export const LOOP_DUR = 0.5;
@@ -306,9 +337,11 @@ export const LOOP_DUR = 0.5;
  * Wrap the picture only (not the SoundLayer) and add a whoosh cue at `total - dur`.
  */
 export const LoopOut: React.FC<{t: number; total: number; start: React.ReactNode; children: React.ReactNode; dur?: number; dir?: 1 | -1}> =
-  ({t, total, start, children, dur = LOOP_DUR, dir = 1}) => {
+  ({t, total, start: start0, children: children0, dur = LOOP_DUR, dir = 1}) => {
     const {width} = useVideoConfig();
     const tLast = (Math.round(total * FPS) - 1) / FPS; // time of the last rendered frame
+    // every video boils: the scene wobbles like hand-drawn lines; the opening shot always uses boil frame 0
+    const children = <Boil t={t}>{children0}</Boil>, start = <Boil t={0}>{start0}</Boil>;
     if (t < tLast - dur) return <>{children}</>;
     const u = eio(seg(t, tLast - dur, tLast));
     const startX = dir * width * (1 - u), endX = -dir * width * u;

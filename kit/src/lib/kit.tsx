@@ -51,6 +51,10 @@ const useFit = () => { const {width, height} = useVideoConfig(); const wf = Reac
 /**
  * SIGNATURE STYLE part 1 - cut paper. Everything in a Layer gets a white paper edge and casts a soft shadow onto
  * the layers behind it, so every scene reads as a paper diorama. paper={false} for a layer that should stay flat.
+ * See-through things (water, glass, glow) go in their own Layer with paper={false} at the same z: the edge filter
+ * stacks four drop-shadows, which turns half-transparent areas almost opaque and hides what is behind them.
+ * Each Layer clips to the frame (overflow hidden): without it the filter also processes everything drawn off-screen
+ * (long sea / ground bands), which made renders ~2x slower.
  */
 export const paperFilter = (edge = 6, lift = 1) =>
   `drop-shadow(${edge}px 0 0 #FFFDF6) drop-shadow(-${edge}px 0 0 #FFFDF6) drop-shadow(0 ${edge}px 0 #FFFDF6) drop-shadow(0 -${edge}px 0 #FFFDF6) ` +
@@ -61,7 +65,7 @@ export const Layer: React.FC<{cam: Cam; z: number; blur?: number; paper?: boolea
   if (d < 250) return null;
   const k = (1000 / d) * fit.kf;
   return (
-    <AbsoluteFill style={{filter: [paper ? paperFilter() : '', blur > 0.05 ? `blur(${blur}px)` : ''].join(' ').trim() || undefined}}>
+    <AbsoluteFill style={{overflow: 'hidden', filter: [paper ? paperFilter() : '', blur > 0.05 ? `blur(${blur}px)` : ''].join(' ').trim() || undefined}}>
       <div style={{position: 'absolute', left: 0, top: 0, transformOrigin: '0 0',
         transform: `translate(${fit.cx}px, ${fit.cy}px) scale(${k}) translate(${-cam.x}px, ${-cam.y}px)`}}>{children}</div>
     </AbsoluteFill>
@@ -270,6 +274,39 @@ export const Look: React.FC = () => (
 export const Ground: React.FC<{y?: number; line?: boolean; color?: string}> = ({y = 0, line = true, color = C.ground}) =>
   <div style={{position: 'absolute', left: -40000, top: y, width: 80000, height: 40000, background: color, borderTop: line ? `8px solid ${INK}` : 'none'}} />;
 
+/** pen stroke that draws itself (p 0..1): spread onto an SVG path. Hidden at 0 so round caps leave no dots. */
+export const pen = (p: number) => ({pathLength: 1, strokeDasharray: `${p} 2`, visibility: (p > 0.002 ? 'visible' : 'hidden') as 'visible' | 'hidden'});
+const waveD = (x0: number, x1: number, y: number, t: number, amp: number, len: number, phase: number) => {
+  const pts: string[] = [];
+  for (let x = x0; x <= x1; x += 40) pts.push(`${x} ${(y + amp * Math.sin((x / len) * 2 * Math.PI + t * 1.7 + phase)).toFixed(1)}`);
+  return 'M ' + pts.join(' L ');
+};
+/**
+ * Sea / lake band: water surface at y = 0 (wavy ink line), filled down. op < 1 = see-through (put it in a Layer with
+ * paper={false}). hole cuts a shape out (e.g. a hull, so the front water does not tint it): {d, tf: SVG transform, id}.
+ * Used in videos/ship: back water opaque behind the boat, front water op 0.42 with the hull as the hole.
+ */
+export const Sea: React.FC<{t: number; x0: number; x1: number; fill: string; op: number; amp?: number; len?: number; phase?: number; line?: number; shine?: boolean;
+  hole?: {d: string; tf: string; id: string}}> =
+  ({t, x0, x1, fill, op, amp = 7, len = 420, phase = 0, line = 7, shine = true, hole}) => {
+    const top = waveD(x0, x1, 0, t, amp, len, phase);
+    return (
+      <W>
+        {hole ? <mask id={hole.id} maskUnits="userSpaceOnUse" x={-9000} y={-9000} width={18000} height={18000}>
+          <rect x={-9000} y={-9000} width={18000} height={18000} fill="#fff" /><path d={hole.d} transform={hole.tf} fill="#000" />
+        </mask> : null}
+        <g mask={hole ? `url(#${hole.id})` : undefined}>
+          <path d={`${top} L ${x1} 6000 L ${x0} 6000 Z`} fill={fill} fillOpacity={op} />
+          {shine ? Array.from({length: 14}).map((_, i) => {
+            const x = x0 + ((i * 397 + t * 22) % (x1 - x0)), y = 26 + (i % 3) * 22;
+            return <path key={i} d={`M ${x} ${y} l ${46 + (i % 4) * 14} 0`} stroke="#fff" strokeOpacity={0.75} strokeWidth={6} strokeLinecap="round" />;
+          }) : null}
+          {line > 0 ? <path d={top} stroke={INK} strokeWidth={line} fill="none" strokeLinejoin="round" /> : null}
+        </g>
+      </W>
+    );
+  };
+
 // ---------- 3D projectile (thrown things) ----------
 /** y(tau) for a gravity arc from y0 to y1 over flight time T with the apex at time ta (late apex = low arc that stays in frame). */
 export const arcY = (y0: number, y1: number, T: number, ta: number) => {
@@ -364,7 +401,8 @@ const cueDb = (c: Cue, tt: number) => {
   for (let i = 0; i < k.length - 1; i++) if (tt <= k[i + 1][0]) return lerp(k[i][1], k[i + 1][1], seg(tt, k[i][0], k[i + 1][0]));
   return k[k.length - 1][1];
 };
-/** Shared effects in public/library/sfx: whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 zap.wav chirp.wav hum.wav (20 s bed) */
+/** Shared effects in public/library/sfx: whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 zap.wav chirp.wav hum.wav (20 s bed)
+ *  splash.wav (0.75 s plop) bubbles.wav (0.6 s gurgle) horn.wav (1.75 s ship toot) waves.wav (3 s lapping: repeat every 2.7 s at -31 dB for a sea bed) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

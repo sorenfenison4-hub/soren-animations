@@ -15,7 +15,7 @@ const composition = await selectComposition({serveUrl, id});
 const files = [];
 for (const [name, frame] of [['first', 0], ['last', composition.durationInFrames - 1]]) {
   const output = path.join(dir, `${id}-${name}.png`);
-  await renderStill({composition, serveUrl, output, frame, scale: 0.5, chromiumOptions: {gl: 'swangle'}});
+  await renderStill({composition, serveUrl, output, frame, scale: 0.5, chromiumOptions: {gl: (process.env.GL || 'angle')}});
   files.push(output);
 }
 const compare = [

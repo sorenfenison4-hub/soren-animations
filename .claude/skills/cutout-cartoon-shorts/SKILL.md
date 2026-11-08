@@ -262,8 +262,8 @@ const y = (tau: number) => ya + 0.5 * g * (tau - ta) * (tau - ta);
 - Pop scan: render a 0.5x preview MP4, compute the mean frame-to-frame difference (blurred, 270x480) and flag frames
   above 2.2x the local median; every flag must be an intended swap or cut.
 - Render 4K vertical: `npx remotion render src/index.ts <CompId> out/<name>-4K.mp4 --scale=2 --gl=angle
-  --image-format=png --crf=16 --pixel-format=yuv420p` (GPU; ~2 min for 13 s; on a machine without a GPU use
-  `--gl=swangle` and expect it to be much slower). Bundle ONCE to a fixed outDir in scripts (Remotion copies public/
+  --image-format=png --crf=16 --pixel-format=yuv420p` (GPU; ~2 min for 13 s; on a machine without a GPU keep
+  `--gl=angle` too: measured ~3x faster than `--gl=swangle` with the notebook paper / boil filters). Bundle ONCE to a fixed outDir in scripts (Remotion copies public/
   into a new temp folder every bundle otherwise).
 - Verify the file: 2160x3840, 60 fps, frame count = duration x 60, audio present and as long as the picture, the picture
   still moves at the very end.

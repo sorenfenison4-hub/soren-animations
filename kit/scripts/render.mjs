@@ -1,4 +1,4 @@
-// node scripts/render.mjs <CompId> <out.mp4> [scale] [from-to]  - bundles to work/bundle, renders H.264 on CPU (swangle); CRF env overrides 16
+// node scripts/render.mjs <CompId> <out.mp4> [scale] [from-to]  - bundles to work/bundle, renders H.264 on CPU (gl angle: 3x faster than swangle with the paper filters; GL env overrides); CRF env overrides 16
 import {bundle} from '@remotion/bundler';
 import {selectComposition, renderMedia} from '@remotion/renderer';
 import path from 'path';
@@ -6,7 +6,7 @@ const BROWSER = '/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-s
 const [id, out, scale = '1', range] = process.argv.slice(2);
 const root = process.cwd(), outDir = path.join(root, 'work/bundle');
 await bundle({entryPoint: path.join(root, 'src/index.ts'), outDir, publicDir: path.join(root, 'public')});
-const opts = {browserExecutable: BROWSER, chromiumOptions: {gl: 'swangle'}};
+const opts = {browserExecutable: BROWSER, chromiumOptions: {gl: (process.env.GL || 'angle')}};
 const composition = await selectComposition({serveUrl: outDir, id, ...opts});
 const t0 = Date.now(); let last = -1;
 await renderMedia({composition, serveUrl: outDir, codec: 'h264', outputLocation: out, crf: Number(process.env.CRF || 16), frameRange: range ? range.split('-').map(Number) : null, pixelFormat: 'yuv420p',

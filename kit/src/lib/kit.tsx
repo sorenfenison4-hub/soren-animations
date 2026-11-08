@@ -225,6 +225,88 @@ export const Badge: React.FC<{text: string; s: number; y?: number; color?: strin
     color, whiteSpace: 'nowrap', boxShadow: `0 10px 0 ${INK}`}}>{text}</div>;
 };
 
+// ---------- like / subscribe / comment (every video, once) ----------
+/** seconds the like / subscribe / comment doodle stays on screen */
+export const CTA_DUR = 2.6;
+const THUMB_D = 'M 8 30 H 20 V 56 H 8 Z M 20 31 Q 29 28 31 18 Q 33 8 39 8 Q 46 9 44 21 L 42 28 H 53 Q 60 28 59 35 Q 58 38 55 39 Q 60 41 58 46 Q 57 49 53 49 Q 57 52 54 56 Q 52 58 48 58 H 30 Q 24 58 20 55 Z';
+const BELL_D = 'M 32 8 Q 35 8 35 12 Q 47 15 47 31 V 41 L 52 47 H 12 L 17 41 V 31 Q 17 15 29 12 Q 29 8 32 8 Z';
+const BUBBLE_D = 'M 11 10 H 53 Q 60 10 60 17 V 40 Q 60 47 53 47 H 30 L 17 57 L 20 47 H 11 Q 4 47 4 40 V 17 Q 4 10 11 10 Z';
+const CURSOR_D = 'M 0 0 L 0 36 L 9 28 L 16 43 L 23 40 L 16 25 L 28 25 Z';
+const CTA_CLICK = [0.8, 1.3, 1.8];
+/**
+ * Like / subscribe / comment doodle - every video has it once (the voice-over never asks). Three stickers pop in
+ * along a band, a cursor taps LIKE (the thumb fills blue), SUBSCRIBE (turns grey, the bell rings) and COMMENT (the "?"
+ * in the bubble pops), then they pop out. Lasts CTA_DUR s from `at`. Put it inside the scene function (so it boils and
+ * slides out with LoopOut), in a calm stretch after the answer lands (about 55-80 % through), never in the first 3 s,
+ * finished before the loop push. y = band centre in screen px (default 250 tall / 110 wide: above the Shorts buttons
+ * and below the top bar). Sounds: spread ctaCues(at) into the cue list.
+ */
+export const CallToAction: React.FC<{t: number; at: number; y?: number}> = ({t, at, y}) => {
+  const {width, height} = useVideoConfig();
+  const u = t - at;
+  if (u < 0 || u > CTA_DUR) return null;
+  const wide = width > height, cy = y ?? (wide ? 110 : 250), cx = width / 2;
+  const WS = [205, 330, 305], GAP = 18, total = WS[0] + WS[1] + WS[2] + 2 * GAP;
+  const x0 = Math.max(cx - total / 2, 145);   // clear of the notebook's red margin line (x 118-122)
+  const lefts = [x0, x0 + WS[0] + GAP, x0 + WS[0] + WS[1] + 2 * GAP];
+  const scaleOf = (i: number) => popIn(u, i * 0.15, 0.3) * (1 - eio(seg(u, CTA_DUR - 0.4 + i * 0.07, CTA_DUR - 0.2 + i * 0.07)))
+    * (1 + spring(u, CTA_CLICK[i], 0.1, 3, 7));
+  const liked = u >= CTA_CLICK[0], subbed = u >= CTA_CLICK[1], asked = u >= CTA_CLICK[2];
+  const thumbRot = liked ? -16 * Math.exp(-6 * (u - CTA_CLICK[0])) * Math.sin(2 * Math.PI * 4 * (u - CTA_CLICK[0])) : 0;
+  const bellRot = subbed ? 22 * Math.exp(-4.5 * (u - CTA_CLICK[1])) * Math.sin(2 * Math.PI * 6 * (u - CTA_CLICK[1])) : 0;
+  const qS = asked ? 1 + spring(u, CTA_CLICK[2], 0.5, 3, 6) : 1;
+  // cursor: comes in from the lower right, taps each icon, leaves
+  const tap = (i: number) => ({x: lefts[i] + 52, y: cy + 8});
+  const keys: [number, number, number][] = [[0.35, cx + 470, cy + 230], [0.74, tap(0).x, tap(0).y], [0.86, tap(0).x, tap(0).y],
+    [1.24, tap(1).x, tap(1).y], [1.36, tap(1).x, tap(1).y], [1.74, tap(2).x, tap(2).y], [1.9, tap(2).x, tap(2).y], [2.35, cx + 520, cy + 260]];
+  let cur = {x: keys[0][1], y: keys[0][2]};
+  for (let k = 0; k < keys.length - 1; k++) if (u >= keys[k][0]) {
+    const e = eio(seg(u, keys[k][0], keys[k + 1][0]));
+    cur = {x: lerp(keys[k][1], keys[k + 1][1], e), y: lerp(keys[k][2], keys[k + 1][2], e)};
+  }
+  const press = Math.max(...CTA_CLICK.map((c) => Math.max(0, 1 - Math.abs(u - c) / 0.06)));
+  const curOn = u > 0.35 && u < 2.35;
+  const sticker = (i: number, bg: string, children: React.ReactNode) => {
+    const s = scaleOf(i); if (s < 0.01) return null;
+    return <div key={i} style={{position: 'absolute', left: lefts[i], top: cy - 48, width: WS[i], height: 96, transform: `scale(${s})`,
+      background: bg, border: `6px solid ${INK}`, borderRadius: 26, boxShadow: `0 7px 0 ${INK}`, boxSizing: 'border-box', display: 'flex',
+      alignItems: 'center', justifyContent: 'center', gap: 12, fontFamily: FONT, fontWeight: 900, fontSize: 40, letterSpacing: -0.5}}>{children}</div>;
+  };
+  return (
+    <AbsoluteFill style={{pointerEvents: 'none'}}>
+      {sticker(0, '#fff', <>
+        <svg width={58} height={58} viewBox="0 0 64 64" style={{transform: `rotate(${thumbRot}deg)`}}>
+          <path d={THUMB_D} fill={liked ? '#3D8FD6' : '#fff'} stroke={INK} strokeWidth={4.5} strokeLinejoin="round" />
+        </svg><span style={{color: liked ? '#2F6FB5' : INK}}>LIKE</span></>)}
+      {sticker(1, subbed ? '#DDD7CB' : '#E5534B', <>
+        <svg width={58} height={58} viewBox="0 0 64 64" style={{overflow: 'visible'}}><g transform={`rotate(${bellRot} 32 10)`}>
+          <path d={BELL_D} fill={subbed ? '#FFD43B' : '#fff'} stroke={INK} strokeWidth={4.5} strokeLinejoin="round" />
+          <circle cx={32} cy={52} r={5} fill="#fff" stroke={INK} strokeWidth={4} />
+        </g></svg><span style={{color: subbed ? INK : '#fff'}}>SUBSCRIBE</span></>)}
+      {sticker(2, '#fff', <>
+        <svg width={58} height={58} viewBox="0 0 64 64" style={{overflow: 'visible'}}>
+          <path d={BUBBLE_D} fill={asked ? '#FFE98A' : '#fff'} stroke={INK} strokeWidth={4.5} strokeLinejoin="round" />
+          <text x={32} y={39} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill={INK}
+            transform={`translate(32 29) scale(${qS}) translate(-32 -29)`}>?</text>
+        </svg><span>COMMENT</span></>)}
+      <svg width={width} height={height} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
+        {CTA_CLICK.map((c, i) => {
+          const v = seg(u, c, c + 0.35); if (v <= 0 || v >= 1) return null;
+          return <circle key={i} cx={tap(i).x} cy={tap(i).y} r={12 + 44 * eout(v)} fill="none" stroke={INK} strokeWidth={7 * (1 - v)} />;
+        })}
+        {curOn ? <g transform={`translate(${cur.x} ${cur.y}) scale(${1.6 * (1 - 0.16 * press)})`}>
+          <path d={CURSOR_D} fill="#fff" stroke={INK} strokeWidth={3.4} strokeLinejoin="round" />
+        </g> : null}
+      </svg>
+    </AbsoluteFill>
+  );
+};
+/** sound cues for CallToAction(at): quiet pops as the stickers land, a click per tap, a soft ding for the bell */
+export const ctaCues = (at: number): Cue[] => [
+  {f: 'pop.wav', at, db: -30}, {f: 'pop.wav', at: at + 0.15, db: -31}, {f: 'pop.wav', at: at + 0.3, db: -31},
+  {f: 'pop.wav', at: at + CTA_CLICK[0], db: -24}, {f: 'ding.mp3', at: at + CTA_CLICK[1], db: -27}, {f: 'pop.wav', at: at + CTA_CLICK[2], db: -24},
+];
+
 // ---------- props drawn in code (flat fill + one soft shade + thick outline) ----------
 /** Rounded box: crates, phones, books, signs, cars... with an optional shade band on the right. */
 export const Box: React.FC<{x: number; y: number; w: number; h: number; fill: string; shade?: string; r?: number; rot?: number; children?: React.ReactNode}> =

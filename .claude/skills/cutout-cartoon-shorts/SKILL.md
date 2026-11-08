@@ -306,4 +306,10 @@ Per video:
    `DURATION - LOOP_DUR`. The last frame then equals frame 0. Check with `node scripts/check-loop.mjs <CompId>`
    (copied with the kit): it must print "seamless loop".
 
+7. Like / subscribe / comment (every video): `<CallToAction t={t} at={T.cta} />` (kit.tsx) inside the scene function +
+   `...ctaCues(T.cta)` in the cues. Three doodle stickers pop in along the top band and a cursor taps LIKE, SUBSCRIBE and
+   COMMENT (2.6 s). Place it once, in a calm stretch right after the answer lands (about 55-80 % through), never in the
+   first 3 s, finished before the loop push; the voice-over never asks. The description ends with "Like and subscribe
+   for more weird questions, and leave yours in the comments." before the channel line.
+
 Budget per video: Higgsfield 0-10 credits, ElevenLabs ~250-400 credits. Starter plan: max 4 Higgsfield jobs at once.

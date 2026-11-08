@@ -5,12 +5,17 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 ## How every video is made
 - Use the `cutout-cartoon-shorts` skill (in `.claude/skills/`) and its section 12 daily workflow.
 - Start a new video by copying `kit/` to `videos/<short-name>/` (the kit is a Remotion 4 project: `src/lib/kit.tsx`,
-  `src/Template.tsx`, `public/library/char` = 14 poses, `public/library/sfx` = 11 sounds). Run `npm install` there.
+  `src/Template.tsx`, `public/library/char` = 14 poses, `public/library/sfx` = 15 sounds). Run `npm install` there.
 - House style = notebook doodle (keep it in every video, it is automatic through the kit): `LoopOut` wraps every
   scene in `Boil` (hand-drawn line wobble 8x a second + blue-ruled notebook paper, red margin, hole punches, felt-tip
   marker streaks); every `Layer` is cut paper (white edge + cast shadow, like stickers in the notebook); `Sky` is blank
   notebook paper; `<Look />` (paper grain + warm vignette) goes over the whole frame after `LoopOut`, as in
   `Template.tsx`. Wrap thumbnails in `<Boil t={0}>` so they match. No accessory on the guy.
+- Every video asks viewers to like, subscribe and comment - on screen only, the voice never asks: put
+  `<CallToAction t={t} at={T.cta} />` from `kit.tsx` inside the scene function and `...ctaCues(T.cta)` in the cues
+  (three doodle stickers LIKE / SUBSCRIBE / COMMENT that a cursor taps, 2.6 s, quiet pops). Once per video, in a calm
+  stretch right after the answer lands (about 55-80 % through), never in the first 3 s, finished before the loop push;
+  top band by default (y 250), moved with `y` if something important is there. Not in thumbnails.
 - Reuse first: library poses, code-drawn props from `kit.tsx`, shared sounds. A new Higgsfield picture only when code
   would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
 - Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator
@@ -26,8 +31,8 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 - Finish every video with a YouTube title + description, given in the final reply and saved to
   `videos/<short-name>/renders/description.txt`. Title = the plain question (under 60 characters). Description = 2-3
   short plain paragraphs that answer it with the same verified facts as the voice-over (one extra fact is fine), a
-  safety line when the topic is dangerous, then "Weird questions. Quick answers." and 3-4 hashtags starting with
-  #shorts. Same voice rules as the script: no hype words, no "!", no sources or links.
+  safety line when the topic is dangerous, then the line "Like and subscribe for more weird questions, and leave yours
+  in the comments.", then "Weird questions. Quick answers." and 3-4 hashtags starting with #shorts. Same voice rules as the script: no hype words, no "!", no sources or links.
 - Finish every video with thumbnails too: a 1080x1920 Shorts cover and a 1280x720 version, made in `src/Thumbs.tsx`
   from the video's own pieces (example: `videos/birds/src/Thumbs.tsx`), rendered with
   `COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then `ThumbWide`) and saved to `renders/` as

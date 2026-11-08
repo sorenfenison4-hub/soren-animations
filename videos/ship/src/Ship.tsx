@@ -6,7 +6,8 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame, useVideoConfig} from 'remotion';
 import {FPS, INK, FONT, C, Layer, camAt, Cam, Sky, Guy, swap, ContactShadow, ObjectFace, FACE0, Face, Arrow,
-  SoundLayer, Cue, W, seg, popIn, spring, lerp, eio, eout, clamp, rnd, arcY, WideFit, LoopOut, LOOP_DUR, Look, Pose} from './lib/kit';
+  SoundLayer, Cue, W, seg, popIn, spring, lerp, eio, eout, clamp, rnd, arcY, WideFit, LoopOut, LOOP_DUR, Look, Pose,
+  CallToAction, ctaCues} from './lib/kit';
 
 // beat times = ElevenLabs Scribe word starts + 0.1 s voice offset (word ends checked against the loudness pauses)
 export const T = {
@@ -14,7 +15,7 @@ export const T = {
   but: 3.06, steel2: 3.46, ship: 3.78, floats: 4.26,
   its: 5.3, shape: 5.62,
   hollow: 6.74, hull: 7.14, lift: 7.3, settles: 7.54, pushes1: 9.02, aside1: 9.5, weighs: 9.94, much1: 10.5, ship2: 10.98,
-  then: 11.94, pushes2: 12.74, up: 13.18, just: 13.42, hard: 13.86,
+  cta: 11.95, then: 11.94, pushes2: 12.74, up: 13.18, just: 13.42, hard: 13.86,
   solid: 14.98, block2: 15.22, cant: 15.7, push3: 16.1, much3: 16.9, water3: 17.14, so: 17.78,
 };
 export const DURATION = 19.0;
@@ -487,6 +488,8 @@ const ShipScene: React.FC<{t: number}> = ({t}) => {
       </AbsoluteFill>
       {blob}
       <DoodleScale t={t} st={st} fit={fit} />
+      {/* like / subscribe / comment: once the answer has landed (the scale balanced), gone before the last line */}
+      <CallToAction t={t} at={T.cta} />
     </AbsoluteFill>
   );
 };
@@ -514,6 +517,7 @@ export const Ship: React.FC = () => {
     {f: 'pop.wav', at: T.solid, db: -24},
     {f: 'pop.wav', at: T.block2 + 0.1, db: -14}, {f: 'twang.mp3', at: T.block2 + 0.14, db: -24},
     {f: 'pop.wav', at: T.push3 + 0.2, db: -22},
+    ...ctaCues(T.cta),
     {f: 'crickets.mp3', at: T.so + 0.1, db: -30, to: 0.6, keys: [[T.so + 0.1, -30], [T.so + 0.5, -30], [T.so + 0.7, -50]]},
     {f: 'whoosh.wav', at: DURATION - LOOP_DUR - 0.05, db: -26}, // the loop push back to the opening shot
   ];

@@ -277,12 +277,21 @@ export const LoopOut: React.FC<{t: number; total: number; start: React.ReactNode
   };
 
 // ---------- sound ----------
-export type Cue = {f: string; at: number; db: number};
-/** Shared effects in public/library/sfx: whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 */
+/** keys: optional [video time s, dB] pairs (linear in dB) that override db over time; from/to: play only that part of the file (s). */
+export type Cue = {f: string; at: number; db: number; keys?: [number, number][]; from?: number; to?: number};
+const cueDb = (c: Cue, tt: number) => {
+  const k = c.keys; if (!k || !k.length) return c.db;
+  if (tt <= k[0][0]) return k[0][1];
+  for (let i = 0; i < k.length - 1; i++) if (tt <= k[i + 1][0]) return lerp(k[i][1], k[i + 1][1], seg(tt, k[i][0], k[i + 1][0]));
+  return k[k.length - 1][1];
+};
+/** Shared effects in public/library/sfx: whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 zap.wav chirp.wav hum.wav (20 s bed) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}
-    {cues.map((c, i) => <Sequence key={i} from={Math.round(c.at * FPS)} layout="none">
-      <Audio src={staticFile(c.f.includes('/') ? c.f : `library/sfx/${c.f}`)} volume={10 ** (c.db / 20)} /></Sequence>)}
+    {cues.map((c, i) => <Sequence key={i} from={Math.round(c.at * FPS)} layout="none"
+      durationInFrames={c.to !== undefined ? Math.max(1, Math.round((c.to - (c.from ?? 0)) * FPS)) : undefined}>
+      <Audio src={staticFile(c.f.includes('/') ? c.f : `library/sfx/${c.f}`)} startFrom={c.from ? Math.round(c.from * FPS) : undefined}
+        volume={c.keys ? (f: number) => 10 ** (cueDb(c, c.at + f / FPS) / 20) : 10 ** (c.db / 20)} /></Sequence>)}
   </>
 );

@@ -107,9 +107,25 @@ const WireLine: React.FC<{s: Span; w: number; flash?: number}> = ({s, w, flash =
     {flash > 0.01 ? <path d={spanD(s)} stroke="#FFF3A6" strokeOpacity={flash} strokeWidth={w + 2} fill="none" strokeLinecap="round" /> : null}
   </W>
 );
+// ---------- current: power over time + distance travelled ----------
+// The dashes move by the distance travelled (the integral of speed), never time x speed, so speed changes never make them jump.
+// Each surge adds a whole number of dash periods, so outside the surges the dashes sit exactly where a steady flow puts them.
+const P0 = 0.22, V0 = lerp(230, 780, P0), PERIOD = lerp(14, 44, P0) + lerp(90, 74, P0);
+const bumpV = (t: number) => 0.5 * seg(t, T.volts - 0.1, T.volts + 0.1) * (1 - seg(t, T.volts + 0.5, T.volts + 1.0));
+const bumpE = (t: number) => Math.max(0, eio(seg(t, T.electricity, T.electricity + 0.3)) * (1 - eio(seg(t, 14.3, 14.7))) - P0);
+const powerAt = (t: number) => P0 + Math.max(bumpV(t), bumpE(t));
+const integ = (f: (x: number) => number, a: number, b: number) => {
+  const n = Math.max(1, Math.ceil((b - a) * 2400)), h = (b - a) / n; let sum = 0;
+  for (let i = 0; i < n; i++) sum += f(a + (i + 0.5) * h);
+  return sum * h;
+};
+const WV = [T.volts - 0.1, T.volts + 1.0], WE = [T.electricity, 14.7];
+const IV = integ(bumpV, WV[0], WV[1]), IE = integ(bumpE, WE[0], WE[1]);
+const KV = (Math.round((550 * IV) / PERIOD) * PERIOD) / IV, KE = (Math.round((550 * IE) / PERIOD) * PERIOD) / IE;
+const travelled = (t: number) => V0 * t + KV * integ(bumpV, WV[0], clamp(t, WV[0], WV[1])) + KE * integ(bumpE, WE[0], clamp(t, WE[0], WE[1]));
 /** current = yellow dashes sliding along the wire; p 0..1 = small/slow .. big/fast */
 const Current: React.FC<{s: Span; t: number; p: number}> = ({s, t, p}) => {
-  const dash = lerp(14, 44, p), gap = lerp(90, 74, p), off = -((t * lerp(230, 780, p)) % (dash + gap)), d = spanD(s);
+  const dash = lerp(14, 44, p), gap = PERIOD - dash, off = -(travelled(t) % PERIOD), d = spanD(s);
   return <W>
     {p > 0.3 ? <path d={d} stroke="#FFF4B0" strokeOpacity={0.55 * seg(p, 0.3, 1)} strokeWidth={HOT_W + 16} fill="none" strokeLinecap="round"
       strokeDasharray={`${dash + 12} ${gap - 12}`} strokeDashoffset={off + 6} /> : null}
@@ -357,8 +373,7 @@ export const Birds: React.FC = () => {
   const pose: Pose = g.pose;
 
   // current in the hot wire: always flowing, a bump on "volts", big and fast on "stays in the wire"
-  const power = Math.max(0.22 + 0.5 * seg(t, T.volts - 0.1, T.volts + 0.1) * (1 - seg(t, T.volts + 0.5, T.volts + 1.0)),
-    eio(seg(t, T.electricity, T.electricity + 0.3)) * (1 - eio(seg(t, 14.3, 14.7))));
+  const power = powerAt(t);
   const wflash = t > T.zap ? 0.9 * Math.exp(-4 * (t - T.zap)) : 0;
 
   // explanation overlays

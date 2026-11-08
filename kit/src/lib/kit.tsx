@@ -307,6 +307,37 @@ export const ctaCues = (at: number): Cue[] => [
   {f: 'pop.wav', at: at + CTA_CLICK[0], db: -24}, {f: 'ding.mp3', at: at + CTA_CLICK[1], db: -27}, {f: 'pop.wav', at: at + CTA_CLICK[2], db: -24},
 ];
 
+// ---------- opening hook text (every video) ----------
+/** seconds the hook text stays before it pops out (default) */
+export const HOOK_OUT = 1.8;
+/**
+ * Big hook text for the first ~2 s, for viewers scrolling with the sound off. It is fully on screen at frame 0 (no
+ * pop-in: frame 0 is what the feed shows) and pops out at `out`. Put it inside the scene function so it boils, and so
+ * LoopOut slides it back in with the opening shot (the question reappears as the loop restarts).
+ * text: 2-6 words, the question or the surprising fact ("THE MOON IS LEAVING?"); hi: one word of it drawn on a yellow
+ * marker stroke. Default band y = 330 tall / 120 wide (below the Shorts top bar). Keep faces out of that band at t = 0.
+ */
+export const HookTitle: React.FC<{t: number; text: string; hi?: string; out?: number; y?: number}> = ({t, text, hi, out = HOOK_OUT, y}) => {
+  const fit = useFit();
+  const s = 1 - backOut(seg(t, out - 0.05, out + 0.25)) * (t > out ? 1 : 0);
+  if (s < 0.02 || t > out + 0.25) return null;
+  const bob = 1 + 0.025 * Math.sin(t * 2 * Math.PI * 1.6);  // alive from frame 0 (sin 0 = 0, so frame 0 stays fixed)
+  const words = text.split(' ');
+  const fs = fit.wide ? 64 : 92;
+  return (
+    <div style={{position: 'absolute', left: fit.cx, top: y ?? (fit.wide ? 120 : 330), transform: `translate(-50%,-50%) rotate(-2deg) scale(${Math.max(0, s) * bob})`,
+      background: '#fff', border: `9px solid ${INK}`, borderRadius: 40, padding: fit.wide ? '12px 36px' : '18px 44px', boxShadow: `0 10px 0 ${INK}`,
+      fontFamily: FONT, fontWeight: 900, fontSize: fs, lineHeight: 1.08, letterSpacing: -1, color: INK, textAlign: 'center',
+      maxWidth: fit.wide ? 1100 : 860, width: 'max-content'}}>
+      {words.map((w, i) => {
+        const on = hi && w.replace(/[^A-Za-z0-9']/g, '').toLowerCase() === hi.toLowerCase();
+        return <React.Fragment key={i}>{i ? ' ' : ''}<span style={on ? {background: 'linear-gradient(transparent 18%, #FFD43B 18%, #FFD43B 88%, transparent 88%)',
+          padding: '0 8px', margin: '0 -4px', borderRadius: 10} : undefined}>{w}</span></React.Fragment>;
+      })}
+    </div>
+  );
+};
+
 // ---------- props drawn in code (flat fill + one soft shade + thick outline) ----------
 /** Rounded box: crates, phones, books, signs, cars... with an optional shade band on the right. */
 export const Box: React.FC<{x: number; y: number; w: number; h: number; fill: string; shade?: string; r?: number; rot?: number; children?: React.ReactNode}> =

@@ -5,12 +5,13 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {FPS, Layer, camAt, Sky, Ground, Guy, swap, ContactShadow, Ball, ObjectFace, FACE0, Face, Puffs, Star, Badge,
-  SoundLayer, Cue, arcY, seg, popIn, spring, shake, hit, lerp, WideFit, LoopOut, LOOP_DUR, Look, CallToAction, ctaCues} from './lib/kit';
+  SoundLayer, Cue, arcY, seg, popIn, spring, shake, hit, lerp, WideFit, LoopOut, LOOP_DUR, Look, CallToAction, ctaCues, HookTitle} from './lib/kit';
 
 // with a voice: DURATION = voice end + LOOP_DUR + ~0.3 s, so the loop push starts after the last word
 export const DURATION = 8;
 // every beat as a constant (from the voice's word times)
-const T = {fall: 1.0, land: 1.7, eyes: 2.4, smug: 3.2, wow: 3.3, pull: 4.2, laugh: 5.0, cta: 4.85};
+// hook: something already moves in the first 0.3 s and the voice starts at 0.1 s (first word by 0.2 s)
+const T = {fall: 0.3, land: 1.0, eyes: 1.7, smug: 2.5, wow: 2.6, pull: 3.5, laugh: 4.3, cta: 4.85};
 
 const rockFace = (t: number): Face => {
   if (t < T.eyes) return {...FACE0, open: 0, mouth: 'none'};
@@ -63,6 +64,8 @@ export const TemplateScene: React.FC<{t: number}> = ({t}) => {
         </Layer>
         <Badge text="TEMPLATE" s={popIn(t, T.pull + 0.6) * (1 - seg(t, DURATION - LOOP_DUR - 0.35, DURATION - LOOP_DUR - 0.1))} />
       </AbsoluteFill>
+      {/* every video: big hook text, on screen at frame 0, gone by ~2 s (sound-off viewers read the question) */}
+      <HookTitle t={t} text="WHAT IF A ROCK HAD EYES?" hi="EYES" />
       {/* every video: like / subscribe / comment once, after the answer lands, gone before the loop push */}
       <CallToAction t={t} at={T.cta} y={430} />
     </AbsoluteFill>

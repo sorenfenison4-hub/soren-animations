@@ -18,8 +18,14 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
   top band by default (y 250), moved with `y` if something important is there. Not in thumbnails.
 - Reuse first: library poses, code-drawn props from `kit.tsx`, shared sounds. A new Higgsfield picture only when code
   would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
+- Hook (fewer swipe-aways - every video): (1) something already moves by 0.3 s (the guy mid-action, a thing falling),
+  never a still opening; (2) the voice's first word by 0.2 s (`python3 scripts/check-hook.py <vo.mp3> 0.1`, `--trim`
+  cuts leading silence); (3) `<HookTitle t={t} text="..." hi="..." />` from `kit.tsx` inside the scene function: big
+  2-6 word question / surprising fact, on screen at frame 0, gone by ~2 s, for sound-off viewers; (4) lead with the
+  surprise, not the topic ("The Moon is leaving us. About 4 cm a year." beats "Why is the Moon drifting away?").
+  `check-loop.mjs` also fails a still opening.
 - Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator
-  phrases. The first line names what frame 0 shows. Every fact verified against reliable sources.
+  phrases. The first line names what frame 0 shows and leads with the surprising part. Every fact verified against reliable sources.
 - Every video loops seamlessly: wrap the picture in `LoopOut` from `kit.tsx` (the final shot slides out and the
   opening shot slides back in, so the last frame is exactly frame 0) and add a whoosh cue on the push. Make the
   composition about 0.8 s longer than the voice so the push starts after the last word. Where it reads naturally,

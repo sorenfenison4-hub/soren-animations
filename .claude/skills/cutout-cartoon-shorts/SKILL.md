@@ -50,6 +50,9 @@ Read the whole file once before starting. Follow the order; each step says what 
    over-act.
 2. One visual beat per line, on the exact word: "throw" = the throw, "steam" = steam, "no THANKS" = the catch.
 3. Frame 0 states the premise (character + the thing + the setting, readable like a thumbnail). No intro, no rewind.
+   Hook (the first 2 s decide the swipe): an action is already under way by 0.3 s; the first line leads with the
+   surprise or the stakes ("The Moon is leaving us. About 4 cm a year."), not the topic; a HookTitle (section 12)
+   puts the question / surprising fact on screen for sound-off viewers.
 4. Plan the shots: as few hard cuts as possible (one continuous camera move is best); a cut only for a new shot
    (e.g. the reaction close-up). End on an image that loops back to frame 0.
 5. Plan the fun: one gag per beat that a kid would laugh at (an object that comes alive and opens its eyes, an
@@ -68,7 +71,9 @@ Read the whole file once before starting. Follow the order; each step says what 
   `public/<short>/vo/take1.mp3`.
 - Word times: faster-whisper with `word_timestamps=True` (or ElevenLabs Scribe). Whisper word edges are +-0.2 s:
   find the real pauses by loudness (RMS every 20 ms, silence = below -42 dB for >= 0.18 s) and trust those.
-- Place the voice at 0.1 s and define every beat as a constant: `T = {turn: 2.05, release: 3.7, land: 4.8, ...}`.
+- Place the voice at 0.1 s; the first word must be heard by 0.2 s: `python3 scripts/check-hook.py <vo.mp3> 0.1`
+  (`--trim` cuts the take's leading silence down to 0.02 s).
+- Define every beat as a constant: `T = {turn: 2.05, release: 3.7, land: 4.8, ...}`.
   The composition length = voice end + ~0.5 s. Big sounds (an explosion) go into a pause, not on top of words.
 - Done = voice file + words.json + the T table.
 
@@ -271,7 +276,7 @@ const y = (tau: number) => ya + 0.5 * g * (tau - ta) * (tau - ta);
 ---------------------------------------------------------------------------------------------------------------------
 ## 11. Rules that keep it looking hand-made
 
-- Frame 0 = the premise, centred, big, readable; the first spoken line names what you see.
+- Frame 0 = the premise, centred, big, readable, already moving; the first spoken line names what you see and starts by 0.2 s.
 - Everything centred and balanced when the camera holds; nothing important cut by the frame edge.
 - No motion blur, no cross-fades between drawings, no random jitter. Every move eased; the camera glides >= 1 s.
 - One focal action at a time; effects stop when their beat is over.
@@ -311,5 +316,10 @@ Per video:
    COMMENT (2.6 s). Place it once, in a calm stretch right after the answer lands (about 55-80 % through), never in the
    first 3 s, finished before the loop push; the voice-over never asks. The description ends with "Like and subscribe
    for more weird questions, and leave yours in the comments." before the channel line.
+
+8. Hook (every video): `<HookTitle t={t} text="THE MOON IS LEAVING?" hi="LEAVING" />` (kit.tsx) inside the scene
+   function: 2-6 words, fully on screen at frame 0 (no pop-in), pops out at 1.8 s (`out`), top band y 330 (`y` moves
+   it). Something moves by 0.3 s and the voice starts by 0.2 s; `check-loop.mjs` also compares frame 0 with 0.5 s and
+   fails a still opening, `check-hook.py` checks the voice start.
 
 Budget per video: Higgsfield 0-10 credits, ElevenLabs ~250-400 credits. Starter plan: max 4 Higgsfield jobs at once.

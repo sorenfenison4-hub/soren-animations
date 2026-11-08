@@ -6,6 +6,9 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   sweat, smoke/steam puffs, arrows, stars, badges, code-drawn props (Box, Ball, Rope), projectile arcs, shake, sound layer.
 - `Sea` (in kit.tsx) - wavy water band for lakes and seas (the see-through version goes in a `paper={false}` Layer);
   `pen(p)` makes any SVG stroke draw itself like a pen doodle. Example of both: `videos/ship/src/Ship.tsx`.
+- `HookTitle` (in kit.tsx) - big question / surprising-fact text on screen from frame 0 to ~1.8 s, for sound-off
+  viewers (every video, see Template.tsx). `python3 scripts/check-hook.py <vo.mp3> 0.1` checks the first word is heard
+  by 0.2 s (`--trim` cuts leading silence); `check-loop.mjs` also fails an opening that does not move by 0.5 s.
 - `CallToAction` + `ctaCues` (in kit.tsx) - the like / subscribe / comment doodle every video has once (see Template.tsx).
 - `LoopOut` (in kit.tsx) - every video ends by sliding back to its opening shot, so the last frame equals frame 0 and
   the Short loops seamlessly. `node scripts/check-loop.mjs <CompositionId>` checks it.

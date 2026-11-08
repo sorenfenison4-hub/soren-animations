@@ -14,6 +14,11 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 - Output: 1080x1920 60 fps MP4 only (no 4K - there is no GPU). Offer a 1920x1080 version and thumbnails when asked
   (1280x720 for regular videos, 1080x1920 cover). Keep yellow + black-outlined Inter 900 text as the thumbnail style.
 - Do not include sources or links in replies or video descriptions; still verify facts behind the scenes.
+- Finish every video with a YouTube title + description, given in the final reply and saved to
+  `videos/<short-name>/renders/description.txt`. Title = the plain question (under 60 characters). Description = 2-3
+  short plain paragraphs that answer it with the same verified facts as the voice-over (one extra fact is fine), a
+  safety line when the topic is dangerous, then "Weird questions. Quick answers." and 3-4 hashtags starting with
+  #shorts. Same voice rules as the script: no hype words, no "!", no sources or links.
 - Don't stop to ask questions; choose sensible defaults and report choices and credits at the end.
 
 ## Saving Claude usage

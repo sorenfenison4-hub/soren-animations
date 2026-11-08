@@ -16,20 +16,20 @@ export const DURATION = 19.2;
 // ---------- world layout (Z = 1000 layer, ground at y = 0) ----------
 const GX = -130;   // the guy's feet
 const PX = 250;    // power pole
-const BX = 50;     // the bird (midpoint between its feet)
+export const BX = 50;     // the bird (midpoint between its feet)
 type Span = {x0: number; x1: number; y: number; S: number};
 const span = (x0: number, x1: number, y: number): Span => ({x0, x1, y, S: 45});
 const HY = -654, GY = -834; // wire heights at the pole
-const HOT = [span(PX - 60 - 1700, PX - 60, HY), span(PX + 60, PX + 60 + 1700, HY)]; // 7,200 V wire (on the insulators)
+export const HOT = [span(PX - 60 - 1700, PX - 60, HY), span(PX + 60, PX + 60 + 1700, HY)]; // 7,200 V wire (on the insulators)
 const GND = [span(PX - 1700, PX, GY), span(PX, PX + 1700, GY)];                     // grounded top wire (0 V)
 const spanY = (s: Span, x: number) => { const u = (x - s.x0) / (s.x1 - s.x0); return s.y + 4 * s.S * u * (1 - u); };
 const spanSlope = (s: Span, x: number) => { const u = (x - s.x0) / (s.x1 - s.x0); return (4 * s.S * (1 - 2 * u)) / (s.x1 - s.x0); };
 /** part of a sagging wire as one quadratic curve (exact for the parabola) */
-const spanD = (s: Span, a = s.x0, b = s.x1) =>
+export const spanD = (s: Span, a = s.x0, b = s.x1) =>
   `M ${a} ${spanY(s, a)} Q ${(a + b) / 2} ${spanY(s, a) + (spanSlope(s, a) * (b - a)) / 2} ${b} ${spanY(s, b)}`;
-const hotY = (x: number) => spanY(HOT[0], x);
+export const hotY = (x: number) => spanY(HOT[0], x);
 const gndY = (x: number) => spanY(GND[0], x);
-const BY = hotY(BX);
+export const BY = hotY(BX);
 const HOT_W = 8, GND_W = 6;
 const CX = BX + 66, CY = gndY(CX) + GND_W / 2 + 4; // where the wing tip touches the top wire
 
@@ -56,7 +56,7 @@ const spikyD = (cx: number, cy: number, rx: number, ry: number, n: number, amt: 
   return 'M ' + p.join(' L ') + ' Z';
 };
 /** jagged lightning through the given points; seed changes the jags */
-const boltD = (pts: number[][], seed: number, jag: number) => {
+export const boltD = (pts: number[][], seed: number, jag: number) => {
   const out: string[] = [];
   for (let i = 0; i < pts.length - 1; i++) {
     const [x0, y0] = pts[i], [x1, y1] = pts[i + 1];
@@ -69,7 +69,7 @@ const boltD = (pts: number[][], seed: number, jag: number) => {
   const e = pts[pts.length - 1];
   return 'M ' + out.join(' L ') + ` L ${e[0]} ${e[1]}`;
 };
-const Bolt: React.FC<{d: string; w?: number}> = ({d, w = 1}) => (
+export const Bolt: React.FC<{d: string; w?: number}> = ({d, w = 1}) => (
   <g>
     <path d={d} stroke={INK} strokeWidth={13 * w} fill="none" strokeLinejoin="round" strokeLinecap="round" />
     <path d={d} stroke={ZAPY} strokeWidth={7 * w} fill="none" strokeLinejoin="round" strokeLinecap="round" />
@@ -100,10 +100,10 @@ const Pole: React.FC = () => {
     <rect x={PX - 10} y={GY - 6} width={20} height={22} rx={5} fill="#9AA4AE" stroke={INK} strokeWidth={5} />
   </W>;
 };
-const WireLine: React.FC<{s: Span; w: number; flash?: number}> = ({s, w, flash = 0}) => (
+export const WireLine: React.FC<{s: Span; w: number; flash?: number; a?: number; b?: number}> = ({s, w, flash = 0, a, b}) => (
   <W>
-    <path d={spanD(s)} stroke={INK} strokeWidth={w + 8} fill="none" strokeLinecap="round" />
-    <path d={spanD(s)} stroke={WIRE} strokeWidth={w} fill="none" strokeLinecap="round" />
+    <path d={spanD(s, a ?? s.x0, b ?? s.x1)} stroke={INK} strokeWidth={w + 8} fill="none" strokeLinecap="round" />
+    <path d={spanD(s, a ?? s.x0, b ?? s.x1)} stroke={WIRE} strokeWidth={w} fill="none" strokeLinecap="round" />
     {flash > 0.01 ? <path d={spanD(s)} stroke="#FFF3A6" strokeOpacity={flash} strokeWidth={w + 2} fill="none" strokeLinecap="round" /> : null}
   </W>
 );
@@ -124,8 +124,8 @@ const IV = integ(bumpV, WV[0], WV[1]), IE = integ(bumpE, WE[0], WE[1]);
 const KV = (Math.round((550 * IV) / PERIOD) * PERIOD) / IV, KE = (Math.round((550 * IE) / PERIOD) * PERIOD) / IE;
 const travelled = (t: number) => V0 * t + KV * integ(bumpV, WV[0], clamp(t, WV[0], WV[1])) + KE * integ(bumpE, WE[0], clamp(t, WE[0], WE[1]));
 /** current = yellow dashes sliding along the wire; p 0..1 = small/slow .. big/fast */
-const Current: React.FC<{s: Span; t: number; p: number}> = ({s, t, p}) => {
-  const dash = lerp(14, 44, p), gap = PERIOD - dash, off = -(travelled(t) % PERIOD), d = spanD(s);
+export const Current: React.FC<{s: Span; t: number; p: number; a?: number; b?: number}> = ({s, t, p, a, b}) => {
+  const dash = lerp(14, 44, p), gap = PERIOD - dash, off = -(travelled(t) % PERIOD), d = spanD(s, a ?? s.x0, b ?? s.x1);
   return <W>
     {p > 0.3 ? <path d={d} stroke="#FFF4B0" strokeOpacity={0.55 * seg(p, 0.3, 1)} strokeWidth={HOT_W + 16} fill="none" strokeLinecap="round"
       strokeDasharray={`${dash + 12} ${gap - 12}`} strokeDashoffset={off + 6} /> : null}
@@ -165,9 +165,9 @@ const NoSign: React.FC<{x: number; y: number; s: number}> = ({x, y, s}) => s < 0
 
 // ---------- the bird ----------
 type Wing = {a: number; L: number}; // a: degrees away from hanging down (outward), L: length
-type BirdS = {face: Face; beak: number; wl: Wing; wr: Wing; frz: boolean; xray: boolean; sy: number; lean: number; glow: number};
+export type BirdS = {face: Face; beak: number; wl: Wing; wr: Wing; frz: boolean; xray: boolean; sy: number; lean: number; glow: number};
 const SH = {x: 40, y: -74};           // right shoulder (left one mirrored)
-const WING0: Wing = {a: 12, L: 50};   // folded
+export const WING0: Wing = {a: 12, L: 50};   // folded
 const wingD = (L: number) => {
   const w = 13 + 0.08 * L;
   return `M ${-w * 0.6} 0 C ${-w * 1.3} ${L * 0.32} ${-w * 0.95} ${L * 0.8} ${-w * 0.25} ${L} Q 0 ${L * 1.06} ${w * 0.25} ${L} C ${w * 0.95} ${L * 0.8} ${w * 1.3} ${L * 0.32} ${w * 0.6} 0 Z`;
@@ -187,7 +187,7 @@ const BODY = ellD(0, -68, 52, 48);
 const FRZ_BODY = spikyD(0, -68, 52, 48, 13, 0.2, 21);
 
 /** tail hangs behind the wire, so it is drawn before the wires */
-const BirdBack: React.FC<{s: BirdS}> = ({s}) => (
+export const BirdBack: React.FC<{s: BirdS}> = ({s}) => (
   <W><g transform={`translate(${BX} ${BY}) rotate(${s.lean * 0.4})`}>
     <path d={TAIL} fill={s.xray ? XRAY : s.frz ? SOOT_W : RED_W} stroke={INK} strokeWidth={6} strokeLinejoin="round" />
   </g></W>
@@ -214,7 +214,7 @@ const Legs: React.FC<{s: BirdS; bone?: boolean}> = ({s, bone}) => (
   </g>
 );
 /** the bird in front of the wire: legs, body, wings, tuft, face, beak (or its x-ray skeleton) */
-const BirdFront: React.FC<{t: number; s: BirdS}> = ({t, s}) => {
+export const BirdFront: React.FC<{t: number; s: BirdS}> = ({t, s}) => {
   const frz = s.frz;
   const fill = frz ? SOOT : RED, shade = frz ? SOOT_D : RED_D, wingC = frz ? SOOT_W : RED_W, belly = frz ? BELLY_S : BELLY;
   const body = frz ? FRZ_BODY : BODY;
@@ -329,7 +329,7 @@ const birdAt = (t: number): BirdS => {
 };
 
 // ---------- background pieces ----------
-const Cloud: React.FC<{x: number; y: number; s: number}> = ({x, y, s}) => {
+export const Cloud: React.FC<{x: number; y: number; s: number}> = ({x, y, s}) => {
   const cs = [[-70, 10, 42], [-20, -22, 58], [45, -8, 50], [90, 16, 34], [10, 20, 44]];
   return <W><g transform={`translate(${x} ${y}) scale(${s})`}>
     {cs.map(([cx, cy, r], i) => <circle key={'i' + i} cx={cx} cy={cy} r={r + 7} fill={INK} />)}

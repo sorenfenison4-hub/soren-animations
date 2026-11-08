@@ -11,14 +11,19 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 - Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator
   phrases. The first line names what frame 0 shows. Every fact verified against reliable sources.
 - Voice: ElevenLabs connector, "James - Natural. Conversational, Warm" (c1rY2UegY9FCAFayo2PO), eleven_v4, one take.
-- Output: 1080x1920 60 fps MP4 only (no 4K - there is no GPU). Offer a 1920x1080 version and thumbnails when asked
-  (1280x720 for regular videos, 1080x1920 cover). Keep yellow + black-outlined Inter 900 text as the thumbnail style.
+- Output: 1080x1920 60 fps MP4 only (no 4K - there is no GPU). Offer a 1920x1080 version when asked.
 - Do not include sources or links in replies or video descriptions; still verify facts behind the scenes.
 - Finish every video with a YouTube title + description, given in the final reply and saved to
   `videos/<short-name>/renders/description.txt`. Title = the plain question (under 60 characters). Description = 2-3
   short plain paragraphs that answer it with the same verified facts as the voice-over (one extra fact is fine), a
   safety line when the topic is dangerous, then "Weird questions. Quick answers." and 3-4 hashtags starting with
   #shorts. Same voice rules as the script: no hype words, no "!", no sources or links.
+- Finish every video with thumbnails too: a 1080x1920 Shorts cover and a 1280x720 version, made in `src/Thumbs.tsx`
+  from the video's own pieces (example: `videos/birds/src/Thumbs.tsx`), rendered with
+  `COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then `ThumbWide`) and saved to `renders/` as
+  `thumbnail-1080x1920.png` and `thumbnail-1280x720.png`. Style: yellow + black-outlined Inter 900 text, 1-3 words
+  that add to the title instead of repeating it; the main subject big in the middle; the guy in it; nothing crossing a
+  face. On the cover keep text and faces in the top three quarters (the Shorts shelf covers the bottom).
 - Don't stop to ask questions; choose sensible defaults and report choices and credits at the end.
 
 ## Saving Claude usage

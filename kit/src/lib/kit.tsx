@@ -9,7 +9,7 @@ export const FPS = 60;
 export const INK = '#141414';
 export const FONT = "'Inter', 'DejaVu Sans', sans-serif";
 export const C = {
-  skyTop: '#7FC2FA', skyMid: '#B7E0FF', skyLow: '#E2F3FF', ground: '#D8D1C4', wall: '#F3E6CF', shaft: '#5B6879',
+  skyTop: '#5BC3D6', skyMid: '#A9E2E4', skyLow: '#FFF0D2', ground: '#D8D1C4', wall: '#F3E6CF', shaft: '#5B6879',
   yellow: '#FFD43B', red: '#FF6A4B', blue: '#2F80ED', sweat: '#8ED3FF', steel: '#A9B4BF', lava: '#FF6A2B', lavaHot: '#FFC867',
 };
 
@@ -83,13 +83,39 @@ export const POSES = Object.keys(LIB) as Pose[];
 /** world head radius shared by every pose, so pose swaps never change the head size (guy is ~300 world units tall) */
 export const HEAD_R = 64;
 /** The guy standing with his feet at (x, y). flip = mirror (point_right -> pointing left). Breathes by default. */
-export const Guy: React.FC<{pose: Pose; x: number; y: number; t: number; size?: number; sx?: number; sy?: number; rot?: number; flip?: boolean; breathe?: boolean; tremble?: number}> =
-  ({pose, x, y, t, size = 1, sx = 1, sy = 1, rot = 0, flip, breathe = true, tremble = 0}) => {
+export const Guy: React.FC<{pose: Pose; x: number; y: number; t: number; size?: number; sx?: number; sy?: number; rot?: number; flip?: boolean; breathe?: boolean; tremble?: number; curl?: boolean}> =
+  ({pose, x, y, t, size = 1, sx = 1, sy = 1, rot = 0, flip, breathe = true, tremble = 0, curl = true}) => {
     const m = (LIB as any)[pose]; const s = (HEAD_R * size) / m.head[2];
     const b = breathe ? 1 + 0.009 * Math.sin(2 * Math.PI * 0.6 * t) : 1;
     const tx = tremble * Math.sin(t * 2 * Math.PI * 17) * 1.5;
-    return <Pic src={`library/char/${pose}.png`} w={m.w} h={m.h} x={x + tx} y={y} s={s} ax={m.feet[0]} ay={m.feet[1]} sx={sx} sy={sy * b} rot={rot} flip={flip} />;
+    const [ax, ay] = m.feet;
+    return (
+      <div style={{position: 'absolute', left: x + tx - ax * s, top: y - ay * s, width: m.w * s, height: m.h * s,
+        transformOrigin: `${ax * s}px ${ay * s}px`, transform: `rotate(${rot}deg) scale(${(flip ? -1 : 1) * sx}, ${sy * b})`}}>
+        {curl ? <Curl x={m.head[0] * s} y={(m.head[1] - m.head[2] * 0.97) * s} k={(m.head[2] * s) / HEAD_R}
+          t={t} flip={flip} perk={(sy * b - 1) * 900 + tremble * 6 * Math.sin(t * 2 * Math.PI * 9)} /> : null}
+        <Img src={staticFile(`library/char/${pose}.png`)} style={{position: 'absolute', left: 0, top: 0, width: m.w * s, height: m.h * s}} />
+      </div>
+    );
   };
+/**
+ * The channel's signature: one springy "?"-shaped curl on top of the guy's head (yellow ribbon, ink outline).
+ * Drawn behind the head so its root tucks under the outline. It sways gently, and perk (deg) leans it, e.g. on
+ * squash-swaps. Always on unless <Guy curl={false}>. Use it standalone (k = world scale) for icons and thumbnails.
+ */
+export const Curl: React.FC<{x: number; y: number; k?: number; t: number; flip?: boolean; perk?: number}> = ({x, y, k = 1, t, flip, perk = 0}) => {
+  const a = 6 * Math.sin(2 * Math.PI * 0.7 * t) + 2.5 * Math.sin(2 * Math.PI * 1.9 * t + 1) + perk;
+  // "?" hook: stem rises from the crown, bends over and curls down to the right
+  const d = 'M 0 14 C 0 -6 -6 -20 -2 -38 C 2 -56 26 -62 34 -46 C 41 -32 28 -20 16 -26';
+  return (
+    <svg style={{position: 'absolute', left: x, top: y, overflow: 'visible'}} width={1} height={1}>
+      <g transform={`scale(${(flip ? -1 : 1) * k}, ${k}) rotate(${a}) `}>
+        <path d={d} stroke={INK} strokeWidth={17} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        <path d={d} stroke={C.yellow} strokeWidth={8} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+      </g>
+    </svg>
+  );
+};
 /** Squash-swap helper: returns the pose to show and the squash scales for a swap at tSwap (turn = narrow, act = anticipation + stretch). */
 export const swap = (t: number, tSwap: number, before: Pose, after: Pose, kind: 'turn' | 'act' = 'act') => {
   const pose = t < tSwap ? before : after;
@@ -238,7 +264,27 @@ export const Rope: React.FC<{x0: number; y0: number; x1: number; y1: number; w?:
 };
 
 // ---------- backgrounds ----------
-export const Sky: React.FC = () => <AbsoluteFill style={{background: `linear-gradient(${C.skyTop} 0%, ${C.skyMid} 60%, ${C.skyLow} 100%)`}} />;
+/** Signature sky: teal at the top, warm cream at the horizon, with big soft halftone dots fading out downwards. */
+export const Sky: React.FC = () => (
+  <AbsoluteFill style={{background: `linear-gradient(${C.skyTop} 0%, ${C.skyMid} 58%, ${C.skyLow} 100%)`}}>
+    <AbsoluteFill style={{backgroundImage: 'radial-gradient(rgba(255,255,255,0.16) 26%, transparent 28%)', backgroundSize: '40px 40px',
+      WebkitMaskImage: 'linear-gradient(#000 0%, transparent 55%)', maskImage: 'linear-gradient(#000 0%, transparent 55%)'}} />
+  </AbsoluteFill>
+);
+/**
+ * Signature finish, laid over the whole frame in every video (outside LoopOut, under nothing): static paper grain
+ * plus a soft warm vignette. It never moves, so it cannot break the loop.
+ */
+export const Look: React.FC = () => (
+  <AbsoluteFill style={{pointerEvents: 'none'}}>
+    <svg width="100%" height="100%" style={{position: 'absolute', inset: 0, mixBlendMode: 'multiply', opacity: 0.09}}>
+      <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves={2} seed={7} />
+        <feColorMatrix values="0 0 0 0 0.45  0 0 0 0 0.38  0 0 0 0 0.30  0 0 0 -1.6 1.25" /></filter>
+      <rect width="100%" height="100%" filter="url(#paper)" />
+    </svg>
+    <AbsoluteFill style={{background: 'radial-gradient(ellipse 85% 75% at 50% 45%, transparent 60%, rgba(90,52,20,0.12) 100%)'}} />
+  </AbsoluteFill>
+);
 export const Ground: React.FC<{y?: number; line?: boolean; color?: string}> = ({y = 0, line = true, color = C.ground}) =>
   <div style={{position: 'absolute', left: -40000, top: y, width: 80000, height: 40000, background: color, borderTop: line ? `8px solid ${INK}` : 'none'}} />;
 

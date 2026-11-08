@@ -6,6 +6,9 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 - Use the `cutout-cartoon-shorts` skill (in `.claude/skills/`) and its section 12 daily workflow.
 - Start a new video by copying `kit/` to `videos/<short-name>/` (the kit is a Remotion 4 project: `src/lib/kit.tsx`,
   `src/Template.tsx`, `public/library/char` = 14 poses, `public/library/sfx` = 11 sounds). Run `npm install` there.
+- Signature look (keep it in every video): the guy's yellow "?" curl (on by default in `Guy`, also `Curl` for
+  thumbnails), the teal-to-cream `Sky` with halftone dots, and `<Look />` (paper grain + warm vignette) laid over the
+  whole frame after `LoopOut`, as in `Template.tsx`.
 - Reuse first: library poses, code-drawn props from `kit.tsx`, shared sounds. A new Higgsfield picture only when code
   would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
 - Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator

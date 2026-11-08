@@ -5,7 +5,7 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {FPS, Layer, camAt, Sky, Ground, Guy, swap, ContactShadow, Ball, ObjectFace, FACE0, Face, Puffs, Star, Badge,
-  SoundLayer, Cue, arcY, seg, popIn, spring, shake, hit, lerp, WideFit, LoopOut, LOOP_DUR} from './lib/kit';
+  SoundLayer, Cue, arcY, seg, popIn, spring, shake, hit, lerp, WideFit, LoopOut, LOOP_DUR, Look} from './lib/kit';
 
 // with a voice: DURATION = voice end + LOOP_DUR + ~0.3 s, so the loop push starts after the last word
 export const DURATION = 8;
@@ -79,6 +79,7 @@ export const Template: React.FC = () => {
       <LoopOut t={t} total={DURATION} start={<TemplateScene t={0} />}>
         <TemplateScene t={t} />
       </LoopOut>
+      <Look />
       <SoundLayer cues={cues} />
     </AbsoluteFill>
   );

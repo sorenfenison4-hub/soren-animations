@@ -5,7 +5,7 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 ## How every video is made
 - Use the `cutout-cartoon-shorts` skill (in `.claude/skills/`) and its section 12 daily workflow.
 - Start a new video by copying `kit/` to `videos/<short-name>/` (the kit is a Remotion 4 project: `src/lib/kit.tsx`,
-  `src/Template.tsx`, `public/library/char` = 14 poses, `public/library/sfx` = 8 sounds). Run `npm install` there.
+  `src/Template.tsx`, `public/library/char` = 14 poses, `public/library/sfx` = 11 sounds). Run `npm install` there.
 - Reuse first: library poses, code-drawn props from `kit.tsx`, shared sounds. A new Higgsfield picture only when code
   would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
 - Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator

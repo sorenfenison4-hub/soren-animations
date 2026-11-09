@@ -4,7 +4,7 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {FPS, INK, FONT, Layer, camAt, Sky, Guy, swap, Ball, ObjectFace, FACE0, Face, Star, Arrow, Badge, W, pen,
-  SoundLayer, Cue, seg, popIn, spring, lerp, eio, eout, WideFit, LoopOut, LOOP_DUR, Look, CallToAction, ctaCues, HookTitle, Pose} from './lib/kit';
+  SoundLayer, Cue, seg, popIn, spring, lerp, eio, eout, WideFit, LoopOut, LOOP_DUR, Look, CallToAction, ctaCues, HookTitle, AskBanner, Pose} from './lib/kit';
 
 // voice at 0.1 s, ends 18.86 s; + ~0.8 s so the loop push starts after the last word
 export const DURATION = 19.7;
@@ -112,8 +112,8 @@ const STARS: [number, number, number][] = [[-900, -1500, 1], [700, -1800, 0.8], 
 
 export const MoonScene: React.FC<{t: number}> = ({t}) => {
   const cam = camAt([
-    {t: 0, x: 200, y: -820, k: 0.9}, {t: T.so, x: 215, y: -850, k: 0.87},
-    {t: T.so + 1.4, x: 0, y: -200, k: 0.5}, {t: T.cam2, x: 0, y: -200, k: 0.5}, {t: T.cam2 + 0.8, x: 40, y: -840, k: 0.9},
+    {t: 0, x: 200, y: -800, k: 0.9}, {t: T.so, x: 215, y: -830, k: 0.87},
+    {t: T.so + 1.4, x: 0, y: -280, k: 0.48}, {t: T.cam2, x: 0, y: -280, k: 0.48}, {t: T.cam2 + 0.8, x: 40, y: -840, k: 0.9},
   ], t);
   const th = moonAngle(t), D = moonDist(t);
   const mx = D * Math.cos(th * deg), my = -D * Math.sin(th * deg);
@@ -161,7 +161,7 @@ export const MoonScene: React.FC<{t: number}> = ({t}) => {
         })}</W> : null}
         {/* Earth spins fast, the Moon goes around slowly */}
         <ArcArrow r={760} a0={205} a1={335} p={spinP} w={18} />
-        <Label x={0} y={890} s={popIn(t, T.spins + 0.6) * (1 - seg(t, T.slings - 0.3, T.slings))} text="FAST" size={130} />
+        <Label x={0} y={860} s={popIn(t, T.spins + 0.6) * (1 - seg(t, T.slings - 0.3, T.slings))} text="FAST" size={130} />
         <ArcArrow r={D} a0={th + 14} a1={th + 34} p={slowP} w={18} />
         <Label x={(D + 210) * Math.cos((th + 26) * deg)} y={-(D + 210) * Math.sin((th + 26) * deg)}
           s={popIn(t, T.slow + 0.4) * (1 - seg(t, T.slings - 0.3, T.slings))} text="SLOW" size={130} rot={-(th + 26 - 90)} />
@@ -179,7 +179,7 @@ export const MoonScene: React.FC<{t: number}> = ({t}) => {
       </Layer>
       <Badge text="4 CM A YEAR" s={popIn(t, T.four) * (1 - seg(t, T.so - 0.3, T.so - 0.05))} />
       <HookTitle t={t} text="THE MOON IS LEAVING US" hi="LEAVING" />
-      <CallToAction t={t} at={T.cta} y={210} />
+      <CallToAction t={t} at={T.cta} y={262} />
     </AbsoluteFill>
   );
 };
@@ -203,6 +203,7 @@ export const MoonVideo: React.FC = () => {
       <LoopOut t={t} total={DURATION} start={<MoonScene t={0} />}>
         <MoonScene t={t} />
       </LoopOut>
+      <AskBanner />
       <Look />
       <SoundLayer voice="moon/vo/take1.mp3" voiceAt={0.1} cues={cues} />
     </AbsoluteFill>

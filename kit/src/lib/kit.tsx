@@ -539,7 +539,8 @@ const cueDb = (c: Cue, tt: number) => {
   return k[k.length - 1][1];
 };
 /** Shared effects in public/library/sfx: whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 zap.wav chirp.wav hum.wav (20 s bed)
- *  splash.wav (0.75 s plop) bubbles.wav (0.6 s gurgle) horn.wav (1.75 s ship toot) waves.wav (3 s lapping: repeat every 2.7 s at -31 dB for a sea bed) */
+ *  splash.wav (0.75 s plop) bubbles.wav (0.6 s gurgle) horn.wav (1.75 s ship toot) waves.wav (3 s lapping: repeat every 2.7 s at -31 dB for a sea bed)
+ *  tick.wav / tick2.wav (70 ms wheel clicker: alternate them, about -31 dB when fast up to -15 dB for the last click) confetti.wav (0.48 s party-popper burst) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

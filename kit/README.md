@@ -18,7 +18,9 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - `public/library/char/` - 13 Higgsfield poses (trimmed). Measurements in `src/lib/library.json`.
 - `public/library/sfx/` - whoosh, pop, ding, twang, strain, whir, crickets, giggle, zap, chirp, hum (20 s power-line bed),
   splash, bubbles, horn (ship toot), waves (3 s sea lapping, repeat it for a bed), tick / tick2 (wheel clicker),
-  confetti (party-popper burst).
+  confetti (party-popper burst), crack (stone crack: small crackles, the big snap 0.32 s into the file), hiss (2.6 s steam hiss).
+- Cracks that draw themselves and then fill (water, dissolved lime, new stone), a code-drawn block with a face and a
+  laurel wreath, a hard hat, a mixing trough and the Pantheon: `videos/concrete/src/Concrete.tsx`.
 - Yes / no wheel videos: copy `videos/wheel` - its `src/Wheel.tsx` has the prize wheel with a face, the flapper and tick
   model (ticks come from the wheel's own motion), a question card with a YES stamp, a YES sticker and paper confetti.
   `SoundLayer` cues take optional `keys` ([time, dB] fades) and `from`/`to` (play part of a file).

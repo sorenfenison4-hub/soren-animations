@@ -272,17 +272,19 @@ const Heat: React.FC<{x: number; y: number; t: number; at: number}> = ({x, y, t,
 
 // ---------------- faces and poses over time ----------------
 const blinkAt = (t: number, list: number[]) => list.some((b) => t > b && t < b + 0.12) ? 1 : 0;
+/** eyes popping open (with an overshoot) after a squeezed "> <" */
+const eyesPop = (t: number, at: number) => 0.3 + 0.7 * popIn(t, at, 0.24);
 const romanFace = (t: number): Face => {
   let f: Face = {...FACE0, mouth: 'o', brow: -8, lx: -0.6, ly: -0.2};                                  // it's cracking
   if (t > 0.12) f = {...FACE0, squeeze: 1, mouth: 'grit', brow: 8};                                       // ouch
-  if (t > T.heals - 0.05) f = {...FACE0, open: 1 + spring(t, T.heals, 0.2, 3, 6), lx: -0.8, ly: -0.1, mouth: 'o', brow: -10};
+  if (t > T.heals - 0.05) f = {...FACE0, open: eyesPop(t, T.heals - 0.05), lx: -0.8, ly: -0.1, mouth: 'o', brow: -10};
   if (t > T.cracks) f = {...FACE0, lid: 0.45, mouth: 'smile', brow: -6, lx: -0.6};                       // smug at the guy: healed
   if (t > 9.2) f = {...FACE0, lx: 0.55, ly: -0.85, mouth: 'flat', brow: -6};                               // rain on its head
   if (t > T.crack) f = {...FACE0, squeeze: 1, mouth: 'grit', brow: 10};                                   // crack
-  if (t > T.crack + 0.55) f = {...FACE0, lx: 0.2, ly: 0.8, mouth: 'o', brow: -10};                        // looks down at the crack
+  if (t > T.crack + 0.55) f = {...FACE0, open: eyesPop(t, T.crack + 0.55), lx: 0.2, ly: 0.8, mouth: 'o', brow: -10}; // looks down at the crack
   if (t > T.hardens) f = {...FACE0, lx: 0.1, ly: 0.75, mouth: 'smile', brow: -6};
   if (t > T.sealing) f = {...FACE0, squeeze: 1, mouth: 'grin', brow: -6};                                 // sealed
-  if (t > 15.5) f = {...FACE0, lid: 0.45, mouth: 'smile', brow: -6, lx: -0.8};                            // smug at the modern block
+  if (t > 15.5) f = {...FACE0, open: eyesPop(t, 15.5), lid: 0.45, mouth: 'smile', brow: -6, lx: -0.8};  // smug at the modern block
   if (t > T.crackIt + 0.12) f = {...FACE0, squeeze: 1, mouth: 'grin', brow: -6};                          // laughs
   return {...f, lid: Math.max(f.lid, f.squeeze ? 0 : blinkAt(t, [4.6, 12.3, 16.9]))};
 };
@@ -292,7 +294,7 @@ const modernFace = (t: number): Face => {
   if (t > T.steel) f = {...FACE0, lx: 0.1, ly: 0.8, mouth: 'o', brow: -8};                                    // looks at its steel
   if (t > T.rust) f = {...FACE0, lx: 0, ly: 0.7, mouth: 'frown', brow: -14, sweat: 1};                        // rusting
   if (t > T.crackIt) f = {...FACE0, squeeze: 1, mouth: 'grit', brow: 12, sweat: 1};
-  if (t > T.crackIt + 0.55) f = {...FACE0, lx: 0.6, ly: 0.2, mouth: 'frown', brow: -14, sweat: 1};
+  if (t > T.crackIt + 0.55) f = {...FACE0, open: eyesPop(t, T.crackIt + 0.55), lx: 0.6, ly: 0.2, mouth: 'frown', brow: -14, sweat: 1};
   return {...f, lid: Math.max(f.lid, f.squeeze ? 0 : blinkAt(t, [17.05]))};
 };
 const guyPose = (t: number) => {

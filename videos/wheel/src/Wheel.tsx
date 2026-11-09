@@ -135,12 +135,14 @@ const SpeedLines: React.FC<{t: number; w: number}> = ({t, w}) => {
 
 /** pale game-show rays behind the wheel (flat, turning slowly) */
 export const SUN = {x: 660, y: 898};
+const mix = (a: string, b: string, u: number) => '#' + [1, 3, 5].map((i) => Math.round(lerp(parseInt(a.slice(i, i + 2), 16), parseInt(b.slice(i, i + 2), 16), clamp(u)))
+  .toString(16).padStart(2, '0')).join('');
 export const Sunburst: React.FC<{t: number; glow: number}> = ({t, glow}) => (
   <W><g transform={`translate(${SUN.x} ${SUN.y}) rotate(${t * 5})`}>
     {Array.from({length: 18}).map((_, i) => {
       const a0 = i * 20 * deg, a1 = (i * 20 + 10) * deg, r = 2600;
       return <path key={i} d={`M 0 0 L ${r * Math.sin(a0)} ${-r * Math.cos(a0)} L ${r * Math.sin(a1)} ${-r * Math.cos(a1)} Z`}
-        fill={glow > 0.5 ? '#FFE8A0' : '#FFF0C4'} />;
+        fill={mix('#FFF0C4', '#FFE59A', glow)} />;
     })}
   </g></W>
 );
@@ -269,7 +271,7 @@ export const WheelScene: React.FC<{t: number}> = ({t}) => {
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
       <Sky />
-      <Layer cam={cam} z={1500} paper={false}><Sunburst t={t} glow={t > T.yes && Math.floor((t - T.yes) * 7) % 2 === 0 ? 1 : 0} /></Layer>
+      <Layer cam={cam} z={1500} paper={false}><Sunburst t={t} glow={t > T.yes ? seg(t, T.yes, T.yes + 0.15) * (0.55 + 0.45 * Math.cos((t - T.yes) * 2 * Math.PI * 1.6)) : 0} /></Layer>
       <Layer cam={cam} z={1700}>
         <W>{DOODLES.map(([xs, ys, kind], i) => {
           const [x, y] = toWorld(xs, ys, 1700), tw = 1 + 0.12 * Math.sin(t * 3 + i * 1.7);
@@ -302,7 +304,7 @@ export const WheelScene: React.FC<{t: number}> = ({t}) => {
 };
 
 const tickCues: Cue[] = PASSES.filter((p) => p >= 0 && p < DURATION - 0.6).map((p, i) => ({
-  f: i % 2 ? 'tick2.wav' : 'tick.wav', at: p, db: p > T.yes - 0.05 ? -15 : -31 + 13 * clamp(1 - speedAt(p) / W0) ** 2,
+  f: i % 2 ? 'tick2.wav' : 'tick.wav', at: p, db: p > T.yes - 0.05 ? -12 : -24 + 10 * clamp(1 - speedAt(p) / W0) ** 2,
 }));
 
 export const WheelVideo: React.FC = () => {

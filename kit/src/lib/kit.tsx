@@ -307,6 +307,30 @@ export const ctaCues = (at: number): Cue[] => [
   {f: 'pop.wav', at: at + CTA_CLICK[0], db: -24}, {f: 'ding.mp3', at: at + CTA_CLICK[1], db: -27}, {f: 'pop.wav', at: at + CTA_CLICK[2], db: -24},
 ];
 
+// ---------- "comment your question" banner (every video, whole video) ----------
+/**
+ * Small sticker in the top band that stays on screen for the WHOLE video, asking for the next question. Put it OUTSIDE
+ * LoopOut (after it, before <Look />): it never moves or boils, so it is identical on frame 0 and the last frame and
+ * cannot break the loop. Default y = 165 tall (just under the Shorts top bar, above the CallToAction band at 250) /
+ * 46 wide. Not in thumbnails.
+ */
+export const AskBanner: React.FC<{text?: string; y?: number}> = ({text = 'Comment what question you want answered next', y}) => {
+  const fit = useFit();
+  const fs = fit.wide ? 26 : 32;
+  return (
+    <div style={{position: 'absolute', left: fit.cx, top: y ?? (fit.wide ? 46 : 165), transform: 'translate(-50%,-50%) rotate(-1deg)',
+      display: 'flex', alignItems: 'center', gap: 12, background: '#FFF3B0', border: `5px solid ${INK}`, borderRadius: 18,
+      padding: '7px 20px 7px 14px', boxShadow: `0 6px 0 ${INK}`, fontFamily: FONT, fontWeight: 800, fontSize: fs, color: INK,
+      whiteSpace: 'nowrap', letterSpacing: -0.3, pointerEvents: 'none'}}>
+      <svg width={fs * 1.35} height={fs * 1.35} viewBox="0 0 64 64">
+        <path d={BUBBLE_D} fill="#fff" stroke={INK} strokeWidth={5} strokeLinejoin="round" />
+        <text x={32} y={39} textAnchor="middle" fontFamily={FONT} fontWeight={900} fontSize={30} fill={INK}>?</text>
+      </svg>
+      {text}
+    </div>
+  );
+};
+
 // ---------- opening hook text (every video) ----------
 /** seconds the hook text stays before it pops out (default) */
 export const HOOK_OUT = 1.8;
@@ -315,7 +339,7 @@ export const HOOK_OUT = 1.8;
  * pop-in: frame 0 is what the feed shows) and pops out at `out`. Put it inside the scene function so it boils, and so
  * LoopOut slides it back in with the opening shot (the question reappears as the loop restarts).
  * text: 2-6 words, the question or the surprising fact ("THE MOON IS LEAVING?"); hi: one word of it drawn on a yellow
- * marker stroke. Default band y = 330 tall / 120 wide (below the Shorts top bar). Keep faces out of that band at t = 0.
+ * marker stroke. Default band y = 350 tall / 130 wide (below the AskBanner). Keep faces out of that band at t = 0.
  */
 export const HookTitle: React.FC<{t: number; text: string; hi?: string; out?: number; y?: number}> = ({t, text, hi, out = HOOK_OUT, y}) => {
   const fit = useFit();
@@ -325,7 +349,7 @@ export const HookTitle: React.FC<{t: number; text: string; hi?: string; out?: nu
   const words = text.split(' ');
   const fs = fit.wide ? 64 : 92;
   return (
-    <div style={{position: 'absolute', left: fit.cx, top: y ?? (fit.wide ? 120 : 330), transform: `translate(-50%,-50%) rotate(-2deg) scale(${Math.max(0, s) * bob})`,
+    <div style={{position: 'absolute', left: fit.cx, top: y ?? (fit.wide ? 130 : 350), transform: `translate(-50%,-50%) rotate(-2deg) scale(${Math.max(0, s) * bob})`,
       background: '#fff', border: `9px solid ${INK}`, borderRadius: 40, padding: fit.wide ? '12px 36px' : '18px 44px', boxShadow: `0 10px 0 ${INK}`,
       fontFamily: FONT, fontWeight: 900, fontSize: fs, lineHeight: 1.08, letterSpacing: -1, color: INK, textAlign: 'center',
       maxWidth: fit.wide ? 1100 : 860, width: 'max-content'}}>

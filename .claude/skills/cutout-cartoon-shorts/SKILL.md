@@ -318,8 +318,13 @@ Per video:
    for more weird questions, and leave yours in the comments." before the channel line.
 
 8. Hook (every video): `<HookTitle t={t} text="THE MOON IS LEAVING?" hi="LEAVING" />` (kit.tsx) inside the scene
-   function: 2-6 words, fully on screen at frame 0 (no pop-in), pops out at 1.8 s (`out`), top band y 330 (`y` moves
+   function: 2-6 words, fully on screen at frame 0 (no pop-in), pops out at 1.8 s (`out`), top band y 350, under the AskBanner (`y` moves
    it). Something moves by 0.3 s and the voice starts by 0.2 s; `check-loop.mjs` also compares frame 0 with 0.5 s and
    fails a still opening, `check-hook.py` checks the voice start.
+
+9. Ask banner (every video, whole video): `<AskBanner />` (kit.tsx) right after `</LoopOut>` and before `<Look />`: a
+   small yellow sticker "Comment what question you want answered next" fixed in the top band (y 165 tall / 46 wide).
+   Outside LoopOut it never moves or boils, so frame 0 still equals the last frame. Keep the CallToAction band at
+   y >= 250 and other text / faces clear of it. Not in thumbnails.
 
 Budget per video: Higgsfield 0-10 credits, ElevenLabs ~250-400 credits. Starter plan: max 4 Higgsfield jobs at once.

@@ -24,6 +24,10 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
   2-6 word question / surprising fact, on screen at frame 0, gone by ~2 s, for sound-off viewers; (4) lead with the
   surprise, not the topic ("The Moon is leaving us. About 4 cm a year." beats "Why is the Moon drifting away?").
   `check-loop.mjs` also fails a still opening.
+- Every video also shows `<AskBanner />` from `kit.tsx` for the WHOLE video: a small yellow sticker "Comment what
+  question you want answered next" in the top band (y 165, under the Shorts top bar). Put it after `LoopOut`, before
+  `<Look />`, as in `Template.tsx`: it never moves, so the loop stays seamless. Keep HookTitle / CallToAction / big
+  props clear of it (CTA band y >= 250). Not in thumbnails.
 - Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator
   phrases. The first line names what frame 0 shows and leads with the surprising part. Every fact verified against reliable sources.
 - Every video loops seamlessly: wrap the picture in `LoopOut` from `kit.tsx` (the final shot slides out and the

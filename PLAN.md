@@ -30,3 +30,7 @@
 - [ ] 28. Why do mosquitoes bite some people more? (body)
 - [ ] 29. Why do planes fly curved routes on a map? (engineering)
 - [ ] 30. Why is the sky blue but sunsets orange? (space / science)
+
+## Extra videos (asked for directly, not from the list)
+
+- [x] Is today my lucky day? (yes / no wheel format) - made: wheel/renders/wheel-1080x1920.mp4

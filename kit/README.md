@@ -17,7 +17,10 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - `src/Template.tsx` - an 8-second example that uses all of it. Copy it for each new video.
 - `public/library/char/` - 13 Higgsfield poses (trimmed). Measurements in `src/lib/library.json`.
 - `public/library/sfx/` - whoosh, pop, ding, twang, strain, whir, crickets, giggle, zap, chirp, hum (20 s power-line bed),
-  splash, bubbles, horn (ship toot), waves (3 s sea lapping, repeat it for a bed).
+  splash, bubbles, horn (ship toot), waves (3 s sea lapping, repeat it for a bed), tick / tick2 (wheel clicker),
+  confetti (party-popper burst).
+- Yes / no wheel videos: copy `videos/wheel` - its `src/Wheel.tsx` has the prize wheel with a face, the flapper and tick
+  model (ticks come from the wheel's own motion), a question card with a YES stamp, a YES sticker and paper confetti.
   `SoundLayer` cues take optional `keys` ([time, dB] fades) and `from`/`to` (play part of a file).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),
   `python3 scripts/sheet.py sheet.png 5 324 <same times>` (contact sheet), `node scripts/render.mjs <CompId> renders/x.mp4`

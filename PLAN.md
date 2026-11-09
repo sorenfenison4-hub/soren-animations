@@ -3,7 +3,7 @@
 - [x] 1. Why can't you tickle yourself? (body) - made: tickle/out/tickle-1080x1920.mp4
 - [x] 2. Why don't birds on power lines get shocked? (animals / physics) - made: birds/renders/birds-1080x1920.mp4
 - [x] 3. Why does a steel ship float? (engineering) - made: ship/renders/ship-1080x1920.mp4
-- [ ] 4. Why is the Moon drifting away from Earth? (space)
+- [x] 4. Why is the Moon drifting away from Earth? (space) - made: moon/renders/moon-1080x1920.mp4
 - [ ] 5. Why has Roman concrete lasted 2,000 years? (history / engineering)
 - [ ] 6. Why do zebras have stripes? (animals)
 - [ ] 7. Why do onions make you cry? (body / chemistry)

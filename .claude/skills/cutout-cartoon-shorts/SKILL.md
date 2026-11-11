@@ -328,3 +328,23 @@ Per video:
    y >= 250 and other text / faces clear of it. Not in thumbnails.
 
 Budget per video: Higgsfield 0-10 credits, ElevenLabs ~250-400 credits. Starter plan: max 4 Higgsfield jobs at once.
+
+---------------------------------------------------------------------------------------------------------------------
+## 13. Story Shorts (several characters, dialogue)
+
+Model: videos/whisper (71 s, 27 shots). Narrator (James) + one ElevenLabs voice per character, each recorded as ONE take
+with all its lines (eleven_v4 tags like [whispering] work for whispers); word times from the ElevenLabs connector's
+`creative_transcribe_audio` (Scribe, 0 credits) on each take's own flow node; `scripts/assemble.py` cuts every loud
+stretch and lays the lines back to back (narrator ~1.12x, 0.1-0.3 s gaps) into one track + src/dialogue.json. Hook: open
+on the climax for ~3 s (the payoff happening), then "X days earlier" with a rewind wipe; captions word by word
+(`Captions`), hidden while the HookTitle or a title card shows. Shots = one world + camera keys with cuts (a key 1 ms
+before the cut), screen-space close-up inserts for waist-up pictures. New characters: Higgsfield with front_calm.png as
+the reference and a costume style block (same head, eyes, outline, white hands/feet, clothes allowed), one hero picture
+per character, then every pose with the hero as a second reference. Anchor cast cut-outs by the head (Char), not the
+feet: props (broom, bucket) shift the measured feet. Higgsfield login in a cloud session waits only a few minutes: give
+the URL and have the callback pasted right away (start a new login if it timed out); reference uploads need
+upload.higgsfield.ai allowed in the environment. assemble.py matches loudness (-21.5 LUFS + limiter), not peak: the takes
+come out at different levels and a peak-normalized mix of them is ~3 dB quieter than the channel. A camera that follows
+something = a key every frame with `e: 'lin'` (sparse keys with the default ease stop and go 4x a second). After the
+pop scan, fix a stretch without a full re-render: `render.mjs <Comp> work/patch.mp4 1 <from>-<to>`, splice it in with an
+ffmpeg trim + concat re-encode (crf 16); a sound-only fix = `render.mjs <Comp> work/sound.aac` + remux (`-c:v copy`).

@@ -1,0 +1,1502 @@
+{
+"voiceAt": 0.1,
+"end": 70.153,
+"lines": [
+{
+"id": "never",
+"spk": "narrator",
+"s": 0.136,
+"e": 2.082
+},
+{
+"id": "ask",
+"spk": "narrator",
+"s": 2.375,
+"e": 3.642
+},
+{
+"id": "earlier",
+"spk": "narrator",
+"s": 3.973,
+"e": 4.901
+},
+{
+"id": "leaned",
+"spk": "narrator",
+"s": 5.273,
+"e": 8.041
+},
+{
+"id": "tonight",
+"spk": "advisor",
+"s": 8.318,
+"e": 10.848
+},
+{
+"id": "forty",
+"spk": "narrator",
+"s": 11.174,
+"e": 15.996
+},
+{
+"id": "majesty",
+"spk": "sweeper",
+"s": 16.291,
+"e": 19.161
+},
+{
+"id": "ghosts",
+"spk": "advisor",
+"s": 19.451,
+"e": 22.761
+},
+{
+"id": "court",
+"spk": "narrator",
+"s": 23.046,
+"e": 25.834
+},
+{
+"id": "scrub",
+"spk": "king",
+"s": 26.109,
+"e": 29.909
+},
+{
+"id": "night",
+"spk": "narrator",
+"s": 30.254,
+"e": 32.156
+},
+{
+"id": "morning",
+"spk": "narrator",
+"s": 32.447,
+"e": 35.318
+},
+{
+"id": "day2",
+"spk": "narrator",
+"s": 35.645,
+"e": 37.278
+},
+{
+"id": "day3",
+"spk": "narrator",
+"s": 37.606,
+"e": 39.415
+},
+{
+"id": "notice",
+"spk": "narrator",
+"s": 39.719,
+"e": 40.826
+},
+{
+"id": "treasury",
+"spk": "advisor",
+"s": 41.156,
+"e": 42.586
+},
+{
+"id": "ready",
+"spk": "narrator",
+"s": 42.931,
+"e": 46.584
+},
+{
+"id": "listen",
+"spk": "sweeper",
+"s": 46.877,
+"e": 47.657
+},
+{
+"id": "fool",
+"spk": "advisor",
+"s": 48.007,
+"e": 50.107
+},
+{
+"id": "heard",
+"spk": "narrator",
+"s": 50.513,
+"e": 52.174
+},
+{
+"id": "round",
+"spk": "narrator",
+"s": 52.526,
+"e": 58.451
+},
+{
+"id": "pauls",
+"spk": "narrator",
+"s": 58.801,
+"e": 63.509
+},
+{
+"id": "now",
+"spk": "narrator",
+"s": 63.835,
+"e": 66.714
+},
+{
+"id": "stupid",
+"spk": "advisor",
+"s": 67.133,
+"e": 68.753
+},
+{
+"id": "iheard",
+"spk": "king",
+"s": 69.243,
+"e": 70.083
+}
+],
+"words": [
+{
+"w": "Never",
+"spk": "narrator",
+"line": "never",
+"s": 0.1,
+"e": 0.421
+},
+{
+"w": "whisper",
+"spk": "narrator",
+"line": "never",
+"s": 0.457,
+"e": 0.957
+},
+{
+"w": "in",
+"spk": "narrator",
+"line": "never",
+"s": 1.029,
+"e": 1.136
+},
+{
+"w": "a",
+"spk": "narrator",
+"line": "never",
+"s": 1.171,
+"e": 1.243
+},
+{
+"w": "round",
+"spk": "narrator",
+"line": "never",
+"s": 1.314,
+"e": 1.614
+},
+{
+"w": "room.",
+"spk": "narrator",
+"line": "never",
+"s": 1.671,
+"e": 2.145
+},
+{
+"w": "Just",
+"spk": "narrator",
+"line": "ask",
+"s": 2.392,
+"e": 2.535
+},
+{
+"w": "ask",
+"spk": "narrator",
+"line": "ask",
+"s": 2.607,
+"e": 2.75
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "ask",
+"s": 2.785,
+"e": 2.821
+},
+{
+"w": "king's",
+"spk": "narrator",
+"line": "ask",
+"s": 2.892,
+"e": 3.107
+},
+{
+"w": "advisor.",
+"spk": "narrator",
+"line": "ask",
+"s": 3.357,
+"e": 3.678
+},
+{
+"w": "Three",
+"spk": "narrator",
+"line": "earlier",
+"s": 3.937,
+"e": 4.08
+},
+{
+"w": "days",
+"spk": "narrator",
+"line": "earlier",
+"s": 4.223,
+"e": 4.437
+},
+{
+"w": "earlier.",
+"spk": "narrator",
+"line": "earlier",
+"s": 4.508,
+"e": 4.937
+},
+{
+"w": "The",
+"spk": "narrator",
+"line": "leaned",
+"s": 5.291,
+"e": 5.326
+},
+{
+"w": "advisor",
+"spk": "narrator",
+"line": "leaned",
+"s": 5.362,
+"e": 5.862
+},
+{
+"w": "leaned",
+"spk": "narrator",
+"line": "leaned",
+"s": 5.933,
+"e": 6.148
+},
+{
+"w": "on",
+"spk": "narrator",
+"line": "leaned",
+"s": 6.219,
+"e": 6.291
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "leaned",
+"s": 6.326,
+"e": 6.362
+},
+{
+"w": "wall",
+"spk": "narrator",
+"line": "leaned",
+"s": 6.433,
+"e": 6.791
+},
+{
+"w": "and",
+"spk": "narrator",
+"line": "leaned",
+"s": 6.862,
+"e": 6.933
+},
+{
+"w": "whispered",
+"spk": "narrator",
+"line": "leaned",
+"s": 7.076,
+"e": 7.433
+},
+{
+"w": "his",
+"spk": "narrator",
+"line": "leaned",
+"s": 7.505,
+"e": 7.576
+},
+{
+"w": "plan.",
+"spk": "narrator",
+"line": "leaned",
+"s": 7.648,
+"e": 8.076
+},
+{
+"w": "Tonight,",
+"spk": "advisor",
+"line": "tonight",
+"s": 8.338,
+"e": 8.908
+},
+{
+"w": "we",
+"spk": "advisor",
+"line": "tonight",
+"s": 9.068,
+"e": 9.188
+},
+{
+"w": "swap",
+"spk": "advisor",
+"line": "tonight",
+"s": 9.348,
+"e": 9.508
+},
+{
+"w": "the",
+"spk": "advisor",
+"line": "tonight",
+"s": 9.588,
+"e": 9.668
+},
+{
+"w": "crown",
+"spk": "advisor",
+"line": "tonight",
+"s": 9.748,
+"e": 10.068
+},
+{
+"w": "for",
+"spk": "advisor",
+"line": "tonight",
+"s": 10.148,
+"e": 10.228
+},
+{
+"w": "a",
+"spk": "advisor",
+"line": "tonight",
+"s": 10.308,
+"e": 10.388
+},
+{
+"w": "fake.",
+"spk": "advisor",
+"line": "tonight",
+"s": 10.468,
+"e": 10.918
+},
+{
+"w": "Forty",
+"spk": "narrator",
+"line": "forty",
+"s": 11.156,
+"e": 11.406
+},
+{
+"w": "meters",
+"spk": "narrator",
+"line": "forty",
+"s": 11.441,
+"e": 11.727
+},
+{
+"w": "away,",
+"spk": "narrator",
+"line": "forty",
+"s": 11.906,
+"e": 12.218
+},
+{
+"w": "on",
+"spk": "narrator",
+"line": "forty",
+"s": 12.36,
+"e": 12.395
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "forty",
+"s": 12.467,
+"e": 12.538
+},
+{
+"w": "far",
+"spk": "narrator",
+"line": "forty",
+"s": 12.61,
+"e": 12.824
+},
+{
+"w": "side",
+"spk": "narrator",
+"line": "forty",
+"s": 12.895,
+"e": 13.11
+},
+{
+"w": "of",
+"spk": "narrator",
+"line": "forty",
+"s": 13.145,
+"e": 13.181
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "forty",
+"s": 13.253,
+"e": 13.288
+},
+{
+"w": "round",
+"spk": "narrator",
+"line": "forty",
+"s": 13.324,
+"e": 13.61
+},
+{
+"w": "hall,",
+"spk": "narrator",
+"line": "forty",
+"s": 13.681,
+"e": 14.047
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "forty",
+"s": 14.175,
+"e": 14.246
+},
+{
+"w": "sweeper",
+"spk": "narrator",
+"line": "forty",
+"s": 14.389,
+"e": 14.818
+},
+{
+"w": "heard",
+"spk": "narrator",
+"line": "forty",
+"s": 14.889,
+"e": 15.175
+},
+{
+"w": "every",
+"spk": "narrator",
+"line": "forty",
+"s": 15.246,
+"e": 15.532
+},
+{
+"w": "word.",
+"spk": "narrator",
+"line": "forty",
+"s": 15.675,
+"e": 16.032
+},
+{
+"w": "Your",
+"spk": "sweeper",
+"line": "majesty",
+"s": 16.251,
+"e": 16.371
+},
+{
+"w": "Majesty,",
+"spk": "sweeper",
+"line": "majesty",
+"s": 16.451,
+"e": 17.121
+},
+{
+"w": "he's",
+"spk": "sweeper",
+"line": "majesty",
+"s": 17.261,
+"e": 17.501
+},
+{
+"w": "stealing",
+"spk": "sweeper",
+"line": "majesty",
+"s": 17.621,
+"e": 17.981
+},
+{
+"w": "your",
+"spk": "sweeper",
+"line": "majesty",
+"s": 18.061,
+"e": 18.221
+},
+{
+"w": "crown",
+"spk": "sweeper",
+"line": "majesty",
+"s": 18.301,
+"e": 18.621
+},
+{
+"w": "tonight.",
+"spk": "sweeper",
+"line": "majesty",
+"s": 18.701,
+"e": 19.231
+},
+{
+"w": "From",
+"spk": "advisor",
+"line": "ghosts",
+"s": 19.431,
+"e": 19.591
+},
+{
+"w": "forty",
+"spk": "advisor",
+"line": "ghosts",
+"s": 19.751,
+"e": 20.071
+},
+{
+"w": "meters?",
+"spk": "advisor",
+"line": "ghosts",
+"s": 20.151,
+"e": 20.721
+},
+{
+"w": "The",
+"spk": "advisor",
+"line": "ghosts",
+"s": 20.961,
+"e": 21.041
+},
+{
+"w": "broom",
+"spk": "advisor",
+"line": "ghosts",
+"s": 21.121,
+"e": 21.361
+},
+{
+"w": "boy",
+"spk": "advisor",
+"line": "ghosts",
+"s": 21.441,
+"e": 21.681
+},
+{
+"w": "hears",
+"spk": "advisor",
+"line": "ghosts",
+"s": 21.761,
+"e": 22.081
+},
+{
+"w": "ghosts.",
+"spk": "advisor",
+"line": "ghosts",
+"s": 22.161,
+"e": 22.831
+},
+{
+"w": "The",
+"spk": "narrator",
+"line": "court",
+"s": 23.046,
+"e": 23.118
+},
+{
+"w": "court",
+"spk": "narrator",
+"line": "court",
+"s": 23.189,
+"e": 23.475
+},
+{
+"w": "laughs.",
+"spk": "narrator",
+"line": "court",
+"s": 23.546,
+"e": 24.046
+},
+{
+"w": "The",
+"spk": "narrator",
+"line": "court",
+"s": 24.298,
+"e": 24.369
+},
+{
+"w": "king",
+"spk": "narrator",
+"line": "court",
+"s": 24.441,
+"e": 24.798
+},
+{
+"w": "laughs",
+"spk": "narrator",
+"line": "court",
+"s": 24.941,
+"e": 25.226
+},
+{
+"w": "loudest.",
+"spk": "narrator",
+"line": "court",
+"s": 25.298,
+"e": 25.869
+},
+{
+"w": "You",
+"spk": "king",
+"line": "scrub",
+"s": 26.069,
+"e": 26.209
+},
+{
+"w": "like",
+"spk": "king",
+"line": "scrub",
+"s": 26.329,
+"e": 26.449
+},
+{
+"w": "listening",
+"spk": "king",
+"line": "scrub",
+"s": 26.649,
+"e": 26.849
+},
+{
+"w": "to",
+"spk": "king",
+"line": "scrub",
+"s": 26.889,
+"e": 26.929
+},
+{
+"w": "walls?",
+"spk": "king",
+"line": "scrub",
+"s": 27.089,
+"e": 27.759
+},
+{
+"w": "Then",
+"spk": "king",
+"line": "scrub",
+"s": 27.939,
+"e": 28.099
+},
+{
+"w": "scrub",
+"spk": "king",
+"line": "scrub",
+"s": 28.259,
+"e": 28.659
+},
+{
+"w": "them.",
+"spk": "king",
+"line": "scrub",
+"s": 28.779,
+"e": 28.979
+},
+{
+"w": "All",
+"spk": "king",
+"line": "scrub",
+"s": 29.229,
+"e": 29.469
+},
+{
+"w": "of",
+"spk": "king",
+"line": "scrub",
+"s": 29.549,
+"e": 29.629
+},
+{
+"w": "them.",
+"spk": "king",
+"line": "scrub",
+"s": 29.709,
+"e": 29.979
+},
+{
+"w": "That",
+"spk": "narrator",
+"line": "night",
+"s": 30.29,
+"e": 30.433
+},
+{
+"w": "night,",
+"spk": "narrator",
+"line": "night",
+"s": 30.504,
+"e": 30.781
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "night",
+"s": 30.924,
+"e": 30.995
+},
+{
+"w": "crown",
+"spk": "narrator",
+"line": "night",
+"s": 31.067,
+"e": 31.424
+},
+{
+"w": "vanishes.",
+"spk": "narrator",
+"line": "night",
+"s": 31.567,
+"e": 32.219
+},
+{
+"w": "By",
+"spk": "narrator",
+"line": "morning",
+"s": 32.412,
+"e": 32.554
+},
+{
+"w": "morning,",
+"spk": "narrator",
+"line": "morning",
+"s": 32.626,
+"e": 33.063
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "morning",
+"s": 33.162,
+"e": 33.233
+},
+{
+"w": "king",
+"spk": "narrator",
+"line": "morning",
+"s": 33.305,
+"e": 33.448
+},
+{
+"w": "wears",
+"spk": "narrator",
+"line": "morning",
+"s": 33.519,
+"e": 33.733
+},
+{
+"w": "a",
+"spk": "narrator",
+"line": "morning",
+"s": 33.769,
+"e": 33.805
+},
+{
+"w": "wooden",
+"spk": "narrator",
+"line": "morning",
+"s": 33.876,
+"e": 34.162
+},
+{
+"w": "one,",
+"spk": "narrator",
+"line": "morning",
+"s": 34.233,
+"e": 34.492
+},
+{
+"w": "painted",
+"spk": "narrator",
+"line": "morning",
+"s": 34.603,
+"e": 34.889
+},
+{
+"w": "gold.",
+"spk": "narrator",
+"line": "morning",
+"s": 34.961,
+"e": 35.38
+},
+{
+"w": "Day",
+"spk": "narrator",
+"line": "day2",
+"s": 35.895,
+"e": 35.966
+},
+{
+"w": "two,",
+"spk": "narrator",
+"line": "day2",
+"s": 36.252,
+"e": 36.333
+},
+{
+"w": "it",
+"spk": "narrator",
+"line": "day2",
+"s": 36.564,
+"e": 36.635
+},
+{
+"w": "squeaks.",
+"spk": "narrator",
+"line": "day2",
+"s": 36.778,
+"e": 37.341
+},
+{
+"w": "Day",
+"spk": "narrator",
+"line": "day3",
+"s": 37.695,
+"e": 37.838
+},
+{
+"w": "three,",
+"spk": "narrator",
+"line": "day3",
+"s": 38.195,
+"e": 38.257
+},
+{
+"w": "a",
+"spk": "narrator",
+"line": "day3",
+"s": 38.415,
+"e": 38.486
+},
+{
+"w": "woodpecker",
+"spk": "narrator",
+"line": "day3",
+"s": 38.7,
+"e": 38.986
+},
+{
+"w": "moves",
+"spk": "narrator",
+"line": "day3",
+"s": 39.2,
+"e": 39.272
+},
+{
+"w": "in.",
+"spk": "narrator",
+"line": "day3",
+"s": 39.415,
+"e": 39.477
+},
+{
+"w": "The",
+"spk": "narrator",
+"line": "notice",
+"s": 39.844,
+"e": 39.951
+},
+{
+"w": "king",
+"spk": "narrator",
+"line": "notice",
+"s": 40.058,
+"e": 40.129
+},
+{
+"w": "doesn't",
+"spk": "narrator",
+"line": "notice",
+"s": 40.272,
+"e": 40.415
+},
+{
+"w": "notice.",
+"spk": "narrator",
+"line": "notice",
+"s": 40.772,
+"e": 40.888
+},
+{
+"w": "Tomorrow,",
+"spk": "advisor",
+"line": "treasury",
+"s": 41.176,
+"e": 41.766
+},
+{
+"w": "the",
+"spk": "advisor",
+"line": "treasury",
+"s": 41.946,
+"e": 42.026
+},
+{
+"w": "treasury.",
+"spk": "advisor",
+"line": "treasury",
+"s": 42.106,
+"e": 42.656
+},
+{
+"w": "But",
+"spk": "narrator",
+"line": "ready",
+"s": 43.021,
+"e": 43.056
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "ready",
+"s": 43.092,
+"e": 43.235
+},
+{
+"w": "sweeper",
+"spk": "narrator",
+"line": "ready",
+"s": 43.306,
+"e": 43.806
+},
+{
+"w": "is",
+"spk": "narrator",
+"line": "ready",
+"s": 43.949,
+"e": 44.021
+},
+{
+"w": "ready.",
+"spk": "narrator",
+"line": "ready",
+"s": 44.378,
+"e": 44.423
+},
+{
+"w": "He",
+"spk": "narrator",
+"line": "ready",
+"s": 44.673,
+"e": 44.745
+},
+{
+"w": "puts",
+"spk": "narrator",
+"line": "ready",
+"s": 44.887,
+"e": 44.959
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "ready",
+"s": 45.03,
+"e": 45.102
+},
+{
+"w": "king's",
+"spk": "narrator",
+"line": "ready",
+"s": 45.245,
+"e": 45.459
+},
+{
+"w": "ear",
+"spk": "narrator",
+"line": "ready",
+"s": 45.673,
+"e": 45.709
+},
+{
+"w": "to",
+"spk": "narrator",
+"line": "ready",
+"s": 45.745,
+"e": 45.816
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "ready",
+"s": 45.887,
+"e": 45.959
+},
+{
+"w": "far",
+"spk": "narrator",
+"line": "ready",
+"s": 46.173,
+"e": 46.245
+},
+{
+"w": "wall.",
+"spk": "narrator",
+"line": "ready",
+"s": 46.602,
+"e": 46.646
+},
+{
+"w": "Just",
+"spk": "sweeper",
+"line": "listen",
+"s": 46.957,
+"e": 47.077
+},
+{
+"w": "listen.",
+"spk": "sweeper",
+"line": "listen",
+"s": 47.157,
+"e": 47.727
+},
+{
+"w": "The",
+"spk": "advisor",
+"line": "fool",
+"s": 48.027,
+"e": 48.107
+},
+{
+"w": "old",
+"spk": "advisor",
+"line": "fool",
+"s": 48.187,
+"e": 48.347
+},
+{
+"w": "fool",
+"spk": "advisor",
+"line": "fool",
+"s": 48.507,
+"e": 48.747
+},
+{
+"w": "still",
+"spk": "advisor",
+"line": "fool",
+"s": 48.907,
+"e": 49.147
+},
+{
+"w": "thinks",
+"spk": "advisor",
+"line": "fool",
+"s": 49.187,
+"e": 49.387
+},
+{
+"w": "it's",
+"spk": "advisor",
+"line": "fool",
+"s": 49.427,
+"e": 49.627
+},
+{
+"w": "gold.",
+"spk": "advisor",
+"line": "fool",
+"s": 49.867,
+"e": 50.177
+},
+{
+"w": "The",
+"spk": "narrator",
+"line": "heard",
+"s": 50.602,
+"e": 50.674
+},
+{
+"w": "king",
+"spk": "narrator",
+"line": "heard",
+"s": 50.959,
+"e": 51.031
+},
+{
+"w": "heard",
+"spk": "narrator",
+"line": "heard",
+"s": 51.388,
+"e": 51.459
+},
+{
+"w": "every",
+"spk": "narrator",
+"line": "heard",
+"s": 51.745,
+"e": 51.817
+},
+{
+"w": "word.",
+"spk": "narrator",
+"line": "heard",
+"s": 52.174,
+"e": 52.236
+},
+{
+"w": "In",
+"spk": "narrator",
+"line": "round",
+"s": 52.562,
+"e": 52.633
+},
+{
+"w": "a",
+"spk": "narrator",
+"line": "round",
+"s": 52.705,
+"e": 52.776
+},
+{
+"w": "round",
+"spk": "narrator",
+"line": "round",
+"s": 52.99,
+"e": 53.062
+},
+{
+"w": "room,",
+"spk": "narrator",
+"line": "round",
+"s": 53.347,
+"e": 53.446
+},
+{
+"w": "a",
+"spk": "narrator",
+"line": "round",
+"s": 53.591,
+"e": 53.734
+},
+{
+"w": "whisper",
+"spk": "narrator",
+"line": "round",
+"s": 53.805,
+"e": 54.198
+},
+{
+"w": "doesn't",
+"spk": "narrator",
+"line": "round",
+"s": 54.305,
+"e": 54.448
+},
+{
+"w": "spread",
+"spk": "narrator",
+"line": "round",
+"s": 54.734,
+"e": 54.805
+},
+{
+"w": "out.",
+"spk": "narrator",
+"line": "round",
+"s": 55.019,
+"e": 55.082
+},
+{
+"w": "It",
+"spk": "narrator",
+"line": "round",
+"s": 55.398,
+"e": 55.469
+},
+{
+"w": "hugs",
+"spk": "narrator",
+"line": "round",
+"s": 55.541,
+"e": 55.826
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "round",
+"s": 55.898,
+"e": 55.969
+},
+{
+"w": "curved",
+"spk": "narrator",
+"line": "round",
+"s": 56.112,
+"e": 56.326
+},
+{
+"w": "wall",
+"spk": "narrator",
+"line": "round",
+"s": 56.612,
+"e": 56.755
+},
+{
+"w": "and",
+"spk": "narrator",
+"line": "round",
+"s": 56.826,
+"e": 56.969
+},
+{
+"w": "slides",
+"spk": "narrator",
+"line": "round",
+"s": 57.398,
+"e": 57.541
+},
+{
+"w": "all",
+"spk": "narrator",
+"line": "round",
+"s": 57.683,
+"e": 57.719
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "round",
+"s": 57.755,
+"e": 57.826
+},
+{
+"w": "way",
+"spk": "narrator",
+"line": "round",
+"s": 57.898,
+"e": 58.041
+},
+{
+"w": "around.",
+"spk": "narrator",
+"line": "round",
+"s": 58.398,
+"e": 58.514
+},
+{
+"w": "In",
+"spk": "narrator",
+"line": "pauls",
+"s": 58.855,
+"e": 58.998
+},
+{
+"w": "St",
+"spk": "narrator",
+"line": "pauls",
+"s": 59.141,
+"e": 59.212
+},
+{
+"w": "Paul's",
+"spk": "narrator",
+"line": "pauls",
+"s": 59.355,
+"e": 59.498
+},
+{
+"w": "Cathedral,",
+"spk": "narrator",
+"line": "pauls",
+"s": 59.569,
+"e": 60.042
+},
+{
+"w": "it",
+"spk": "narrator",
+"line": "pauls",
+"s": 60.257,
+"e": 60.328
+},
+{
+"w": "carries",
+"spk": "narrator",
+"line": "pauls",
+"s": 60.471,
+"e": 60.721
+},
+{
+"w": "about",
+"spk": "narrator",
+"line": "pauls",
+"s": 60.828,
+"e": 60.908
+},
+{
+"w": "thirty-four",
+"spk": "narrator",
+"line": "pauls",
+"s": 61.102,
+"e": 61.602
+},
+{
+"w": "meters,",
+"spk": "narrator",
+"line": "pauls",
+"s": 61.674,
+"e": 62.04
+},
+{
+"w": "to",
+"spk": "narrator",
+"line": "pauls",
+"s": 62.206,
+"e": 62.277
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "pauls",
+"s": 62.348,
+"e": 62.42
+},
+{
+"w": "other",
+"spk": "narrator",
+"line": "pauls",
+"s": 62.634,
+"e": 62.706
+},
+{
+"w": "side",
+"spk": "narrator",
+"line": "pauls",
+"s": 62.92,
+"e": 62.991
+},
+{
+"w": "of",
+"spk": "narrator",
+"line": "pauls",
+"s": 63.027,
+"e": 63.063
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "pauls",
+"s": 63.134,
+"e": 63.206
+},
+{
+"w": "dome.",
+"spk": "narrator",
+"line": "pauls",
+"s": 63.348,
+"e": 63.572
+},
+{
+"w": "Now",
+"spk": "narrator",
+"line": "now",
+"s": 64.139,
+"e": 64.21
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "now",
+"s": 64.282,
+"e": 64.532
+},
+{
+"w": "advisor",
+"spk": "narrator",
+"line": "now",
+"s": 64.782,
+"e": 64.924
+},
+{
+"w": "scrubs",
+"spk": "narrator",
+"line": "now",
+"s": 65.139,
+"e": 65.353
+},
+{
+"w": "the",
+"spk": "narrator",
+"line": "now",
+"s": 65.424,
+"e": 65.496
+},
+{
+"w": "walls.",
+"spk": "narrator",
+"line": "now",
+"s": 65.924,
+"e": 66.005
+},
+{
+"w": "All",
+"spk": "narrator",
+"line": "now",
+"s": 66.339,
+"e": 66.41
+},
+{
+"w": "of",
+"spk": "narrator",
+"line": "now",
+"s": 66.482,
+"e": 66.553
+},
+{
+"w": "them.",
+"spk": "narrator",
+"line": "now",
+"s": 66.696,
+"e": 66.777
+},
+{
+"w": "Stupid",
+"spk": "advisor",
+"line": "stupid",
+"s": 67.433,
+"e": 67.913
+},
+{
+"w": "round",
+"spk": "advisor",
+"line": "stupid",
+"s": 68.073,
+"e": 68.313
+},
+{
+"w": "room.",
+"spk": "advisor",
+"line": "stupid",
+"s": 68.393,
+"e": 68.823
+},
+{
+"w": "I",
+"spk": "king",
+"line": "iheard",
+"s": 69.303,
+"e": 69.423
+},
+{
+"w": "heard",
+"spk": "king",
+"line": "iheard",
+"s": 69.583,
+"e": 69.743
+},
+{
+"w": "that.",
+"spk": "king",
+"line": "iheard",
+"s": 69.903,
+"e": 70.153
+}
+]
+}

@@ -4,6 +4,7 @@
 import React from 'react';
 import {AbsoluteFill, Audio, Img, Sequence, staticFile, useVideoConfig} from 'remotion';
 import LIB from './library.json';
+import CAST from './cast.json';
 
 export const FPS = 60;
 export const INK = '#141414';
@@ -30,14 +31,15 @@ export const rnd = (seed: number) => { const x = Math.sin(seed * 127.1 + 311.7) 
 
 // ---------- 2.5D multiplane camera ----------
 export type Cam = {x: number; y: number; z: number};
-export type Key = {t: number; x: number; y: number; k: number; e?: 'io' | 'out'};
-/** Camera keys give the screen scale k of the Z=1000 layer; zoom is interpolated in log space. Repeat a key to hold. */
+export type Key = {t: number; x: number; y: number; k: number; e?: 'io' | 'out' | 'lin'};
+/** Camera keys give the screen scale k of the Z=1000 layer; zoom is interpolated in log space. Repeat a key to hold. e = ease into this key
+ *  (default in-out; 'lin' for a follow camera built from a key every frame - never sparse eased keys, they stop and go). */
 export const camAt = (keys: Key[], t: number): Cam => {
   let res = {x: keys[0].x, y: keys[0].y, k: keys[0].k};
   for (let i = 0; i < keys.length - 1; i++) {
     const a = keys[i], b = keys[i + 1];
     if (t >= a.t && t <= b.t) {
-      const u0 = seg(t, a.t, b.t); const u = b.e === 'out' ? eout(u0) : eio(u0);
+      const u0 = seg(t, a.t, b.t); const u = b.e === 'out' ? eout(u0) : b.e === 'lin' ? u0 : eio(u0);
       res = {x: lerp(a.x, b.x, u), y: lerp(a.y, b.y, u), k: Math.exp(lerp(Math.log(a.k), Math.log(b.k), u))};
       break;
     }
@@ -88,7 +90,7 @@ export const Pic: React.FC<{src: string; w: number; h: number; x: number; y: num
     transformOrigin: `${axp * s}px ${ayp * s}px`, transform: `rotate(${rot}deg) scale(${(flip ? -1 : 1) * sx}, ${sy})`}} />;
 };
 
-// ---------- the guy (13 poses in the library) ----------
+// ---------- the guy (16 poses in the library, incl. sweep / listen with a broom) ----------
 export type Pose = keyof typeof LIB;
 export const POSES = Object.keys(LIB) as Pose[];
 /** world head radius shared by every pose, so pose swaps never change the head size (guy is ~300 world units tall) */
@@ -538,7 +540,9 @@ const cueDb = (c: Cue, tt: number) => {
   for (let i = 0; i < k.length - 1; i++) if (tt <= k[i + 1][0]) return lerp(k[i][1], k[i + 1][1], seg(tt, k[i][0], k[i + 1][0]));
   return k[k.length - 1][1];
 };
-/** Shared effects in public/library/sfx: whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 zap.wav chirp.wav hum.wav (20 s bed)
+/** Shared effects in public/library/sfx: gulp.wav (0.95 s cartoon gulp) squeak.wav (0.5 s wooden squeak) peck.wav (3 s woodpecker bursts)
+ *  rewind.wav (2.7 s tape rewind) whisper_whoosh.wav (1.75 s airy travelling whoosh) crowd_laugh.wav (4 s crowd laughing)
+ *  whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 zap.wav chirp.wav hum.wav (20 s bed)
  *  splash.wav (0.75 s plop) bubbles.wav (0.6 s gurgle) horn.wav (1.75 s ship toot) waves.wav (3 s lapping: repeat every 2.7 s at -31 dB for a sea bed)
  *  tick.wav / tick2.wav (70 ms wheel clicker: alternate them, about -31 dB when fast up to -15 dB for the last click) confetti.wav (0.48 s party-popper burst)
  *  crack.wav (0.52 s stone crack: crackles, big snap at 0.32 s - start it 0.3 s before the beat) hiss.wav (2.6 s steam hiss, about -27 dB under a voice) */
@@ -551,3 +555,66 @@ export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]
         volume={c.keys ? (f: number) => 10 ** (cueDb(c, c.at + f / FPS) / 20) : 10 ** (c.db / 20)} /></Sequence>)}
   </>
 );
+
+// ---------- the cast: other characters in the guy's style (public/library/cast, measured in cast.json) ----------
+/** king_calm / king_laugh / king_point / king_listen (faces left) / king_shock (waist-up close-up; no crown in the
+ *  pictures, draw one on castHead) and adv_front / adv_whisper (faces left) / adv_laugh / adv_panic / adv_scrub (faces
+ *  left, with a bucket): the king and the scheming advisor from videos/whisper. */
+export type CastName = keyof typeof CAST;
+type CastM = {w: number; h: number; head: number[]; feet: number[] | null};
+/** A cast cut-out: head centre at x (so pose swaps never jump), bottom of the picture on the ground y. Waist-up
+ *  pictures (feet null) put their head centre at (x, y). Same head size as the guy. */
+export const Char: React.FC<{name: CastName; x: number; y: number; t: number; size?: number; sx?: number; sy?: number; flip?: boolean; rot?: number; breathe?: boolean}> =
+  ({name, x, y, t, size = 1, sx = 1, sy = 1, flip = false, rot = 0, breathe = true}) => {
+    const m = (CAST as any)[name] as CastM; const s = (HEAD_R * size) / m.head[2];
+    const ax = m.head[0], ay = m.feet ? m.h - 14 : m.head[1];
+    const b = breathe ? 1 + 0.009 * Math.sin(2 * Math.PI * 0.6 * t + x * 0.01) : 1;
+    return <div style={{position: 'absolute', left: x - ax * s, top: y - ay * s, width: m.w * s, height: m.h * s, transformOrigin: `${ax * s}px ${ay * s}px`,
+      transform: `rotate(${rot}deg) scale(${(flip ? -1 : 1) * sx}, ${sy * b})`}}>
+      <Img src={staticFile(`library/cast/${name}.png`)} style={{position: 'absolute', left: 0, top: 0, width: m.w * s, height: m.h * s}} />
+    </div>;
+  };
+/** where a cast cut-out's head centre is (for crowns, hats, sweat, speech) */
+export const castHead = (name: CastName, x: number, y: number, size = 1) => {
+  const m = (CAST as any)[name] as CastM; const s = (HEAD_R * size) / m.head[2];
+  return {x, y: m.feet ? y - (m.h - 14 - m.head[1]) * s : y, r: HEAD_R * size};
+};
+
+// ---------- word-by-word captions (story Shorts with dialogue) ----------
+/** words: [{w, s, e, line?}] in video seconds (scripts/assemble.py writes them to src/dialogue.json). */
+export type CapWord = {w: string; s: number; e: number; line?: string};
+type CapGroup = {ws: CapWord[]; s: number; e: number};
+const capCache = new WeakMap<CapWord[], CapGroup[]>();
+const capGroups = (words: CapWord[]) => {
+  const hit0 = capCache.get(words); if (hit0) return hit0;
+  const gs: CapGroup[] = []; let cur: CapWord[] = [];
+  words.forEach((w, i) => {
+    const prev = words[i - 1];
+    if (cur.length && (cur.length >= 3 || /[.,?!]$/.test(prev.w) || prev.line !== w.line || w.s - prev.e > 0.35)) { gs.push({ws: cur, s: cur[0].s, e: cur[cur.length - 1].e}); cur = []; }
+    cur.push(w);
+  });
+  if (cur.length) gs.push({ws: cur, s: cur[0].s, e: cur[cur.length - 1].e});
+  capCache.set(words, gs); return gs;
+};
+/**
+ * Captions like the big story channels: 1-3 words at a time, white Inter 900 with a thick black outline, the word being
+ * spoken in yellow, each group pops in. Put it inside the scene function (it boils and slides with LoopOut). y = band
+ * centre (default 1395 tall: above the Shorts title area); hide: [from, to] stretches with no captions (the HookTitle,
+ * title cards); italicLines: line ids drawn in italics (whispers).
+ */
+export const Captions: React.FC<{t: number; words: CapWord[]; y?: number; size?: number; hide?: [number, number][]; italicLines?: string[]}> =
+  ({t, words, y = 1395, size = 84, hide = [], italicLines = []}) => {
+    if (hide.some(([a, b]) => t >= a && t < b)) return null;
+    const gs = capGroups(words); let gi = -1;
+    for (let i = 0; i < gs.length; i++) if (gs[i].s <= t) gi = i;
+    if (gi < 0) return null;
+    const g = gs[gi], next = gs[gi + 1];
+    if (t > (next ? Math.min(next.s, g.e + 0.5) : g.e + 0.5)) return null;
+    const pop = 1 + 0.14 * (1 - eout(seg(t, g.s, g.s + 0.13)));
+    const it = g.ws[0].line !== undefined && italicLines.includes(g.ws[0].line);
+    return <div style={{position: 'absolute', left: '50%', top: y, transform: `translate(-50%,-50%) scale(${pop})`, whiteSpace: 'nowrap', fontFamily: FONT,
+      fontWeight: 900, fontSize: size, letterSpacing: -1, fontStyle: it ? 'italic' : 'normal', WebkitTextStroke: `${size * 0.19}px ${INK}`,
+      paintOrder: 'stroke fill', textShadow: `0 ${size * 0.08}px 0 ${INK}`}}>
+      {g.ws.map((w, i) => <span key={i} style={{color: w.s <= t && (i === g.ws.length - 1 || g.ws[i + 1].s > t) ? C.yellow : '#fff'}}>{(i ? ' ' : '') + w.w.toUpperCase()}</span>)}
+    </div>;
+  };

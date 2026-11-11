@@ -1,0 +1,22 @@
+[
+  {
+    "created_at": "2026-11-11T05:13:43.121756Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "5e5ca1dc-fe33-40bd-8aea-827767c9db3d",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: one single loud cartoon gulp, a nervous swallow.",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261111_051343_5e5ca1dc-fe33-40bd-8aea-827767c9db3d.wav",
+    "status": "completed"
+  }
+]

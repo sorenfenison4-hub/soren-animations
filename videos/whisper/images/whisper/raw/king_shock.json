@@ -1,0 +1,41 @@
+[
+  {
+    "created_at": "2026-11-11T05:08:47.589338Z",
+    "display_name": "GPT Image 2.5",
+    "id": "fe046d42-6605-4a0a-a6ea-3d384bb7df6a",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261111_050847_fe046d42-6605-4a0a-a6ea-3d384bb7df6a_min.webp",
+    "params": {
+      "aspect_ratio": "4:5",
+      "background": "transparent",
+      "height": 3200,
+      "medias": [
+        {
+          "data": {
+            "id": "b001376f-9f2d-4448-9eb8-d326a484cc15",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/b001376f-9f2d-4448-9eb8-d326a484cc15_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "0359084a-09a1-48df-8e4e-90487bca44c7",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/0359084a-09a1-48df-8e4e-90487bca44c7_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "A plump, jolly-but-pompous king: the same big round white head as the reference with a big curly white moustache, a royal red velvet cape with a white ermine fur collar with small black spots, a gold chain with a round gold medallion on his round belly. His head is bare and round: NO crown, no hat, nothing on top of his head. Waist-up close-up, front view, extreme shock: eyes huge and round, eyebrows raised high, jaw dropped wide open, both hands up beside his face, the top of his round head fully in frame with a margin. Flat 2D cartoon in exactly the same drawing style as the reference images: the same simple character design with a big round white head, small solid black oval eyes, simple curved black eyebrows, no nose, a small soft body, noodle arms with simple four-finger white hands and short legs with rounded white feet, thick smooth black outlines of even weight, flat colours with one very soft shade, a pink tongue only when the mouth is open. Clean vector-like linework, no texture, no text, no border. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2560
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261111_050847_fe046d42-6605-4a0a-a6ea-3d384bb7df6a.png",
+    "status": "completed"
+  }
+]

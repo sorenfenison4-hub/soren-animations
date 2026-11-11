@@ -1,0 +1,33 @@
+[
+  {
+    "created_at": "2026-11-11T05:07:42.604318Z",
+    "display_name": "GPT Image 2.5",
+    "id": "ec2c0109-0b21-41ab-b474-0024c80c4978",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261111_050742_ec2c0109-0b21-41ab-b474-0024c80c4978_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "background": "transparent",
+      "height": 3504,
+      "medias": [
+        {
+          "data": {
+            "id": "c9a83fdd-49c5-4933-9789-f5d4073b7f81",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/c9a83fdd-49c5-4933-9789-f5d4073b7f81_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "Full body, three-quarter view facing to the left, holding a long plain wooden broom upright in the hand on the right side of the image, the other hand cupped behind his ear on the left side of his head, eyes wide with surprise, mouth a small open o, whole body and broom in frame with a margin. Flat 2D cartoon in exactly the same drawing style as the reference images: the same simple white character with a big round head, a small soft body, noodle arms with simple four-finger hands and short legs with rounded feet, thick smooth black outlines of even weight, flat white fill with a very soft pale-grey shade on one side, small solid black oval eyes, simple curved black eyebrows, no nose, no hair, no clothes, a pink tongue only when the mouth is open. Clean vector-like linework, flat colours, no texture, no text, no border. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2336
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261111_050742_ec2c0109-0b21-41ab-b474-0024c80c4978.png",
+    "status": "completed"
+  }
+]

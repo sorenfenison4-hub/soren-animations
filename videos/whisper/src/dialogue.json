@@ -330,6 +330,13 @@
 "e": 8.908
 },
 {
+"w": "we",
+"spk": "advisor",
+"line": "tonight",
+"s": 9.068,
+"e": 9.188
+},
+{
 "w": "swap",
 "spk": "advisor",
 "line": "tonight",
@@ -484,6 +491,13 @@
 "e": 16.032
 },
 {
+"w": "Your",
+"spk": "sweeper",
+"line": "majesty",
+"s": 16.251,
+"e": 16.371
+},
+{
 "w": "Majesty,",
 "spk": "sweeper",
 "line": "majesty",
@@ -629,6 +643,13 @@
 "line": "court",
 "s": 25.298,
 "e": 25.869
+},
+{
+"w": "You",
+"spk": "king",
+"line": "scrub",
+"s": 26.069,
+"e": 26.209
 },
 {
 "w": "like",

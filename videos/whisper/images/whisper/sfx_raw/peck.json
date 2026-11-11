@@ -1,0 +1,22 @@
+[
+  {
+    "created_at": "2026-11-11T05:13:43.209294Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "2f9cabb0-e7e8-4d8d-933a-31b955f0eb1b",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a woodpecker rapidly pecking on hollow wood, three quick bursts of knocks.",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261111_051343_2f9cabb0-e7e8-4d8d-933a-31b955f0eb1b.wav",
+    "status": "completed"
+  }
+]

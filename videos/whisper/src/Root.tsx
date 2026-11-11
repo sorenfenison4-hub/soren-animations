@@ -1,3 +1,10 @@
 import React from 'react';
-// compositions are added with the scene (src/Whisper.tsx) - work in progress
-export const RemotionRoot: React.FC = () => <></>;
+import {Composition} from 'remotion';
+import {FPS} from './lib/kit';
+import {WhisperVideo, WhisperWide, DURATION} from './Whisper';
+export const RemotionRoot: React.FC = () => (
+  <>
+    <Composition id="Whisper" component={WhisperVideo} durationInFrames={Math.round(DURATION * FPS)} fps={FPS} width={1080} height={1920} />
+    <Composition id="WhisperWide" component={WhisperWide} durationInFrames={Math.round(DURATION * FPS)} fps={FPS} width={1920} height={1080} />
+  </>
+);

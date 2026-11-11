@@ -1,0 +1,22 @@
+[
+  {
+    "created_at": "2026-11-11T05:14:00.116582Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "757084bf-6ff8-4aac-b3db-482c15d3b05c",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a soft airy whoosh that zips past quickly, like a whisper flying along a long curved stone wall, about one second.",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261111_051400_757084bf-6ff8-4aac-b3db-482c15d3b05c.wav",
+    "status": "completed"
+  }
+]

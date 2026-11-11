@@ -61,8 +61,8 @@ for i, (lid, spk, a, b, gap) in enumerate(CHUNKS):
     k = TEMPO[spk]; seg = tempo(seg, k)
     start = VOICE_AT + t
     for w in words[spk]:
-        if a0 <= w['start'] < b0:
-            wout.append({'w': w['text'], 'spk': spk, 'line': lid, 's': round(start + (w['start'] - a0) / k, 3),
+        if a0 - 0.14 <= w['start'] < b0 and not any(x['spk'] == spk and x['w'] == w['text'] and abs(x['src'] - w['start']) < 1e-6 for x in wout):
+            wout.append({'w': w['text'], 'spk': spk, 'line': lid, 'src': w['start'], 's': round(start + max(0, w['start'] - a0) / k, 3),
                          'e': round(start + (min(w['end'], b0) - a0) / k, 3)})
     L = lines.setdefault(lid, {'id': lid, 'spk': spk, 's': round(start + PAD0 / k, 3)})
     L['e'] = round(start + (b - a0) / k, 3)
@@ -73,6 +73,7 @@ peak = np.abs(mix).max(); mix = mix / peak * 10 ** (-3 / 20)   # peak at -3 dBFS
 tmp = 'work/dialogue.f32'; mix.astype(np.float32).tofile(tmp)
 subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'f32le', '-ar', str(SR), '-ac', '1', '-i', tmp, '-c:a', 'libmp3lame', '-b:a', '192k',
                 'public/whisper/vo/dialogue.mp3'], check=True)
+for x in wout: x.pop('src', None)
 json.dump({'voiceAt': VOICE_AT, 'end': round(VOICE_AT + t, 3), 'lines': list(lines.values()), 'words': wout}, open('src/dialogue.json', 'w'), indent=0)
 print(f'dialogue {t:.2f} s (video end of last word {VOICE_AT + t:.2f} s), {len(wout)} words')
 for L in lines.values(): print(f"  {L['id']:9s} {L['spk']:8s} {L['s']:6.2f} -> {L['e']:6.2f}")

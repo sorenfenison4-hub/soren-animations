@@ -36,3 +36,4 @@
 - [x] Is today my lucky day? (yes / no wheel format) - made: wheel/renders/wheel-1080x1920.mp4
 - [x] Why is he building a tower to the Moon? (story format, night) - made: tower/renders/tower-1080x1920.mp4
 - [x] Why should you never whisper in a round room? (story format with characters, voices, captions) - made: whisper/renders/whisper-1080x1920.mp4
+- [x] Why does his bridge get longer every year? (story format, Iceland plates) - made: bridge/renders/bridge-1080x1920.mp4

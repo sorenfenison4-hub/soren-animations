@@ -27,7 +27,7 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   scrub; measured in `src/lib/cast.json`; head-anchored, same head size as the guy; no crown in the king pictures so code
   can draw a gold or wooden one), two more guy poses `sweep` / `listen` (with a broom), `Captions` (kit.tsx) and
   `scripts/assemble.py` (cuts every line of several ElevenLabs takes and lays them back to back into one dialogue track +
-  `src/dialogue.json` with word times in video time; edit its CHUNKS table per video). New sounds: gulp, squeak, peck,
+  `src/dialogue.json` with word times in video time, loudness-matched to -21.5 LUFS; edit its CHUNKS table per video). New sounds: gulp, squeak, peck,
   rewind, whisper_whoosh, crowd_laugh. Music beds: Higgsfield `elevenlabs_music_v2_5 --duration N --force_instrumental true`
   (~14 credits for 72 s); sound effects `seed_audio` (max 2 at once on the starter plan).
 - Night scenes and story Shorts: `videos/tower/src/Tower.tsx` - navy marker sky with star layers, moonlight / window glows,
@@ -40,7 +40,7 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   `SoundLayer` cues take optional `keys` ([time, dB] fades) and `from`/`to` (play part of a file).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),
   `python3 scripts/sheet.py sheet.png 5 324 <same times>` (contact sheet), `node scripts/render.mjs <CompId> renders/x.mp4`
-  (CPU render, crf 16), `python3 scripts/popscan.py renders/x.mp4` (pop scan), `python3 scripts/pauses.py vo.mp3` (pauses).
+  (CPU render, crf 16; `[scale] [from-to]` renders a frame range to patch in; an `.aac` out renders only the sound), `python3 scripts/popscan.py renders/x.mp4` (pop scan), `python3 scripts/pauses.py vo.mp3` (pauses).
   They use the pre-installed headless Chromium in /opt/pw-browsers with `gl: angle` (about 3x faster than swangle for the
   paper / boil filters on a CPU-only machine: ~3.4 s per 1080x1920 frame per worker; `GL=swangle` to compare).
 - `images/` - the original 4K pictures, prompts are in the skill.

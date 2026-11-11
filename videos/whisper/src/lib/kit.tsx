@@ -30,14 +30,15 @@ export const rnd = (seed: number) => { const x = Math.sin(seed * 127.1 + 311.7) 
 
 // ---------- 2.5D multiplane camera ----------
 export type Cam = {x: number; y: number; z: number};
-export type Key = {t: number; x: number; y: number; k: number; e?: 'io' | 'out'};
-/** Camera keys give the screen scale k of the Z=1000 layer; zoom is interpolated in log space. Repeat a key to hold. */
+export type Key = {t: number; x: number; y: number; k: number; e?: 'io' | 'out' | 'lin'};
+/** Camera keys give the screen scale k of the Z=1000 layer; zoom is interpolated in log space. Repeat a key to hold. e = ease into this key
+ *  (default in-out; 'lin' for a follow camera built from a key every frame - never sparse eased keys, they stop and go). */
 export const camAt = (keys: Key[], t: number): Cam => {
   let res = {x: keys[0].x, y: keys[0].y, k: keys[0].k};
   for (let i = 0; i < keys.length - 1; i++) {
     const a = keys[i], b = keys[i + 1];
     if (t >= a.t && t <= b.t) {
-      const u0 = seg(t, a.t, b.t); const u = b.e === 'out' ? eout(u0) : eio(u0);
+      const u0 = seg(t, a.t, b.t); const u = b.e === 'out' ? eout(u0) : b.e === 'lin' ? u0 : eio(u0);
       res = {x: lerp(a.x, b.x, u), y: lerp(a.y, b.y, u), k: Math.exp(lerp(Math.log(a.k), Math.log(b.k), u))};
       break;
     }

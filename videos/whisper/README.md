@@ -18,3 +18,6 @@ room." / "I heard that." - and it loops to the opening whisper.
     npm install
     node scripts/check-loop.mjs Whisper
     node scripts/render.mjs Whisper renders/whisper-1080x1920.mp4
+
+The committed render had frames 580-950 re-rendered and spliced in (follow camera fixed: a key every frame) and its
+sound re-rendered alone (dialogue loudness-matched); a full render of the current source gives the same video.

@@ -411,9 +411,10 @@ export const WhisperScene: React.FC<{t: number}> = ({t}) => {
   const wS = advMouth(), p7 = (tt: number) => eio(seg(tt, T.tonight + 0.2, T.heard1 + 0.05));
   const head7 = (tt: number) => whisperHead(wS.x, wS.y, GUY_EAR.x, GUY_EAR.y, p7(tt));
   hold(T.s6, T.fake - 0.3, -1040, -350, 1.3);
-  for (let tt = T.fake - 0.3; tt < T.heard1 + 0.4; tt += 0.25) {
-    const h = head7(tt), f = seg(tt, T.fake - 0.3, T.fake + 0.4);
-    K.push({t: tt, x: lerp(-1040, h[0], f), y: lerp(-350, h[1] + 120, f), k: lerp(1.3, 0.8, f)});
+  // a key every frame, linear in between (keys every 0.25 s with the default ease made the camera stop and go 4x a second)
+  for (let n = Math.ceil((T.fake - 0.3) * FPS); n / FPS < T.heard1 + 0.4; n++) {
+    const tt = n / FPS, h = head7(tt), f = eio(seg(tt, T.fake - 0.3, T.fake + 0.4));
+    K.push({t: tt, x: lerp(-1040, h[0], f), y: lerp(-350, h[1] + 120, f), k: lerp(1.3, 0.8, f), e: 'lin'});
   }
   mv(T.heard1 + 0.4, T.s8, head7(T.heard1 + 0.4)[0], head7(T.heard1 + 0.4)[1] + 120, 0.8, 1000, -330, 1.1);
   hold(T.s8, T.s9, 130, -330, 1.05);

@@ -343,4 +343,8 @@ the reference and a costume style block (same head, eyes, outline, white hands/f
 per character, then every pose with the hero as a second reference. Anchor cast cut-outs by the head (Char), not the
 feet: props (broom, bucket) shift the measured feet. Higgsfield login in a cloud session waits only a few minutes: give
 the URL and have the callback pasted right away (start a new login if it timed out); reference uploads need
-upload.higgsfield.ai allowed in the environment.
+upload.higgsfield.ai allowed in the environment. assemble.py matches loudness (-21.5 LUFS + limiter), not peak: the takes
+come out at different levels and a peak-normalized mix of them is ~3 dB quieter than the channel. A camera that follows
+something = a key every frame with `e: 'lin'` (sparse keys with the default ease stop and go 4x a second). After the
+pop scan, fix a stretch without a full re-render: `render.mjs <Comp> work/patch.mp4 1 <from>-<to>`, splice it in with an
+ffmpeg trim + concat re-encode (crf 16); a sound-only fix = `render.mjs <Comp> work/sound.aac` + remux (`-c:v copy`).

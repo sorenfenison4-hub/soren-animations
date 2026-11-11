@@ -2,12 +2,13 @@
 # cuts every spoken chunk (times = loud stretches found by pauses.py), speeds the narrator up a little, lays the chunks
 # back to back with short gaps, writes public/whisper/vo/dialogue.mp3 and src/dialogue.json (line + word times in
 # video time, for the T table and the captions). Run from the video folder: python3 scripts/assemble.py
-import json, subprocess, numpy as np, os, tempfile
+import json, re, subprocess, numpy as np, os, tempfile
 
 SR = 48000
 VOICE_AT = 0.1          # where the dialogue track starts in the video
 PAD0, PAD1 = 0.04, 0.07  # keep a little air before / after each loud stretch
 TEMPO = {'narrator': 1.12, 'advisor': 1.0, 'sweeper': 1.0, 'king': 1.0}
+TARGET_LUFS, LIMIT_DB = -21.5, -2.0  # loudness of a single ElevenLabs take (the effect / music cue levels assume it); limiter ceiling
 
 def load(name):
     raw = subprocess.run(['ffmpeg', '-v', 'error', '-i', f'public/whisper/vo/{name}.mp3', '-ac', '1', '-ar', str(SR), '-f', 'f32le', '-'],
@@ -69,11 +70,18 @@ for i, (lid, spk, a, b, gap) in enumerate(CHUNKS):
     out.append(seg); t += len(seg) / SR
     if gap > 0: out.append(np.zeros(int(gap * SR), np.float32)); t += gap
 mix = np.concatenate(out)
-peak = np.abs(mix).max(); mix = mix / peak * 10 ** (-3 / 20)   # peak at -3 dBFS
+# match loudness, not peak: normalizing the peak let one shouted line set the level and left the dialogue 3 dB quieter
+# than a single take; a limiter catches the few loud peaks instead
+F32 = ['-f', 'f32le', '-ar', str(SR), '-ac', '1']
+def lufs(args):
+    r = subprocess.run(['ffmpeg', '-nostats', *args, '-af', 'ebur128', '-f', 'null', '-'], capture_output=True, text=True).stderr
+    return float(re.findall(r'I:\s+(-?[\d.]+) LUFS', r)[-1])
 tmp = 'work/dialogue.f32'; mix.astype(np.float32).tofile(tmp)
-subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 'f32le', '-ar', str(SR), '-ac', '1', '-i', tmp, '-c:a', 'libmp3lame', '-b:a', '192k',
-                'public/whisper/vo/dialogue.mp3'], check=True)
+(mix * 10 ** ((TARGET_LUFS - lufs([*F32, '-i', tmp])) / 20)).astype(np.float32).tofile(tmp)
+subprocess.run(['ffmpeg', '-v', 'error', '-y', *F32, '-i', tmp, '-af', f'alimiter=limit={10 ** (LIMIT_DB / 20):.4f}:attack=5:release=60:level=0:latency=1',
+                '-c:a', 'libmp3lame', '-b:a', '192k', 'public/whisper/vo/dialogue.mp3'], check=True)
 for x in wout: x.pop('src', None)
 json.dump({'voiceAt': VOICE_AT, 'end': round(VOICE_AT + t, 3), 'lines': list(lines.values()), 'words': wout}, open('src/dialogue.json', 'w'), indent=0)
-print(f'dialogue {t:.2f} s (video end of last word {VOICE_AT + t:.2f} s), {len(wout)} words')
+print(f'dialogue {t:.2f} s (video end of last word {VOICE_AT + t:.2f} s), {len(wout)} words, '
+      f'{lufs(["-i", "public/whisper/vo/dialogue.mp3"]):.1f} LUFS')
 for L in lines.values(): print(f"  {L['id']:9s} {L['spk']:8s} {L['s']:6.2f} -> {L['e']:6.2f}")

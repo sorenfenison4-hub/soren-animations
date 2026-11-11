@@ -34,3 +34,4 @@
 ## Extra videos (asked for directly, not from the list)
 
 - [x] Is today my lucky day? (yes / no wheel format) - made: wheel/renders/wheel-1080x1920.mp4
+- [x] Why is he building a tower to the Moon? (story format, night) - made: tower/renders/tower-1080x1920.mp4

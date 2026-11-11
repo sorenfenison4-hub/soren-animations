@@ -21,6 +21,11 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   confetti (party-popper burst), crack (stone crack: small crackles, the big snap 0.32 s into the file), hiss (2.6 s steam hiss).
 - Cracks that draw themselves and then fill (water, dissolved lime, new stone), a code-drawn block with a face and a
   laurel wreath, a hard hat, a mixing trough and the Pantheon: `videos/concrete/src/Concrete.tsx`.
+- Night scenes and story Shorts: `videos/tower/src/Tower.tsx` - navy marker sky with star layers, moonlight / window glows,
+  a house with a lit window, a tower of thin slabs, a Moon with a face and blush, self-drawing dimension arrows, a heart,
+  "HA HA" speech bubbles, a time-lapse with a year badge and clicker ticks.
+- Word times when the whisper model download is blocked (cloud sessions): the ElevenLabs connector's
+  `creative_transcribe_audio` (eleven_scribe_v1, 0 credits) on the voice's own flow node returns per-word times.
 - Yes / no wheel videos: copy `videos/wheel` - its `src/Wheel.tsx` has the prize wheel with a face, the flapper and tick
   model (ticks come from the wheel's own motion), a question card with a YES stamp, a YES sticker and paper confetti.
   `SoundLayer` cues take optional `keys` ([time, dB] fades) and `from`/`to` (play part of a file).

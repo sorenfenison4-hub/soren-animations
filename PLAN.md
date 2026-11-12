@@ -37,3 +37,4 @@
 - [x] Why is he building a tower to the Moon? (story format, night) - made: tower/renders/tower-1080x1920.mp4
 - [x] Why should you never whisper in a round room? (story format with characters, voices, captions) - made: whisper/renders/whisper-1080x1920.mp4
 - [x] Why does his bridge get longer every year? (story format, Iceland plates) - made: bridge/renders/bridge-1080x1920.mp4
+- [x] Why can't you sleep the first night in a hotel? (story format, night, shading pass, no AskBanner) - made: hotel/renders/hotel-1080x1920.mp4

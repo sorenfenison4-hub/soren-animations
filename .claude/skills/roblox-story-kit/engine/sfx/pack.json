@@ -1,0 +1,54 @@
+{
+  "whoosh": {
+    "gain": -2,
+    "lead": 0.15
+  },
+  "poof": {
+    "gain": -2
+  },
+  "sparkle": {
+    "gain": -4
+  },
+  "confetti": {
+    "gain": -2
+  },
+  "boom": {
+    "gain": 3
+  },
+  "rise": {
+    "gain": -4
+  },
+  "zombie": {
+    "gain": -3
+  },
+  "crickets": {
+    "gain": -2
+  },
+  "crowd": {
+    "gain": -4
+  },
+  "footsteps": {
+    "gain": -2
+  },
+  "sneeze": {
+    "gain": -3,
+    "lead": 0.39
+  },
+  "meow": {
+    "gain": -4,
+    "lead": 0.2
+  },
+  "jet": {
+    "gain": -2,
+    "lead": 0.25
+  },
+  "gasp": {
+    "gain": -3
+  },
+  "alarm": {
+    "gain": -4
+  },
+  "splat": {
+    "gain": -2
+  }
+}

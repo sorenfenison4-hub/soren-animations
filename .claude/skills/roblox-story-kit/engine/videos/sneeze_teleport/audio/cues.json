@@ -1,0 +1,444 @@
+[
+ {
+  "t": 0.228,
+  "name": "sneeze",
+  "vol": 1.0,
+  "shot": 1
+ },
+ {
+  "t": 0.773,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 1
+ },
+ {
+  "t": 0.959,
+  "name": "jet",
+  "vol": 1.0,
+  "shot": 2
+ },
+ {
+  "t": 1.81,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 3
+ },
+ {
+  "t": 3.326,
+  "name": "sneeze",
+  "vol": 0.8,
+  "shot": 4
+ },
+ {
+  "t": 3.953,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 5
+ },
+ {
+  "t": 4.632,
+  "name": "alarm",
+  "vol": 1.0,
+  "shot": 6
+ },
+ {
+  "t": 5.695,
+  "name": "jet",
+  "vol": 0.8,
+  "shot": 7
+ },
+ {
+  "t": 6.989,
+  "name": "sneeze",
+  "vol": 0.8,
+  "shot": 8
+ },
+ {
+  "t": 7.315,
+  "name": "whoosh",
+  "vol": 0.8,
+  "shot": 9
+ },
+ {
+  "t": 7.355,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 9
+ },
+ {
+  "t": 7.585,
+  "name": "poof",
+  "vol": 0.8,
+  "shot": 9
+ },
+ {
+  "t": 8.48,
+  "name": "door",
+  "vol": 0.6,
+  "shot": 10
+ },
+ {
+  "t": 10.969,
+  "name": "sneeze",
+  "vol": 0.8,
+  "shot": 12
+ },
+ {
+  "t": 11.746,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 12
+ },
+ {
+  "t": 12.051,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 13
+ },
+ {
+  "t": 12.151,
+  "name": "thud",
+  "vol": 0.7,
+  "shot": 13
+ },
+ {
+  "t": 12.936,
+  "name": "buzzer",
+  "vol": 0.6,
+  "shot": 14
+ },
+ {
+  "t": 16.49,
+  "name": "meow",
+  "vol": 1.0,
+  "shot": 17
+ },
+ {
+  "t": 17.814,
+  "name": "thud",
+  "vol": 0.6,
+  "shot": 18
+ },
+ {
+  "t": 17.964,
+  "name": "meow",
+  "vol": 1.0,
+  "shot": 18
+ },
+ {
+  "t": 20.194,
+  "name": "sneeze",
+  "vol": 1.0,
+  "shot": 20
+ },
+ {
+  "t": 20.63,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 21
+ },
+ {
+  "t": 21.087,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 22
+ },
+ {
+  "t": 21.387,
+  "name": "gasp",
+  "vol": 1.0,
+  "shot": 22
+ },
+ {
+  "t": 22.475,
+  "name": "crickets",
+  "vol": 0.7,
+  "dur": 1.4229999999999983,
+  "shot": 23
+ },
+ {
+  "t": 24.523,
+  "name": "splat",
+  "vol": 1.0,
+  "shot": 24
+ },
+ {
+  "t": 25.258,
+  "name": "sneeze",
+  "vol": 1.0,
+  "shot": 25
+ },
+ {
+  "t": 25.67,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 26
+ },
+ {
+  "t": 26.988,
+  "name": "gasp",
+  "vol": 1.0,
+  "shot": 27
+ },
+ {
+  "t": 28.176,
+  "name": "bonk",
+  "vol": 1.0,
+  "shot": 28
+ },
+ {
+  "t": 28.726,
+  "name": "bonk",
+  "vol": 0.7,
+  "shot": 28
+ },
+ {
+  "t": 29.439,
+  "name": "sneeze",
+  "vol": 1.0,
+  "shot": 29
+ },
+ {
+  "t": 29.876,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 30
+ },
+ {
+  "t": 32.287,
+  "name": "sneeze",
+  "vol": 1.0,
+  "shot": 32
+ },
+ {
+  "t": 32.751,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 33
+ },
+ {
+  "t": 34.107,
+  "name": "meow",
+  "vol": 1.0,
+  "shot": 34
+ },
+ {
+  "t": 36.099,
+  "name": "sneeze",
+  "vol": 1.0,
+  "shot": 35
+ },
+ {
+  "t": 36.567,
+  "name": "jet",
+  "vol": 1.0,
+  "shot": 36
+ },
+ {
+  "t": 37.572,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 37
+ },
+ {
+  "t": 38.333,
+  "name": "wind",
+  "vol": 0.7,
+  "dur": 1.1900000000000048,
+  "shot": 38
+ },
+ {
+  "t": 40.947,
+  "name": "meow",
+  "vol": 0.8,
+  "shot": 40
+ },
+ {
+  "t": 42.839,
+  "name": "sneeze",
+  "vol": 0.9,
+  "shot": 42
+ },
+ {
+  "t": 43.33,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 43
+ },
+ {
+  "t": 44.245,
+  "name": "alarm",
+  "vol": 0.8,
+  "shot": 44
+ },
+ {
+  "t": 45.759,
+  "name": "sneeze",
+  "vol": 0.8,
+  "shot": 45
+ },
+ {
+  "t": 46.321,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 46
+ },
+ {
+  "t": 48.093,
+  "name": "sneeze",
+  "vol": 0.5,
+  "shot": 47
+ },
+ {
+  "t": 48.343,
+  "name": "sneeze",
+  "vol": 0.5,
+  "shot": 47
+ },
+ {
+  "t": 48.593,
+  "name": "sneeze",
+  "vol": 0.5,
+  "shot": 47
+ },
+ {
+  "t": 48.822,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 48
+ },
+ {
+  "t": 49.183,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 48
+ },
+ {
+  "t": 49.471,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 48
+ },
+ {
+  "t": 49.886,
+  "name": "alarm",
+  "vol": 1.0,
+  "shot": 49
+ },
+ {
+  "t": 50.841,
+  "name": "jet",
+  "vol": 1.0,
+  "shot": 50
+ },
+ {
+  "t": 51.041,
+  "name": "wind",
+  "vol": 0.8,
+  "dur": 0.8109999999999999,
+  "shot": 50
+ },
+ {
+  "t": 52.03,
+  "name": "ding",
+  "vol": 1.0,
+  "shot": 51
+ },
+ {
+  "t": 53.761,
+  "name": "meow",
+  "vol": 0.8,
+  "shot": 52
+ },
+ {
+  "t": 56.752,
+  "name": "click",
+  "vol": 0.8,
+  "shot": 54
+ },
+ {
+  "t": 57.663,
+  "name": "meow",
+  "vol": 0.7,
+  "shot": 55
+ },
+ {
+  "t": 58.258,
+  "name": "rise",
+  "vol": 1.0,
+  "shot": 56
+ },
+ {
+  "t": 60.762,
+  "name": "sneeze",
+  "vol": 1.0,
+  "shot": 57
+ },
+ {
+  "t": 60.812,
+  "name": "boom",
+  "vol": 0.6,
+  "shot": 57
+ },
+ {
+  "t": 61.309,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 58
+ },
+ {
+  "t": 61.359,
+  "name": "teleport",
+  "vol": 0.8,
+  "shot": 58
+ },
+ {
+  "t": 63.027,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 59
+ },
+ {
+  "t": 63.277,
+  "name": "boom",
+  "vol": 0.8,
+  "shot": 59
+ },
+ {
+  "t": 64.34,
+  "name": "ding",
+  "vol": 1.0,
+  "shot": 60
+ },
+ {
+  "t": 64.943,
+  "name": "cheer",
+  "vol": 1.0,
+  "dur": 2.029000000000008,
+  "shot": 61
+ },
+ {
+  "t": 65.872,
+  "name": "footsteps",
+  "vol": 0.8,
+  "shot": 62
+ },
+ {
+  "t": 68.854,
+  "name": "sneeze",
+  "vol": 0.5,
+  "shot": 64
+ },
+ {
+  "t": 68.904,
+  "name": "meow",
+  "vol": 0.6,
+  "shot": 64
+ },
+ {
+  "t": 69.437,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 65
+ }
+]

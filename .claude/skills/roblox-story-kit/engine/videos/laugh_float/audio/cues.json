@@ -1,0 +1,501 @@
+[
+ {
+  "t": 0.0,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 1
+ },
+ {
+  "t": 0.1,
+  "name": "rise",
+  "vol": 1.0,
+  "shot": 1
+ },
+ {
+  "t": 1.242,
+  "name": "window",
+  "vol": 1.0,
+  "shot": 2
+ },
+ {
+  "t": 1.342,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 2
+ },
+ {
+  "t": 2.898,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 3
+ },
+ {
+  "t": 4.009,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 4
+ },
+ {
+  "t": 5.082,
+  "name": "wind",
+  "vol": 0.6,
+  "dur": 1.0,
+  "shot": 5
+ },
+ {
+  "t": 6.142,
+  "name": "sparkle",
+  "vol": 0.6,
+  "shot": 6
+ },
+ {
+  "t": 7.484,
+  "name": "rise",
+  "vol": 1.0,
+  "shot": 7
+ },
+ {
+  "t": 8.055,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 7
+ },
+ {
+  "t": 8.752,
+  "name": "kids_laugh",
+  "vol": 0.7,
+  "dur": 1.6,
+  "shot": 8
+ },
+ {
+  "t": 10.489,
+  "name": "ding",
+  "vol": 0.6,
+  "shot": 9
+ },
+ {
+  "t": 10.689,
+  "name": "whoosh",
+  "vol": 0.8,
+  "shot": 9
+ },
+ {
+  "t": 11.239,
+  "name": "bonk",
+  "vol": 0.8,
+  "shot": 9
+ },
+ {
+  "t": 13.042,
+  "name": "clink",
+  "vol": 0.8,
+  "shot": 11
+ },
+ {
+  "t": 13.642,
+  "name": "clink",
+  "vol": 0.6,
+  "shot": 11
+ },
+ {
+  "t": 13.889,
+  "name": "whoosh",
+  "vol": 0.8,
+  "shot": 12
+ },
+ {
+  "t": 15.038,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 13
+ },
+ {
+  "t": 15.138,
+  "name": "rise",
+  "vol": 0.7,
+  "shot": 13
+ },
+ {
+  "t": 16.073,
+  "name": "whoosh",
+  "vol": 0.6,
+  "shot": 14
+ },
+ {
+  "t": 17.654,
+  "name": "confetti",
+  "vol": 1.0,
+  "shot": 14
+ },
+ {
+  "t": 19.95,
+  "name": "paper",
+  "vol": 0.7,
+  "shot": 16
+ },
+ {
+  "t": 22.297,
+  "name": "rimshot",
+  "vol": 1.0,
+  "shot": 17
+ },
+ {
+  "t": 22.472,
+  "name": "crickets",
+  "vol": 1.0,
+  "dur": 0.9,
+  "shot": 18
+ },
+ {
+  "t": 24.035,
+  "name": "snort",
+  "vol": 1.0,
+  "shot": 20
+ },
+ {
+  "t": 24.963,
+  "name": "rise",
+  "vol": 1.0,
+  "shot": 21
+ },
+ {
+  "t": 27.959,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 24
+ },
+ {
+  "t": 29.7,
+  "name": "bonk",
+  "vol": 1.0,
+  "shot": 25
+ },
+ {
+  "t": 30.829,
+  "name": "boing",
+  "vol": 1.0,
+  "shot": 26
+ },
+ {
+  "t": 31.243,
+  "name": "kids_laugh",
+  "vol": 1.0,
+  "dur": 6.3100000000000005,
+  "shot": 27
+ },
+ {
+  "t": 34.377,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 29
+ },
+ {
+  "t": 34.838,
+  "name": "pop",
+  "vol": 0.8,
+  "shot": 29
+ },
+ {
+  "t": 35.76,
+  "name": "boing",
+  "vol": 1.0,
+  "shot": 30
+ },
+ {
+  "t": 37.718,
+  "name": "window",
+  "vol": 1.0,
+  "shot": 31
+ },
+ {
+  "t": 38.433,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 32
+ },
+ {
+  "t": 38.483,
+  "name": "wind",
+  "vol": 1.0,
+  "dur": 1.9200000000000017,
+  "shot": 32
+ },
+ {
+  "t": 41.482,
+  "name": "whoosh",
+  "vol": 0.7,
+  "shot": 34
+ },
+ {
+  "t": 42.141,
+  "name": "wind",
+  "vol": 0.8,
+  "dur": 1.1850000000000023,
+  "shot": 35
+ },
+ {
+  "t": 44.738,
+  "name": "whoosh",
+  "vol": 0.6,
+  "shot": 37
+ },
+ {
+  "t": 47.316,
+  "name": "pigeon",
+  "vol": 1.0,
+  "shot": 40
+ },
+ {
+  "t": 49.33,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 41
+ },
+ {
+  "t": 50.021,
+  "name": "poof",
+  "vol": 1.0,
+  "shot": 41
+ },
+ {
+  "t": 50.321,
+  "name": "crowd",
+  "vol": 0.8,
+  "dur": 1.6940000000000026,
+  "shot": 42
+ },
+ {
+  "t": 51.965,
+  "name": "kids_laugh",
+  "vol": 0.6,
+  "dur": 1.4679999999999964,
+  "shot": 43
+ },
+ {
+  "t": 53.433,
+  "name": "boom",
+  "vol": 0.5,
+  "shot": 44
+ },
+ {
+  "t": 54.111,
+  "name": "rise",
+  "vol": 1.0,
+  "shot": 45
+ },
+ {
+  "t": 54.211,
+  "name": "kids_laugh",
+  "vol": 0.7,
+  "dur": 1.4870000000000019,
+  "shot": 45
+ },
+ {
+  "t": 55.598,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 46
+ },
+ {
+  "t": 56.2,
+  "name": "boing",
+  "vol": 0.7,
+  "shot": 47
+ },
+ {
+  "t": 56.608,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 48
+ },
+ {
+  "t": 57.254,
+  "name": "wind",
+  "vol": 0.9,
+  "dur": 1.9570000000000007,
+  "shot": 49
+ },
+ {
+  "t": 59.211,
+  "name": "wind",
+  "vol": 0.5,
+  "dur": 1.7880000000000038,
+  "shot": 50
+ },
+ {
+  "t": 60.999,
+  "name": "stomp",
+  "vol": 1.0,
+  "shot": 51
+ },
+ {
+  "t": 64.906,
+  "name": "stomp",
+  "vol": 0.9,
+  "shot": 54
+ },
+ {
+  "t": 65.461,
+  "name": "stomp",
+  "vol": 0.9,
+  "shot": 54
+ },
+ {
+  "t": 66.017,
+  "name": "stomp",
+  "vol": 0.9,
+  "shot": 54
+ },
+ {
+  "t": 66.572,
+  "name": "stomp",
+  "vol": 0.9,
+  "shot": 54
+ },
+ {
+  "t": 67.041,
+  "name": "ding",
+  "vol": 1.0,
+  "shot": 55
+ },
+ {
+  "t": 68.037,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 56
+ },
+ {
+  "t": 69.676,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 57
+ },
+ {
+  "t": 70.711,
+  "name": "pop",
+  "vol": 1.0,
+  "shot": 58
+ },
+ {
+  "t": 71.426,
+  "name": "pop",
+  "vol": 0.8,
+  "shot": 59
+ },
+ {
+  "t": 71.826,
+  "name": "pop",
+  "vol": 0.8,
+  "shot": 59
+ },
+ {
+  "t": 72.226,
+  "name": "pop",
+  "vol": 0.8,
+  "shot": 59
+ },
+ {
+  "t": 72.781,
+  "name": "sparkle",
+  "vol": 1.0,
+  "shot": 60
+ },
+ {
+  "t": 75.529,
+  "name": "clink",
+  "vol": 0.7,
+  "shot": 62
+ },
+ {
+  "t": 76.188,
+  "name": "rope",
+  "vol": 1.0,
+  "shot": 62
+ },
+ {
+  "t": 76.574,
+  "name": "rope",
+  "vol": 1.0,
+  "shot": 63
+ },
+ {
+  "t": 76.624,
+  "name": "stomp",
+  "vol": 0.6,
+  "shot": 63
+ },
+ {
+  "t": 77.092,
+  "name": "whoosh",
+  "vol": 1.0,
+  "shot": 64
+ },
+ {
+  "t": 77.192,
+  "name": "wind",
+  "vol": 0.8,
+  "dur": 1.656000000000006,
+  "shot": 64
+ },
+ {
+  "t": 78.898,
+  "name": "thud",
+  "vol": 1.0,
+  "shot": 65
+ },
+ {
+  "t": 79.198,
+  "name": "thud",
+  "vol": 0.8,
+  "shot": 65
+ },
+ {
+  "t": 79.498,
+  "name": "poof",
+  "vol": 0.8,
+  "shot": 65
+ },
+ {
+  "t": 79.821,
+  "name": "cheer",
+  "vol": 1.0,
+  "dur": 2.048999999999998,
+  "shot": 66
+ },
+ {
+  "t": 80.021,
+  "name": "confetti",
+  "vol": 1.0,
+  "shot": 66
+ },
+ {
+  "t": 82.625,
+  "name": "sparkle",
+  "vol": 1.0,
+  "shot": 68
+ },
+ {
+  "t": 83.717,
+  "name": "rise",
+  "vol": 1.0,
+  "shot": 69
+ },
+ {
+  "t": 84.319,
+  "name": "pop",
+  "vol": 0.5,
+  "shot": 70
+ },
+ {
+  "t": 84.922,
+  "name": "rocket",
+  "vol": 1.0,
+  "shot": 71
+ },
+ {
+  "t": 86.188,
+  "name": "sparkle",
+  "vol": 1.0,
+  "shot": 72
+ }
+]

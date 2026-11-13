@@ -1,35 +1,37 @@
 # Next 30 videos (verify each fact before scripting; tick when published)
 
+From #7 on, the list is rewritten in the "what if" lane (your body / animals first) - see CLAUDE.md, Growth.
+
 - [x] 1. Why can't you tickle yourself? (body) - made: tickle/out/tickle-1080x1920.mp4
 - [x] 2. Why don't birds on power lines get shocked? (animals / physics) - made: birds/renders/birds-1080x1920.mp4
 - [x] 3. Why does a steel ship float? (engineering) - made: ship/renders/ship-1080x1920.mp4
 - [x] 4. Why is the Moon drifting away from Earth? (space) - made: moon/renders/moon-1080x1920.mp4
 - [x] 5. Why has Roman concrete lasted 2,000 years? (history / engineering) - made: concrete/renders/concrete-1080x1920.mp4
 - [x] 6. Why do zebras have stripes? (animals) - made as a story: zebra/renders/zebra-1080x1920.mp4 ("What if you painted a cow like a zebra?")
-- [ ] 7. Why do onions make you cry? (body / chemistry)
-- [ ] 8. Why can't you fold paper in half more than a few times? (science)
-- [ ] 9. Why can't you hear anything in space? (space)
-- [ ] 10. Why are most planes painted white? (engineering)
-- [ ] 11. Why don't giraffes faint when they lower their heads? (animals)
-- [ ] 12. What causes brain freeze? (body)
-- [ ] 13. Why do you see lightning before you hear thunder? (science)
-- [ ] 14. What really happens if you swallow gum? (body)
-- [ ] 15. What actually keeps a moving bike upright? (engineering)
-- [ ] 16. Why are there almost no green mammals? (animals)
-- [ ] 17. Why are there no stars in photos from space? (space)
-- [ ] 18. Why is the ocean salty? (science)
-- [ ] 19. Why do your ears pop on a plane? (body)
-- [ ] 20. Why does the Eiffel Tower get taller in summer? (engineering)
-- [ ] 21. Why can't penguins fly? (animals)
-- [ ] 22. Why does popcorn pop? (science)
-- [ ] 23. Why do we have leap years? (history / space)
-- [ ] 24. Why do your fingers wrinkle in water? (body - the reason is still debated)
-- [ ] 25. How do noise-cancelling headphones make silence? (engineering)
-- [ ] 26. Why don't spiders stick to their own webs? (animals)
-- [ ] 27. Why don't fish freeze when a lake freezes over? (science)
-- [ ] 28. Why do mosquitoes bite some people more? (body)
-- [ ] 29. Why do planes fly curved routes on a map? (engineering)
-- [ ] 30. Why is the sky blue but sunsets orange? (space / science)
+- [ ] 7. What if a tiger turned green? (animals - was #16 green mammals; deer see orange as green; mammals can't grow green fur) - NEXT
+- [ ] 8. What if you cut an onion underwater? (body / chemistry - was: why onions make you cry)
+- [ ] 9. What if you screamed in space? (space - was: why you can't hear anything in space)
+- [ ] 10. What if you had a giraffe's neck? (animals / body - was: why giraffes don't faint)
+- [ ] 11. What if you swallowed a piece of gum? (body)
+- [ ] 12. What if you ate a whole tub of ice cream in 10 seconds? (body - brain freeze)
+- [ ] 13. What if a penguin tried to fly? (animals - was: why penguins can't fly)
+- [ ] 14. What if your ears never popped on a plane? (body)
+- [ ] 15. What if lightning struck 1 km away? (science - light vs sound, count the seconds)
+- [ ] 16. What if a spider walked across its own web? (animals - was: why spiders don't stick)
+- [ ] 17. What if a lake froze from the bottom up? (animals / science - was: why fish don't freeze)
+- [ ] 18. What if your fingers never wrinkled in water? (body - the reason is still debated)
+- [ ] 19. What if all the salt in the ocean washed up on land? (science - was: why the ocean is salty)
+- [ ] 20. What if mosquitoes could only smell you? (body / animals - was: why mosquitoes bite some people more)
+- [ ] 21. What if you folded paper 42 times? (science)
+- [ ] 22. What if a plane was painted black? (engineering - was: why planes are white)
+- [ ] 23. What if your bike had no rider? (engineering - a moving bike balances itself)
+- [ ] 24. What if the Eiffel Tower grew every summer? (engineering - it does, a few cm)
+- [ ] 25. What if popcorn had no shell? (science)
+- [ ] 26. What if we skipped leap years? (history / space)
+- [ ] 27. What if Earth had no air? (space - the sky would be black; was: why the sky is blue)
+- [ ] 28. What if you took a photo of the stars from space? (space)
+- [ ] 29. What if a plane flew a straight line on the map? (engineering)
+- [ ] 30. What if sound could cancel itself? (engineering - noise-cancelling headphones)
 
 ## Extra videos (asked for directly, not from the list)
 

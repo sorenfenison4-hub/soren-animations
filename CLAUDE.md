@@ -20,13 +20,18 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
   would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
 - Hook (fewer swipe-aways - every video; from the study of top animated "what if" Shorts, see Growth below):
   (1) frame 0 is the impossible / surprising picture ALREADY happening, big (main subject or face about half the frame),
-  something moving by 0.3 s and a real sound on frame 0 - never a still or a wide establishing shot;
+  something moving by 0.3 s and a real sound on frame 0 (a whoosh / boing / hit, not a soft chirp) - never a still or a
+  wide establishing shot. Use the TALL frame: the subject upright and big. Never open on the guy lying down or small in a
+  wide landscape (the giraffe-neck opening did exactly that and lost 40 % to swipes). Show the PEAK picture of the video
+  at frame 0 (the long neck next to the giraffe, already wobbling), not the calm moment before it;
   (2) the voice's first word by 0.2 s (`python3 scripts/check-hook.py <vo.mp3> 0.1`, `--trim` cuts leading silence) and
   the FIRST LINE IS THE WHOLE PREMISE in one breath ("He painted his cow like a zebra... and the flies stopped biting.",
-  "If a hummingbird's heart was put in your chest, could you run forever?") - no setup, no "so", no introducing the guy;
+  "If a hummingbird's heart was put in your chest, could you run forever?") - no setup, no "so", no introducing the guy.
+  The consequence lands inside the first ~2 s: "Get a giraffe's neck, and you'd faint the second you stand up." beats
+  "What if you woke up with a giraffe's neck? ... and pass out." (payoff at 4.3 s);
   (3) `<HookTitle t={t} text="..." hi="..." />` from `kit.tsx` inside the scene function: 2-6 words, on screen at
   frame 0, gone by ~2 s, a CLAIM that sounds wrong ("STRIPES STOP FLIES", "HALF HIS BRAIN IS AWAKE") rather than a
-  question, adding to the voice instead of repeating it;
+  question, adding to the voice instead of repeating it - and the picture at frame 0 must already show what it claims;
   (4) about YOU / your body when possible; danger or a consequence by ~5 s; one hard number in the first half
   ("under a quarter", "4 cm a year", "for 5 seconds"); a reason to stay to the end (a twist that loops).
   `check-loop.mjs` also fails a still opening.
@@ -73,7 +78,16 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
   learns who to test them on.
 - When the user shares Studio numbers: many swipes -> fix frame 0 / first line; a drop in the middle of the retention
   graph -> cut that part; compare topics by median views and do more of the winner.
-- Never delete and re-upload a stalled Short. A retry needs a new first frame and first line.
+- Never delete and re-upload a stalled Short. A retry is a NEW upload with a new first frame and first line (the old one
+  stays up); reuse the scene code, so it costs only a new voice take.
+- Reading the two numbers together: high average % viewed (100 %+) with a high swipe rate (30 %+) = the video is good,
+  the first second is not -> fix only frame 0, the first line, the hook text and the frame-0 sound. Low % viewed with a
+  low swipe rate = the opening works, the middle drags -> cut where the retention graph drops.
+
+## Results log (add a line whenever the user shares Studio numbers)
+| Video | Views | Swiped away | Avg % viewed | Read |
+|---|---|---|---|---|
+| What if you woke up with a giraffe's neck? (videos/neck, 18.7 s) | 1.8K | 40 % | 113 % | Story + length + loop work (replays); opening loses people: frame 0 = guy lying small in a wide shot, payoff line at 4.3 s, quiet first sound. Fix = peak picture upright and big at frame 0, consequence in the first 2 s. |
 - Cadence goal: about one video a day (at least 4 a week) for 3-4 weeks; reuse scenes, props and sounds to make that
   affordable.
 

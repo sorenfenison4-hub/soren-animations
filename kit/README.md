@@ -9,8 +9,9 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - `HookTitle` (in kit.tsx) - big question / surprising-fact text on screen from frame 0 to ~1.8 s, for sound-off
   viewers (every video, see Template.tsx). `python3 scripts/check-hook.py <vo.mp3> 0.1` checks the first word is heard
   by 0.2 s (`--trim` cuts leading silence); `check-loop.mjs` also fails an opening that does not move by 0.5 s.
-- `AskBanner` (in kit.tsx) - "Comment what question you want answered next" sticker in the top band for the whole
-  video (every video, outside LoopOut, see Template.tsx).
+- `CommentAsk` (in kit.tsx) - comment question sticker near the end of every video ("What should he paint next?"). The old
+  always-on `AskBanner` is retired.
+- `scripts/tighten.py` - shortens pauses and speeds a voice take up 1.06x, remaps word times.
 - `CallToAction` + `ctaCues` (in kit.tsx) - the like / subscribe / comment doodle every video has once (see Template.tsx).
 - `LoopOut` (in kit.tsx) - every video ends by sliding back to its opening shot, so the last frame equals frame 0 and
   the Short loops seamlessly. `node scripts/check-loop.mjs <CompositionId>` checks it.

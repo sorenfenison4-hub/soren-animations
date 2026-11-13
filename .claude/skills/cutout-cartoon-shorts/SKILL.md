@@ -49,10 +49,11 @@ Read the whole file once before starting. Follow the order; each step says what 
    "but here's the part"), no hype words (incredible, shocking, amazing, insane) and no "!" lines: they make AI voices
    over-act.
 2. One visual beat per line, on the exact word: "throw" = the throw, "steam" = steam, "no THANKS" = the catch.
-3. Frame 0 states the premise (character + the thing + the setting, readable like a thumbnail). No intro, no rewind.
-   Hook (the first 2 s decide the swipe): an action is already under way by 0.3 s; the first line leads with the
-   surprise or the stakes ("The Moon is leaving us. About 4 cm a year."), not the topic; a HookTitle (section 12)
-   puts the question / surprising fact on screen for sound-off viewers.
+3. Frame 0 IS the premise: the impossible / surprising picture already happening (a half-striped cow with the brush
+   mid-stroke), big in frame, moving by 0.3 s, with a sound on frame 0. No intro, no wide establishing shot.
+   Hook (the first 2 s decide the swipe; full rules in section 14): the first line is the whole premise in one breath,
+   about YOU when possible; a HookTitle (section 12) puts a CLAIM that sounds wrong on screen for sound-off viewers;
+   danger or a consequence by ~5 s; one hard number; a twist ending that loops.
 4. Plan the shots: as few hard cuts as possible (one continuous camera move is best); a cut only for a new shot
    (e.g. the reaction close-up). End on an image that loops back to frame 0.
 5. Plan the fun: one gag per beat that a kid would laugh at (an object that comes alive and opens its eyes, an
@@ -293,7 +294,8 @@ SoundLayer), `src/Template.tsx` (an 8 s gag using every piece - copy it per vide
 poses, measured in `src/lib/library.json`), `public/library/sfx/` (whoosh, pop, ding, twang, strain, whir).
 
 Per video:
-1. Script 10-20 s (35-50 words). Shorter = cheaper voice and better Shorts retention.
+1. Script 15-25 s (40-60 words), stories included. Shorter = cheaper voice and better completion. If the take runs
+   long, `scripts/tighten.py` shortens pauses to 0.26 s and speeds up 1.06x, and remaps the word times.
 2. Voice: one eleven_v4 take with the same voice every day ("James - Natural", c1rY2UegY9FCAFayo2PO) for a recognisable
    channel. ~1 credit per character (a 45-word script = ~250 credits). Word times + T table as in section 2.
 3. Pictures, in this order of preference:
@@ -317,15 +319,14 @@ Per video:
    first 3 s, finished before the loop push; the voice-over never asks. The description ends with "Like and subscribe
    for more weird questions, and leave yours in the comments." before the channel line.
 
-8. Hook (every video): `<HookTitle t={t} text="THE MOON IS LEAVING?" hi="LEAVING" />` (kit.tsx) inside the scene
-   function: 2-6 words, fully on screen at frame 0 (no pop-in), pops out at 1.8 s (`out`), top band y 350, under the AskBanner (`y` moves
-   it). Something moves by 0.3 s and the voice starts by 0.2 s; `check-loop.mjs` also compares frame 0 with 0.5 s and
+8. Hook (every video): `<HookTitle t={t} text="STRIPES STOP FLIES" hi="STRIPES" />` (kit.tsx) inside the scene
+   function: 2-6 words, a claim rather than a question, fully on screen at frame 0 (no pop-in), pops out at 1.8 s
+   (`out`), top band y 350 (`y` moves it). Something moves by 0.3 s and the voice starts by 0.2 s; `check-loop.mjs` also compares frame 0 with 0.5 s and
    fails a still opening, `check-hook.py` checks the voice start.
 
-9. Ask banner (every video, whole video): `<AskBanner />` (kit.tsx) right after `</LoopOut>` and before `<Look />`: a
-   small yellow sticker "Comment what question you want answered next" fixed in the top band (y 165 tall / 46 wide).
-   Outside LoopOut it never moves or boils, so frame 0 still equals the last frame. Keep the CallToAction band at
-   y >= 250 and other text / faces clear of it. Not in thumbnails.
+9. Comment question (every video, near the end): `<CommentAsk t={t} at={...} until={...} text="What should he paint
+   next?" />` (kit.tsx) inside the scene function, top band y 270, from the last line until ~0.4 s before the loop
+   push: a question about THIS video people want to answer. (The old always-on `AskBanner` is retired.)
 
 Budget per video: Higgsfield 0-10 credits, ElevenLabs ~250-400 credits. Starter plan: max 4 Higgsfield jobs at once.
 
@@ -348,3 +349,32 @@ come out at different levels and a peak-normalized mix of them is ~3 dB quieter 
 something = a key every frame with `e: 'lin'` (sparse keys with the default ease stop and go 4x a second). After the
 pop scan, fix a stretch without a full re-render: `render.mjs <Comp> work/patch.mp4 1 <from>-<to>`, splice it in with an
 ffmpeg trim + concat re-encode (crf 16); a sound-only fix = `render.mjs <Comp> work/sound.aac` + remux (`-c:v copy`).
+
+---------------------------------------------------------------------------------------------------------------------
+## 14. Hooks and growth (what the top animated "what if" Shorts do)
+
+Studied the biggest animated science / "what if" Shorts (Nov 2026: 29 videos over 1M views + 25 breakouts from small
+channels; channels with ~40K subscribers got 3-178x their normal views, so the hook decides, not the channel size):
+- Title = an impossible picture you see before it plays, about YOU: "What If Your Hair Had Nerves", "What If Humans Had
+  Hummingbird Hearts", "What If Your Skeleton Disappeared For 5 Seconds". Textbook questions ("Why does a steel ship
+  float?") lose: people have heard them.
+- First line = the whole premise as one question in one breath, then a consequence right away. The 23.6M-view
+  hummingbird Short opens: "If a hummingbird's heart is removed then stuck into your chest and it was beating almost 20
+  times a second, could it ... give you super human endurance? Well, within moments your brain would start shutting
+  down..."
+- Danger words do the work (bad, dangerous, disappeared, don't want); concrete numbers and time limits ("for 5
+  seconds", "24 hours", "20 times a second") make the impossible feel testable.
+- Length 26-45 s for the big ones; for a small channel aim 15-25 s.
+
+"1K views jail" = the first test audience did not stay. YouTube shows a new Short to a small group and pushes it only if
+it beats similar Shorts on: chose to view vs swiped away (no official target; guides say 70 %+), how much is watched and
+replayed (over 100 % = loops), then shares / comments / likes; it also weighs viewer satisfaction and prefers a few good
+videos to many low-value ones. So: hook rules above, 15-25 s, a seamless loop, a comment question, one lane
+("what if" + your body / animals) for 10-15 videos, about one video a day, never delete + re-upload (a retry needs a new
+first frame and first line), and a searchable plain question as the description's first line. Read Studio per video:
+many swipes = fix frame 0 / first line; a mid-video drop in retention = cut that part.
+
+Models: videos/zebra (all of this in 26.7 s: frame-0 half-striped cow, "STRIPES STOP FLIES", danger at 4 s, "UNDER 1/4",
+twist + loop, CommentAsk), videos/hotel (night shading: screen-blended moonbeam with window bars, dust, warm light under a
+door, blurred wall shadows, gradient-shaded head with a rim light), videos/zebra again for day shading (low sun, form
+shading per body, cast shadows leaning away from the sun, parallax sky / hills).

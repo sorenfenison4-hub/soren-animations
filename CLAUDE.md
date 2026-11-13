@@ -18,18 +18,28 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
   top band by default (y 250), moved with `y` if something important is there. Not in thumbnails.
 - Reuse first: library poses, code-drawn props from `kit.tsx`, shared sounds. A new Higgsfield picture only when code
   would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
-- Hook (fewer swipe-aways - every video): (1) something already moves by 0.3 s (the guy mid-action, a thing falling),
-  never a still opening; (2) the voice's first word by 0.2 s (`python3 scripts/check-hook.py <vo.mp3> 0.1`, `--trim`
-  cuts leading silence); (3) `<HookTitle t={t} text="..." hi="..." />` from `kit.tsx` inside the scene function: big
-  2-6 word question / surprising fact, on screen at frame 0, gone by ~2 s, for sound-off viewers; (4) lead with the
-  surprise, not the topic ("The Moon is leaving us. About 4 cm a year." beats "Why is the Moon drifting away?").
+- Hook (fewer swipe-aways - every video; from the study of top animated "what if" Shorts, see Growth below):
+  (1) frame 0 is the impossible / surprising picture ALREADY happening, big (main subject or face about half the frame),
+  something moving by 0.3 s and a real sound on frame 0 - never a still or a wide establishing shot;
+  (2) the voice's first word by 0.2 s (`python3 scripts/check-hook.py <vo.mp3> 0.1`, `--trim` cuts leading silence) and
+  the FIRST LINE IS THE WHOLE PREMISE in one breath ("He painted his cow like a zebra... and the flies stopped biting.",
+  "If a hummingbird's heart was put in your chest, could you run forever?") - no setup, no "so", no introducing the guy;
+  (3) `<HookTitle t={t} text="..." hi="..." />` from `kit.tsx` inside the scene function: 2-6 words, on screen at
+  frame 0, gone by ~2 s, a CLAIM that sounds wrong ("STRIPES STOP FLIES", "HALF HIS BRAIN IS AWAKE") rather than a
+  question, adding to the voice instead of repeating it;
+  (4) about YOU / your body when possible; danger or a consequence by ~5 s; one hard number in the first half
+  ("under a quarter", "4 cm a year", "for 5 seconds"); a reason to stay to the end (a twist that loops).
   `check-loop.mjs` also fails a still opening.
-- Every video also shows `<AskBanner />` from `kit.tsx` for the WHOLE video: a small yellow sticker "Comment what
-  question you want answered next" in the top band (y 165, under the Shorts top bar). Put it after `LoopOut`, before
-  `<Look />`, as in `Template.tsx`: it never moves, so the loop stays seamless. Keep HookTitle / CallToAction / big
-  props clear of it (CTA band y >= 250). Not in thumbnails.
-- Script 10-20 s (35-50 words), plain spoken English ("so", "basically", "right?"), no hype words, no "!", no narrator
-  phrases. The first line names what frame 0 shows and leads with the surprising part. Every fact verified against reliable sources.
+- No AskBanner any more (the user asked to remove it). Instead every video ends with `<CommentAsk t={t} at={...}
+  until={...} text="..." />` from `kit.tsx` inside the scene function: a question about THIS video that people want to
+  answer ("What should he paint next?", "Same for you?"), top band y 270, from the last line until ~0.4 s before the
+  loop push. Not in thumbnails.
+- Script 15-25 s (40-60 words) - stories too: no more 30-70 s videos (completion drops; stalled Shorts usually lose
+  people in the middle). Story = premise line, 2-3 quick beats, the answer, a twist line that loops back to frame 0.
+  Plain spoken English, no hype words, no "!", no narrator phrases. Every fact verified against reliable sources; when a
+  number only appears in press write-ups and not in the study, leave it out.
+- Pacing: if the take runs long, `python3 scripts/tighten.py <take.mp3> <tight.mp3> <words.json>` shortens pauses to
+  0.26 s and speeds up 1.06x, and prints the remapped word times (zebra: 30.4 s -> 25.9 s).
 - Every video loops seamlessly: wrap the picture in `LoopOut` from `kit.tsx` (the final shot slides out and the
   opening shot slides back in, so the last frame is exactly frame 0) and add a whoosh cue on the push. Make the
   composition about 0.8 s longer than the voice so the push starts after the last word. Where it reads naturally,
@@ -39,8 +49,9 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 - Output: 1080x1920 60 fps MP4 only (no 4K - there is no GPU). Offer a 1920x1080 version when asked.
 - Do not include sources or links in replies or video descriptions; still verify facts behind the scenes.
 - Finish every video with a YouTube title + description, given in the final reply and saved to
-  `videos/<short-name>/renders/description.txt`. Title = the plain question (under 60 characters). Description = 2-3
-  short plain paragraphs that answer it with the same verified facts as the voice-over (one extra fact is fine), a
+  `videos/<short-name>/renders/description.txt`. Title = the "what if" / curiosity question
+  (under 60 characters, e.g. "What if you painted a cow like a zebra?"). Description: the FIRST LINE is the plain
+  question people search for ("Why do zebras have stripes?"), then 2-3 short plain paragraphs that answer it with the same verified facts as the voice-over (one extra fact is fine), a
   safety line when the topic is dangerous, then the line "Like and subscribe for more weird questions, and leave yours
   in the comments.", then "Weird questions. Quick answers." and 3-4 hashtags starting with #shorts. Same voice rules as the script: no hype words, no "!", no sources or links.
 - Finish every video with thumbnails too: a 1080x1920 Shorts cover and a 1280x720 version, made in `src/Thumbs.tsx`
@@ -50,6 +61,21 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
   that add to the title instead of repeating it; the main subject big in the middle; the guy in it; nothing crossing a
   face. On the cover keep text and faces in the top three quarters (the Shorts shelf covers the bottom).
 - Don't stop to ask questions; choose sensible defaults and report choices and credits at the end.
+
+## Growth (getting out of "1K views jail")
+- It is not a penalty: every Short is first shown to a small test audience and only pushed further if it beats similar
+  Shorts. Stalling at a few hundred to ~2K views = the test was lost. Nothing to appeal, nothing to wait out.
+- What the test reads: "Viewed vs. swiped away" in Studio (the hook; YouTube publishes no target, creator guides say
+  aim for 70 %+, stuck channels sit at 50-60 %), average % viewed (over 100 % = replays from the loop), then shares,
+  comments, likes. YouTube says it also weighs viewer satisfaction, and that a few good videos beat many low-value ones.
+- Lane: "what if" + your body / animals (what breaks out in this niche: impossible picture in the title, about YOU,
+  danger, a number, 25-45 s at most). Keep the guy and the notebook style; stay in the lane for 10-15 videos so YouTube
+  learns who to test them on.
+- When the user shares Studio numbers: many swipes -> fix frame 0 / first line; a drop in the middle of the retention
+  graph -> cut that part; compare topics by median views and do more of the winner.
+- Never delete and re-upload a stalled Short. A retry needs a new first frame and first line.
+- Cadence goal: about one video a day (at least 4 a week) for 3-4 weeks; reuse scenes, props and sounds to make that
+  affordable.
 
 ## Saving Claude usage
 - One video per session. Keep replies short. One contact sheet + one pop scan per video unless something looks off.
@@ -62,7 +88,8 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 - ElevenLabs: use the connector (the saved API key is rejected).
 
 ## Progress
-- `PLAN.md` lists the next videos: take the next unchecked one, then tick it and commit.
+- `PLAN.md` lists the next videos (rewritten as "what if" ideas): take the next unchecked one, verify its facts, then
+  tick it and commit.
 - Finished files go in `videos/<short-name>/renders/` and are committed.
 - When the video is finished, merge your branch into `main` and push `main` (new sessions start from `main`, so this
   is how the next session sees the ticked PLAN.md and any new kit pieces). Pull `main` first if another session

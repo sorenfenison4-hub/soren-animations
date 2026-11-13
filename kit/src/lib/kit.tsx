@@ -309,7 +309,7 @@ export const ctaCues = (at: number): Cue[] => [
   {f: 'pop.wav', at: at + CTA_CLICK[0], db: -24}, {f: 'ding.mp3', at: at + CTA_CLICK[1], db: -27}, {f: 'pop.wav', at: at + CTA_CLICK[2], db: -24},
 ];
 
-// ---------- "comment your question" banner (every video, whole video) ----------
+// ---------- "comment your question" banner (RETIRED: replaced by CommentAsk; kept for old videos) ----------
 /**
  * Small sticker in the top band that stays on screen for the WHOLE video, asking for the next question. Put it OUTSIDE
  * LoopOut (after it, before <Look />): it never moves or boils, so it is identical on frame 0 and the last frame and
@@ -332,6 +332,32 @@ export const AskBanner: React.FC<{text?: string; y?: number}> = ({text = 'Commen
     </div>
   );
 };
+
+// ---------- comment question near the end (every video) ----------
+/**
+ * Comment bait near the end (replaces the old always-on AskBanner): a yellow sticker in the top band with a question
+ * about THIS video that viewers want to answer ("What should he paint next?", "Same for you?") plus a small second line.
+ * Put it inside the scene function (so it boils and slides out with LoopOut), from the last line until ~0.4 s before the
+ * loop push. Default y = 270 tall / 110 wide. Not in thumbnails.
+ */
+export const CommentAsk: React.FC<{t: number; at: number; until: number; text: string; sub?: string; y?: number}> =
+  ({t, at, until, text, sub = 'Tell us in the comments', y}) => {
+    const fit = useFit();
+    const s = popIn(t, at, 0.35) * (1 - eio(seg(t, until - 0.25, until)));
+    if (s < 0.01) return null;
+    const wob = 1 + 0.02 * Math.sin((t - at) * 2 * Math.PI * 1.2);
+    return (
+      <div style={{position: 'absolute', left: fit.cx, top: y ?? (fit.wide ? 110 : 270), transform: `translate(-50%,-50%) rotate(-2deg) scale(${s * wob})`,
+        display: 'flex', alignItems: 'center', gap: 16, background: '#FFF3B0', border: `7px solid ${INK}`, borderRadius: 30, padding: '14px 30px 14px 20px',
+        boxShadow: `0 8px 0 ${INK}`, fontFamily: FONT, fontWeight: 900, fontSize: 44, color: INK, whiteSpace: 'nowrap', letterSpacing: -0.5}}>
+        <svg width={64} height={64} viewBox="0 0 64 64">
+          <path d={BUBBLE_D} fill="#fff" stroke={INK} strokeWidth={5} strokeLinejoin="round" />
+          <circle cx={20} cy={29} r={4} fill={INK} /><circle cx={32} cy={29} r={4} fill={INK} /><circle cx={44} cy={29} r={4} fill={INK} />
+        </svg>
+        <div style={{lineHeight: 1.05}}>{text}<div style={{fontSize: 32, fontWeight: 800}}>{sub}</div></div>
+      </div>
+    );
+  };
 
 // ---------- opening hook text (every video) ----------
 /** seconds the hook text stays before it pops out (default) */

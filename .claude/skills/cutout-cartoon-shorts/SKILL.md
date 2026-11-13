@@ -51,6 +51,8 @@ Read the whole file once before starting. Follow the order; each step says what 
 2. One visual beat per line, on the exact word: "throw" = the throw, "steam" = steam, "no THANKS" = the catch.
 3. Frame 0 IS the premise: the impossible / surprising picture already happening (a half-striped cow with the brush
    mid-stroke), big in frame, moving by 0.3 s, with a sound on frame 0. No intro, no wide establishing shot.
+   Use the tall frame: the subject upright and big, the PEAK picture of the video (not the calm moment before it); never
+   open lying down or small in a wide landscape (videos/neck: 40 % swiped away despite 113 % viewed).
    Hook (the first 2 s decide the swipe; full rules in section 14): the first line is the whole premise in one breath,
    about YOU when possible; a HookTitle (section 12) puts a CLAIM that sounds wrong on screen for sound-off viewers;
    danger or a consequence by ~5 s; one hard number; a twist ending that loops.
@@ -378,3 +380,10 @@ Models: videos/zebra (all of this in 26.7 s: frame-0 half-striped cow, "STRIPES 
 twist + loop, CommentAsk), videos/hotel (night shading: screen-blended moonbeam with window bars, dust, warm light under a
 door, blurred wall shadows, gradient-shaded head with a rim light), videos/zebra again for day shading (low sun, form
 shading per body, cast shadows leaning away from the sun, parallax sky / hills).
+
+First real numbers (videos/neck, 18.7 s): 1.8K views, 113 % average viewed, 40 % swiped away. The content, length and
+loop work (people replay); the first second does not. Frame 0 showed the guy lying flat and small in a wide savanna,
+the first line took 2 s of setup before "pass out" at 4.3 s, and the first sound was a soft chirp. Rule from it: when %
+viewed is high but swipes are high, change only frame 0 (peak picture, upright, big, a hit / whoosh on frame 0), the
+first line (the consequence inside ~2 s) and the hook text (what frame 0 already shows). Retry = a new upload with the
+reused scene and a new voice take; never delete the original.

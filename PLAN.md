@@ -5,7 +5,7 @@
 - [x] 3. Why does a steel ship float? (engineering) - made: ship/renders/ship-1080x1920.mp4
 - [x] 4. Why is the Moon drifting away from Earth? (space) - made: moon/renders/moon-1080x1920.mp4
 - [x] 5. Why has Roman concrete lasted 2,000 years? (history / engineering) - made: concrete/renders/concrete-1080x1920.mp4
-- [ ] 6. Why do zebras have stripes? (animals)
+- [x] 6. Why do zebras have stripes? (animals) - made as a story: zebra/renders/zebra-1080x1920.mp4 ("What if you painted a cow like a zebra?")
 - [ ] 7. Why do onions make you cry? (body / chemistry)
 - [ ] 8. Why can't you fold paper in half more than a few times? (science)
 - [ ] 9. Why can't you hear anything in space? (space)

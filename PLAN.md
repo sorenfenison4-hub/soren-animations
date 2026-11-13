@@ -11,7 +11,7 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [ ] 7. What if a tiger turned green? (animals - was #16 green mammals; deer see orange as green; mammals can't grow green fur) - NEXT
 - [ ] 8. What if you cut an onion underwater? (body / chemistry - was: why onions make you cry)
 - [ ] 9. What if you screamed in space? (space - was: why you can't hear anything in space)
-- [ ] 10. What if you had a giraffe's neck? (animals / body - was: why giraffes don't faint)
+- [x] 10. What if you had a giraffe's neck? (animals / body - was: why giraffes don't faint) - made: neck/renders/neck-1080x1920.mp4
 - [ ] 11. What if you swallowed a piece of gum? (body)
 - [ ] 12. What if you ate a whole tub of ice cream in 10 seconds? (body - brain freeze)
 - [ ] 13. What if a penguin tried to fly? (animals - was: why penguins can't fly)

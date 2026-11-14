@@ -45,6 +45,7 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [x] What if you had a mantis shrimp's punch? (body + animal powers) - made: mantis/renders/mantis-1080x1920.mp4
 - [x] What if a whale swallowed you like Jonah? (Bible / animals / body - first Bible idea; next Bible ideas: walk on water, Goliath's height, 40 days without food) - made: whale/renders/whale-1080x1920.mp4
 - [x] What if you woke up with wings? (story format, no facts; spoken like ask turned into a gag: the like button becomes a bird) - made: wings/renders/wings-1080x1920.mp4
+- [x] What if you had an owl's eyes? (body + animal powers, zebra recipe applied) - made: owl/renders/owl-1080x1920.mp4
 
 ## Rejected ideas (the user said no - never pitch these again)
 

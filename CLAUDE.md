@@ -84,6 +84,15 @@ Niche: **your body + animal powers** (see Growth).
   graph -> cut that part; compare topics by median views and do more of the winner.
 - Never delete and re-upload a stalled Short. A retry is a NEW upload with a new first frame and first line (the old one
   stays up); reuse the scene code, so it costs only a new voice take.
+- WHY THE ZEBRA SHORT WORKED (the user said it did really well; copy this recipe every time - first used in videos/owl):
+  (1) the guy DOES something on screen (paints the cow) instead of just standing there while the voice explains;
+  (2) an animal co-star with a face and changing moods (annoyed cow, smug zebra) that reacts to him;
+  (3) one comedy hit mid-video (the fly's no-brakes dive + BOING + dizzy stars + a short crowd laugh) to stop the drop;
+  (4) a POV / inside insert in a circle panel (FLY VISION) - a picture people have never seen;
+  (5) the number shown as a live versus counter (LANDINGS 4 vs 20), not just said;
+  (6) a sticker word every ~1.5 s (ITCH, DISEASE, NO BRAKES, BOING, UNDER 1/4...) so the screen keeps changing;
+  (7) a camera move or cut every 2-3 s; (8) a funny social ending that loops (every cow queues for a paint job);
+  (9) a comment question asking viewers to SUGGEST the next thing ("What should he paint next?").
 - Reading the two numbers together: high average % viewed (100 %+) with a high swipe rate (30 %+) = the video is good,
   the first second is not -> fix only frame 0, the first line, the hook text and the frame-0 sound. Low % viewed with a
   low swipe rate = the opening works, the middle drags -> cut where the retention graph drops.

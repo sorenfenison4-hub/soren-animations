@@ -24,7 +24,7 @@ export const T = {
   itll: 20.29, window: 21.07, morning: 21.54,                             // "...it'll be at your window in the morning."
 };
 // shots (hard cuts)
-const S2 = 3.8, S3 = 9.42, S4 = 11.82, S5 = 13.62, S6 = 20.12;
+const S2 = 3.8, S3 = 9.42, S4 = 11.82, S5 = 13.62, S5L = 17.95, S6 = 20.12;
 
 const GOLD = '#FFD43B';
 const FEATH = '#B07D4F', FEATH_D = '#8A5A33', COVERT = '#E9CFA6';
@@ -454,7 +454,7 @@ const WireScene: React.FC<{t: number}> = ({t}) => {
   const wob = t > T.sat ? 6 * Math.sin(t * 3.1) * (1 - 0.6 * seg(t, T.so, T.now)) : 0;
   const a = t < T.sat ? flap(t, 4, 30, 25) : lerp(20, -60, eout(seg(t, T.sat, T.sat + 0.4))) + (t > T.leader ? 18 * popIn(t, T.leader + 0.1, 0.3) * (1 - seg(t, T.leader + 0.9, T.leader + 1.2)) : 0);
   const guy: WG = {pose: g.pose, x: 0, y: gy, a, s: lerp(1, 0.35, seg(t, T.sat, T.sat + 0.4)), sx: g.sx * (1 + land), sy: g.sy * (1 - land), rot: wob};
-  const bow = eio(seg(t, T.leader - 0.05, T.leader + 0.2)) * (1 - eio(seg(t, T.leader + 0.55, T.leader + 0.8)));
+  const bow = eio(seg(t, T.leader - 0.05, T.leader + 0.2)) * (1 - eio(seg(t, T.leader + 0.38, T.leader + 0.58)));
   // like button (world coords under the wire): pops in on "tap", cursor taps on "like", thumb sprouts wings on "and",
   // flies up and becomes a blue bird on "bird", lands on his head on "too"
   const LX = 0, LY = 330;
@@ -523,8 +523,73 @@ const WireScene: React.FC<{t: number}> = ({t}) => {
   );
 };
 
+// ---------- shot 5b: close-up like gag - tap LIKE, the thumb grows wings, poofs into a blue bird that flies at YOU ----------
+const LikeScene: React.FC<{t: number}> = ({t}) => {
+  const CX = 540, CY = 860;
+  const liked = t >= T.like;
+  const stS = popIn(t, S5L, 0.3) * (1 + spring(t, T.like, 0.08, 3, 7)) * (1 - eio(seg(t, T.and2 + 0.1, T.and2 + 0.3)));
+  // the thumb: in the sticker, lifts out with wings on "and", hovers, poofs on "bird"
+  const lift = eout(seg(t, T.and2, T.and2 + 0.35));
+  const tx = lerp(CX - 150, CX, lift), ty = lerp(CY, CY - 120, lift) + 14 * Math.sin(t * 9) * lift;
+  const ts = lerp(2.0, 3.6, lift);
+  const wingS = popIn(t, T.and2, 0.3);
+  const thumbOn = t < T.bird;
+  // the bird: appears in the poof, flaps, turns to the camera on "too" and flies at the viewer
+  const at = (t - T.too) / (S6 - T.too);
+  const toward = t > T.too ? Math.pow(Math.max(0, at), 1.6) : 0;
+  const bs = popIn(t, T.bird, 0.3) * lerp(1, 5.5, toward);
+  const by = CY - 120 + 12 * Math.sin(t * 7) - 260 * toward;
+  const curK: [number, number, number][] = [[S5L, 980, 1500], [T.like - 0.06, CX - 120, CY + 40], [T.like + 0.12, CX - 120, CY + 40], [T.and2, 1000, 1450]];
+  let cur = {x: curK[0][1], y: curK[0][2]};
+  for (let k = 0; k < curK.length - 1; k++) if (t >= curK[k][0]) { const e = eio(seg(t, curK[k][0], curK[k + 1][0])); cur = {x: lerp(curK[k][1], curK[k + 1][1], e), y: lerp(curK[k][2], curK[k + 1][2], e)}; }
+  const press = Math.max(0, 1 - Math.abs(t - T.like) / 0.06);
+  const ring = seg(t, T.like, T.like + 0.4);
+  const puff = seg(t, T.bird - 0.06, T.bird + 0.4);
+  return (
+    <AbsoluteFill style={{overflow: 'hidden', background: '#D9EEF9'}}>
+      <svg width={1080} height={1920} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible', filter: 'drop-shadow(5px 12px 8px rgba(70,45,20,0.28))'}}>
+        <Cloud x={230} y={420 + 10 * Math.sin(t)} s={1.4} /><Cloud x={860} y={560 + 10 * Math.sin(t + 1)} s={1.1} /><Cloud x={760} y={1350} s={1.3} />
+        {/* the LIKE sticker */}
+        {stS > 0.01 ? <g transform={`translate(${CX} ${CY}) scale(${stS})`}>
+          <rect x={-300} y={-120} width={600} height={240} rx={64} fill="#fff" stroke={INK} strokeWidth={12} />
+          <text x={95} y={10} textAnchor="middle" dominantBaseline="middle" fontFamily={FONT} fontWeight={900} fontSize={128} fill={liked ? '#2F6FB5' : INK}>LIKE</text>
+        </g> : null}
+        {ring > 0 && ring < 1 ? <circle cx={CX - 150} cy={CY} r={40 + 170 * eout(ring)} fill="none" stroke={INK} strokeWidth={14 * (1 - ring)} /> : null}
+        {/* the thumb (with wings once it lifts off) */}
+        {thumbOn && stS + lift > 0.01 ? <g transform={`translate(${tx} ${ty}) scale(${ts * (t < T.and2 ? stS : 1)}) rotate(${-8 * Math.sin(t * 10) * lift})`}>
+          {[-1, 1].map((sd) => <g key={sd} transform={`translate(${sd * 20} -4) scale(${sd * wingS * 0.8} ${wingS * 0.8}) rotate(${-34 * Math.sin(2 * Math.PI * 7 * t)})`}>
+            <path d="M 0 -8 Q 40 -40 76 -18 Q 56 6 0 12 Z" fill={COVERT} stroke={INK} strokeWidth={4} strokeLinejoin="round" />
+            <path d="M 20 -6 Q 44 -20 62 -14" stroke={FEATH} strokeWidth={4} fill="none" strokeLinecap="round" /></g>)}
+          <g transform="translate(-33 -33)"><path d={THUMB_D} fill={liked ? '#3D8FD6' : '#fff'} stroke={INK} strokeWidth={4} strokeLinejoin="round" /></g>
+        </g> : null}
+        {/* the blue bird it turns into */}
+        {t >= T.bird ? (t < T.too
+          ? <g transform={`translate(${CX} ${by + 150}) scale(${3.4 * bs})`}><Bird x={0} y={0} dir={-1} col={BLUE} t={t} fly={1} look={-1} thumb /></g>
+          : <BirdFront x={CX} y={by} s={2.6 * bs} col={BLUE} t={t} />) : null}
+        {/* poof */}
+        {puff > 0 && puff < 1 ? Array.from({length: 9}, (_, i) => {
+          const an = (i / 9) * Math.PI * 2, r = 60 + 190 * eout(puff), rr = 70 * Math.sin(Math.PI * puff);
+          return <circle key={'pi' + i} cx={CX + Math.cos(an) * r} cy={CY - 120 + Math.sin(an) * r} r={rr + 9} fill={INK} />;
+        }) : null}
+        {puff > 0 && puff < 1 ? Array.from({length: 9}, (_, i) => {
+          const an = (i / 9) * Math.PI * 2, r = 60 + 190 * eout(puff), rr = 70 * Math.sin(Math.PI * puff);
+          return <circle key={'pf' + i} cx={CX + Math.cos(an) * r} cy={CY - 120 + Math.sin(an) * r} r={rr} fill="#fff" />;
+        }) : null}
+        {/* cursor */}
+        {t < T.and2 ? <g transform={`translate(${cur.x} ${cur.y}) scale(${4 * (1 - 0.16 * press)})`}><path d={CURSOR_D} fill="#fff" stroke={INK} strokeWidth={3} strokeLinejoin="round" /></g> : null}
+      </svg>
+      <div style={{position: 'absolute', left: 0, top: 0}}>
+        {[0, 1, 2, 3].map((i) => <svg key={i} width={1080} height={1920} style={{position: 'absolute', left: 0, top: 0, overflow: 'visible'}}>
+          <g transform={`translate(${CX + Math.cos(i * 1.57 + 0.6) * 300} ${CY - 120 + Math.sin(i * 1.57 + 0.6) * 260}) rotate(${i * 30}) scale(${2.2 * pulse(t, T.bird + i * 0.04, 0.45)})`}>
+            {pulse(t, T.bird + i * 0.04, 0.45) > 0.01 ? <path d="M 0 -30 Q 6 -6 30 0 Q 6 6 0 30 Q -6 6 -30 0 Q -6 -6 0 -30 Z" fill="#FFE066" stroke={INK} strokeWidth={5} strokeLinejoin="round" /> : null}
+          </g></svg>)}
+      </div>
+    </AbsoluteFill>
+  );
+};
+
 export const WingsScene: React.FC<{t: number; thumb?: boolean; dy?: number}> = ({t, thumb, dy}) => {
-  const shot = t < S2 ? <RoomScene t={t} thumb={thumb} dy={dy} /> : t < S3 ? <UpScene t={t} /> : t < S4 ? <VScene t={t} /> : t < S5 ? <LandScene t={t} /> : t < S6 ? <WireScene t={t} /> : <RoomScene t={t} />;
+  const shot = t < S2 ? <RoomScene t={t} thumb={thumb} dy={dy} /> : t < S3 ? <UpScene t={t} /> : t < S4 ? <VScene t={t} /> : t < S5 ? <LandScene t={t} /> : t < S5L ? <WireScene t={t} /> : t < S6 ? <LikeScene t={t} /> : <RoomScene t={t} />;
   return (
     <AbsoluteFill style={{overflow: 'hidden', background: '#FBF7EC'}}>
       {shot}
@@ -560,7 +625,7 @@ export const WingsVideo: React.FC = () => {
     // like -> bird
     {f: 'pop.wav', at: T.tap, db: -22}, {f: 'pop.wav', at: T.like, db: -14}, {f: 'ding.mp3', at: T.like + 0.03, db: -26},
     {f: 'whoosh.wav', at: T.and2 + 0.05, db: -26}, {f: 'confetti.wav', at: T.bird - 0.03, db: -24}, {f: 'pop.wav', at: T.bird + 0.28, db: -20},
-    {f: 'chirp.wav', at: T.too, db: -20},
+    {f: 'chirp.wav', at: T.too, db: -20}, {f: 'whoosh.wav', at: T.too + 0.05, db: -18}, {f: 'whoosh.wav', at: S5L - 0.1, db: -28, to: 0.5},
     // dawn: tapping, snoring, he shoots up
     {f: 'whoosh.wav', at: S6 - 0.05, db: -28, to: 0.5}, {f: 'snore.mp3', at: S6, db: -28},
     {f: 'peck.wav', at: T.itll, db: -22, to: 1.25}, {f: 'chirp.wav', at: T.window + 0.1, db: -24},

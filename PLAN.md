@@ -1,5 +1,7 @@
 # Next 30 videos (verify each fact before scripting; tick when published)
 
+Niche: your body + animal powers (CLAUDE.md, Growth) - do items that fit it first.
+
 From #7 on, the list is rewritten in the "what if" lane (your body / animals first) - see CLAUDE.md, Growth.
 
 - [x] 1. Why can't you tickle yourself? (body) - made: tickle/out/tickle-1080x1920.mp4

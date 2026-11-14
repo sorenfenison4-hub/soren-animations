@@ -1,6 +1,7 @@
 # Soren Animations - standing instructions
 
 Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical cartoon Shorts with the white round-head guy.
+Niche: **your body + animal powers** (see Growth).
 
 ## How every video is made
 - Use the `cutout-cartoon-shorts` skill (in `.claude/skills/`) and its section 12 daily workflow.
@@ -73,9 +74,12 @@ Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical carto
 - What the test reads: "Viewed vs. swiped away" in Studio (the hook; YouTube publishes no target, creator guides say
   aim for 70 %+, stuck channels sit at 50-60 %), average % viewed (over 100 % = replays from the loop), then shares,
   comments, likes. YouTube says it also weighs viewer satisfaction, and that a few good videos beat many low-value ones.
-- Lane: "what if" + your body / animals (what breaks out in this niche: impossible picture in the title, about YOU,
-  danger, a number, 25-45 s at most). Keep the guy and the notebook style; stay in the lane for 10-15 videos so YouTube
-  learns who to test them on.
+- NICHE (decided): "your body + animal powers" - what happens to YOUR body if it got an animal's ability or part
+  (a giraffe's neck, a hummingbird's heart, a mantis shrimp's punch, an owl's eyes) or was put in an extreme place
+  (Mars, the deep sea, -50 C). Every new idea must fit this; pick PLAN.md items that fit first and rewrite or skip the
+  rest. Title shape: "What if you had a <animal>'s <part>?" / "What happens to your body <extreme>?".
+  What breaks out in this niche: impossible picture in the title, about YOU, danger, a number, 25-45 s at most. Keep
+  the guy and the notebook style; stay in the niche for 10-15 videos so YouTube learns who to test them on.
 - When the user shares Studio numbers: many swipes -> fix frame 0 / first line; a drop in the middle of the retention
   graph -> cut that part; compare topics by median views and do more of the winner.
 - Never delete and re-upload a stalled Short. A retry is a NEW upload with a new first frame and first line (the old one

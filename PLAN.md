@@ -42,4 +42,5 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [x] Why should you never whisper in a round room? (story format with characters, voices, captions) - made: whisper/renders/whisper-1080x1920.mp4
 - [x] Why does his bridge get longer every year? (story format, Iceland plates) - made: bridge/renders/bridge-1080x1920.mp4
 - [x] Why can't you sleep the first night in a hotel? (story format, night, shading pass, no AskBanner) - made: hotel/renders/hotel-1080x1920.mp4
+- [x] What if you had a mantis shrimp's punch? (body + animal powers) - made: mantis/renders/mantis-1080x1920.mp4
 - [x] What if a whale swallowed you like Jonah? (Bible / animals / body - first Bible idea; next Bible ideas: walk on water, Goliath's height, 40 days without food) - made: whale/renders/whale-1080x1920.mp4

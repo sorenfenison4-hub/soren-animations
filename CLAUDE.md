@@ -126,6 +126,16 @@ Niche: **your body + animal powers** (see Growth).
   Frame 0: the guy's face must stay visible (no prop over it), and a wall / height must read at a glance.
 - Still true from the giraffe: frame 0 = ONE big impossible picture (subject about half the frame), the hook text visible
   in that picture, and the first line carries the DANGER, not a mild consequence. Avoid topics people already know.
+- RESEARCH (2026-11-16, retention + reach; YouTube publishes no thresholds, blog numbers disagree - treat as directional):
+  (1) keep one question OPEN until the last third (the first line raises it, the answer lands late; never give the
+  answer away in line 1 like the gecko did); open the next small question before closing the last one;
+  (2) the screen never holds the same picture more than ~3 s (we already cut every 2-3 s);
+  (3) YouTube's Shorts lead: no magic posting count, better videos beat more videos; deleting / re-uploading is not
+  a good strategy; a few hundred to a few thousand views then a stall is the normal test, and some Shorts pick up later;
+  (4) turn the comment ask into a series: build the next video from a top comment, pin that comment, and suggest the
+  user posts it as a reply-to-comment Short; set every new Short's "Related video" link to the owl (or the newest hit);
+  (5) screen the premise BEFORE animating: write 5-8 title + first-line pairs, keep the one that passes the owl test
+  (above), only then build the scene - premise decided the owl vs snake / gecko gap, not production.
 - vidIQ connector: the account had only 3 credits left on 2026-11-15 (analytics calls cost 5), so ask the user for
   Studio numbers instead.
 - Cadence goal: about one video a day (at least 4 a week) for 3-4 weeks; reuse scenes, props and sounds to make that

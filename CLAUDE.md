@@ -134,6 +134,10 @@ Niche: **your body + animal powers** (see Growth).
   a good strategy; a few hundred to a few thousand views then a stall is the normal test, and some Shorts pick up later;
   (4) turn the comment ask into a series: build the next video from a top comment, pin that comment, and suggest the
   user posts it as a reply-to-comment Short; set every new Short's "Related video" link to the owl (or the newest hit);
+  comment asks are an easy either/or ("Eagle eyes or chameleon eyes?"), not open questions (the open "Which animal's
+  eyes next?" got no answers); at the start of each session read the channel's comments once (vidIQ
+  vidiq_video_comments with the channel id UCv6BUckmVIc4zZ022f7f_jQ, 5 credits; 18 left on 2026-11-16, no refill
+  until 2026-12-06) - if credits are short, ask the user to paste the top comments;
   (5) screen the premise BEFORE animating: write 5-8 title + first-line pairs, keep the one that passes the owl test
   (above), only then build the scene - premise decided the owl vs snake / gecko gap, not production.
 - vidIQ connector: the account had only 3 credits left on 2026-11-15 (analytics calls cost 5), so ask the user for

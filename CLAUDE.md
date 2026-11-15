@@ -116,7 +116,14 @@ Niche: **your body + animal powers** (see Growth).
 | Video | Views | Swiped away | Avg % viewed | Read |
 |---|---|---|---|---|
 | What if you woke up with a giraffe's neck? (videos/neck, 18.7 s) | 1.8K | 40 % | 113 % | Story + length + loop work (replays); opening loses people: frame 0 = guy lying small in a wide shot, payoff line at 4.3 s, quiet first sound. Fix = peak picture upright and big at frame 0, consequence in the first 2 s. |
-| What if you had an owl's eyes? (videos/owl, 22.3 s) | did well (user, 2026-11-15, later the same day; an earlier note that day said it did not - the user's latest word wins; Studio numbers not shared yet) | ? | ? | The owl formula (Growth) worked: a body-part swap visible on the guy's face from frame 0, the animal doing the power with ease next to him while he fails at it, two X-rays (the animal's secret part + YOUR part breaking), two live counters (270 dial, NECK BONES 14 vs 7), a mid-video comedy hit made by the power itself (head whip -> dizzy), a dumb-but-funny solution that loops. Ask for swipe % + avg % viewed to confirm. |
+| What if you had an owl's eyes? (videos/owl, 22.3 s) | 15K (user, 2026-11-15) | ? | ? | The owl formula (Growth) worked: a body-part swap visible on the guy's face from frame 0, the animal doing the power with ease next to him while he fails at it, two X-rays (the animal's secret part + YOUR part breaking), two live counters (270 dial, NECK BONES 14 vs 7), a mid-video comedy hit made by the power itself (head whip -> dizzy), a dumb-but-funny solution that loops. Ask for swipe % + avg % viewed to confirm. |
+- OWL (15K) vs SNAKE + GECKO (~1K each), same formula and same production: the difference is the PREMISE, not the
+  animation. Pick ideas that pass all four: (1) the power is about a part every viewer is using right now and can test
+  while watching (eyes, neck, breath, heartbeat - they moved their eyes when told "you'd never move them again"); (2) the
+  first line takes something AWAY from you or gives a surprising cost, not a "no" to the fantasy and not an obvious
+  result; (3) the animal's own trick is a famous, visual, slightly unbelievable thing (an owl's head turned backwards)
+  shown at frame 0 on the co-star; (4) real danger to YOUR body and one simple number that is a picture (270 degrees).
+  Frame 0: the guy's face must stay visible (no prop over it), and a wall / height must read at a glance.
 - Still true from the giraffe: frame 0 = ONE big impossible picture (subject about half the frame), the hook text visible
   in that picture, and the first line carries the DANGER, not a mild consequence. Avoid topics people already know.
 - vidIQ connector: the account had only 3 credits left on 2026-11-15 (analytics calls cost 5), so ask the user for

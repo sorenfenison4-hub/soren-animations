@@ -93,6 +93,21 @@ Niche: **your body + animal powers** (see Growth).
   (6) a sticker word every ~1.5 s (ITCH, DISEASE, NO BRAKES, BOING, UNDER 1/4...) so the screen keeps changing;
   (7) a camera move or cut every 2-3 s; (8) a funny social ending that loops (every cow queues for a paint job);
   (9) a comment question asking viewers to SUGGEST the next thing ("What should he paint next?").
+- WHY THE OWL SHORT WORKED (the user said it did really well; the "animal power" version of the zebra recipe - use it
+  for every "What if you had a <animal>'s <part>?" video, first used in videos/snake):
+  (1) the power is ON HIM at frame 0 and readable at a glance (huge owl eyes on his round head), so the title is the
+  picture; his head is drawn in code over the library body (`GuyHead` in videos/owl/src/Owl.tsx) so the part can move;
+  (2) the animal co-star stands next to him and does the same thing with ease and a smug face (owl turns 270 while he
+  gets stuck at 90) - "it can, you can't" side by side is the whole story;
+  (3) two X-ray circle panels: first the animal's secret (tube eyes, padlocked), then YOUR body breaking (YOUR ARTERY
+  tearing, DANGER) - the danger shown, not just said;
+  (4) two live counters with ticks: a dial on the animal (0 -> 270 degrees) and a versus panel (NECK BONES 14 vs 7);
+  (5) a running little character (the fly) that drives what he does and comes back for the loop;
+  (6) the comedy hit comes from the power itself (his head whips after the fly -> dizzy stars + laugh, ~7 s);
+  (7) short lines, one fact each, 47 words, ~22 s; a sticker word every ~1.5 s (LOCKED, WHIP, 270, STUCK, DANGER, ROOM
+  TO SPARE, THE SLOW WAY); a camera cut every 2-3 s between his face and the animal;
+  (8) the ending is his dumb-but-funny workaround (turns his whole body the slow way) that runs straight into frame 0;
+  (9) the comment ask invites the next animal ("Which animal's eyes next?").
 - Reading the two numbers together: high average % viewed (100 %+) with a high swipe rate (30 %+) = the video is good,
   the first second is not -> fix only frame 0, the first line, the hook text and the frame-0 sound. Low % viewed with a
   low swipe rate = the opening works, the middle drags -> cut where the retention graph drops.
@@ -101,10 +116,9 @@ Niche: **your body + animal powers** (see Growth).
 | Video | Views | Swiped away | Avg % viewed | Read |
 |---|---|---|---|---|
 | What if you woke up with a giraffe's neck? (videos/neck, 18.7 s) | 1.8K | 40 % | 113 % | Story + length + loop work (replays); opening loses people: frame 0 = guy lying small in a wide shot, payoff line at 4.3 s, quiet first sound. Fix = peak picture upright and big at frame 0, consequence in the first 2 s. |
-| What if you had an owl's eyes? (videos/owl, 22.3 s) | did not do well (user, 2026-11-15; Studio numbers not shared yet) | ? | ? | Likely the first second, not the zebra recipe: frame 0 = two medium-size characters side by side, small owl eyes, nothing looks impossible; the owl's turned-away head reads as a brown blob; hook text "HIS EYES ARE STUCK" is not visible in the picture; first line has no danger ("you'd never move them again"), the real danger (torn artery) only at ~15 s; topic is a well-known textbook fact (owls turn 270). Planned retry (new upload, reuse scene code, new voice take): frame 0 = his head twisted backwards like an owl's with the X-ray artery already tearing; first line "Turn your head like an owl, and you'd tear the artery to your brain." Ask the user for swipe % + avg % viewed to confirm. |
-- Lesson from owl: the zebra recipe (Growth) does not save a weak first second. Frame 0 must still be ONE big impossible
-  picture (subject about half the frame), the hook text must be visible in that picture, and the first line must carry
-  the DANGER, not a mild consequence. Avoid topics people already know ("owls turn their heads 270").
+| What if you had an owl's eyes? (videos/owl, 22.3 s) | did well (user, 2026-11-15, later the same day; an earlier note that day said it did not - the user's latest word wins; Studio numbers not shared yet) | ? | ? | The owl formula (Growth) worked: a body-part swap visible on the guy's face from frame 0, the animal doing the power with ease next to him while he fails at it, two X-rays (the animal's secret part + YOUR part breaking), two live counters (270 dial, NECK BONES 14 vs 7), a mid-video comedy hit made by the power itself (head whip -> dizzy), a dumb-but-funny solution that loops. Ask for swipe % + avg % viewed to confirm. |
+- Still true from the giraffe: frame 0 = ONE big impossible picture (subject about half the frame), the hook text visible
+  in that picture, and the first line carries the DANGER, not a mild consequence. Avoid topics people already know.
 - vidIQ connector: the account had only 3 credits left on 2026-11-15 (analytics calls cost 5), so ask the user for
   Studio numbers instead.
 - Cadence goal: about one video a day (at least 4 a week) for 3-4 weeks; reuse scenes, props and sounds to make that

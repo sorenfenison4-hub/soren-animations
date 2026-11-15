@@ -48,6 +48,8 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [x] What if you had an owl's eyes? (body + animal powers, zebra recipe applied) - made: owl/renders/owl-1080x1920.mp4
 - [x] What if you had a fish's gills? (body + animal powers, story format like the zebra: "He got fish gills... and nearly drowned in the sea.") - made: gills/renders/gills-1080x1920.mp4
 
+- [ ] What if you could swallow like a snake? (body + animal powers, owl formula: watermelon, 26 cm gape, windpipe snorkel)
+
 ## Rejected ideas (the user said no - never pitch these again)
 
 - What if you had a hummingbird's heart? (rejected 2026-11-14)

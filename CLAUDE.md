@@ -101,6 +101,12 @@ Niche: **your body + animal powers** (see Growth).
 | Video | Views | Swiped away | Avg % viewed | Read |
 |---|---|---|---|---|
 | What if you woke up with a giraffe's neck? (videos/neck, 18.7 s) | 1.8K | 40 % | 113 % | Story + length + loop work (replays); opening loses people: frame 0 = guy lying small in a wide shot, payoff line at 4.3 s, quiet first sound. Fix = peak picture upright and big at frame 0, consequence in the first 2 s. |
+| What if you had an owl's eyes? (videos/owl, 22.3 s) | did not do well (user, 2026-11-15; Studio numbers not shared yet) | ? | ? | Likely the first second, not the zebra recipe: frame 0 = two medium-size characters side by side, small owl eyes, nothing looks impossible; the owl's turned-away head reads as a brown blob; hook text "HIS EYES ARE STUCK" is not visible in the picture; first line has no danger ("you'd never move them again"), the real danger (torn artery) only at ~15 s; topic is a well-known textbook fact (owls turn 270). Planned retry (new upload, reuse scene code, new voice take): frame 0 = his head twisted backwards like an owl's with the X-ray artery already tearing; first line "Turn your head like an owl, and you'd tear the artery to your brain." Ask the user for swipe % + avg % viewed to confirm. |
+- Lesson from owl: the zebra recipe (Growth) does not save a weak first second. Frame 0 must still be ONE big impossible
+  picture (subject about half the frame), the hook text must be visible in that picture, and the first line must carry
+  the DANGER, not a mild consequence. Avoid topics people already know ("owls turn their heads 270").
+- vidIQ connector: the account had only 3 credits left on 2026-11-15 (analytics calls cost 5), so ask the user for
+  Studio numbers instead.
 - Cadence goal: about one video a day (at least 4 a week) for 3-4 weeks; reuse scenes, props and sounds to make that
   affordable.
 

@@ -14,8 +14,8 @@ const Title: React.FC<{size: number; style: React.CSSProperties; lines: string[]
 const tb = 2.6;
 export const ThumbTall: React.FC = () => (
   <AbsoluteFill style={{overflow: 'hidden'}}>
-    <Boil t={0}><SnakeScene t={tb} thumb camK={{x: 70, y: -205, k: 3.0}} /></Boil>
-    <Title size={150} lines={['NO', 'SNORKEL']} style={{left: 0, right: 0, top: 170, textAlign: 'center'}} />
+    <Boil t={0}><SnakeScene t={tb} thumb camK={{x: 30, y: -215, k: 3.45}} /></Boil>
+    <Title size={170} lines={['NO', 'SNORKEL']} style={{left: 0, right: 0, top: 170, textAlign: 'center'}} />
   </AbsoluteFill>
 );
 export const ThumbWide: React.FC = () => (

@@ -132,8 +132,11 @@ Niche: **your body + animal powers** (see Growth).
   (2) the screen never holds the same picture more than ~3 s (we already cut every 2-3 s);
   (3) YouTube's Shorts lead: no magic posting count, better videos beat more videos; deleting / re-uploading is not
   a good strategy; a few hundred to a few thousand views then a stall is the normal test, and some Shorts pick up later;
-  (4) turn the comment ask into a series: build the next video from a top comment, pin that comment, and suggest the
-  user posts it as a reply-to-comment Short; set every new Short's "Related video" link to the owl (or the newest hit);
+  (4) turn the comment ask into a series: series videos open with a doodle COMMENT BUBBLE in the top band at frame 0
+  instead of HookTitle, holding the premise as if a viewer asked it ("what if you had a chameleon's eyes??") - it does
+  not have to be a real comment (the user's call), it shows viewers their comment could be next; use a made-up cartoon
+  handle or none, never a real person's name; never post comments from other accounts (YouTube counts that as fake
+  engagement); when a real suggestion fits, use it, pin it, and the user can post the video as a reply to it; set every new Short's "Related video" link to the owl (or the newest hit);
   comment asks are an easy either/or ("Eagle eyes or chameleon eyes?"), not open questions (the open "Which animal's
   eyes next?" got no answers); at the start of each session read the channel's comments once (vidIQ
   vidiq_video_comments with the channel id UCv6BUckmVIc4zZ022f7f_jQ, 5 credits; 18 left on 2026-11-16, no refill

@@ -390,6 +390,41 @@ export const HookTitle: React.FC<{t: number; text: string; hi?: string; out?: nu
   );
 };
 
+// ---------- series opener: "a viewer asked" comment bubble (use INSTEAD of HookTitle on series videos) ----------
+/** A doodle comment card at frame 0 holding the premise as if a viewer asked it. Same timing as HookTitle (on at
+ * frame 0, gone by `out`). It does not have to be a real comment: use a made-up cartoon handle (default) or
+ * handle="" for none - never a real person's name. `likes` = the small count next to the thumb. */
+export const CommentBubble: React.FC<{t: number; text: string; handle?: string; likes?: string; out?: number; y?: number; avatar?: string}> =
+  ({t, text, handle = '@curious_doodle', likes = '2.4K', out = HOOK_OUT, y, avatar = '#FFD43B'}) => {
+  const fit = useFit();
+  const s = 1 - backOut(seg(t, out - 0.05, out + 0.25)) * (t > out ? 1 : 0);
+  if (s < 0.02 || t > out + 0.25) return null;
+  const bob = 1 + 0.025 * Math.sin(t * 2 * Math.PI * 1.6);  // alive from frame 0, frame 0 itself unchanged
+  const k = fit.wide ? 0.7 : 1;
+  const av = 96 * k;
+  return (
+    <div style={{position: 'absolute', left: fit.cx, top: y ?? (fit.wide ? 140 : 360), transform: `translate(-50%,-50%) rotate(-2deg) scale(${Math.max(0, s) * bob})`,
+      background: '#fff', border: `9px solid ${INK}`, borderRadius: 40 * k, padding: `${22 * k}px ${34 * k}px ${26 * k}px`, boxShadow: `0 10px 0 ${INK}`,
+      display: 'flex', gap: 24 * k, alignItems: 'flex-start', fontFamily: FONT, color: INK, width: fit.wide ? 1000 : 900, boxSizing: 'border-box'}}>
+      {/* doodle avatar: a little round face */}
+      <svg width={av} height={av} viewBox="-50 -50 100 100" style={{flex: 'none'}}>
+        <circle r={44} fill={avatar} stroke={INK} strokeWidth={7} />
+        <circle cx={-14} cy={-6} r={6} fill={INK} /><circle cx={14} cy={-6} r={6} fill={INK} />
+        <path d="M -16 14 Q 0 28 16 14" stroke={INK} strokeWidth={6} fill="none" strokeLinecap="round" />
+      </svg>
+      <div style={{flex: 1, minWidth: 0}}>
+        {handle ? <div style={{fontWeight: 800, fontSize: 40 * k, color: '#6B6B6B', marginBottom: 6 * k}}>{handle}</div> : null}
+        <div style={{fontWeight: 900, fontSize: 66 * k, lineHeight: 1.08, letterSpacing: -1}}>{text}</div>
+        <div style={{display: 'flex', alignItems: 'center', gap: 14 * k, marginTop: 14 * k, fontWeight: 800, fontSize: 36 * k, color: '#6B6B6B'}}>
+          <svg width={44 * k} height={44 * k} viewBox="0 0 24 24"><path d="M2 10h4v11H2zM8 21h9.5a2 2 0 0 0 2-1.6l1.4-7A2 2 0 0 0 19 10h-5.5l.9-4.3a1.6 1.6 0 0 0-2.9-1.2L8 10z"
+            fill="#fff" stroke={INK} strokeWidth={2} strokeLinejoin="round" /></svg>
+          {likes}<span style={{marginLeft: 18 * k}}>Reply</span>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 // ---------- props drawn in code (flat fill + one soft shade + thick outline) ----------
 /** Rounded box: crates, phones, books, signs, cars... with an optional shade band on the right. */
 export const Box: React.FC<{x: number; y: number; w: number; h: number; fill: string; shade?: string; r?: number; rot?: number; children?: React.ReactNode}> =

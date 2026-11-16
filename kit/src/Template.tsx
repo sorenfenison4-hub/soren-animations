@@ -5,7 +5,7 @@
 import React from 'react';
 import {AbsoluteFill, useCurrentFrame} from 'remotion';
 import {FPS, Layer, camAt, Sky, Ground, Guy, swap, ContactShadow, Ball, ObjectFace, FACE0, Face, Puffs, Star, Badge,
-  SoundLayer, Cue, arcY, seg, popIn, spring, shake, hit, lerp, WideFit, LoopOut, LOOP_DUR, Look, CallToAction, ctaCues, HookTitle, CommentAsk} from './lib/kit';
+  SoundLayer, Cue, arcY, seg, popIn, spring, shake, hit, lerp, WideFit, LoopOut, LOOP_DUR, Look, CallToAction, ctaCues, HookTitle, CommentAsk, CommentBubble} from './lib/kit';
 
 // with a voice: DURATION = voice end + LOOP_DUR + ~0.3 s, so the loop push starts after the last word
 export const DURATION = 8;
@@ -66,6 +66,8 @@ export const TemplateScene: React.FC<{t: number}> = ({t}) => {
       </AbsoluteFill>
       {/* every video: big hook text, on screen at frame 0, gone by ~2 s (sound-off viewers read the question) */}
       <HookTitle t={t} text="WHAT IF A ROCK HAD EYES?" hi="EYES" />
+      {/* series videos (CLAUDE.md, Growth: RESEARCH 4) use the comment bubble INSTEAD of HookTitle:
+      <CommentBubble t={t} text="what if a rock had eyes??" /> */}
       {/* every video: like / subscribe / comment once, after the answer lands, gone before the loop push */}
       <CallToAction t={t} at={T.cta} y={430} />
       <CommentAsk t={t} at={6.6} until={7.4} text="What should the rock do next?" />

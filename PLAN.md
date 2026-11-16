@@ -61,6 +61,7 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [x] What if you had a gecko's feet? (body + animal powers, owl formula: 6.5 million toe hairs, 130 kg on paper, pads on 40 % of your body) - made: gecko/renders/gecko-1080x1920.mp4
 - [x] What if you had an eel's shock or an axolotl's healing? (the user's format: two people, two superhero animal powers, a life with no downsides, ends asking which one; 860 V battery-cell X-ray, leg regrow X-ray, high-five zap gag) - made: eelaxolotl/renders/eelaxolotl-1080x1920.mp4
 - [x] What if you had a woodpecker's head? (animal powers, owl formula + made-up comment bubble: one peck = K.O., 20 pecks a second, skull = stiff hammer not a shock absorber, CONCUSSION X-ray, tiny brain, pillow fix that loops) - made: woodpecker/renders/woodpecker-1080x1920.mp4
+- [x] What if you had a frog's eyes? (animal powers, owl formula point by point + made-up comment bubble: eyes sink into the mouth to push food down, tongue 0.07 s = 5x faster than a blink, GULPS PER BUG 2.3 vs 4, press your eyes -> heart slows X-ray, his own tongue -> BOING dizzy gag, smoothie straw fix that loops) - made: frog/renders/frog-1080x1920.mp4
 
 ## Rejected ideas (the user said no - never pitch these again)
 

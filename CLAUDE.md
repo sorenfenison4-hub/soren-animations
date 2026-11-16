@@ -1,7 +1,7 @@
 # Soren Animations - standing instructions
 
 Channel: **Soren Animations** - "Weird questions. Quick answers." Vertical cartoon Shorts with the white round-head guy.
-Niche: **your body + animal powers** (see Growth).
+Niche: **animal powers** - what if YOU had an animal's part or ability (the user, 2026-11-16; see Growth).
 
 ## How every video is made
 - Use the `cutout-cartoon-shorts` skill (in `.claude/skills/`) and its section 12 daily workflow.
@@ -41,6 +41,12 @@ Niche: **your body + animal powers** (see Growth).
   (4) about YOU / your body when possible; danger or a consequence by ~5 s; one hard number in the first half
   ("under a quarter", "4 cm a year", "for 5 seconds"); a reason to stay to the end (a twist that loops).
   `check-loop.mjs` also fails a still opening.
+- COMMENT BUBBLE RULE (the user, 2026-11-16): every video opens with the `CommentBubble` (series format) and it is always
+  an ANIMAL POWER request ("what if you had a woodpecker's head??"). At the start of each session, check the comments
+  for animal-power suggestions and use the best one (pin it; the user can reply with the video). If there is none,
+  make up the comment yourself with a fake cartoon username (`handle`, e.g. "@curious_doodle", never a real person's
+  name) and like count. The voice + `CommentAsk` at the end always get viewers to comment which animal power they want
+  next (an easy either/or of two animal powers: "Shark teeth or octopus arms? Comment below.").
 - No AskBanner any more (the user asked to remove it). Instead every video ends with `<CommentAsk t={t} at={...}
   until={...} text="..." />` from `kit.tsx` inside the scene function: a question about THIS video that people want to
   answer ("What should he paint next?", "Same for you?"), top band y 270, from the last line until ~0.4 s before the
@@ -79,10 +85,11 @@ Niche: **your body + animal powers** (see Growth).
 - What the test reads: "Viewed vs. swiped away" in Studio (the hook; YouTube publishes no target, creator guides say
   aim for 70 %+, stuck channels sit at 50-60 %), average % viewed (over 100 % = replays from the loop), then shares,
   comments, likes. YouTube says it also weighs viewer satisfaction, and that a few good videos beat many low-value ones.
-- NICHE (decided): "your body + animal powers" - what happens to YOUR body if it got an animal's ability or part
-  (a giraffe's neck, a hummingbird's heart, a mantis shrimp's punch, an owl's eyes) or was put in an extreme place
-  (Mars, the deep sea, -50 C). Every new idea must fit this; pick PLAN.md items that fit first and rewrite or skip the
-  rest. Title shape: "What if you had a <animal>'s <part>?" / "What happens to your body <extreme>?".
+- NICHE (decided, narrowed by the user 2026-11-16): ANIMAL POWERS only - what happens if YOU got an animal's part or
+  ability (an owl's eyes, a chameleon's eyes, a giraffe's neck, a mantis shrimp's punch, a dolphin's blowhole). No more
+  plain "your body + extreme place / habit" ideas (Mars, -50 C, no shower for a year) - every video needs an animal
+  power on the guy and the animal co-star beside him. Pick PLAN.md items that fit first; rewrite the rest as an animal
+  power or skip them. Title shape: "What if you had a <animal>'s <part>?".
   What breaks out in this niche: impossible picture in the title, about YOU, danger, a number, 25-45 s at most. Keep
   the guy and the notebook style; stay in the niche for 10-15 videos so YouTube learns who to test them on.
 - When the user shares Studio numbers: many swipes -> fix frame 0 / first line; a drop in the middle of the retention

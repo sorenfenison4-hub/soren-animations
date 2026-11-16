@@ -1,6 +1,7 @@
 # Next 30 videos (verify each fact before scripting; tick when published)
 
-Niche: your body + animal powers (CLAUDE.md, Growth) - do items that fit it first.
+Niche: ANIMAL POWERS only (the user, 2026-11-16; CLAUDE.md, Growth) - what if YOU had an animal's part or ability.
+Numbered items below that are not an animal power get rewritten as one or skipped.
 
 From #7 on, the list is rewritten in the "what if" lane (your body / animals first) - see CLAUDE.md, Growth.
 
@@ -11,7 +12,7 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [x] 5. Why has Roman concrete lasted 2,000 years? (history / engineering) - made: concrete/renders/concrete-1080x1920.mp4
 - [x] 6. Why do zebras have stripes? (animals) - made as a story: zebra/renders/zebra-1080x1920.mp4 ("What if you painted a cow like a zebra?")
 ## UP NEXT - comment series (CLAUDE.md, Growth: RESEARCH (4)); do these before the numbered list
-- [ ] A. What happens to your body if you don't shower for a year? - shown as a viewer request: a doodle comment
+- [-] A. SKIPPED (not an animal power - niche narrowed 2026-11-16; a viewer did ask for it, @Pokemations_12). What happens to your body if you don't shower for a year? - shown as a viewer request: a doodle comment
   bubble with the question at frame 0 (made-up cartoon handle or none; it does not need to be a real comment).
   Fits "your body + extreme".
 - [x] B. What if you had a chameleon's eyes? - made: chameleon/renders/chameleon-1080x1920.mp4 (comment bubble opener, coiled phone-cord nerve, 360 vs 200, DOUBLE VISION, voice ask "Eagle eyes or cat eyes?") - owl part 2 (each eye moves on its own; viewers will try it while
@@ -59,6 +60,7 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [x] What if you could swallow like a snake? (body + animal powers, owl formula: watermelon, 26 cm gape, windpipe snorkel) - made: snake/renders/snake-1080x1920.mp4
 - [x] What if you had a gecko's feet? (body + animal powers, owl formula: 6.5 million toe hairs, 130 kg on paper, pads on 40 % of your body) - made: gecko/renders/gecko-1080x1920.mp4
 - [x] What if you had an eel's shock or an axolotl's healing? (the user's format: two people, two superhero animal powers, a life with no downsides, ends asking which one; 860 V battery-cell X-ray, leg regrow X-ray, high-five zap gag) - made: eelaxolotl/renders/eelaxolotl-1080x1920.mp4
+- [x] What if you had a woodpecker's head? (animal powers, owl formula + made-up comment bubble: one peck = K.O., 20 pecks a second, skull = stiff hammer not a shock absorber, CONCUSSION X-ray, tiny brain, pillow fix that loops) - made: woodpecker/renders/woodpecker-1080x1920.mp4
 
 ## Rejected ideas (the user said no - never pitch these again)
 

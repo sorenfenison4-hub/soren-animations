@@ -12,7 +12,12 @@ Niche: **your body + animal powers** (see Growth).
   marker streaks); every `Layer` is cut paper (white edge + cast shadow, like stickers in the notebook); `Sky` is blank
   notebook paper; `<Look />` (paper grain + warm vignette) goes over the whole frame after `LoopOut`, as in
   `Template.tsx`. Wrap thumbnails in `<Boil t={0}>` so they match. No accessory on the guy.
-- Every video asks viewers to like, subscribe and comment - on screen only, the voice never asks: put
+- VOICE COMMENT ASK (the user asked, 2026-11-16; replaces "the voice never asks" for comments): the voice's LAST line
+  asks viewers to comment which animal power he should get next, short and plain, about 2 s, e.g. "Which animal power
+  should he get next? Tell me in the comments." (or with two picks: "Eagle eyes or chameleon eyes? Comment below.").
+  It comes after the twist line and before the loop push; `CommentAsk` shows the same question on screen while it is
+  said. Count it in the 40-60 words. Like / subscribe stay on screen only (the voice never asks for those).
+- Every video asks viewers to like, subscribe and comment - on screen (`CallToAction`), plus the voice comment ask above: put
   `<CallToAction t={t} at={T.cta} />` from `kit.tsx` inside the scene function and `...ctaCues(T.cta)` in the cues
   (three doodle stickers LIKE / SUBSCRIBE / COMMENT that a cursor taps, 2.6 s, quiet pops). Once per video, in a calm
   stretch right after the answer lands (about 55-80 % through), never in the first 3 s, finished before the loop push;
@@ -107,7 +112,7 @@ Niche: **your body + animal powers** (see Growth).
   (7) short lines, one fact each, 47 words, ~22 s; a sticker word every ~1.5 s (LOCKED, WHIP, 270, STUCK, DANGER, ROOM
   TO SPARE, THE SLOW WAY); a camera cut every 2-3 s between his face and the animal;
   (8) the ending is his dumb-but-funny workaround (turns his whole body the slow way) that runs straight into frame 0;
-  (9) the comment ask invites the next animal ("Which animal's eyes next?").
+  (9) the comment ask invites the next animal ("Which animal's eyes next?"). From 2026-11-16 the voice also says it (VOICE COMMENT ASK above).
 - Reading the two numbers together: high average % viewed (100 %+) with a high swipe rate (30 %+) = the video is good,
   the first second is not -> fix only frame 0, the first line, the hook text and the frame-0 sound. Low % viewed with a
   low swipe rate = the opening works, the middle drags -> cut where the retention graph drops.

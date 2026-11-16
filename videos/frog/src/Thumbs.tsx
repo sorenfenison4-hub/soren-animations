@@ -11,16 +11,16 @@ const Title: React.FC<{size: number; style: React.CSSProperties; lines: string[]
     {lines.map((l, i) => <div key={i}>{l}</div>)}
   </div>
 );
-const tb = 0.05;
+const tb = 1.5;   // eyes up and bulging, the fly in view
 export const ThumbTall: React.FC = () => (
   <AbsoluteFill style={{overflow: 'hidden'}}>
-    <Boil t={0}><FrogScene t={tb} thumb camK={{x: -20, y: -230, k: 2.75}} /></Boil>
+    <Boil t={0}><FrogScene t={tb} thumb camK={{x: -30, y: -250, k: 2.6}} /></Boil>
     <Title size={150} lines={['EYES', 'IN MOUTH']} style={{left: 0, right: 0, top: 200, textAlign: 'center'}} />
   </AbsoluteFill>
 );
 export const ThumbWide: React.FC = () => (
   <AbsoluteFill style={{overflow: 'hidden'}}>
-    <Boil t={0}><FrogScene t={tb} thumb camK={{x: -60, y: -250, k: 2.9}} /></Boil>
+    <Boil t={0}><FrogScene t={tb} thumb camK={{x: -20, y: -255, k: 3.3}} /></Boil>
     <Title size={96} lines={['EYES', 'IN MOUTH']} style={{left: 40, top: 40, textAlign: 'left'}} />
   </AbsoluteFill>
 );

@@ -14,7 +14,7 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [ ] A. What happens to your body if you don't shower for a year? - shown as a viewer request: a doodle comment
   bubble with the question at frame 0 (made-up cartoon handle or none; it does not need to be a real comment).
   Fits "your body + extreme".
-- [ ] B. What if you had a chameleon's eyes? - owl part 2 (each eye moves on its own; viewers will try it while
+- [x] B. What if you had a chameleon's eyes? - made: chameleon/renders/chameleon-1080x1920.mp4 (comment bubble opener, coiled phone-cord nerve, 360 vs 200, DOUBLE VISION, voice ask "Eagle eyes or cat eyes?") - owl part 2 (each eye moves on its own; viewers will try it while
   watching = owl test 1). Set its Related video to the owl. Comment ask as an easy either/or ("Eagle eyes or
   chameleon eyes?") - nobody answered the open "Which animal's eyes next?", a pick-one question is easier to answer.
 

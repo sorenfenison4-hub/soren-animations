@@ -12,12 +12,12 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   marker streaks); every `Layer` is cut paper (white edge + cast shadow, like stickers in the notebook); `Sky` is blank
   notebook paper; `<Look />` (paper grain + warm vignette) goes over the whole frame after `LoopOut`, as in
   `Template.tsx`. Wrap thumbnails in `<Boil t={0}>` so they match. No accessory on the guy.
-- VOICE COMMENT ASK (the user asked, 2026-11-16; replaces "the voice never asks" for comments): the voice's LAST line
-  asks viewers to comment which animal power he should get next, short and plain, about 2 s, e.g. "Which animal power
-  should he get next? Tell me in the comments." (or with two picks: "Eagle eyes or chameleon eyes? Comment below.").
-  It comes after the twist line and before the loop push; `CommentAsk` shows the same question on screen while it is
-  said. Count it in the 40-60 words. Like / subscribe stay on screen only (the voice never asks for those).
-- Every video asks viewers to like, subscribe and comment - on screen (`CallToAction`), plus the voice comment ask above: put
+- COMMENT ASK ON SCREEN ONLY (the user, 2026-11-17, view-jail study in `docs/view-jail-study.md`; replaces the
+  11-16 voice comment ask): the voice never asks for anything. Its LAST line is the story beat / twist that runs
+  straight back into frame 0 (owl: "So he turns the slow way."). A spoken "X or Y? Comment below." sounded like "the
+  end" right before the loop (swipe instead of replay) and brought ~0 comments. The comment question lives only in
+  `CommentAsk` on screen.
+- Every video asks viewers to like, subscribe and comment - on screen only (`CallToAction` + `CommentAsk`): put
   `<CallToAction t={t} at={T.cta} />` from `kit.tsx` inside the scene function and `...ctaCues(T.cta)` in the cues
   (three doodle stickers LIKE / SUBSCRIBE / COMMENT that a cursor taps, 2.6 s, quiet pops). Once per video, in a calm
   stretch right after the answer lands (about 55-80 % through), never in the first 3 s, finished before the loop push;
@@ -41,12 +41,12 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   (4) about YOU / your body when possible; danger or a consequence by ~5 s; one hard number in the first half
   ("under a quarter", "4 cm a year", "for 5 seconds"); a reason to stay to the end (a twist that loops).
   `check-loop.mjs` also fails a still opening.
-- COMMENT BUBBLE RULE (the user, 2026-11-16): every video opens with the `CommentBubble` (series format) and it is always
-  an ANIMAL POWER request ("what if you had a woodpecker's head??"). At the start of each session, check the comments
-  for animal-power suggestions and use the best one (pin it; the user can reply with the video). If there is none,
-  make up the comment yourself with a fake cartoon username (`handle`, e.g. "@curious_doodle", never a real person's
-  name) and like count. The voice + `CommentAsk` at the end always get viewers to comment which animal power they want
-  next (an easy either/or of two animal powers: "Shark teeth or octopus arms? Comment below.").
+- FRAME-0 TEXT = A CLAIM HookTitle (the user, 2026-11-17; the 11-16 `CommentBubble` opener is retired: it repeated
+  the title in lowercase instead of adding a claim, and the 11-16 videos all stalled at ~1.2K). The owl's "HIS EYES ARE
+  STUCK" is the model. `CommentBubble` stays in the kit, unused. Still read the channel's comments at the start of a
+  session; a good animal-power suggestion can be the topic (pin it, the user can reply with the video), but it is not
+  shown as a bubble. The on-screen `CommentAsk` at the end is an easy either/or of two animal powers ("Shark teeth or
+  octopus arms? Comment below.").
 - No AskBanner any more (the user asked to remove it). Instead every video ends with `<CommentAsk t={t} at={...}
   until={...} text="..." />` from `kit.tsx` inside the scene function: a question about THIS video that people want to
   answer ("What should he paint next?", "Same for you?"), top band y 270, from the last line until ~0.4 s before the
@@ -119,7 +119,7 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   (7) short lines, one fact each, 47 words, ~22 s; a sticker word every ~1.5 s (LOCKED, WHIP, 270, STUCK, DANGER, ROOM
   TO SPARE, THE SLOW WAY); a camera cut every 2-3 s between his face and the animal;
   (8) the ending is his dumb-but-funny workaround (turns his whole body the slow way) that runs straight into frame 0;
-  (9) the comment ask invites the next animal ("Which animal's eyes next?"). From 2026-11-16 the voice also says it (VOICE COMMENT ASK above).
+  (9) the comment ask invites the next animal on screen only (COMMENT ASK ON SCREEN ONLY above).
 - Reading the two numbers together: high average % viewed (100 %+) with a high swipe rate (30 %+) = the video is good,
   the first second is not -> fix only frame 0, the first line, the hook text and the frame-0 sound. Low % viewed with a
   low swipe rate = the opening works, the middle drags -> cut where the retention graph drops.
@@ -128,7 +128,7 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
 | Video | Views | Swiped away | Avg % viewed | Read |
 |---|---|---|---|---|
 | What if you woke up with a giraffe's neck? (videos/neck, 18.7 s) | 1.8K | 40 % | 113 % | Story + length + loop work (replays); opening loses people: frame 0 = guy lying small in a wide shot, payoff line at 4.3 s, quiet first sound. Fix = peak picture upright and big at frame 0, consequence in the first 2 s. |
-| What if you had an owl's eyes? (videos/owl, 22.3 s) | 15K (user, 2026-11-15) | ? | ? | The owl formula (Growth) worked: a body-part swap visible on the guy's face from frame 0, the animal doing the power with ease next to him while he fails at it, two X-rays (the animal's secret part + YOUR part breaking), two live counters (270 dial, NECK BONES 14 vs 7), a mid-video comedy hit made by the power itself (head whip -> dizzy), a dumb-but-funny solution that loops. Ask for swipe % + avg % viewed to confirm. |
+| What if you had an owl's eyes? (videos/owl, 22.3 s) | 23K (vidIQ, 2026-11-17; 15K on 11-15) | ? | ? | The owl formula (Growth) worked: a body-part swap visible on the guy's face from frame 0, the animal doing the power with ease next to him while he fails at it, two X-rays (the animal's secret part + YOUR part breaking), two live counters (270 dial, NECK BONES 14 vs 7), a mid-video comedy hit made by the power itself (head whip -> dizzy), a dumb-but-funny solution that loops. Ask for swipe % + avg % viewed to confirm. |
 - VIEW-JAIL STUDY (2026-11-17, vidIQ public counts): owl 23.0K (282 likes); wings 6.7K; zebra 5.9K; gills 4.1K;
   gecko 3.7K; giraffe 3.6K; whale 3.3K; eel/axolotl 2.1K; snake 1.4K; woodpecker 1.3K; mantis 1.3K; frog 1.2K
   (1 day old, still 243 views/h); chameleon 1.2K. Like rate is the same everywhere (owl 1.2 %, others 0.5-1.6 %), so
@@ -138,8 +138,9 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   (a) frame-0 text became a lowercase comment bubble that repeats the title instead of a claim ("HIS EYES ARE STUCK");
   (b) the voice ends on "X or Y? Comment below." instead of a story beat that runs straight into frame 0 (owl: "So he
   turns the slow way.") - an obvious "the end" right before the loop invites a swipe instead of a replay, for no
-  comments in return. Suggested tests (ask the user): go back to a claim HookTitle, end the voice on the story beat and
-  keep the comment ask on screen only, 1 Short a day, no repeat body part within 3 videos, famous animal tricks only.
+  comments in return. ADOPTED by the user 2026-11-17 (rules above + Cadence): claim HookTitle, voice ends on the story beat,
+  comment ask on screen only, 1 Short a day, no repeat body part within 3 videos, famous animal tricks only. Full
+  write-up: `docs/view-jail-study.md`.
 - OWL (15K) vs SNAKE + GECKO (~1K each), same formula and same production: the difference is the PREMISE, not the
   animation. Pick ideas that pass all four: (1) the power is about a part every viewer is using right now and can test
   while watching (eyes, neck, breath, heartbeat - they moved their eyes when told "you'd never move them again"); (2) the
@@ -155,7 +156,7 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   (2) the screen never holds the same picture more than ~3 s (we already cut every 2-3 s);
   (3) YouTube's Shorts lead: no magic posting count, better videos beat more videos; deleting / re-uploading is not
   a good strategy; a few hundred to a few thousand views then a stall is the normal test, and some Shorts pick up later;
-  (4) turn the comment ask into a series: series videos open with a doodle COMMENT BUBBLE in the top band at frame 0
+  (4) [frame-0 bubble RETIRED 2026-11-17, see FRAME-0 TEXT rule] turn the comment ask into a series: series videos open with a doodle COMMENT BUBBLE in the top band at frame 0
   instead of HookTitle (`<CommentBubble t={t} text="what if you had a chameleon's eyes??" />` from `kit.tsx`; optional
   handle / likes / y; same timing as HookTitle), holding the premise as if a viewer asked it ("what if you had a chameleon's eyes??") - it does
   not have to be a real comment (the user's call), it shows viewers their comment could be next; use a made-up cartoon
@@ -169,8 +170,9 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   (above), only then build the scene - premise decided the owl vs snake / gecko gap, not production.
 - vidIQ connector: the account had only 3 credits left on 2026-11-15 (analytics calls cost 5), so ask the user for
   Studio numbers instead.
-- Cadence goal: about one video a day (at least 4 a week) for 3-4 weeks; reuse scenes, props and sounds to make that
-  affordable.
+- Cadence (the user, 2026-11-17): ONE Short a day, never two on the same day (9 in 3 days after the owl, two 1 h
+  apart, all stalled); no repeat body part within 3 videos (3 "eyes" videos after the owl); only famous, "wait,
+  really?" animal tricks that pass the owl test. Reuse scenes, props and sounds to make that affordable.
 
 ## Saving Claude usage
 - One video per session. Keep replies short. One contact sheet + one pop scan per video unless something looks off.

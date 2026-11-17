@@ -129,6 +129,17 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
 |---|---|---|---|---|
 | What if you woke up with a giraffe's neck? (videos/neck, 18.7 s) | 1.8K | 40 % | 113 % | Story + length + loop work (replays); opening loses people: frame 0 = guy lying small in a wide shot, payoff line at 4.3 s, quiet first sound. Fix = peak picture upright and big at frame 0, consequence in the first 2 s. |
 | What if you had an owl's eyes? (videos/owl, 22.3 s) | 15K (user, 2026-11-15) | ? | ? | The owl formula (Growth) worked: a body-part swap visible on the guy's face from frame 0, the animal doing the power with ease next to him while he fails at it, two X-rays (the animal's secret part + YOUR part breaking), two live counters (270 dial, NECK BONES 14 vs 7), a mid-video comedy hit made by the power itself (head whip -> dizzy), a dumb-but-funny solution that loops. Ask for swipe % + avg % viewed to confirm. |
+- VIEW-JAIL STUDY (2026-11-17, vidIQ public counts): owl 23.0K (282 likes); wings 6.7K; zebra 5.9K; gills 4.1K;
+  gecko 3.7K; giraffe 3.6K; whale 3.3K; eel/axolotl 2.1K; snake 1.4K; woodpecker 1.3K; mantis 1.3K; frog 1.2K
+  (1 day old, still 243 views/h); chameleon 1.2K. Like rate is the same everywhere (owl 1.2 %, others 0.5-1.6 %), so
+  people who see them like them equally: the owl won the FEED TEST (swipes / watch time), not on quality. Comments ~0
+  on every video, also after the voice comment ask (chameleon 0, frog 0, woodpecker 2). Since the owl, 9 Shorts went up
+  in 3 days (4 on 11-16, two 1 h apart), 3 of them "eyes" again. Changes made on 11-16 that the owl did NOT have:
+  (a) frame-0 text became a lowercase comment bubble that repeats the title instead of a claim ("HIS EYES ARE STUCK");
+  (b) the voice ends on "X or Y? Comment below." instead of a story beat that runs straight into frame 0 (owl: "So he
+  turns the slow way.") - an obvious "the end" right before the loop invites a swipe instead of a replay, for no
+  comments in return. Suggested tests (ask the user): go back to a claim HookTitle, end the voice on the story beat and
+  keep the comment ask on screen only, 1 Short a day, no repeat body part within 3 videos, famous animal tricks only.
 - OWL (15K) vs SNAKE + GECKO (~1K each), same formula and same production: the difference is the PREMISE, not the
   animation. Pick ideas that pass all four: (1) the power is about a part every viewer is using right now and can test
   while watching (eyes, neck, breath, heartbeat - they moved their eyes when told "you'd never move them again"); (2) the

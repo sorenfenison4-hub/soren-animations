@@ -494,6 +494,7 @@ export const DolphinScene: React.FC<{t: number; camK?: {x: number; y: number; k:
           const a = t * 6 + (i * 2 * Math.PI) / 3;
           return <Star key={i} x={HX + Math.cos(a) * 86} y={HY - 96 + Math.sin(a) * 16} s={stars * 0.5} rot={t * 200} />;
         })}
+        {thumb ? null : <>
         <Txt x={HX + 150} y={HY - 210} s={pffsh0} text="PFFSH" size={80} rot={8} fill={GOLD} />
         <Txt x={HX + 100} y={HY - 105} s={snap} text="SNAP" size={52} rot={10} fill={GOLD} />
         <Txt x={HX - 10} y={HY + 105} s={noAir} text="NO AIR" size={44} rot={-6} fill="#9DBBEA" />
@@ -507,6 +508,7 @@ export const DolphinScene: React.FC<{t: number; camK?: {x: number; y: number; k:
         <Txt x={HX + 110} y={HY - 110} s={zzz2} text="ZZZ" size={50} rot={10} fill="#FFFFFF" />
         <Txt x={(HX + DX) / 2 + 30} y={-520} s={squirt2} text="SQUIRT" size={60} rot={-6} fill={WATER} />
         <Txt x={HX + 150} y={HY - 210} s={pffsh3} text="PFFSH" size={80} rot={8} fill={GOLD} />
+        </>}
       </Layer>
       <DolphinXRay t={t} s={dxS} />
       <YourXRay t={t} s={yxS} />

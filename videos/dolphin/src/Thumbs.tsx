@@ -14,13 +14,13 @@ const Title: React.FC<{size: number; style: React.CSSProperties; lines: string[]
 const tb = 0.12;   // geyser at full height
 export const ThumbTall: React.FC = () => (
   <AbsoluteFill style={{overflow: 'hidden'}}>
-    <Boil t={0}><DolphinScene t={tb} thumb camK={{x: -20, y: -400, k: 2.3}} /></Boil>
-    <Title size={150} lines={['NEVER', 'SLEEP']} style={{left: 0, right: 0, top: 170, textAlign: 'center'}} />
+    <Boil t={0}><DolphinScene t={tb} thumb camK={{x: -20, y: -288, k: 2.4}} /></Boil>
+    <Title size={130} lines={['NEVER', 'SLEEP']} style={{left: 0, right: 0, top: 110, textAlign: 'center'}} />
   </AbsoluteFill>
 );
 export const ThumbWide: React.FC = () => (
   <AbsoluteFill style={{overflow: 'hidden'}}>
-    <Boil t={0}><DolphinScene t={tb} thumb camK={{x: -60, y: -330, k: 2.7}} /></Boil>
-    <Title size={100} lines={['NEVER', 'SLEEP']} style={{right: 50, top: 60, textAlign: 'right'}} />
+    <Boil t={0}><DolphinScene t={0.4} thumb camK={{x: -30, y: -327, k: 2.5}} /></Boil>
+    <Title size={92} lines={['NEVER', 'SLEEP']} style={{right: 60, top: 30, textAlign: 'right'}} />
   </AbsoluteFill>
 );

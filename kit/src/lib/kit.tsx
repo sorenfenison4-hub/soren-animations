@@ -606,7 +606,9 @@ const cueDb = (c: Cue, tt: number) => {
  *  whoosh.wav pop.wav ding.mp3 twang.mp3 strain.mp3 whir.mp3 crickets.mp3 giggle.mp3 zap.wav chirp.wav hum.wav (20 s bed)
  *  splash.wav (0.75 s plop) bubbles.wav (0.6 s gurgle) horn.wav (1.75 s ship toot) waves.wav (3 s lapping: repeat every 2.7 s at -31 dB for a sea bed)
  *  tick.wav / tick2.wav (70 ms wheel clicker: alternate them, about -31 dB when fast up to -15 dB for the last click) confetti.wav (0.48 s party-popper burst)
- *  crack.wav (0.52 s stone crack: crackles, big snap at 0.32 s - start it 0.3 s before the beat) hiss.wav (2.6 s steam hiss, about -27 dB under a voice) */
+ *  crack.wav (0.52 s stone crack: crackles, big snap at 0.32 s - start it 0.3 s before the beat) hiss.wav (2.6 s steam hiss, about -27 dB under a voice)
+ *  screech.wav (0.7 s cartoon scream, sharp attack: a frame-0 hit) buzz.wav (0.9 s bat buzz, 190 chirps a second) ring.wav (1.4 s ear ringing)
+ *  click.wav (0.15 s light switch) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

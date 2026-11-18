@@ -63,6 +63,7 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [x] What if you had a woodpecker's head? (animal powers, owl formula + made-up comment bubble: one peck = K.O., 20 pecks a second, skull = stiff hammer not a shock absorber, CONCUSSION X-ray, tiny brain, pillow fix that loops) - made: woodpecker/renders/woodpecker-1080x1920.mp4
 - [x] What if you had a frog's eyes? (animal powers, owl formula point by point + made-up comment bubble: eyes sink into the mouth to push food down, tongue 0.07 s = 5x faster than a blink, GULPS PER BUG 2.3 vs 4, press your eyes -> heart slows X-ray, his own tongue -> BOING dizzy gag, smoothie straw fix that loops) - made: frog/renders/frog-1080x1920.mp4
 - [x] 3 animal riddles: can you guess all three? (the user's riddle format: "I have... What am I?" x3 with think timers, comment your answers, countdown, reveal + explanation: octopus 3 hearts / blue blood, butterfly tastes with its feet, wombat cube poop; 56 s) - made: riddles/renders/riddles-1080x1920.mp4
+- [x] What if you had a dolphin's blowhole? (animal powers, owl formula + made-up comment bubble: you'd stop breathing when you fall asleep, a dolphin chooses every breath, half-brain sleep with one eye open, DAYS AWAKE 15 counter, YOUR BRAIN X-ray with OXYGEN dropping, giant-geyser splash gag, the dolphin squirts him awake = loop; voice ask "Bat ears or octopus arms?") - made: dolphin/renders/dolphin-1080x1920.mp4
 
 ## Rejected ideas (the user said no - never pitch these again)
 

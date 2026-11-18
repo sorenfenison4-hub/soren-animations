@@ -12,12 +12,11 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   marker streaks); every `Layer` is cut paper (white edge + cast shadow, like stickers in the notebook); `Sky` is blank
   notebook paper; `<Look />` (paper grain + warm vignette) goes over the whole frame after `LoopOut`, as in
   `Template.tsx`. Wrap thumbnails in `<Boil t={0}>` so they match. No accessory on the guy.
-- VOICE COMMENT ASK (the user asked, 2026-11-16; replaces "the voice never asks" for comments): the voice's LAST line
-  asks viewers to comment which animal power he should get next, short and plain, about 2 s, e.g. "Which animal power
-  should he get next? Tell me in the comments." (or with two picks: "Eagle eyes or chameleon eyes? Comment below.").
-  It comes after the twist line and before the loop push; `CommentAsk` shows the same question on screen while it is
-  said. Count it in the 40-60 words. Like / subscribe stay on screen only (the voice never asks for those).
-- Every video asks viewers to like, subscribe and comment - on screen (`CallToAction`), plus the voice comment ask above: put
+- NO EITHER/OR ENDING (the user, 2026-11-18; replaces the 2026-11-16 "voice comment ask"): never end with a pick-two
+  animal question ("Octopus arms or shark teeth? Comment below.") - not in the voice, not on screen. The voice ends on
+  the story beat that runs straight into frame 0 (owl: "So he turns the slow way."); it never asks for comments, likes
+  or subscribes. Comments are asked on screen only (`CallToAction` + `CommentAsk` below).
+- Every video asks viewers to like, subscribe and comment - on screen only (`CallToAction`): put
   `<CallToAction t={t} at={T.cta} />` from `kit.tsx` inside the scene function and `...ctaCues(T.cta)` in the cues
   (three doodle stickers LIKE / SUBSCRIBE / COMMENT that a cursor taps, 2.6 s, quiet pops). Once per video, in a calm
   stretch right after the answer lands (about 55-80 % through), never in the first 3 s, finished before the loop push;
@@ -45,11 +44,10 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   an ANIMAL POWER request ("what if you had a woodpecker's head??"). At the start of each session, check the comments
   for animal-power suggestions and use the best one (pin it; the user can reply with the video). If there is none,
   make up the comment yourself with a fake cartoon username (`handle`, e.g. "@curious_doodle", never a real person's
-  name) and like count. The voice + `CommentAsk` at the end always get viewers to comment which animal power they want
-  next (an easy either/or of two animal powers: "Shark teeth or octopus arms? Comment below.").
+  name) and like count. No either/or animal question at the end (see NO EITHER/OR ENDING).
 - No AskBanner any more (the user asked to remove it). Instead every video ends with `<CommentAsk t={t} at={...}
   until={...} text="..." />` from `kit.tsx` inside the scene function: a question about THIS video that people want to
-  answer ("What should he paint next?", "Same for you?"), top band y 270, from the last line until ~0.4 s before the
+  answer ("Would you want them?", "Same for you?") - never a pick-two animal question; top band y 270, from the last line until ~0.4 s before the
   loop push. Not in thumbnails.
 - Script 15-25 s (40-60 words) - stories too: no more 30-70 s videos (completion drops; stalled Shorts usually lose
   people in the middle). Story = premise line, 2-3 quick beats, the answer, a twist line that loops back to frame 0.
@@ -119,7 +117,7 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   (7) short lines, one fact each, 47 words, ~22 s; a sticker word every ~1.5 s (LOCKED, WHIP, 270, STUCK, DANGER, ROOM
   TO SPARE, THE SLOW WAY); a camera cut every 2-3 s between his face and the animal;
   (8) the ending is his dumb-but-funny workaround (turns his whole body the slow way) that runs straight into frame 0;
-  (9) the comment ask invites the next animal ("Which animal's eyes next?"). From 2026-11-16 the voice also says it (VOICE COMMENT ASK above).
+  (9) the comment ask invites the next animal ("Which animal's eyes next?"). From 2026-11-18 there is no either/or animal ask at the end (NO EITHER/OR ENDING above).
 - Reading the two numbers together: high average % viewed (100 %+) with a high swipe rate (30 %+) = the video is good,
   the first second is not -> fix only frame 0, the first line, the hook text and the frame-0 sound. Low % viewed with a
   low swipe rate = the opening works, the middle drags -> cut where the retention graph drops.
@@ -161,8 +159,7 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   not have to be a real comment (the user's call), it shows viewers their comment could be next; use a made-up cartoon
   handle or none, never a real person's name; never post comments from other accounts (YouTube counts that as fake
   engagement); when a real suggestion fits, use it, pin it, and the user can post the video as a reply to it; set every new Short's "Related video" link to the owl (or the newest hit);
-  comment asks are an easy either/or ("Eagle eyes or chameleon eyes?"), not open questions (the open "Which animal's
-  eyes next?" got no answers); at the start of each session read the channel's comments once (vidIQ
+  no either/or animal asks at the end any more (the user, 2026-11-18); at the start of each session read the channel's comments once (vidIQ
   vidiq_video_comments with the channel id UCv6BUckmVIc4zZ022f7f_jQ, 5 credits; 18 left on 2026-11-16, no refill
   until 2026-12-06) - if credits are short, ask the user to paste the top comments;
   (5) screen the premise BEFORE animating: write 5-8 title + first-line pairs, keep the one that passes the owl test

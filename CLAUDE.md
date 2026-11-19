@@ -119,6 +119,23 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   Partner Program channels - when the channel joins, put the animal powers in one series; posting often does not hurt a
   single Short (YouTube's Shorts lead), weak and repetitive ones do; unconfirmed analyst reports say Shorts older than
   ~30 days get little new push - don't wait for old ones, retry with a new upload.
+- WATCHED THE TOP SHORTS (2026-11-19; public frames of the biggest what-if / animal-power Shorts, `research/`):
+  (1) the WISH test holds outside our channel: Posit Pixel (375K subs, median 2.7M) - "If A Human Had Greenland Shark
+  Anatomy" 5.8M (wish: live 500 years -> backfire: a parasite eats your eyes) vs "If A Human Had Giraffe Anatomy" 190K,
+  their worst Short (no wish) - our giraffe stalled too; Zack D. Films "What If Humans Had Hummingbird Hearts" 30M
+  (endless stamina -> your brain shuts down) and "...Strength Of Ants" 17.6M; a 7K-sub channel's "Imagine Having THESE
+  Animal Superpowers" 5.3M (177x its median); "wrong superpower" / "powers that contradict themselves" Shorts 23-170M.
+  (2) every big NARRATED one burns in word-by-word CAPTIONS (1-3 words, big, centre-low: Zack, Posit Pixel, CoolFacts,
+  Malas 3D, FactoMatic); we have none - only sticker words. TEST from the next video: captions for the whole voice-over
+  from the Scribe word times, white Inter 900 with a black outline, the spoken word in yellow, about y 1150-1300 of
+  1920, never over his face (move them up or down for that shot); keep the sticker words.
+  (3) frame 0 is a CLOSE-UP: a face or the strange body part fills most of the frame (Posit Pixel: a face with a
+  parasite on the eye; Zack: tweezers on a hummingbird; Malas 3D: their round-headed guy's face) - ours open on a
+  small full-body guy beside the animal. Open on his face with the power on it, big; go wide after.
+  (4) a black / blank frame 0 is a flop (a "what if" Short that opens on black text: 2.2K).
+  (5) no-words visual comedy travels: Malas 3D (a simple round-headed 3D guy, 230K subs) gets 12-22M with daily-life
+  gags ("As Tall as an Electric Pole" 12M - head through the roof - while our giraffe neck explained blood pressure,
+  3.7K). Give the backfire 1-2 silent daily-life gags, not only X-rays and counters.
 - AUDIENCE SETTING: ask the user once to check Studio > Content > the Audience of every Short. Cartoon animals can be set
   (or re-set by YouTube) to "made for kids", which turns comments off and changes who sees it - it could explain ~0
   comments. It must match who the videos are really for; don't game it.
@@ -167,6 +184,12 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
 | What if you woke up with a giraffe's neck? (videos/neck, 18.7 s) | 1.8K | 40 % | 113 % | Story + length + loop work (replays); opening loses people: frame 0 = guy lying small in a wide shot, payoff line at 4.3 s, quiet first sound. Fix = peak picture upright and big at frame 0, consequence in the first 2 s. |
 | What if you had an owl's eyes? (videos/owl, 22.3 s) | 15K (user, 2026-11-15) | ? | ? | The owl formula (Growth) worked: a body-part swap visible on the guy's face from frame 0, the animal doing the power with ease next to him while he fails at it, two X-rays (the animal's secret part + YOUR part breaking), two live counters (270 dial, NECK BONES 14 vs 7), a mid-video comedy hit made by the power itself (head whip -> dizzy), a dumb-but-funny solution that loops. Ask for swipe % + avg % viewed to confirm. |
 | What if you had a shark's teeth? (videos/shark, 18.5 s) | doing well (user, 2026-11-19) | ? | ? | First Short after the either/or voice ending was dropped, and a top wish (a killer bite + teeth that grow back) that backfires on your own body. Frame 0 = him chomping an apple beside a huge smug shark; the teeth RIP out in close-up at 2.6 s. Ask for the numbers. |
+- LIVE COUNTS 2026-11-19 (public, research/channel_shorts.py; 63 subscribers): owl 23K; wings 6.7K; zebra 5.9K;
+  gecko 4.7K; gills 4.6K; giraffe 3.7K; whale 3.2K; shark 2.8K (1 day old); eel/axolotl 2.1K; whisper 1.6K; dolphin 1.4K
+  (the user retitled it "Could You Survive as a Dolphin?"); woodpecker, snake, hotel 1.4K; bat, chameleon, bridge,
+  tower 1.3K; frog, mantis 1.2K; riddles 1.0K; octopus 373 (newest; made an hour after shark); the first six
+  "Why..." Shorts 42-85. Since 11-17 gecko (3.7K -> 4.7K) and gills (4.1K -> 4.6K) still creep up; the rest have
+  mostly stopped.
 - VIEW-JAIL STUDY (2026-11-17, vidIQ public counts): owl 23.0K (282 likes); wings 6.7K; zebra 5.9K; gills 4.1K;
   gecko 3.7K; giraffe 3.6K; whale 3.3K; eel/axolotl 2.1K; snake 1.4K; woodpecker 1.3K; mantis 1.3K; frog 1.2K
   (1 day old, still 243 views/h); chameleon 1.2K. Like rate is the same everywhere (owl 1.2 %, others 0.5-1.6 %), so
@@ -214,8 +237,9 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   Short (the CommentAsk question, or "Which animal power should he try next?") and remind them to answer the first
   comments - a pinned question from the channel itself is allowed (comments from other accounts are not).
 - vidIQ connector: 3 credits left on 2026-11-19 (every call costs 5 or more), refill to 150 on 2026-12-06 - until then
-  ask the user for Studio numbers and pasted comments. This environment's network blocks youtube.com and most article
-  sites (web search summaries still work).
+  ask the user for Studio numbers and pasted comments. Since 2026-11-19 the environment allows youtube.com and
+  i.ytimg.com: `research/` (README there) gets live public view counts for our Shorts and other channels' Shorts, plus
+  frames, for free; most article sites are still blocked (web search summaries work).
 - CADENCE (2026-11-19): at most ONE Short a day, about 20 h or more apart. 17 Shorts were made in 6 days (11-13 to
   11-18), often two within an hour, three "eyes" videos in three days, so the same test viewers kept getting
   same-looking openings and the premise screen got skipped to keep up. No same body part or same animal within 3

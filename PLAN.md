@@ -24,6 +24,11 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   2014, Nature Communications). FEEL IT NOW: breathe in and feel your ribs move. ICON: turtle pulling into its shell.
   NUMBER: your 24 ribs locked in place (verify the shell's bone count if used). Frame 0: him in a shell, a ball bouncing
   off it (BONK); ~3 s: he tries a big breath, the shell won't let his chest move (close-up, wheeze).
+- [x] U7. (made 2026-11-19, a new idea screened that day: glassfrog/renders/glassfrog-1080x1920.mp4 - toucan BONKs into
+  see-through him at frame 0, he passes out at 3.1 s, HIDDEN 0 -> 89 %, MIRROR, OXYGEN 100 -> 11 %, lights-out gag, CLOT,
+  plank fall at the frog's feet, he vanishes only in his sleep = loop) What if you could turn see-through like a glass
+  frog? WISH: turn invisible. BACKFIRE: to vanish it hides 9 in 10 red blood cells in its liver - yours carry your oxygen,
+  you'd pass out; packed that tight they'd clot (Taboada et al. 2022, Science). Upload about 20 h after the turtle.
 - [ ] U2. What if you could drink like a camel? WISH: never be thirsty, a week without water. BACKFIRE: drink like one -
   about 110 litres in 10 minutes - and the water would swell your brain (water poisoning); a camel's red blood cells
   swell to 240 % without bursting, other animals' only ~150 % (Frontiers in Veterinary Science 2023 - verify the human
@@ -42,6 +47,9 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Also screened 2026-11-19 (glass frog day): flea jump - a super-jump wish, the landing = falling off a 25-storey building
+  (cat flea: mean 20 cm, max 48 cm long, max 17 cm high; tiny things fall slowly, Haldane) - fails FEEL IT NOW (legs), could
+  still work; lizard arm regrowth - strong wish, wait until arms are 3+ uploads back (octopus).
 - Parked (fail one check, don't make until fixed): spider webs (they come out of your rear end and can't be shot - funny,
   but no hurt to your body); cheetah speed (no solid body backfire found yet); ant strength (a leaf-cutter study found
   ~9x body mass, no clear backfire); chameleon skin (shows your mood - social, not your body); immortal jellyfish (not a

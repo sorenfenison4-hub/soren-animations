@@ -42,6 +42,13 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - Captions for a narrated Short (first used in videos/turtle): `python3 scripts/tighten.py take.mp3 tight.mp3 words-take.json --tempo 1.12 --json src/data/words.json`
   writes the Scribe words in video time; then `<Captions t={t} words={WORDS} y={...} size={80} />` inside the scene function (y about 1300,
   moved below his face for close-ups). More sounds: bonk (ball on a shell, frame-0 hit), clack (padlock), pfft (air squeezed out), gasp.
+- See-through characters (videos/glassfrog): draw the normal white-and-ink drawing inside `<g filter="url(#glassify)">` (an
+  feColorMatrix: white -> clear glass, ink stays ink) in a `paper={false}` Layer at the same z, organs on top; keep the head
+  solid in a paper Layer so the face reads; a clipPath wipe swaps solid <-> glass. Also there: a code-drawn guy body (front
+  view), a glass frog with a see-through belly, a toucan, blood cells running along smooth loops (`mkLoop` / `along`) and
+  packing into a liver (`slotsIn`), a lights-out blackout gag. Sounds: thud (body falls flat), shimmer (vanish), squelch (clot).
+- Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
+  k 3.9 or less (a head at k 3.9 is already about half the frame wide).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),
   `python3 scripts/sheet.py sheet.png 5 324 <same times>` (contact sheet), `node scripts/render.mjs <CompId> renders/x.mp4`
   (CPU render, crf 16; `[scale] [from-to]` renders a frame range to patch in; an `.aac` out renders only the sound), `python3 scripts/popscan.py renders/x.mp4` (pop scan), `python3 scripts/pauses.py vo.mp3` (pauses).

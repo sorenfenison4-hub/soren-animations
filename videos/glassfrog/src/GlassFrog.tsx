@@ -737,8 +737,8 @@ export const GlassScene: React.FC<{t: number; camK?: {x: number; y: number; k: n
   const yxS = popIn(t, S4 + 0.04, 0.35) * (1 - seg(t, S5 - 0.12, S5 - 0.01));
   // stickers
   const bonk0 = t < 0.45 ? 1 : 1 - seg(t, 0.45, 0.6);
-  const lights = pulse(t, FAINT1 - 0.02, 0.26), packed = pulse(t, T.tight - 0.04, 0.55), clot = pulse(t, T.clot, 0.45);
-  const huh = pulse(t, T.why - 0.05, 0.75), thud = pulse(t, FAINT2, 0.3), asleep = pulse(t, T.asleep - 0.04, 0.5), bonk2 = pulse(t, BIRD2, 0.45);
+  const lights = pulse(t, 2.97, 0.17), packed = pulse(t, T.tight - 0.04, 0.55), clot = pulse(t, T.clot, 0.33);   // stickers end before their cut
+  const huh = pulse(t, T.why - 0.05, 0.75), thud = pulse(t, FAINT2, 0.12), asleep = pulse(t, T.asleep - 0.04, 0.5), bonk2 = pulse(t, BIRD2, 0.45);
   const stars = (t > FAINT1 + 0.02 && t < S3) || (t > FAINT2 + 0.02 && t < S9) ? 1 : 0;
   const starC: P2 = t < S4 ? [GX + 26, -232 + 150 - 46] : [GX + 30 + 228, -62 - 40];
   return (

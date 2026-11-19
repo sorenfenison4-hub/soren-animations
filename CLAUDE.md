@@ -131,6 +131,8 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   Malas 3D, FactoMatic); we have none - only sticker words. TEST from the next video: captions for the whole voice-over
   from the Scribe word times, white Inter 900 with a black outline, the spoken word in yellow, about y 1150-1300 of
   1920, never over his face (move them up or down for that shot); keep the sticker words.
+  First test: videos/turtle (2026-11-19; `tighten.py ... --json src/data/words.json` + the kit's `Captions`, y 1310, 1490
+  in the close-up). Compare its "Viewed vs swiped away" and average % viewed with shark / octopus before making it a rule.
   (3) frame 0 is a CLOSE-UP: a face or the strange body part fills most of the frame (Posit Pixel: a face with a
   parasite on the eye; Zack: tweezers on a hummingbird; Malas 3D: their round-headed guy's face) - ours open on a
   small full-body guy beside the animal. Open on his face with the power on it, big; go wide after.

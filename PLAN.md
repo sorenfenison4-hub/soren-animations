@@ -17,7 +17,9 @@ Each passed WISH -> BACKFIRE -> ICON -> FEEL IT NOW -> SHOW IT -> NUMBER on a qu
 against the primary study before scripting (core facts below were spot-checked on 2026-11-19, numbers marked "verify"
 were not). One a day at most, no same body part / animal within 3 uploads (CLAUDE.md, CADENCE).
 
-- [ ] U1. What if you had a turtle's shell? WISH: built-in armour. BACKFIRE: your ribs would be fused into it, so you
+- [x] U1. (made 2026-11-19: turtle/renders/turtle-1080x1920.mp4 - first Short with word-by-word captions; dodgeball BONK at
+  frame 0, padlock on his chest at 2.6 s, 50 bones counted, YOUR RIBS 24 -> 0, head-in PFFFT gag, he just stands there = loop)
+  What if you had a turtle's shell? WISH: built-in armour. BACKFIRE: your ribs would be fused into it, so you
   could never take a deep breath the way you do now (turtles breathe with a muscle sling under the shell; Lyson et al.
   2014, Nature Communications). FEEL IT NOW: breathe in and feel your ribs move. ICON: turtle pulling into its shell.
   NUMBER: your 24 ribs locked in place (verify the shell's bone count if used). Frame 0: him in a shell, a ball bouncing

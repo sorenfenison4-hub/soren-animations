@@ -39,6 +39,9 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - Yes / no wheel videos: copy `videos/wheel` - its `src/Wheel.tsx` has the prize wheel with a face, the flapper and tick
   model (ticks come from the wheel's own motion), a question card with a YES stamp, a YES sticker and paper confetti.
   `SoundLayer` cues take optional `keys` ([time, dB] fades) and `from`/`to` (play part of a file).
+- Captions for a narrated Short (first used in videos/turtle): `python3 scripts/tighten.py take.mp3 tight.mp3 words-take.json --tempo 1.12 --json src/data/words.json`
+  writes the Scribe words in video time; then `<Captions t={t} words={WORDS} y={...} size={80} />` inside the scene function (y about 1300,
+  moved below his face for close-ups). More sounds: bonk (ball on a shell, frame-0 hit), clack (padlock), pfft (air squeezed out), gasp.
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),
   `python3 scripts/sheet.py sheet.png 5 324 <same times>` (contact sheet), `node scripts/render.mjs <CompId> renders/x.mp4`
   (CPU render, crf 16; `[scale] [from-to]` renders a frame range to patch in; an `.aac` out renders only the sound), `python3 scripts/popscan.py renders/x.mp4` (pop scan), `python3 scripts/pauses.py vo.mp3` (pauses).

@@ -1,10 +1,12 @@
 # Tighten a voice take for Shorts pacing: shortens every pause longer than KEEP to KEEP seconds and speeds the take up
 # (pitch kept), then remaps Scribe word times so the T table still lines up.
-#   python3 scripts/tighten.py <take.mp3> <out.mp3> [words.json] [--keep 0.26] [--tempo 1.06] [--voice-at 0.1]
+#   python3 scripts/tighten.py <take.mp3> <out.mp3> [words.json] [--keep 0.26] [--tempo 1.06] [--voice-at 0.1] [--json caps.json]
 # words.json = the connector's Scribe `words` list ([{"text":..,"start":..}, ...]); prints "word:video_time" pairs
 # (video time = time in out.mp3 + voice-at). Then run check-hook.py on out.mp3. Example: videos/zebra (30.4 s -> 25.9 s).
+# --json writes the words as [{"w", "s", "e"}] in video time for the kit's Captions (first used in videos/turtle).
 import subprocess, sys, json, numpy as np
-args = [a for a in sys.argv[1:] if not a.startswith('--')]
+JSON_OUT = sys.argv[sys.argv.index('--json') + 1] if '--json' in sys.argv else None
+args = [a for a in sys.argv[1:] if not a.startswith('--') and a != JSON_OUT]
 opt = {k: float(sys.argv[sys.argv.index(k) + 1]) for k in ('--keep', '--tempo', '--voice-at') if k in sys.argv}
 args = [a for a in args if a not in [str(v) for v in opt.values()]]
 src, out = args[0], args[1]
@@ -36,4 +38,9 @@ remap = lambda t: (t - sum(min(b, max(a, t)) - a for a, b in cuts)) / TEMPO + AT
 print(f"{len(x)/sr:.2f} s -> {(len(y)/sr)/TEMPO:.2f} s ({len(cuts)} pauses shortened to {KEEP} s, tempo {TEMPO})")
 if len(args) > 2:
     words = json.load(open(args[2]))
+    words = words['words'] if isinstance(words, dict) else words
     print(' '.join(f"{w['text'].strip('.,?')}:{remap(w['start']):.2f}" for w in words if w.get('type', 'word') == 'word'))
+    if JSON_OUT:
+        caps = [{'w': w['text'], 's': round(remap(w['start']), 3), 'e': round(remap(w['end']), 3)} for w in words if w.get('type', 'word') == 'word']
+        json.dump(caps, open(JSON_OUT, 'w'), indent=0)
+        print(f"wrote {JSON_OUT} ({len(caps)} words)")

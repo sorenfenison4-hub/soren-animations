@@ -11,6 +11,39 @@ From #7 on, the list is rewritten in the "what if" lane (your body / animals fir
 - [x] 4. Why is the Moon drifting away from Earth? (space) - made: moon/renders/moon-1080x1920.mp4
 - [x] 5. Why has Roman concrete lasted 2,000 years? (history / engineering) - made: concrete/renders/concrete-1080x1920.mp4
 - [x] 6. Why do zebras have stripes? (animals) - made as a story: zebra/renders/zebra-1080x1920.mp4 ("What if you painted a cow like a zebra?")
+
+## UP NEXT (screened 2026-11-19 with the PREMISE SCREEN in CLAUDE.md, Growth) - do these first, in this order
+Each passed WISH -> BACKFIRE -> ICON -> FEEL IT NOW -> SHOW IT -> NUMBER on a quick check; still verify every fact
+against the primary study before scripting (core facts below were spot-checked on 2026-11-19, numbers marked "verify"
+were not). One a day at most, no same body part / animal within 3 uploads (CLAUDE.md, CADENCE).
+
+- [ ] U1. What if you had a turtle's shell? WISH: built-in armour. BACKFIRE: your ribs would be fused into it, so you
+  could never take a deep breath the way you do now (turtles breathe with a muscle sling under the shell; Lyson et al.
+  2014, Nature Communications). FEEL IT NOW: breathe in and feel your ribs move. ICON: turtle pulling into its shell.
+  NUMBER: your 24 ribs locked in place (verify the shell's bone count if used). Frame 0: him in a shell, a ball bouncing
+  off it (BONK); ~3 s: he tries a big breath, the shell won't let his chest move (close-up, wheeze).
+- [ ] U2. What if you could drink like a camel? WISH: never be thirsty, a week without water. BACKFIRE: drink like one -
+  about 110 litres in 10 minutes - and the water would swell your brain (water poisoning); a camel's red blood cells
+  swell to 240 % without bursting, other animals' only ~150 % (Frontiers in Veterinary Science 2023 - verify the human
+  side in a medical source; add a safety line). FEEL IT NOW: swallow. ICON: camel at a water trough. NUMBER: 110 L in 10 min.
+- [ ] U3. What if you could hibernate like a bear? WISH: sleep through the whole winter. BACKFIRE: you'd wake up too weak
+  to stand (bed-rest muscle and bone loss), while the bear walks out fine; bears also go months without peeing (verify
+  both numbers in bed-rest and bear studies). FEEL IT NOW: your legs. ICON: bear in a cave. NUMBER: months asleep / % muscle lost.
+- [ ] U4. What if you could regrow your arm like a lizard's tail? WISH: grow back anything you lose. BACKFIRE: it comes
+  back with no bones - one long tube of cartilage instead of vertebrae (green anole study, Arizona State 2012). FEEL IT
+  NOW: wiggle your fingers. ICON: lizard dropping its tail. NUMBER: needed (weeks to regrow or bones replaced - verify).
+- [ ] U5. RETRY (new upload, the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
+  fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the
+  backfire: "Punch like a mantis shrimp, and the first punch would crack your knuckles." Frame 0 = the punch at full
+  speed; the crack + OUCH close-up by ~3 s; then the club's spiral layers. Reuse videos/mantis, new voice take only.
+- [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
+  but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
+  and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Parked (fail one check, don't make until fixed): spider webs (they come out of your rear end and can't be shot - funny,
+  but no hurt to your body); cheetah speed (no solid body backfire found yet); ant strength (a leaf-cutter study found
+  ~9x body mass, no clear backfire); chameleon skin (shows your mood - social, not your body); immortal jellyfish (not a
+  part you can feel). Failed the WISH test (no more of these): blowhole, frog eyes, woodpecker head, snake jaw, giraffe neck.
+
 ## UP NEXT - comment series (CLAUDE.md, Growth: RESEARCH (4)); do these before the numbered list
 - [-] A. SKIPPED (not an animal power - niche narrowed 2026-11-16; a viewer did ask for it, @Pokemations_12). What happens to your body if you don't shower for a year? - shown as a viewer request: a doodle comment
   bubble with the question at frame 0 (made-up cartoon handle or none; it does not need to be a real comment).

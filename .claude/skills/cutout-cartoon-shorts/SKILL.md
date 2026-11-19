@@ -296,6 +296,10 @@ SoundLayer), `src/Template.tsx` (an 8 s gag using every piece - copy it per vide
 poses, measured in `src/lib/library.json`), `public/library/sfx/` (whoosh, pop, ding, twang, strain, whir).
 
 Per video:
+0. Premise first (this decided hit vs stall more than anything in production): run the idea through the PREMISE SCREEN
+   in the repo's CLAUDE.md (WISH -> BACKFIRE on your own body -> ICON animal -> a part you FEEL now -> backfire SHOWN
+   in close-up by ~3 s -> one NUMBER) and write the six answers at the top of the video's README before any voice or
+   art. A power nobody wishes for (blowhole, frog eyes) makes the catch a weird fact instead of a twist.
 1. Script 15-25 s (40-60 words), stories included. Shorter = cheaper voice and better completion. If the take runs
    long, `scripts/tighten.py` shortens pauses to 0.26 s and speeds up 1.06x, and remaps the word times.
 2. Voice: one eleven_v4 take with the same voice every day ("James - Natural", c1rY2UegY9FCAFayo2PO) for a recognisable

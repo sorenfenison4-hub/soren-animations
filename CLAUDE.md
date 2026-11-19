@@ -40,9 +40,15 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   (4) about YOU / your body when possible; danger or a consequence by ~5 s; one hard number in the first half
   ("under a quarter", "4 cm a year", "for 5 seconds"); a reason to stay to the end (a twist that loops).
   `check-loop.mjs` also fails a still opening.
+- SHOW THE BACKFIRE BY ~3 S (2026-11-19, shark vs the stalled Shorts): frame 0 = him USING the power at its best (shark:
+  chomping the apple with shark teeth, CHOMP, a huge smug shark beside him); by ~3 s the catch happens TO HIS BODY in a
+  close-up (his face about half the frame) with a hard hit sound (shark: the teeth RIP out into the apple at 2.6 s). Most
+  stalled Shorts said the catch over a calm medium shot of a small guy standing next to the animal under a text box -
+  every opening looked the same. Vary the first shot from video to video (close-up, low angle, mid-action).
 - COMMENT BUBBLE RULE (the user, 2026-11-16): every video opens with the `CommentBubble` (series format) and it is always
-  an ANIMAL POWER request ("what if you had a woodpecker's head??"). At the start of each session, check the comments
-  for animal-power suggestions and use the best one (pin it; the user can reply with the video). If there is none,
+  an ANIMAL POWER request ("what if you had a shark's teeth??"). At the start of each session, check the comments
+  for animal-power suggestions and use the best one that passes the PREMISE SCREEN (Growth) (pin it; the user can reply
+  with the video). If there is none,
   make up the comment yourself with a fake cartoon username (`handle`, e.g. "@curious_doodle", never a real person's
   name) and like count. No either/or animal question at the end (see NO EITHER/OR ENDING).
 - No AskBanner any more (the user asked to remove it). Instead every video ends with `<CommentAsk t={t} at={...}
@@ -83,8 +89,41 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
 - What the test reads: "Viewed vs. swiped away" in Studio (the hook; YouTube publishes no target, creator guides say
   aim for 70 %+, stuck channels sit at 50-60 %), average % viewed (over 100 % = replays from the loop), then shares,
   comments, likes. YouTube says it also weighs viewer satisfaction, and that a few good videos beat many low-value ones.
+- PREMISE SCREEN (2026-11-19 diagnosis - the FIRST gate for every idea; write the six answers at the top of the video's
+  README before any voice or art, and drop the idea if one is a no). Our hits are the classic superpower wishes - see in
+  the dark (owl 23K), a killer bite (shark, the best since), flying (wings 6.7K), breathing underwater (gills 4.1K) - and
+  the twist breaks the wish. The stalled ones are anatomy nobody wishes for - frog eyes, woodpecker head, snake jaw,
+  dolphin blowhole, bat ears, chameleon eyes, giraffe neck (1.2-3.6K) - so the catch is only a weird fact, not a twist.
+  Same kit, same length (18-23 s), same voice tempo: the premise decides.
+  (1) WISH: would most people say "I want that" before they hear the catch? (fly, see in the dark, a killer bite, super
+  strength / speed / jump, breathe underwater, climb walls, regrow body parts, live forever, survive anything, turn
+  invisible). Weird anatomy fails.
+  (2) BACKFIRE: the catch hits the very thing you wanted it for and hurts YOUR body (owl eyes -> you can't move them;
+  shark teeth -> the first bite rips them out; gills -> you drown). Not "it doesn't work" (gecko: you slide off), not
+  "it's even cooler" (mantis: the water boils), not "no downside" (eel / axolotl).
+  (3) ICON: an animal a 6-year-old can name, with a famous trick (owl head turn, shark teeth that grow back).
+  (4) FEEL IT NOW: a body part the viewer is using while watching (eyes, teeth, neck, breath, hands, skin).
+  (5) SHOW IT: frame 0 = him using the power at its best; the backfire hits his body in close-up by ~3 s (SHOW THE
+  BACKFIRE rule above).
+  (6) NUMBER: one number that is a picture (270 degrees, a new row every 2 weeks).
+  Write 5-8 candidates and keep the strongest wish that passes all six; PLAN.md "UP NEXT" holds a screened list.
+- YOUTUBE IN 2026 (web check 2026-11-19; only what YouTube said or several reports agree on - the rest of the web is
+  guesswork): views count every start and replay since 2025-03-31, so public views include people who swiped -
+  compare Shorts by "Viewed vs swiped away", average % viewed and engaged views; Shorts lost the dislike button in June
+  2026 - "Not interested" / "Don't recommend channel" are now the negative signals, so frame 0 must deliver what it
+  promises; Creator Insider, Sep 2026: no single metric decides, satisfaction surveys count, subscribers and new viewers
+  are learned separately, and the system keeps learning after the first hours; Oct 1 2026: Shorts recommendations favour
+  original content and cut re-uploads of other people's videos - our hand-made videos are on the right side, keep each
+  one visibly different; Jan 2026 CEO letter: "managing AI slop" (low-quality, repetitive videos) is a priority - another
+  reason for fewer, better, distinct Shorts; Sep 2026: Shorts series (seasons / episodes, a "Watch series" button) for
+  Partner Program channels - when the channel joins, put the animal powers in one series; posting often does not hurt a
+  single Short (YouTube's Shorts lead), weak and repetitive ones do; unconfirmed analyst reports say Shorts older than
+  ~30 days get little new push - don't wait for old ones, retry with a new upload.
+- AUDIENCE SETTING: ask the user once to check Studio > Content > the Audience of every Short. Cartoon animals can be set
+  (or re-set by YouTube) to "made for kids", which turns comments off and changes who sees it - it could explain ~0
+  comments. It must match who the videos are really for; don't game it.
 - NICHE (decided, narrowed by the user 2026-11-16): ANIMAL POWERS only - what happens if YOU got an animal's part or
-  ability (an owl's eyes, a chameleon's eyes, a giraffe's neck, a mantis shrimp's punch, a dolphin's blowhole). No more
+  ability, picked with the PREMISE SCREEN (an owl's eyes, a shark's teeth, bird wings, fish gills). No more
   plain "your body + extreme place / habit" ideas (Mars, -50 C, no shower for a year) - every video needs an animal
   power on the guy and the animal co-star beside him. Pick PLAN.md items that fit first; rewrite the rest as an animal
   power or skip them. Title shape: "What if you had a <animal>'s <part>?".
@@ -127,6 +166,7 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
 |---|---|---|---|---|
 | What if you woke up with a giraffe's neck? (videos/neck, 18.7 s) | 1.8K | 40 % | 113 % | Story + length + loop work (replays); opening loses people: frame 0 = guy lying small in a wide shot, payoff line at 4.3 s, quiet first sound. Fix = peak picture upright and big at frame 0, consequence in the first 2 s. |
 | What if you had an owl's eyes? (videos/owl, 22.3 s) | 15K (user, 2026-11-15) | ? | ? | The owl formula (Growth) worked: a body-part swap visible on the guy's face from frame 0, the animal doing the power with ease next to him while he fails at it, two X-rays (the animal's secret part + YOUR part breaking), two live counters (270 dial, NECK BONES 14 vs 7), a mid-video comedy hit made by the power itself (head whip -> dizzy), a dumb-but-funny solution that loops. Ask for swipe % + avg % viewed to confirm. |
+| What if you had a shark's teeth? (videos/shark, 18.5 s) | doing well (user, 2026-11-19) | ? | ? | First Short after the either/or voice ending was dropped, and a top wish (a killer bite + teeth that grow back) that backfires on your own body. Frame 0 = him chomping an apple beside a huge smug shark; the teeth RIP out in close-up at 2.6 s. Ask for the numbers. |
 - VIEW-JAIL STUDY (2026-11-17, vidIQ public counts): owl 23.0K (282 likes); wings 6.7K; zebra 5.9K; gills 4.1K;
   gecko 3.7K; giraffe 3.6K; whale 3.3K; eel/axolotl 2.1K; snake 1.4K; woodpecker 1.3K; mantis 1.3K; frog 1.2K
   (1 day old, still 243 views/h); chameleon 1.2K. Like rate is the same everywhere (owl 1.2 %, others 0.5-1.6 %), so
@@ -138,13 +178,19 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   turns the slow way.") - an obvious "the end" right before the loop invites a swipe instead of a replay, for no
   comments in return. Suggested tests (ask the user): go back to a claim HookTitle, end the voice on the story beat and
   keep the comment ask on screen only, 1 Short a day, no repeat body part within 3 videos, famous animal tricks only.
+- DIAGNOSIS (2026-11-19; the user: owl and shark did well, the rest 1-3K, some ~5K): (1) premise drift - after the owl
+  we picked weird anatomy instead of wished-for powers (PREMISE SCREEN); (2) most stalled ones said the catch over a
+  calm medium shot instead of showing it on his body by ~3 s (SHOW THE BACKFIRE); (3) sameness - 17 Shorts in 6 days,
+  three "eyes" videos in three days, near-identical openings (CADENCE); (4) all six Shorts whose voice ended on "X or Y?
+  Comment below." stalled (tangled up with weak premises; both fixed now). Not the cause: length (winners and losers
+  are 18-23 s), voice tempo (bat and dolphin used shark's 1.12), CallToAction and the comment bubble (owl / shark have
+  them). n is small (two hits) - confirm with Studio numbers: Viewed vs swiped away + average % viewed for shark, owl,
+  octopus and two stalled ones.
 - OWL (15K) vs SNAKE + GECKO (~1K each), same formula and same production: the difference is the PREMISE, not the
-  animation. Pick ideas that pass all four: (1) the power is about a part every viewer is using right now and can test
-  while watching (eyes, neck, breath, heartbeat - they moved their eyes when told "you'd never move them again"); (2) the
-  first line takes something AWAY from you or gives a surprising cost, not a "no" to the fantasy and not an obvious
-  result; (3) the animal's own trick is a famous, visual, slightly unbelievable thing (an owl's head turned backwards)
-  shown at frame 0 on the co-star; (4) real danger to YOUR body and one simple number that is a picture (270 degrees).
-  Frame 0: the guy's face must stay visible (no prop over it), and a wall / height must read at a glance.
+  animation. The four checks first written here (part you use now, a surprising cost, a famous animal trick, danger + a
+  number) let weak ideas through (blowhole, frog eyes, woodpecker head all passed them) - they are now part of the
+  PREMISE SCREEN, which adds the WISH test first. Frame 0: the guy's face must stay visible (no prop over it), and a
+  wall / height must read at a glance.
 - Still true from the giraffe: frame 0 = ONE big impossible picture (subject about half the frame), the hook text visible
   in that picture, and the first line carries the DANGER, not a mild consequence. Avoid topics people already know.
 - RESEARCH (2026-11-16, retention + reach; YouTube publishes no thresholds, blog numbers disagree - treat as directional):
@@ -160,14 +206,21 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   handle or none, never a real person's name; never post comments from other accounts (YouTube counts that as fake
   engagement); when a real suggestion fits, use it, pin it, and the user can post the video as a reply to it; set every new Short's "Related video" link to the owl (or the newest hit);
   no either/or animal asks at the end any more (the user, 2026-11-18); at the start of each session read the channel's comments once (vidIQ
-  vidiq_video_comments with the channel id UCv6BUckmVIc4zZ022f7f_jQ, 5 credits; 18 left on 2026-11-16, no refill
-  until 2026-12-06) - if credits are short, ask the user to paste the top comments;
-  (5) screen the premise BEFORE animating: write 5-8 title + first-line pairs, keep the one that passes the owl test
-  (above), only then build the scene - premise decided the owl vs snake / gecko gap, not production.
-- vidIQ connector: the account had only 3 credits left on 2026-11-15 (analytics calls cost 5), so ask the user for
-  Studio numbers instead.
-- Cadence goal: about one video a day (at least 4 a week) for 3-4 weeks; reuse scenes, props and sounds to make that
-  affordable.
+  vidiq_video_comments with the channel id UCv6BUckmVIc4zZ022f7f_jQ, 5 credits; see the vidIQ line below for the
+  balance) - if credits are short, ask the user to paste the top comments;
+  (5) screen the premise BEFORE animating: write 5-8 title + first-line pairs, keep the one that passes the PREMISE
+  SCREEN (above), only then build the scene - premise decided the owl vs snake / gecko gap, not production.
+  (6) comments are ~0 on every video: in the final reply give the user a one-line channel comment to pin under the
+  Short (the CommentAsk question, or "Which animal power should he try next?") and remind them to answer the first
+  comments - a pinned question from the channel itself is allowed (comments from other accounts are not).
+- vidIQ connector: 3 credits left on 2026-11-19 (every call costs 5 or more), refill to 150 on 2026-12-06 - until then
+  ask the user for Studio numbers and pasted comments. This environment's network blocks youtube.com and most article
+  sites (web search summaries still work).
+- CADENCE (2026-11-19): at most ONE Short a day, about 20 h or more apart. 17 Shorts were made in 6 days (11-13 to
+  11-18), often two within an hour, three "eyes" videos in three days, so the same test viewers kept getting
+  same-looking openings and the premise screen got skipped to keep up. No same body part or same animal within 3
+  uploads. If no idea passes the PREMISE SCREEN, skip the day - a weak Short costs more than a missed day. Reuse scenes,
+  props and sounds to keep one a day affordable.
 
 ## Saving Claude usage
 - One video per session. Keep replies short. One contact sheet + one pop scan per video unless something looks off.

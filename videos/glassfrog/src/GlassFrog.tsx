@@ -720,13 +720,13 @@ const capY = (t: number) => (t >= S5 && t < S6 ? 1395 : t >= S7 && t < S8 ? 1440
 
 export const GlassScene: React.FC<{t: number; camK?: {x: number; y: number; k: number}; thumb?: boolean; uid?: string}> = ({t, camK, thumb, uid = 'm'}) => {
   const cam0 = camK ? camAt([{t: 0, ...camK}], 0) : camAt([
-    {t: 0, x: -40, y: -172, k: 2.95}, {t: 1.6, x: -40, y: -174, k: 3.06},                 // frame 0: see-through him, the toucan BONKs, the frog
-    {t: S2, x: GX, y: -226, k: 3.72}, {t: 2.9, x: GX, y: -228, k: 3.88}, {t: S3 - 0.02, x: GX, y: -226, k: 3.88}, // close-up: he passes out
-    {t: S3, x: FX - 5, y: -322, k: 2.6}, {t: S4 - 0.02, x: FX - 5, y: -320, k: 2.74},       // the frog, under its X-ray
-    {t: S4, x: GX, y: -356, k: 2.4}, {t: S5 - 0.02, x: GX, y: -352, k: 2.5},                // him, under YOUR X-ray
-    {t: S6, x: GX + 35, y: -160, k: 3.55}, {t: S7 - 0.02, x: GX + 35, y: -150, k: 3.8},      // he vanishes again -> CLOT
-    {t: S7, x: 25, y: -150, k: 2.55}, {t: S8 - 0.02, x: 30, y: -146, k: 2.62},              // two-shot: ??? and the plank fall
-    {t: S8, x: FX - 25, y: -205, k: 3.7}, {t: S9 - 0.02, x: FX - 25, y: -205, k: 3.88},      // the frog falls asleep
+    {t: 0, x: -40, y: -172, k: 2.95}, {t: S2 - 0.001, x: -40, y: -174, k: 3.06},                 // frame 0: see-through him, the toucan BONKs, the frog
+    {t: S2, x: GX, y: -226, k: 3.72}, {t: 2.9, x: GX, y: -228, k: 3.88}, {t: S3 - 0.001, x: GX, y: -226, k: 3.88}, // close-up: he passes out
+    {t: S3, x: FX - 5, y: -322, k: 2.6}, {t: S4 - 0.001, x: FX - 5, y: -320, k: 2.74},       // the frog, under its X-ray
+    {t: S4, x: GX, y: -356, k: 2.4}, {t: S5 - 0.001, x: GX, y: -352, k: 2.5},                // him, under YOUR X-ray
+    {t: S6, x: GX + 35, y: -160, k: 3.55}, {t: S7 - 0.001, x: GX + 35, y: -150, k: 3.8},      // he vanishes again -> CLOT
+    {t: S7, x: 25, y: -150, k: 2.55}, {t: S8 - 0.001, x: 30, y: -146, k: 2.62},              // two-shot: ??? and the plank fall
+    {t: S8, x: FX - 25, y: -205, k: 3.7}, {t: S9 - 0.001, x: FX - 25, y: -205, k: 3.88},      // the frog falls asleep
     {t: S9, x: -40, y: -172, k: 2.85}, {t: DURATION, x: -40, y: -172, k: 3.0},              // he vanishes in his sleep = frame 0
   ], t);
   const sh = shake(t, hit(t, 0, 8, 7) + hit(t, FAINT1, 10, 6) + hit(t, T.clot, 5, 7) + hit(t, FAINT2, 10, 6) + hit(t, BIRD2, 6, 7));

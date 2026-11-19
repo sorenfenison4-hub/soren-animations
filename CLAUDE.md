@@ -119,7 +119,9 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   Partner Program channels - when the channel joins, put the animal powers in one series; posting often does not hurt a
   single Short (YouTube's Shorts lead), weak and repetitive ones do; unconfirmed analyst reports say Shorts older than
   ~30 days get little new push - don't wait for old ones, retry with a new upload.
-- WATCHED THE TOP SHORTS (2026-11-19; public frames of the biggest what-if / animal-power Shorts, `research/`):
+- WATCHED THE TOP SHORTS (2026-11-19; public frames of the biggest what-if / animal-power Shorts; all data, channel
+  tables and the dated 2026 YouTube changes in `research/2026-11-19-findings.md`; the hummingbird-heart idea below is
+  only evidence - the user rejected it on 2026-11-14, never pitch it):
   (1) the WISH test holds outside our channel: Posit Pixel (375K subs, median 2.7M) - "If A Human Had Greenland Shark
   Anatomy" 5.8M (wish: live 500 years -> backfire: a parasite eats your eyes) vs "If A Human Had Giraffe Anatomy" 190K,
   their worst Short (no wish) - our giraffe stalled too; Zack D. Films "What If Humans Had Hummingbird Hearts" 30M
@@ -149,7 +151,8 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
 - When the user shares Studio numbers: many swipes -> fix frame 0 / first line; a drop in the middle of the retention
   graph -> cut that part; compare topics by median views and do more of the winner.
 - Never delete and re-upload a stalled Short. A retry is a NEW upload with a new first frame and first line (the old one
-  stays up); reuse the scene code, so it costs only a new voice take.
+  stays up); reuse the scene code, so it costs only a new voice take. DON'T RECREATE OLD VIDEOS (the user, 2026-11-19,
+  "no dont recreate them"): make a retry only when the user asks for that video; put the effort into new videos.
 - WHY THE ZEBRA SHORT WORKED (the user said it did really well; copy this recipe every time - first used in videos/owl):
   (1) the guy DOES something on screen (paints the cow) instead of just standing there while the voice explains;
   (2) an animal co-star with a face and changing moods (annoyed cow, smug zebra) that reacts to him;

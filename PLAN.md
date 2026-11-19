@@ -32,7 +32,8 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U4. What if you could regrow your arm like a lizard's tail? WISH: grow back anything you lose. BACKFIRE: it comes
   back with no bones - one long tube of cartilage instead of vertebrae (green anole study, Arizona State 2012). FEEL IT
   NOW: wiggle your fingers. ICON: lizard dropping its tail. NUMBER: needed (weeks to regrow or bones replaced - verify).
-- [ ] U5. RETRY (new upload, the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
+- [-] U5. ON HOLD - the user said not to recreate old videos (2026-11-19); only if they ask for it. RETRY (new upload,
+  the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
   fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the
   backfire: "Punch like a mantis shrimp, and the first punch would crack your knuckles." Frame 0 = the punch at full
   speed; the crack + OUCH close-up by ~3 s; then the club's spiral layers. Reuse videos/mantis, new voice take only.

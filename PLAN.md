@@ -29,7 +29,10 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   plank fall at the frog's feet, he vanishes only in his sleep = loop) What if you could turn see-through like a glass
   frog? WISH: turn invisible. BACKFIRE: to vanish it hides 9 in 10 red blood cells in its liver - yours carry your oxygen,
   you'd pass out; packed that tight they'd clot (Taboada et al. 2022, Science). Upload about 20 h after the turtle.
-- [ ] U2. What if you could drink like a camel? WISH: never be thirsty, a week without water. BACKFIRE: drink like one -
+- [x] U2. (made 2026-11-20: camel/renders/camel-1080x1920.mp4 - he chugs a water-cooler jug beside the camel at frame 0, his
+  head balloons at 2.2 s (BWOMP, WATER POISONING), DAYS 0 -> 20 + FAT NOT WATER on the hump, LITRES 0 -> 110 + burp gag, CAMEL
+  BLOOD X-ray (oval cell to 240 %, a round one pops at 150 %), desert-outhouse gag HOURS 0 -> 110 = 4 1/2 days, YOUR BRAIN X-ray,
+  teacup the slow way = loop. Upload about 20 h after the glass frog.) What if you could drink like a camel? WISH: never be thirsty, a week without water. BACKFIRE: drink like one -
   about 110 litres in 10 minutes - and the water would swell your brain (water poisoning); a camel's red blood cells
   swell to 240 % without bursting, other animals' only ~150 % (Frontiers in Veterinary Science 2023 - verify the human
   side in a medical source; add a safety line). FEEL IT NOW: swallow. ICON: camel at a water trough. NUMBER: 110 L in 10 min.
@@ -47,6 +50,10 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Screened 2026-11-20 (camel day): bat wings (fly -> a bat's wing is its hand: you'd keep only your thumbs) and lizard arm
+  regrowth are the strongest wishes left - make one of them next (arms were too close: octopus was 3 uploads back);
+  lobster "live forever" dropped (the immortal lobster is a myth, the molting-death share is a press quote); tardigrade
+  "survive anything" weak icon + passive.
 - Also screened 2026-11-19 (glass frog day): flea jump - a super-jump wish, the landing = falling off a 25-storey building
   (cat flea: mean 20 cm, max 48 cm long, max 17 cm high; tiny things fall slowly, Haldane) - fails FEEL IT NOW (legs), could
   still work; lizard arm regrowth - strong wish, wait until arms are 3+ uploads back (octopus).

@@ -611,7 +611,8 @@ const cueDb = (c: Cue, tt: number) => {
  *  click.wav (0.15 s light switch) bonk.wav (0.21 s hollow ball-on-shell knock, onset at 0: a frame-0 hit) clack.wav (0.33 s padlock snap)
  *  pfft.wav (0.56 s air squeezed out) gasp.wav (0.9 s strained wheezy gasp, about -22 dB under a voice)
  *  thud.wav (0.4 s body falling flat, onset at 0, about -6 dB for a faint) shimmer.wav (0.78 s glassy vanish sparkle, peak 0.18 s in)
- *  squelch.wav (0.46 s wet blob / clog, onset at 0) */
+ *  squelch.wav (0.46 s wet blob / clog, onset at 0) glug.wav (0.95 s water-cooler glug-glug, loud from 0: a frame-0 sound, about -11 dB
+ *  so the first word stays clear) stretch.wav (1.2 s rubber balloon stretching: a head or a cell swelling) burp.wav (0.95 s big cartoon burp, peak 0.76 s) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

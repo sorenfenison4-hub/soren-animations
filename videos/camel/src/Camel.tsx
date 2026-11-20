@@ -131,7 +131,7 @@ const mir = (a: ArmP): ArmP => ({e: [-a.e[0], a.e[1]], h: [-a.h[0], a.h[1]]});
 const sym = (r: ArmP, front = 0): ArmsP => ({l: mir(r), r, front});
 const ARM = {
   down: sym({e: [52, -114], h: [56, -78]}),
-  jug: {r: {e: [98, -150], h: [102, -209]}, l: {e: [-98, -146], h: [-78, -106]}, front: 1} as ArmsP,
+  jug: {r: {e: [98, -150], h: [102, -209]}, l: {e: [-68, -128], h: [-36, -118]}, front: 1} as ArmsP,   // left hand pats his full belly
   hips: sym({e: [98, -146], h: [78, -106]}, 1),
   cup: {r: {e: [72, -128], h: [30, -200]}, l: {e: [-52, -114], h: [-56, -78]}, front: 1} as ArmsP,
   shrug: sym({e: [80, -150], h: [92, -190]}),

@@ -44,6 +44,13 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   like the shark. Upload about 20 h after the camel.) What if you had a bat's wings? WISH: fly. BACKFIRE: a bat's wing IS
   a hand - arm + four long fingers with skin between, only the thumb free - so you'd lose your hands (2 of 10 fingers
   free). FEEL IT NOW: "Spread your fingers". ICON: bat hanging upside down. NUMBER: 4 fingers / 10 -> 2.
+- [x] U9. (made 2026-11-20, the user: "let's try to make one of the million-view video ideas in the last chat" - the first
+  test of the LADDER format from research/2026-11-20-findings.md: jump/renders/jump-1080x1920.mp4) What if you could jump
+  like a flea? Kangaroo legs mid-hop over a car at frame 0 (2.4 m), POOF cat legs onto a roof (6 m), POOF flea legs up the
+  side of a 30-floor tower (100 m, 30 FLOORS), X-RAY: FLEA (resilin spring = CATAPULT), then the backfire: a flea is so
+  light that air slows its fall, he drops all 30 floors (counter 100 -> 0, SPLAT), back to kangaroo legs = loop. One height
+  counter with the rungs ranked under it. Backfire at 11-15 s on purpose (ladder test). Upload about 20 h after the bat wings;
+  compare its "Viewed vs swiped away" and average % viewed with the shark (single power) before making more ladders.
 - [ ] U3. What if you could hibernate like a bear? WISH: sleep through the whole winter. BACKFIRE: you'd wake up too weak
   to stand (bed-rest muscle and bone loss), while the bear walks out fine; bears also go months without peeing (verify
   both numbers in bed-rest and bear studies). FEEL IT NOW: your legs. ICON: bear in a cave. NUMBER: months asleep / % muscle lost.

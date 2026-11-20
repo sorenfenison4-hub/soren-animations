@@ -217,6 +217,10 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   turns the slow way.") - an obvious "the end" right before the loop invites a swipe instead of a replay, for no
   comments in return. Suggested tests (ask the user): go back to a claim HookTitle, end the voice on the story beat and
   keep the comment ask on screen only, 1 Short a day, no repeat body part within 3 videos, famous animal tricks only.
+- LADDER FORMAT TEST (2026-11-20, videos/jump, "What if you could jump like a flea?"): the million-view format from
+  research/2026-11-20-findings.md in our style - one question, three animals (kangaroo 2.4 m -> cat 6 m -> flea 100 m), one
+  live counter with the rungs ranked under it, the top rung hits his body (the 30-floor landing) at ~60-80 % instead of by
+  ~3 s. Judge it against the shark (single power, backfire by 3 s) on swipe % and average % viewed before doing more.
 - DIAGNOSIS (2026-11-19; the user: owl and shark did well, the rest 1-3K, some ~5K): (1) premise drift - after the owl
   we picked weird anatomy instead of wished-for powers (PREMISE SCREEN); (2) most stalled ones said the catch over a
   calm medium shot instead of showing it on his body by ~3 s (SHOW THE BACKFIRE); (3) sameness - 17 Shorts in 6 days,

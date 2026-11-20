@@ -219,6 +219,20 @@ export const Puffs: React.FC<{t: number; born: number; x: number; y: number; n?:
       {puffs.map((p, i) => <circle key={'f' + i} cx={p.cx} cy={p.cy} r={p.r} fill={color} />)}
     </W>;
   };
+/** POOF: a quick burst of puffs (pops in 0.09 s, holds, gone by 0.56 s) to cover a transformation - swap the drawing at
+ *  at + 0.12. Unlike Puffs (which linger ~1 s), the shape underneath shows again almost at once. First used in videos/jump. */
+const POOF_P: [number, number, number][] = [[-62, 18, 42], [-22, -14, 50], [30, 6, 50], [72, 28, 40], [0, 48, 48], [-52, 62, 38], [52, 70, 38], [8, -44, 34], [-86, 52, 30], [90, -6, 30]];
+export const Poof: React.FC<{t: number; at: number; x: number; y: number; s?: number}> = ({t, at, x, y, s = 1}) => {
+  const u = t - at;
+  if (u < 0 || u > 0.56) return null;
+  const k = eout(clamp(u / 0.09)) * (1 - eio(seg(u, 0.3, 0.56)));
+  if (k < 0.01) return null;
+  const pts = POOF_P.map(([px, py, r]) => [x + s * px * (1 + 0.5 * u), y + s * (py * (1 + 0.3 * u) - 60 * u), s * r * k] as [number, number, number]);
+  return <W>
+    {pts.map(([cx, cy, r], i) => <circle key={'o' + i} cx={cx} cy={cy} r={r + 7 * k} fill={INK} />)}
+    {pts.map(([cx, cy, r], i) => <circle key={'f' + i} cx={cx} cy={cy} r={r} fill="#FFFFFF" />)}
+  </W>;
+};
 /** Screen-space label that pops in (counters, "1 km", "500 m"). */
 export const Badge: React.FC<{text: string; s: number; y?: number; color?: string}> = ({text, s, y, color = INK}) => {
   const fit = useFit(); if (s < 0.01) return null;
@@ -613,7 +627,9 @@ const cueDb = (c: Cue, tt: number) => {
  *  thud.wav (0.4 s body falling flat, onset at 0, about -6 dB for a faint) shimmer.wav (0.78 s glassy vanish sparkle, peak 0.18 s in)
  *  squelch.wav (0.46 s wet blob / clog, onset at 0) glug.wav (0.95 s water-cooler glug-glug, loud from 0: a frame-0 sound, about -11 dB
  *  so the first word stays clear) stretch.wav (1.2 s rubber balloon stretching: a head or a cell swelling) burp.wav (0.95 s big cartoon burp, peak 0.76 s)
- *  flap.wav (0.45 s big leathery wing flap: a low whump + skin snap, peak at 0.02 s; one per downstroke) slap.wav (0.55 s cartoon face slap, onset at 0) */
+ *  flap.wav (0.45 s big leathery wing flap: a low whump + skin snap, peak at 0.02 s; one per downstroke) slap.wav (0.55 s cartoon face slap, onset at 0)
+ *  whistle.wav (1.38 s cartoon falling whistle, 2.6 -> 0.46 kHz, ends quiet: start it ~1.4 s before the landing, about -16 dB)
+ *  meow.wav (0.92 s smug cartoon cat "mrrow", loud from 0.04 s, about -17 dB) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

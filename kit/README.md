@@ -42,6 +42,12 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - Captions for a narrated Short (first used in videos/turtle): `python3 scripts/tighten.py take.mp3 tight.mp3 words-take.json --tempo 1.12 --json src/data/words.json`
   writes the Scribe words in video time; then `<Captions t={t} words={WORDS} y={...} size={80} />` inside the scene function (y about 1300,
   moved below his face for close-ups). More sounds: bonk (ball on a shell, frame-0 hit), clack (padlock), pfft (air squeezed out), gasp.
+- Animal legs on the code-drawn guy (videos/jump): `Leg` / `Haunch` / `Tail` draw kangaroo, cat or flea legs IN PROFILE under
+  his front-view body (hip -> knee -> ankle -> toe blended between stand / crouch / extend / tuck; a fur haunch over the hips
+  makes them read as his own), plus a hopping kangaroo, a sitting cat, a flea with a face, a car with eyes, a brick house,
+  a 30-floor tower with painted floor numbers (draws only the floors near the camera), a ranked height counter, an X-ray
+  spring that snaps (catapult), speed streaks and wavy AIR arrows. `Poof` (now in kit.tsx) = a quick transformation puff.
+  Sounds: whistle (falling), meow.
 - Bat wings on the code-drawn guy (videos/batwings): `wingGeom` + `GuyWing` turn his arms into bat wings (white arm and
   finger bones, a skin membrane with scalloped edges, a thumb claw; poses are a few angles + a flap rotation), a bat hanging
   upside down from a branch (face upright, wings open / fold / reach), X-ray bone chains with knuckles (`BoneChain`), a hand

@@ -29,7 +29,7 @@ const PRESS0 = 0.18, STRAIN = 1.55;                                     // frame
 const S2 = 1.95, CRUNCH = 2.12;                                         // close-up: his spine gives
 const S3 = 3.50, CNT0 = 4.45;                                           // the beetle pulls its ball: 0 -> 1,141 x its weight
 const S4 = 6.40, ZOOM0 = 6.74, ZOOM1 = 7.50, NUM0 = 7.30, NUM_DT = 0.095;   // the whole tower, 80,000 KG
-const DROP13 = 8.62, LAND13 = 8.86;                                     // the 13th elephant drops on top
+const DROP13 = 8.50, LAND13 = 8.86;                                     // the 13th elephant drops on top
 const S4B = 9.12, SQUISH = 9.16;                                        // close-up: he squishes flatter, eyes BOING
 const S5 = 10.05, SHRINK = 10.30, TUG = 10.95;                          // POOF - the beetle at its real size
 const S6 = 11.95, COUNT0 = 12.45, COUNT1 = 13.55, STOMP = 13.72, X_OUT = 14.33;   // X-RAY: YOUR SPINE
@@ -278,7 +278,7 @@ const Tower: React.FC<{t: number; s: TowerS}> = ({t, s}) => {
     let dy = 0, sy = 1;
     if (k === 12) {
       if (s.n13 <= 0) continue;
-      if (s.n13 < 1) dy = -1500 * (1 - s.n13 * s.n13);
+      if (s.n13 < 1) dy = -900 * (1 - s.n13 * s.n13);
       else sy = 1 - 0.16 * Math.exp(-7 * s.land) * Math.cos(s.land * 18);
     }
     const ns = s.nums[k] ?? 0;
@@ -472,7 +472,7 @@ const XFrame: React.FC<{id: string; R: number; t: number; children: React.ReactN
   </svg>
 );
 // 24 movable vertebrae, top to bottom: 7 neck, 12 chest, 5 lower back
-const VERT = Array.from({length: 24}, (_, i) => ({h: i < 7 ? 12 : i < 19 ? 15.5 : 22, w: i < 7 ? 38 : i < 19 ? 46 : 58}));
+const VERT = Array.from({length: 24}, (_, i) => ({h: (i < 7 ? 12 : i < 19 ? 15.5 : 22) * 0.9, w: i < 7 ? 38 : i < 19 ? 46 : 58}));
 const SPINE_BOT = 330;
 /** X-RAY: YOUR SPINE - the stack is counted bone by bone, then an elephant foot (80,000 KG) stomps: it crunches */
 const SpineXRay: React.FC<{t: number; s: number; uid: string}> = ({t, s, uid}) => {
@@ -480,7 +480,7 @@ const SpineXRay: React.FC<{t: number; s: number; uid: string}> = ({t, s, uid}) =
   const cnt = Math.floor(24 * seg(t, COUNT0, COUNT1) + 0.0001);
   const press = eout(seg(t, STOMP, STOMP + 0.14));
   const squish = 1 - 0.36 * press;
-  const gap = 5.5 * (1 - 0.75 * press);
+  const gap = 5 * (1 - 0.75 * press);
   // stack from the bottom up so the pelvis stays put
   const rows: {y: number; h: number; w: number; i: number}[] = [];
   let y = SPINE_BOT;

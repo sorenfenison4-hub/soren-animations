@@ -63,3 +63,5 @@ loop; thumbnails ("13 ELEPHANTS", the crunch with the X-ray flash): `BUNDLE=work
 Lessons: a tall stack reads best as a wide zoom-out with numbered badges and the counter beside it (k 0.6, tower at screen
 x ~380); keep close-up stickers above the head or beside it so the X-ray flash on the torso stays visible; in the spine
 X-ray keep the foot glued to the head top while the stack compresses (the first version stopped 200 units above it).
+"> <" eyes over an open mouth read as LAUGHING - for pain use squeezed eyes over clenched teeth (+ sweat); a falling thing
+needs ~10 frames on screen to read (the 13th elephant first fell from 1,500 units up and showed for 3 frames).

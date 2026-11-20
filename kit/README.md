@@ -42,6 +42,10 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - Captions for a narrated Short (first used in videos/turtle): `python3 scripts/tighten.py take.mp3 tight.mp3 words-take.json --tempo 1.12 --json src/data/words.json`
   writes the Scribe words in video time; then `<Captions t={t} words={WORDS} y={...} size={80} />` inside the scene function (y about 1300,
   moved below his face for close-ups). More sounds: bonk (ball on a shell, frame-0 hit), clack (padlock), pfft (air squeezed out), gasp.
+- Bat wings on the code-drawn guy (videos/batwings): `wingGeom` + `GuyWing` turn his arms into bat wings (white arm and
+  finger bones, a skin membrane with scalloped edges, a thumb claw; poses are a few angles + a flap rotation), a bat hanging
+  upside down from a branch (face upright, wings open / fold / reach), X-ray bone chains with knuckles (`BoneChain`), a hand
+  X-ray that spreads and stretches into a wing, a sitting guy holding a phone with his feet. Sounds: flap, slap.
 - See-through characters (videos/glassfrog): draw the normal white-and-ink drawing inside `<g filter="url(#glassify)">` (an
   feColorMatrix: white -> clear glass, ink stays ink) in a `paper={false}` Layer at the same z, organs on top; keep the head
   solid in a paper Layer so the face reads; a clipPath wipe swaps solid <-> glass. Also there: a code-drawn guy body (front

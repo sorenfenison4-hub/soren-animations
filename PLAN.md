@@ -36,6 +36,14 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   about 110 litres in 10 minutes - and the water would swell your brain (water poisoning); a camel's red blood cells
   swell to 240 % without bursting, other animals' only ~150 % (Frontiers in Veterinary Science 2023 - verify the human
   side in a medical source; add a safety line). FEEL IT NOW: swallow. ICON: camel at a water trough. NUMBER: 110 L in 10 min.
+- [x] U8. (made 2026-11-20, the user: "use the shark teeth video as an example ... something everyone has wanted":
+  batwings/renders/batwings-1080x1920.mp4 - he flies with bat wings at frame 0 beside a smug hanging bat, his wing-hands
+  slap the branch and can't grip (NO GRIP 1.98 s), THUD close-up 2.55 s, X-RAY BAT WING (fingers 1-4, SKIN, 2 LAYERS THIN),
+  thumb-on-nose SLAP gag, X-RAY YOUR HAND (spread your fingers -> they stretch into a wing, BYE, HANDS), FREE FINGERS 10 -> 2,
+  phone BOING/CRACK, pizza SPLAT, high five WHAPs the bat round the branch, toe typing, flaps off = loop; no captions,
+  like the shark. Upload about 20 h after the camel.) What if you had a bat's wings? WISH: fly. BACKFIRE: a bat's wing IS
+  a hand - arm + four long fingers with skin between, only the thumb free - so you'd lose your hands (2 of 10 fingers
+  free). FEEL IT NOW: "Spread your fingers". ICON: bat hanging upside down. NUMBER: 4 fingers / 10 -> 2.
 - [ ] U3. What if you could hibernate like a bear? WISH: sleep through the whole winter. BACKFIRE: you'd wake up too weak
   to stand (bed-rest muscle and bone loss), while the bear walks out fine; bears also go months without peeing (verify
   both numbers in bed-rest and bear studies). FEEL IT NOW: your legs. ICON: bear in a cave. NUMBER: months asleep / % muscle lost.
@@ -50,8 +58,8 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
-- Screened 2026-11-20 (camel day): bat wings (fly -> a bat's wing is its hand: you'd keep only your thumbs) and lizard arm
-  regrowth are the strongest wishes left - make one of them next (arms were too close: octopus was 3 uploads back);
+- Screened 2026-11-20 (camel day): bat wings (fly -> a bat's wing is its hand: you'd keep only your thumbs; made as U8) and
+  lizard arm regrowth (strongest wish left - hands/arms again, so wait 3 uploads after the bat wings) were the top two;
   lobster "live forever" dropped (the immortal lobster is a myth, the molting-death share is a press quote); tardigrade
   "survive anything" weak icon + passive.
 - Also screened 2026-11-19 (glass frog day): flea jump - a super-jump wish, the landing = falling off a 25-storey building

@@ -629,7 +629,8 @@ const cueDb = (c: Cue, tt: number) => {
  *  so the first word stays clear) stretch.wav (1.2 s rubber balloon stretching: a head or a cell swelling) burp.wav (0.95 s big cartoon burp, peak 0.76 s)
  *  flap.wav (0.45 s big leathery wing flap: a low whump + skin snap, peak at 0.02 s; one per downstroke) slap.wav (0.55 s cartoon face slap, onset at 0)
  *  whistle.wav (1.38 s cartoon falling whistle, 2.6 -> 0.46 kHz, ends quiet: start it ~1.4 s before the landing, about -16 dB)
- *  meow.wav (0.92 s smug cartoon cat "mrrow", loud from 0.04 s, about -17 dB) */
+ *  meow.wav (0.92 s smug cartoon cat "mrrow", loud from 0.04 s, about -17 dB)
+ *  trumpet.wav (0.95 s cartoon elephant trumpet, loud from 0, about -17 to -21 dB) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

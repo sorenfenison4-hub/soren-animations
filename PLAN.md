@@ -51,6 +51,14 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   light that air slows its fall, he drops all 30 floors (counter 100 -> 0, SPLAT), back to kangaroo legs = loop. One height
   counter with the rungs ranked under it. Backfire at 11-15 s on purpose (ladder test). Upload about 20 h after the bat wings;
   compare its "Viewed vs swiped away" and average % viewed with the shark (single power) before making more ladders.
+- [x] U10. (made 2026-11-20, the user: "next million view idea": beetle/renders/beetle-1080x1920.mp4) What if you had a dung
+  beetle's strength? WISH: super strength (the top classic wish we had not done; a big channel's ant-strength Short got
+  17.6M). BACKFIRE: the beetle pulls 1,141 times its weight (Knell & Simmons 2010) - for you 80 tonnes, 13 elephants - and
+  your spine, a stack of 24 little bones, would crush on the first lift; the beetle gets away with it because it's tiny.
+  Shark formula, not a ladder (the flea ladder had just gone up): frame 0 he holds 13 stacked elephants (EASY) beside the smug
+  beetle holding its dung ball up, CRUNCH close-up with an X-ray flash at 2.12 s, the beetle's ball swells with the counter,
+  zoom out to all 13 (80,000 KG), SQUISH + eyes BOING, POOF to its real size (1 CM), X-RAY: YOUR SPINE (an elephant foot
+  stomps), "So now he lifts with his legs" = frame 0. Upload about 20 h after the flea jump.
 - [ ] U3. What if you could hibernate like a bear? WISH: sleep through the whole winter. BACKFIRE: you'd wake up too weak
   to stand (bed-rest muscle and bone loss), while the bear walks out fine; bears also go months without peeing (verify
   both numbers in bed-rest and bear studies). FEEL IT NOW: your legs. ICON: bear in a cave. NUMBER: months asleep / % muscle lost.
@@ -65,6 +73,10 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Screened 2026-11-20 (beetle day): immortal jellyfish (live forever -> every time you got old you'd turn back into a
+  baby: a strong, loopable twist, but passive and no part you feel - keep as a candidate); ant strength (the measured number
+  is ~9x body mass, ~650 kg for you, which a trained spine survives - use the dung beetle's 1,141x instead, done); Greenland
+  shark (weak icon, and exactly Posit Pixel's 5.8M premise). A strength LADDER (ant -> beetle) is ready if the flea ladder wins.
 - Screened 2026-11-20 (camel day): bat wings (fly -> a bat's wing is its hand: you'd keep only your thumbs; made as U8) and
   lizard arm regrowth (strongest wish left - hands/arms again, so wait 3 uploads after the bat wings) were the top two;
   lobster "live forever" dropped (the immortal lobster is a myth, the molting-death share is a press quote); tardigrade

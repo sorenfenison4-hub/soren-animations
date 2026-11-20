@@ -57,6 +57,13 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   solid in a paper Layer so the face reads; a clipPath wipe swaps solid <-> glass. Also there: a code-drawn guy body (front
   view), a glass frog with a see-through belly, a toucan, blood cells running along smooth loops (`mkLoop` / `along`) and
   packing into a liver (`slotsIn`), a lights-out blackout gag. Sounds: thud (body falls flat), shimmer (vanish), squelch (clot).
+- Lifting / squashing on the code-drawn guy (videos/beetle): a small IK rig (`rig`, `Limb`, `torsoD`) - arms reach any hand
+  point (overhead lifts), legs squat, `sq` / `wide` crush the torso (fold marks, the head sinks into the shoulders), an
+  X-ray flash shows his vertebra stack cracking, eyes that pop out on springs; a cartoon `Elephant` (side view, 7 faces,
+  flapping ears, trunk down / up, legs dangle when held by the belly) and a `Tower` of 13 stacked elephants with number
+  badges; a dung beetle standing up with its ball overhead (`BeetleLift`) or walking on six IK legs pulling a rope
+  (`BeetleWalk`), a `DungBall` with flies; a spine X-ray (24 vertebrae counted, an elephant foot stomps, the stack
+  compresses with cracks). Sound: trumpet (elephant).
 - Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
   k 3.9 or less (a head at k 3.9 is already about half the frame wide).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),

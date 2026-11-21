@@ -11,16 +11,16 @@ const Title: React.FC<{size: number; style: React.CSSProperties; lines: string[]
   </div>
 );
 // the new arm raised (smug), the old one lying on the sand, the lizard beside him
-const TB = 1.3;
+const TB = 1.38;
 export const ThumbTall: React.FC = () => (
   <AbsoluteFill style={{overflow: 'hidden'}}>
-    <Boil t={0}><LizScene t={TB} thumb uid="th" camK={{x: 20, y: -190, k: 2.95}} /></Boil>
-    <Title size={170} lines={['0 BONES']} style={{left: 0, right: 0, top: 170, textAlign: 'center'}} />
+    <Boil t={0}><LizScene t={TB} thumb uid="th" camK={{x: 32, y: -178, k: 2.5}} /></Boil>
+    <Title size={176} lines={['0 BONES']} style={{left: 0, right: 0, top: 200, textAlign: 'center'}} />
   </AbsoluteFill>
 );
 export const ThumbWide: React.FC = () => (
   <AbsoluteFill style={{overflow: 'hidden'}}>
-    <Boil t={0}><LizScene t={TB} thumb uid="tw" camK={{x: 84, y: -168, k: 3.08}} /></Boil>
-    <Title size={128} lines={['0', 'BONES']} style={{right: 70, top: 150, textAlign: 'center'}} />
+    <Boil t={0}><LizScene t={TB} thumb uid="tw" camK={{x: 30, y: -150, k: 2.85}} /></Boil>
+    <Title size={118} lines={['0 BONES']} style={{right: 56, top: 52, textAlign: 'center'}} />
   </AbsoluteFill>
 );

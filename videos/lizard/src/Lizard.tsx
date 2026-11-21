@@ -650,6 +650,7 @@ const camFor = (t: number): {x: number; y: number; k: number} => {
 
 export const LizScene: React.FC<{t: number; camK?: {x: number; y: number; k: number}; thumb?: boolean; uid?: string}> = ({t, camK, thumb, uid = 'm'}) => {
   const g = guyAt(t), L = lizAt(t);
+  if (thumb) { L.mood = 'smug'; L.ta = 74; L.bend = -0.3; L.wob = 0; g.na = 154; g.nwob = 0; g.mood = 'smug'; }   // thumbnails: new arm up clear of his face, the lizard smug, its two-tone tail hanging
   const c0 = camK ?? camFor(t);
   const sh = shake(t, hit(t, 0, 5, 7) + hit(t, WHACK, 18, 6) + hit(t, SNAP, 4, 8) + hit(t, PLOP, 10, 6) + hit(t, POP2, 6, 7) + hit(t, FLY, 3, 9) + hit(t, POP2 + FLY, 3, 9));
   const cam = {x: c0.x + sh.x / c0.k, y: c0.y + sh.y / c0.k, z: 1000 - 1000 / c0.k};

@@ -67,6 +67,13 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   badges; a dung beetle standing up with its ball overhead (`BeetleLift`) or walking on six IK legs pulling a rope
   (`BeetleWalk`), a `DungBall` with flies; a spine X-ray (24 vertebrae counted, an elephant foot stomps, the stack
   compresses with cracks). Sound: trumpet (elephant).
+- Lizard arm on the code-drawn guy (videos/lizard): `StiffArm` (one straight tube that only turns at the shoulder, a springy
+  twang bend, grows out of the shoulder), `dropArm` (a popped-off arm tips over and flip-flops on the ground like a dropped
+  lizard tail), a side-view green `Lizard` (tan regrown tail end, toe pads, a pink dewlap that flares, `taper` = a tapered
+  tube along a quadratic curve for tails), X-ray panels for a lizard tail (vertebrae with break lines -> SNAP -> one smooth
+  cartilage tube), a nose in profile (bone + cartilage tip, a finger boops it) and a human arm (all 30 bones counted, then a
+  scan line turns it into one tube), an ice cream cone that lands upside down on his head (`ScoopHat`), a desert set
+  (mesas, saguaros, a rock).
 - Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
   k 3.9 or less (a head at k 3.9 is already about half the frame wide).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),

@@ -69,9 +69,14 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U3. What if you could hibernate like a bear? WISH: sleep through the whole winter. BACKFIRE: you'd wake up too weak
   to stand (bed-rest muscle and bone loss), while the bear walks out fine; bears also go months without peeing (verify
   both numbers in bed-rest and bear studies). FEEL IT NOW: your legs. ICON: bear in a cave. NUMBER: months asleep / % muscle lost.
-- [ ] U4. What if you could regrow your arm like a lizard's tail? WISH: grow back anything you lose. BACKFIRE: it comes
-  back with no bones - one long tube of cartilage instead of vertebrae (green anole study, Arizona State 2012). FEEL IT
-  NOW: wiggle your fingers. ICON: lizard dropping its tail. NUMBER: needed (weeks to regrow or bones replaced - verify).
+- [x] U4. (made 2026-11-21, the user: "next video idea": lizard/renders/lizard-1080x1920.mp4 - POP: he pulls his arm off at a
+  dotted line, it flip-flops on the sand like a dropped tail, a new one shoots out (GROWS BACK); he waves and the stiff new arm
+  WHACKs his face at 2.45 s (NO BONES); X-RAY: LIZARD TAIL (SNAP, 1 LONG TUBE of CARTILAGE) = TIP OF YOUR NOSE (BOOP); the lizard
+  wags its stiff tail (FINE); X-RAY: YOUR ARM 0 -> 30 BONES, scan -> 0; ice cream cone swung onto his head (PLOP, NO ELBOW / NO
+  WRIST / NO KNUCKLES); he pops it off and tries again = loop. Upload about 20 h after the fly's eyes.)
+  What if you could regrow your arm like a lizard's tail? WISH: grow back anything you lose. BACKFIRE: it comes
+  back with no bones - one long tube of cartilage instead of vertebrae (Fisher et al. 2012, Anatomical Record). FEEL IT
+  NOW: the hand holding your phone; the tip of your nose (same cartilage). ICON: lizard dropping its tail. NUMBER: 30 bones -> 0.
 - [-] U5. ON HOLD - the user said not to recreate old videos (2026-11-19); only if they ask for it. RETRY (new upload,
   the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
   fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the
@@ -80,6 +85,11 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Screened 2026-11-21 (lizard day): lizard arm regrowth (made, U4); bear hibernation (passive, backfire not showable by 3 s);
+  basilisk lizard running on water (the catch is only "it doesn't work"); starfish regrowth (same wish, weaker icon). The
+  screened list is nearly used up (U3 bear = weak, U6 cat eyes = eyes again + number unsettled): screen 5-8 NEW wishes next
+  session before making anything (seeds: cat night vision once eyes are 3 uploads back, chameleon tongue, a seal / whale
+  breath-hold, a wood frog that freezes and thaws, a cheetah sprint if a body backfire can be verified).
 - Screened 2026-11-21 (fly-eyes day): fly eyes (made, U11); lizard arm regrowth still the strongest wish left - make it
   next (arms are then 4 uploads back); cat eyes (daylight acuity number unsettled); immortal jellyfish (passive); cheetah
   (no verified body backfire); cockroach "survive anything" (the catch - a week without its head, then thirst - needs an

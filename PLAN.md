@@ -59,6 +59,13 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   beetle holding its dung ball up, CRUNCH close-up with an X-ray flash at 2.12 s, the beetle's ball swells with the counter,
   zoom out to all 13 (80,000 KG), SQUISH + eyes BOING, POOF to its real size (1 CM), X-RAY: YOUR SPINE (an elephant foot
   stomps), "So now he lifts with his legs" = frame 0. Upload about 20 h after the flea jump.
+- [x] U11. (made 2026-11-21, the user: "next million view idea": flyeyes/renders/flyeyes-1080x1920.mp4) What if you had a
+  fly's eyes? WISH: see in slow motion and dodge anything - the reason you can never swat a fly. BACKFIRE: almost blind -
+  each eye is over 3,000 tiny eyes (3,433-3,484 in houseflies, Sukontason 2008) that each see one dot; as sharp as yours
+  they'd have to be a meter wide (Kirschfeld 1976). Shark formula: frame 0 a slow-motion dodge of the fly's swatter,
+  2.22 s BONK face first into the screen (ALMOST BLIND), YOU swat the fly on his head in slow motion -> SMACK on him (x4),
+  ZOOM: FLY EYE (0 -> 3,400 PER EYE, the facets flip to a mosaic of his face = FLY VISION), eyes swell to 1 METER and tip
+  him over, POOF, "So he only wears them for fly fights" = frame 0. Upload about 20 h after the beetle.
 - [ ] U3. What if you could hibernate like a bear? WISH: sleep through the whole winter. BACKFIRE: you'd wake up too weak
   to stand (bed-rest muscle and bone loss), while the bear walks out fine; bears also go months without peeing (verify
   both numbers in bed-rest and bear studies). FEEL IT NOW: your legs. ICON: bear in a cave. NUMBER: months asleep / % muscle lost.
@@ -73,6 +80,11 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Screened 2026-11-21 (fly-eyes day): fly eyes (made, U11); lizard arm regrowth still the strongest wish left - make it
+  next (arms are then 4 uploads back); cat eyes (daylight acuity number unsettled); immortal jellyfish (passive); cheetah
+  (no verified body backfire); cockroach "survive anything" (the catch - a week without its head, then thirst - needs an
+  accident first, macabre); sperm whale breath-hold (bends on the way up; the trick is not famous); spider webs (the catch
+  does not hurt you).
 - Screened 2026-11-20 (beetle day): immortal jellyfish (live forever -> every time you got old you'd turn back into a
   baby: a strong, loopable twist, but passive and no part you feel - keep as a candidate); ant strength (the measured number
   is ~9x body mass, ~650 kg for you, which a trained spine survives - use the dung beetle's 1,141x instead, done); Greenland

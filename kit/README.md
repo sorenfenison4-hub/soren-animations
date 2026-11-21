@@ -20,6 +20,9 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - `public/library/sfx/` - whoosh, pop, ding, twang, strain, whir, crickets, giggle, zap, chirp, hum (20 s power-line bed),
   splash, bubbles, horn (ship toot), waves (3 s sea lapping, repeat it for a bed), tick / tick2 (wheel clicker),
   confetti (party-popper burst), crack (stone crack: small crackles, the big snap 0.32 s into the file), hiss (2.6 s steam hiss).
+  More in the SoundLayer comment in `src/lib/kit.tsx` (flybuzz / flyby / flybuzz_slow / whoosh_slow are synthesized, from
+  videos/flyeyes). Compound-eye domes, a cartoon housefly on leg IK, a fly swatter with slow-motion ghosts and a hexagon
+  mosaic that turns a picture into one dot per little eye: `videos/flyeyes/src/Fly.tsx`.
 - Cracks that draw themselves and then fill (water, dissolved lime, new stone), a code-drawn block with a face and a
   laurel wreath, a hard hat, a mixing trough and the Pantheon: `videos/concrete/src/Concrete.tsx`.
 - Story Shorts with several characters (format of the big animated-story channels: narrator + character voices, a cut every

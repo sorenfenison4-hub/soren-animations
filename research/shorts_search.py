@@ -10,7 +10,7 @@ for q in qs:
         except Exception: print('FAIL', q, how); continue
         k = 0
         for e in d.get('entries', []):
-            if not e.get('id') or '/shorts/' not in (e.get('url') or ''): continue
+            if not e or not e.get('id') or '/shorts/' not in (e.get('url') or ''): continue
             k += 1
             x = rows.setdefault(e['id'], {'id': e['id'], 'title': e.get('title'), 'views': e.get('view_count'), 'channel': e.get('channel') or e.get('uploader'),
                                          'channel_id': e.get('channel_id'), 'dur': e.get('duration'), 'queries': []})

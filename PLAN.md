@@ -77,6 +77,15 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   What if you could regrow your arm like a lizard's tail? WISH: grow back anything you lose. BACKFIRE: it comes
   back with no bones - one long tube of cartilage instead of vertebrae (Fisher et al. 2012, Anatomical Record). FEEL IT
   NOW: the hand holding your phone; the tip of your nose (same cartilage). ICON: lizard dropping its tail. NUMBER: 30 bones -> 0.
+- [x] U12. (made 2026-11-22, the user: "next million view idea": butterfly/renders/butterfly-1080x1920.mp4 - he flies on monarch
+  wings beside a smug monarch at frame 0, a chrysalis zips shut, his face drips and sinks into soup at 2.4 s (SPLORCH, SOUP), his
+  eyes float; X-RAY: CHRYSALIS (a caterpillar DIGESTS ITSELF, clumps of cells survive: WINGS / LEGS / EYES, DAYS 0 -> 14, they build
+  a butterfly); he pops out, wings pump open (TA-DA); the straw mouth BOINGs out (STRAW); a pizza BOINGs off it (YOUR TEETH 32 -> 0,
+  NO CHEWING); pizza in the blender, SLURP, flies off = loop. Upload about 20 h after the lizard.)
+  What if you could turn into a butterfly? WISH: fly (turning into an animal + flying). BACKFIRE: first you'd melt into soup -
+  the caterpillar digests itself in the chrysalis (Scientific American 2012) - and you'd come out with a straw for a mouth, no
+  chewing (Krenn 2010). FEEL IT NOW: your teeth (bite down). ICON: caterpillar -> chrysalis -> butterfly. NUMBER: about two
+  weeks in the chrysalis (8-15 days, monarch); 32 teeth -> 0.
 - [-] U5. ON HOLD - the user said not to recreate old videos (2026-11-19); only if they ask for it. RETRY (new upload,
   the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
   fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the
@@ -85,6 +94,13 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Screened 2026-11-22 (butterfly day): butterfly (made, U12); cheetah (still no verified body backfire); peregrine falcon dive
+  (black out in the pull-out: only ~3 g measured, ~10 g modelled - not enough); electric eel (self-shock unknown, eel done);
+  polar bear fur (never cold -> overheats when it runs, Hurst/Watts 1982 treadmill studies: verified, the wish is weaker - keep
+  as a candidate, timely in winter); spider webs (huge wish, but the catch - silk from your rear that sticks to you - does not
+  hurt); starfish "clone yourself" (tear yourself in half: strong, but regrowth right after the lizard - wait 2-3 uploads);
+  narwhal tusk (one giant sensitive tooth: weak wish); immortal jellyfish (passive). NEXT: cat's eyes (see in the dark - eyes are
+  3 uploads back after the butterfly; settle the daylight-acuity number first), then the polar bear or the starfish.
 - Screened 2026-11-21 (lizard day): lizard arm regrowth (made, U4); bear hibernation (passive, backfire not showable by 3 s);
   basilisk lizard running on water (the catch is only "it doesn't work"); starfish regrowth (same wish, weaker icon). The
   screened list is nearly used up (U3 bear = weak, U6 cat eyes = eyes again + number unsettled): screen 5-8 NEW wishes next

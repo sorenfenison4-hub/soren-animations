@@ -677,7 +677,7 @@ export const BflyScene: React.FC<{t: number; camK?: {x: number; y: number; k: nu
         {showGuy ? <GuyB t={t} g={g} uid={uid} /> : null}
         {pz ? <W><Pizza at={pz.p} a={pz.a} s={0.9} /></W> : null}
         {t > TOSS1 && t < TOSS1 + 0.6 ? <Puffs t={t} born={TOSS1} x={STUMP_X} y={JUG_T - 10} n={5} life={0.45} size={16} vy={-90} color="#FFE9A8" seed={5} /> : null}
-        {t > SPLIT && t < SPLIT + 0.7 ? <Puffs t={t} born={SPLIT} x={CH_X} y={-250} n={6} life={0.5} size={26} vy={-60} color="#FFFFFF" seed={3} /> : null}
+        {t > SPLIT && t < SPLIT + 0.7 ? <Puffs t={t} born={SPLIT} x={CH_X} y={-120} n={6} life={0.36} size={26} vy={-60} color="#FFFFFF" seed={3} /> : null}
       </Layer>
       {/* see-through things: soup + the chrysalis shell (no paper edge) */}
       <Layer cam={cam} z={1000} paper={false}>
@@ -689,7 +689,7 @@ export const BflyScene: React.FC<{t: number; camK?: {x: number; y: number; k: nu
         <Txt x={CH_X + 110} y={-470 + 60} s={st.zip} text="ZIP" size={46} rot={8} fill={GOLD} />
         <Txt x={CH_X - 66} y={-388} s={st.splorch} text="SPLORCH" size={30} rot={-8} fill="#FFFFFF" />
         <Txt x={CH_X + 120} y={-420} s={st.crack} text="CRACK" size={46} rot={8} fill="#FFFFFF" />
-        <Txt x={CH_X - 150} y={-330} s={st.tada} text="TA-DA" size={60} rot={-8} fill={GOLD} />
+        <Txt x={CH_X - 60} y={-420} s={st.tada} text="TA-DA" size={60} rot={-8} fill={GOLD} />
         <Txt x={hw[0] + 96} y={hw[1] + 40} s={st.boing} text="BOING" size={36} rot={8} fill="#FFFFFF" />
         <Txt x={hw[0] + 70} y={hw[1] - 90} s={st.bonk} text="BOING" size={40} rot={-8} fill="#FFFFFF" />
         <Txt x={STUMP_X - 10} y={JUG_T - 70} s={st.whirr} text="WHIRR" size={40} rot={-6} fill={GOLD} />

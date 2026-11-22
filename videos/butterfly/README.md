@@ -70,5 +70,7 @@ Voice: James, eleven_v4, one take (21.4 s, 278 credits); line 1 tightened at 1.2
 pauses cut to 0.26 s, spliced -> `public/butterfly/vo/tight.mp3` (17.4 s); first word 0.14 s, "melt" 2.42 s. Word times (Scribe)
 in `src/data/words.json` (video time). No new sounds (flap = wing beats, stretch = zip / wings pumping, squelch + thud = the melt,
 bubbles = the soup, crack, twang = the straw, whir = the blender, gulp + glug = the slurp).
-Render: `node scripts/render.mjs Butterfly renders/butterfly-1080x1920.mp4 1`; `node scripts/check-loop.mjs Butterfly` = seamless
+Render: `node scripts/render.mjs Butterfly renders/butterfly-1080x1920.mp4 1` (25 min on CPU: five paper layers); after the
+pop scan the TA-DA sticker (cut off at the left) and the pop puffs (over his face) were fixed and frames 741-782 re-rendered
+(`render.mjs Butterfly work/patch2.mp4 1 741-782`) and spliced in with an ffmpeg trim + concat re-encode (crf 16, audio copied); `node scripts/check-loop.mjs Butterfly` = seamless
 loop (frame 0 vs 0.5 s: 49.4, moving). Thumbnails: `COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then ThumbWide).

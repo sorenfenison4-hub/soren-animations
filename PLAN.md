@@ -95,6 +95,15 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   What if you had a polar bear's fur? WISH: never be cold. BACKFIRE: the coat keeps the heat in so well that one jog would give you
   heat stroke; even the bear overheats when it walks fast (Hurst et al. 1982, treadmill). FEEL IT NOW: your skin. ICON: polar bear.
   NUMBER: fat up to 10 cm; 40 °C (104 °F).
+- [x] U14. (made 2026-11-22, the user: "next million view idea": starfish/renders/starfish-1080x1920.mp4 - he tears himself in half
+  like notebook paper at frame 0 (RIIIP) beside a smug six-armed starfish, POP 2.74 s, close-up HALF (one eye, half a mouth each);
+  the starfish pulls itself apart with ease (EASY, PULL, POP, BYE); X-RAY: STARFISH (STOMACH IN EVERY ARM, GROWS BACK, DAYS 0 -> 30,
+  CLONE); his month: DAY 1 -> 30, ONE EYE / ONE ARM / ONE LEG, hop hop BONK; DAY 30 the missing sides sketch in, 2 OF HIM, high five;
+  his clone grins, grabs its head and starts to tear = loop. Upload about 20 h after the polar bear.)
+  What if you could clone yourself like a starfish? WISH: clone yourself. BACKFIRE: you'd have to rip yourself in half, then spend a
+  month as two halves with one eye, one arm and one leg each. Fission: the two sides pull apart until the disc tears and each half
+  regrows its arms (Coscinasterias acutispina: 4-5 new arms, adult arm count by 30 days, Zoological Science 2011). ICON: starfish.
+  FEEL IT NOW: your two eyes, arms, legs. NUMBER: about a month.
 - [-] U5. ON HOLD - the user said not to recreate old videos (2026-11-19); only if they ask for it. RETRY (new upload,
   the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
   fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the
@@ -103,6 +112,11 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Screened 2026-11-22 (starfish day): starfish clone (made, U14); cat's eyes (the "almost blind" catch again); immortal jellyfish
+  (passive, melting right after the butterfly - possible from the next upload, the butterfly is then 3 back); octopus three hearts
+  (the main heart stops when it swims: near the rejected hummingbird heart); cheetah (no verified body backfire); eagle eyes (eyes
+  again); crocodile bite (teeth again); porcupine quills (armour like the turtle). NEXT: screen 5-8 new wishes first - the screened
+  list is used up (seeds: immortal jellyfish, a chameleon's tongue, a seal / whale breath-hold, a wood frog that freezes and thaws).
 - Screened 2026-11-22 (polar bear day): polar bear fur (made, U13); starfish "clone yourself" (the strongest wish left - make it next:
   regrowth is then 3 uploads back; verify how the disc splits in Crozier 1920 / Alves et al. 2001 / Haramoto, and the regrowth time:
   C. acutispina grew 4-5 new arms within 30 days of fission); immortal jellyfish (passive, melts like the butterfly); cat's eyes (same

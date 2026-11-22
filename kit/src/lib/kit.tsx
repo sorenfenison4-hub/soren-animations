@@ -637,7 +637,10 @@ const cueDb = (c: Cue, tt: number) => {
  *  swing; `from: 0.42` makes it a frame-0 hit) - synthesized in code for videos/flyeyes
  *  snowball.wav (0.42 s soft snowball "pomf" + crunch, onset at 0: a frame-0 hit, about -6 dB) wind.wav (4 s blizzard gusts: repeat
  *  every 3.6 s at about -30 dB for a bed) kettle.wav (1.3 s rising kettle whistle: overheating) beep.wav (0.62 s three warning beeps)
- *  - synthesized in code for videos/polarbear (videos/polarbear/scripts/sfx_polar.py) */
+ *  - synthesized in code for videos/polarbear (videos/polarbear/scripts/sfx_polar.py)
+ *  rip.wav (2.7 s paper tear, crackly, loud from 0: a frame-0 hit, about -3 dB) rip_short.wav (0.55 s quick tear) boing.wav (0.5 s
+ *  cartoon spring "bwoing", onset at 0: hops, a POP) scribble.wav (0.4 s pencil scribble: a sketch drawing itself)
+ *  - synthesized in code for videos/starfish (videos/starfish/scripts/sfx_star.py) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

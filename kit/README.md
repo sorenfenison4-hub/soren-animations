@@ -22,6 +22,10 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   confetti (party-popper burst), crack (stone crack: small crackles, the big snap 0.32 s into the file), hiss (2.6 s steam hiss).
   snowball / wind (blizzard bed) / kettle / beep are synthesized (videos/polarbear). A furry guy (puff limbs, fur ruff), a front-view
   polar bear, a treadmill and a fur X-ray: `videos/polarbear/src/PolarBear.tsx`.
+  rip (paper tear) / rip_short / boing / scribble are synthesized (videos/starfish). The guy split into two halves along a torn
+  zigzag (the crack opens by shearing the points above its tip; each half = one leg, one arm, one eye, half a mouth; a dashed pencil
+  sketch of the missing side), a six-armed starfish that splits and regrows, a starfish X-ray with a gland in every arm and a beach
+  (sea band, foam line, shells, barnacled rock): `videos/starfish/src/Starfish.tsx`.
   More in the SoundLayer comment in `src/lib/kit.tsx` (flybuzz / flyby / flybuzz_slow / whoosh_slow are synthesized, from
   videos/flyeyes). Compound-eye domes, a cartoon housefly on leg IK, a fly swatter with slow-motion ghosts and a hexagon
   mosaic that turns a picture into one dot per little eye: `videos/flyeyes/src/Fly.tsx`.

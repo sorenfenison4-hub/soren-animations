@@ -11,6 +11,8 @@ From this server YouTube's player asks to sign in ("confirm you're not a bot") -
     python3 -I research/report_tables.py <outdir> tables.md data.json             # markdown tables + data json from the files above
                                                                                   # (expects channel_shorts.json, ch_*.json, shorts*.json in <outdir>)
 
+2026-11-22: comments for free: `python3 -I -m yt_dlp --skip-download --write-comments -o "<dir>/%(id)s.%(ext)s" <short url>` writes
+<id>.info.json with like_count, comment_count and the comments - it worked for 2 of 5 Shorts (the others hit the sign-in check).
 2026-11-22: channel_shorts.py still works; the Shorts-only search (shorts_search.py) now returns only 0-3 results per query
 from this server, so it no longer gives a useful sample.
 

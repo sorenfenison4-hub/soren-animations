@@ -86,6 +86,15 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   the caterpillar digests itself in the chrysalis (Scientific American 2012) - and you'd come out with a straw for a mouth, no
   chewing (Krenn 2010). FEEL IT NOW: your teeth (bite down). ICON: caterpillar -> chrysalis -> butterfly. NUMBER: about two
   weeks in the chrysalis (8-15 days, monarch); 32 teeth -> 0.
+- [x] U13. (made 2026-11-22, the user: "next million view idea": polarbear/renders/polarbear-1080x1920.mp4 - a blizzard, a snowball
+  WHUMPs into his fur and he doesn't blink (NOT COLD); one jog -> red face, steam blast + kettle whistle at 2.3 s (COOKED), he keels
+  over; X-RAY: POLAR BEAR FUR (clear hollow hairs, BLACK SKIN, fat 0 -> 10 CM, TRAPS HEAT); the bear on a treadmill in the snow
+  overheats and the belt flings it into a snowbank (EVEN THE BEAR, TOO HOT, SPROING, POMF); YOUR BODY 37 -> 40 °C = HEAT STROKE; he
+  just stands there taking snowballs (NEVER RUNS) = loop. For this video only, a fixed "Subscribe to @Koolkid7898pogo" box at the
+  top (the user's request). Upload about 20 h after the butterfly.)
+  What if you had a polar bear's fur? WISH: never be cold. BACKFIRE: the coat keeps the heat in so well that one jog would give you
+  heat stroke; even the bear overheats when it walks fast (Hurst et al. 1982, treadmill). FEEL IT NOW: your skin. ICON: polar bear.
+  NUMBER: fat up to 10 cm; 40 °C (104 °F).
 - [-] U5. ON HOLD - the user said not to recreate old videos (2026-11-19); only if they ask for it. RETRY (new upload,
   the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
   fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the
@@ -94,6 +103,11 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Screened 2026-11-22 (polar bear day): polar bear fur (made, U13); starfish "clone yourself" (the strongest wish left - make it next:
+  regrowth is then 3 uploads back; verify how the disc splits in Crozier 1920 / Alves et al. 2001 / Haramoto, and the regrowth time:
+  C. acutispina grew 4-5 new arms within 30 days of fission); immortal jellyfish (passive, melts like the butterfly); cat's eyes (same
+  "almost blind" catch as the fly's eyes); cheetah (comments ask for The Flash - still no verified body backfire; tiger beetles go
+  blind at top speed, Gilbert 1997, but are no icon); spider webs (no hurt); eagle eyes (eyes again); whale breath-hold (pass out).
 - Screened 2026-11-22 (butterfly day): butterfly (made, U12); cheetah (still no verified body backfire); peregrine falcon dive
   (black out in the pull-out: only ~3 g measured, ~10 g modelled - not enough); electric eel (self-shock unknown, eel done);
   polar bear fur (never cold -> overheats when it runs, Hurst/Watts 1982 treadmill studies: verified, the wish is weaker - keep

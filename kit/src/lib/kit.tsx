@@ -61,7 +61,8 @@ const useFit = () => { const {width, height} = useVideoConfig(); const wf = Reac
 export const paperFilter = (edge = 6, lift = 1) =>
   `drop-shadow(${edge}px 0 0 #FFFDF6) drop-shadow(-${edge}px 0 0 #FFFDF6) drop-shadow(0 ${edge}px 0 #FFFDF6) drop-shadow(0 -${edge}px 0 #FFFDF6) ` +
   `drop-shadow(${4 * lift}px ${10 * lift}px ${7 * lift}px rgba(70,45,20,0.30))`;
-/** A flat layer at depth z. Near layers (small z) move and grow faster than far ones. blur is in screen px. */
+/** A flat layer at depth z. Near layers (small z) move and grow faster than far ones. blur is in screen px.
+ *  A layer closer than 250 units to the camera is not drawn: for the z=1000 layer keep the camera k under 4 (3.9 max). */
 export const Layer: React.FC<{cam: Cam; z: number; blur?: number; paper?: boolean; children: React.ReactNode}> = ({cam, z, blur = 0, paper = true, children}) => {
   const fit = useFit(); const d = z - cam.z;
   if (d < 250) return null;
@@ -633,7 +634,10 @@ const cueDb = (c: Cue, tt: number) => {
  *  trumpet.wav (0.95 s cartoon elephant trumpet, loud from 0, about -17 to -21 dB)
  *  flybuzz.wav (1.6 s housefly buzz, ~205 Hz wing beat) flyby.wav (1.1 s buzz passing by, swells in the middle)
  *  flybuzz_slow.wav (2.4 s the buzz 3x slower: slow-motion wing beats) whoosh_slow.wav (3 s whoosh at 0.46x speed: a slow-motion
- *  swing; `from: 0.42` makes it a frame-0 hit) - synthesized in code for videos/flyeyes */
+ *  swing; `from: 0.42` makes it a frame-0 hit) - synthesized in code for videos/flyeyes
+ *  snowball.wav (0.42 s soft snowball "pomf" + crunch, onset at 0: a frame-0 hit, about -6 dB) wind.wav (4 s blizzard gusts: repeat
+ *  every 3.6 s at about -30 dB for a bed) kettle.wav (1.3 s rising kettle whistle: overheating) beep.wav (0.62 s three warning beeps)
+ *  - synthesized in code for videos/polarbear (videos/polarbear/scripts/sfx_polar.py) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

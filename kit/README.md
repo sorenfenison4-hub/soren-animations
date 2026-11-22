@@ -20,6 +20,8 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - `public/library/sfx/` - whoosh, pop, ding, twang, strain, whir, crickets, giggle, zap, chirp, hum (20 s power-line bed),
   splash, bubbles, horn (ship toot), waves (3 s sea lapping, repeat it for a bed), tick / tick2 (wheel clicker),
   confetti (party-popper burst), crack (stone crack: small crackles, the big snap 0.32 s into the file), hiss (2.6 s steam hiss).
+  snowball / wind (blizzard bed) / kettle / beep are synthesized (videos/polarbear). A furry guy (puff limbs, fur ruff), a front-view
+  polar bear, a treadmill and a fur X-ray: `videos/polarbear/src/PolarBear.tsx`.
   More in the SoundLayer comment in `src/lib/kit.tsx` (flybuzz / flyby / flybuzz_slow / whoosh_slow are synthesized, from
   videos/flyeyes). Compound-eye domes, a cartoon housefly on leg IK, a fly swatter with slow-motion ghosts and a hexagon
   mosaic that turns a picture into one dot per little eye: `videos/flyeyes/src/Fly.tsx`.

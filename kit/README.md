@@ -80,6 +80,18 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   cartilage tube), a nose in profile (bone + cartilage tip, a finger boops it) and a human arm (all 30 bones counted, then a
   scan line turns it into one tube), an ice cream cone that lands upside down on his head (`ScoopHat`), a desert set
   (mesas, saguaros, a rock).
+- Four Shorts from 2026-11-23 (all code-drawn, see each README): `videos/beaver/src/Beaver.tsx` - a 3/4 head on the front-view body
+  (`GFace`, mirrored by `dir`) so things can come out of the mouth sideways; J-hook teeth (`jPts`: down past the chin, a half turn, up into
+  the jaw); a beaver in side view; a birch gnawed into an hourglass that falls; seeded wood chips; a branch that snaps; a pencil fed into
+  the teeth like a wood chipper; a skull X-ray in head coordinates. `videos/squeeze/src/Squeeze.tsx` - `SoftGuy`: the guy as ONE merged
+  outline (ink pass, then fill pass) that melts from standing to a puddle (`f`), with noodle limbs and a tapered stream (`tubeD`) to a
+  keyhole; a front-view octopus (8 tapered arms, suckers); an octopus pouring through a hole in a fish-tank divider; a skeleton X-ray whose
+  bones pop away (206 -> 0). `videos/rabbit/src/Rabbit.tsx` - a side-view head with one big eye in the middle (rabbit eyes), a green
+  vision cone, a side-view rabbit, a cream pie that clips to the head with drips, a SEEN FROM ABOVE panel with sweeping fields of view.
+  `videos/lifespan/src/Lifespan.tsx` - an age rig (a grey beard that heaps on the floor, wrinkles, a cane), a tortoise, a Greenland shark,
+  a clam, a jellyfish, a blob, a baby, and an AGE counter with the ladder's rungs ranked under it. Sounds added: chomp, gnaw, shing, creak
+  (synthesized, `videos/beaver/scripts/sfx_beaver.py`). `scripts/vsplice.py` = the starfish splice made generic: per-segment tempo and
+  silence from the command line, remaps the Scribe word times.
 - Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
   k 3.9 or less (a head at k 3.9 is already about half the frame wide).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),

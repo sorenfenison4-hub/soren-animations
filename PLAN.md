@@ -104,6 +104,21 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   month as two halves with one eye, one arm and one leg each. Fission: the two sides pull apart until the disc tears and each half
   regrows its arms (Coscinasterias acutispina: 4-5 new arms, adult arm count by 30 days, Zoological Science 2011). ICON: starfish.
   FEEL IT NOW: your two eyes, arms, legs. NUMBER: about a month.
+- [x] U15. (made 2026-11-23, the user: "next million view idea" + "make 3 more" - four Shorts made in one session; upload ONE A DAY in
+  this order, about 20 h apart: U15 beaver 11-23, U16 squeeze 11-24, U17 rabbit 11-25, U18 lifespan 11-26 - keeps teeth / bones / eyes /
+  ladder apart and the two melting pictures (squeeze puddle, jellyfish blob) two uploads apart. beaver/renders/beaver-1080x1920.mp4)
+  What if you had a beaver's teeth? WISH: chew through anything (a killer bite, like the shark). BACKFIRE: they never stop growing - stop
+  gnawing and they grow into your other jaw and you can't eat (National Zoo; NPS Glacier). Frame 0: he and a smug beaver gnaw one birch from
+  both sides, TIMBER; 2.43 s his teeth curl into his chin (J-hook, CRUNCH). NUMBER: a 6 cm branch in under 30 s (stopwatch to 0:28).
+- [x] U16. (made 2026-11-23, upload 11-24: squeeze/renders/squeeze-1080x1920.mp4) What if you could squeeze like an octopus? WISH: squeeze
+  through anything. BACKFIRE: you'd have to lose every bone - and then you just flop (206 -> 0). Frame 0: he pours out of a keyhole like
+  toothpaste beside a smug octopus; 2.6 s he collapses into a puddle. NUMBER: a hole the size of a lemon (Seattle Aquarium), 206 bones.
+- [x] U17. (made 2026-11-23, upload 11-25: rabbit/renders/rabbit-1080x1920.mp4) What if you had a rabbit's eyes? WISH: eyes in the back of
+  your head. BACKFIRE: a blind spot right in front of your nose - a pie in the face at 2.95 s. Frame 0: side view, he catches a ball behind
+  his back inside a green vision cone. NUMBER: nearly 360 degrees (YOU: 180). Ends: "So now he walks backwards."
+- [x] U18. (made 2026-11-23, upload 11-26: lifespan/renders/lifespan-1080x1920.mp4) What if you lived as long as these animals? The second
+  LADDER test (after the flea): AGE counter 118 -> 190 tortoise -> ~400 Greenland shark -> 507 clam -> infinity immortal jellyfish; the top
+  rung melts him into a blob and turns him back into a baby (AGE 0), then he grows up again = frame 0. Compare with the flea ladder (8.7K).
 - [-] U5. ON HOLD - the user said not to recreate old videos (2026-11-19); only if they ask for it. RETRY (new upload,
   the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
   fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the
@@ -112,6 +127,12 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
   but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
   and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- Screened 2026-11-23 (four-video day): beaver teeth, octopus squeeze, rabbit eyes, lifespan ladder -> all made (U15-U18). Also looked at:
+  cheetah speed (still no verified body backfire), tardigrade "survive anything" (dry up into a raisin; passive, weak icon), whale
+  breath-hold (the bends / lung squeeze: facts too tangled for 20 s), dog nose (weak wish), axolotl regrowth (the one animal suggestion in
+  the comments, "now grow it like a axolotl" on the lizard - regrowth right after the starfish, and its catch - it never grows up - is no
+  backfire), immortal jellyfish on its own (passive; used as the ladder's top rung instead), cat's eyes (catch unsettled). NEXT: screen
+  5-8 new wishes again (seeds: tardigrade if a body hurt can be shown, a chameleon's tongue, a cheetah if a verified backfire turns up).
 - Screened 2026-11-22 (starfish day): starfish clone (made, U14); cat's eyes (the "almost blind" catch again); immortal jellyfish
   (passive, melting right after the butterfly - possible from the next upload, the butterfly is then 3 back); octopus three hearts
   (the main heart stops when it swims: near the rejected hummingbird heart); cheetah (no verified body backfire); eagle eyes (eyes

@@ -1,0 +1,37 @@
+[
+  {
+    "created_at": "2026-11-24T21:19:54.79549Z",
+    "display_name": "GPT Image 2.5",
+    "id": "fc775d20-3065-4eaf-a930-35cc5d7b61df",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_211954_fc775d20-3065-4eaf-a930-35cc5d7b61df_min.webp",
+    "params": {
+      "aspect_ratio": "3:2",
+      "background": "transparent",
+      "height": 2336,
+      "medias": [
+        {
+          "data": {
+            "id": "b1f9449e-2dc5-4dc8-a8e8-55df44887e7c",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/b1f9449e-2dc5-4dc8-a8e8-55df44887e7c_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "Full body, lying flat on his back on the ground, seen from the side: the body horizontal with the head on the LEFT side of the image, the arms flopped out limp, the legs straight, knocked out cold: the eyes drawn as two small black X shapes, the mouth open in a wobbly line with the pink tongue hanging out. Whole body in frame with a margin. Flat 2D cartoon in exactly the same drawing style as the reference images: the same simple white character with a big round head, a small soft body, noodle arms with simple four-finger hands and short legs with rounded feet, thick smooth black outlines of even weight, flat white fill with a very soft pale-grey shade on one side, small solid black oval eyes, simple curved black eyebrows, no nose, no hair, no clothes, a pink tongue only when the mouth is open. Clean vector-like linework, flat colours, no texture, no text, no border. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 3504
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_211954_fc775d20-3065-4eaf-a930-35cc5d7b61df.png",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Full body, lying flat on his back on the ground, seen from the side: the body horizontal with the head on the LEFT side of the image, the arms flopped out limp, the legs straight, knocked out cold: the eyes drawn as two small black X shapes, the mouth open in a wobbly line with the pink tongue hanging out. Whole body in frame with a margin.",
+      "aspect": "3:2"
+    }
+  }
+]

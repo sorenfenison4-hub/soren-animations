@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:26:35.051941Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "e3880f16-eac0-4a64-b8be-c26526aeb5ea",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a vinyl record scratch, a sudden stop",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_212635_e3880f16-eac0-4a64-b8be-c26526aeb5ea.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music, no voice: a vinyl record scratch, a sudden stop"
+    }
+  }
+]

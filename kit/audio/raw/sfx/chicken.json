@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:32:52.152239Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "4d7230ca-5e82-4de6-b8a7-2257df127dc9",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a chicken clucking and bawking, about 2.5 seconds",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_213252_4d7230ca-5e82-4de6-b8a7-2257df127dc9.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music, no voice: a chicken clucking and bawking, about 2.5 seconds"
+    }
+  }
+]

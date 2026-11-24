@@ -1,0 +1,21 @@
+[
+  {
+    "created_at": "2026-11-24T21:19:24.962621Z",
+    "display_name": "ElevenLabs Music v2.5",
+    "id": "964b3513-ecab-43ea-ae5b-399608741756",
+    "job_type": "elevenlabs_music_v2_5",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "duration": 40,
+      "force_instrumental": true,
+      "prompt": "Comedic suspense background music for a cartoon: low plucked pizzicato bass, a ticking woodblock, staccato bassoon and muted trumpet stabs, 104 BPM, tense but funny, the feeling that something is about to go wrong. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only."
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_211924_964b3513-ecab-43ea-ae5b-399608741756.mp3",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Comedic suspense background music for a cartoon: low plucked pizzicato bass, a ticking woodblock, staccato bassoon and muted trumpet stabs, 104 BPM, tense but funny, the feeling that something is about to go wrong. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only.",
+      "duration": 40
+    }
+  }
+]

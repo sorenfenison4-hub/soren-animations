@@ -1,5 +1,6 @@
 // Cut-out cartoon kit: everything reusable from the elevator Short.
-// Character poses come from public/library/char (Higgsfield, measured in library.json);
+// Character poses come from public/library/char (37 Higgsfield pictures, measured in library.json; Higgsfield was
+// cancelled on 2026-11-24, so new pictures are drawn in code);
 // everything else (props, faces, effects, badges) is drawn in code in the same flat style.
 import React from 'react';
 import {AbsoluteFill, Audio, Img, Sequence, staticFile, useVideoConfig} from 'remotion';
@@ -91,7 +92,7 @@ export const Pic: React.FC<{src: string; w: number; h: number; x: number; y: num
     transformOrigin: `${axp * s}px ${ayp * s}px`, transform: `rotate(${rot}deg) scale(${(flip ? -1 : 1) * sx}, ${sy})`}} />;
 };
 
-// ---------- the guy (16 poses in the library, incl. sweep / listen with a broom) ----------
+// ---------- the guy (37 poses in the library, incl. sweep / listen with a broom; list in kit/README.md) ----------
 export type Pose = keyof typeof LIB;
 export const POSES = Object.keys(LIB) as Pose[];
 /** world head radius shared by every pose, so pose swaps never change the head size (guy is ~300 world units tall) */
@@ -645,7 +646,13 @@ const cueDb = (c: Cue, tt: number) => {
  *  to fall) - synthesized in code for videos/beaver (videos/beaver/scripts/sfx_beaver.py)
  *  underwater.wav (4 s muffled underwater bed: repeat every 3.8 s at about -23 dB) bubblestream.wav (1.6 s bubbles pouring out of
  *  gills, loud from 0: a frame-0 sound, about -17 dB) fwoop.wav (0.5 s suction pop: something shot out of a tube, about -7 dB)
- *  - synthesized in code for videos/sharkgills (videos/sharkgills/scripts/sfx_shark.py) */
+ *  - synthesized in code for videos/sharkgills (videos/sharkgills/scripts/sfx_shark.py)
+ *  2026-11-24, the last Higgsfield credits: 46 more sounds - animal voices (lion_roar bear_roar gorilla monkey dog_bark cat_hiss
+ *  cat_purr frog_croak eagle_cry crocodile whale_song sea_lion dolphin wolf_howl rattlesnake bee_buzz mosquito horse_neigh
+ *  seagulls cow_moo chicken owl_hoot), crowds (crowd_ooh crowd_aww crowd_gasp crowd_cheer kids_laugh sneeze yawn), stings
+ *  (sad_trombone rimshot tada record_scratch drumroll slide_up slide_down dizzy_birds splat heartbeat_fast), scanner correct
+ *  wrong page_flip thunder ice_crack sizzle - onsets, peaks and hit times in kit/audio/README.md; music beds:
+ *  {f: 'library/music/curious.mp3'} (also uhoh sneaky hero dreamy happy, ~40 s, -20 LUFS: about -24 dB under a voice) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

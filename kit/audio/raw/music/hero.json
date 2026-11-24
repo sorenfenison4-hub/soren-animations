@@ -1,0 +1,21 @@
+[
+  {
+    "created_at": "2026-11-24T21:19:42.731253Z",
+    "display_name": "ElevenLabs Music v2.5",
+    "id": "3f4091db-4e42-4327-a2f0-4cadc60e5188",
+    "job_type": "elevenlabs_music_v2_5",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "duration": 40,
+      "force_instrumental": true,
+      "prompt": "Upbeat comedic superhero background music for a cartoon: bright brass fanfare stabs, driving drums, rushing strings, 132 BPM, heroic and a little silly. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only."
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_211942_3f4091db-4e42-4327-a2f0-4cadc60e5188.mp3",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Upbeat comedic superhero background music for a cartoon: bright brass fanfare stabs, driving drums, rushing strings, 132 BPM, heroic and a little silly. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only.",
+      "duration": 40
+    }
+  }
+]

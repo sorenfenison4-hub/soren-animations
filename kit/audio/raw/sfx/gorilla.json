@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:28:24.744698Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "f6e5f1a7-1d3d-4240-af8d-c9efe5405e4c",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a gorilla beating its chest with fast hollow thumps, then a low grunt, about 3 seconds",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_212824_f6e5f1a7-1d3d-4240-af8d-c9efe5405e4c.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music, no voice: a gorilla beating its chest with fast hollow thumps, then a low grunt, about 3 seconds"
+    }
+  }
+]

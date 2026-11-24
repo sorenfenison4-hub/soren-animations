@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:26:47.320319Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "a1b99fa9-1bc8-40f0-a47a-65ea2bf8c400",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a snare drum roll for 3 seconds ending with a cymbal crash",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_212647_a1b99fa9-1bc8-40f0-a47a-65ea2bf8c400.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music, no voice: a snare drum roll for 3 seconds ending with a cymbal crash"
+    }
+  }
+]

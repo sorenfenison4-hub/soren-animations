@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:28:42.182491Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "85c711f6-ee7d-451c-9281-82b896c0fe9e",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a medium-sized dog barking twice, woof woof, close up",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_212842_85c711f6-ee7d-451c-9281-82b896c0fe9e.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music, no voice: a medium-sized dog barking twice, woof woof, close up"
+    }
+  }
+]

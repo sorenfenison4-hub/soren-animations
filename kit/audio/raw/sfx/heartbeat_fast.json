@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:27:41.421335Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "ac944688-297e-45ff-8f06-893ed0a51840",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a fast racing heartbeat, about 4 seconds",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_212741_ac944688-297e-45ff-8f06-893ed0a51840.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music, no voice: a fast racing heartbeat, about 4 seconds"
+    }
+  }
+]

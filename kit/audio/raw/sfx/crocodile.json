@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:29:20.070307Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "c3297354-bdfc-4ab1-93ce-b129cccf339b",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a crocodile's deep hiss followed by a loud jaw snap, about 2 seconds",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_212920_c3297354-bdfc-4ab1-93ce-b129cccf339b.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music, no voice: a crocodile's deep hiss followed by a loud jaw snap, about 2 seconds"
+    }
+  }
+]

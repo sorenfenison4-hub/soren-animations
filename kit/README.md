@@ -16,7 +16,25 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
 - `LoopOut` (in kit.tsx) - every video ends by sliding back to its opening shot, so the last frame equals frame 0 and
   the Short loops seamlessly. `node scripts/check-loop.mjs <CompositionId>` checks it.
 - `src/Template.tsx` - an 8-second example that uses all of it. Copy it for each new video.
-- `public/library/char/` - 16 Higgsfield poses (trimmed; sweep + listen hold a broom). Measurements in `src/lib/library.json`.
+- `public/library/char/` - 37 poses of the guy (Higgsfield GPT Image 2.5, trimmed; measured in `src/lib/library.json`, so
+  `<Guy pose="run" .../>` just works; `flip` mirrors any of them). The first 16: front_calm, front_worried, front_wave,
+  lookup, walk, point_right, shrug, think, scared, surprised, laugh, present, side_stand, tickle_self, sweep + listen (with
+  a broom). 21 more made with the last Higgsfield credits on 2026-11-24 (prompts `images/prompts-2026-11-24.md`, QA sheet
+  `images/qa/poses-2026-11-24.png`): run (side view), jump (arms up, feet tucked), fall (tipping backwards), sit
+  (cross-legged), knockout (lying on his back, X eyes), swim (front crawl, cheeks puffed), fly (superhero), lift (both arms
+  straight up, hands empty - draw what he holds), push (side view, palms flat on something not drawn), eat (hand at his wide
+  open mouth, nothing in it - draw the food), choke (hands at his throat), ouch (hands over his mouth, tears), dizzy
+  (spiral eyes, tongue out), facepalm, cry (kneeling, wailing, blue tears), thumbs_up, arms_crossed (smug), back (seen from
+  behind), sneak (side view, tiptoe), phone (looking at a phone), angry. knockout / swim / fly lie flat: about 2.5x as
+  wide as tall, `feet` = under the middle of the body. Their head circles are fitted to the outline and stored on the old
+  poses' scale (see `images/prep_poses.py`), so swapping between any two poses keeps the head size. All 37 drawn by
+  `Guy` side by side: `images/qa/library-all-poses.png`. (A video that draws the guy fully in code can delete
+  `public/library/char` from its own copy: 72 MB less in every bundle.)
+- `public/library/music/` - 6 instrumental beds (curious, uhoh, sneaky, hero, dreamy, happy; ~40 s, -20 LUFS) and 46 more
+  sounds in `public/library/sfx/` (22 animal voices - lion, bear, gorilla, monkey, dog, cat, frog, eagle, crocodile, whale,
+  sea lion, dolphin, wolf, rattlesnake, bee, mosquito, horse, seagulls, cow, chicken, owl - crowds, comedy stings, an X-ray
+  scanner, a page flip...), made with the last Higgsfield credits on 2026-11-24. Catalog with onsets, peaks and every hit
+  time: `audio/README.md`; add new sounds with `audio/prep_sfx.py`.
 - `public/library/sfx/` - whoosh, pop, ding, twang, strain, whir, crickets, giggle, zap, chirp, hum (20 s power-line bed),
   splash, bubbles, horn (ship toot), waves (3 s sea lapping, repeat it for a bed), tick / tick2 (wheel clicker),
   confetti (party-popper burst), crack (stone crack: small crackles, the big snap 0.32 s into the file), hiss (2.6 s steam hiss).
@@ -38,8 +56,8 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   can draw a gold or wooden one), two more guy poses `sweep` / `listen` (with a broom), `Captions` (kit.tsx) and
   `scripts/assemble.py` (cuts every line of several ElevenLabs takes and lays them back to back into one dialogue track +
   `src/dialogue.json` with word times in video time, loudness-matched to -21.5 LUFS; edit its CHUNKS table per video). New sounds: gulp, squeak, peck,
-  rewind, whisper_whoosh, crowd_laugh. Music beds: Higgsfield `elevenlabs_music_v2_5 --duration N --force_instrumental true`
-  (~14 credits for 72 s); sound effects `seed_audio` (max 2 at once on the starter plan).
+  rewind, whisper_whoosh, crowd_laugh. Music beds: `public/library/music/` (above). Higgsfield, which made the pictures,
+  beds and Seed Audio sounds, was cancelled on 2026-11-24.
 - Night scenes and story Shorts: `videos/tower/src/Tower.tsx` - navy marker sky with star layers, moonlight / window glows,
   a house with a lit window, a tower of thin slabs, a Moon with a face and blush, self-drawing dimension arrows, a heart,
   "HA HA" speech bubbles, a time-lapse with a year badge and clicker ticks.

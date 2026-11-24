@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:25:24.638229Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "d005b378-3bc8-42e4-8e8a-e2c797039a7c",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music: a small crowd going awww, sympathetic, about 2 seconds",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_212524_d005b378-3bc8-42e4-8e8a-e2c797039a7c.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music: a small crowd going awww, sympathetic, about 2 seconds"
+    }
+  }
+]

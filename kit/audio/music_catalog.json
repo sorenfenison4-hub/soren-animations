@@ -1,0 +1,32 @@
+{
+ "curious": {
+  "dur": 40.07,
+  "lufs": -20.2,
+  "prompt": "Playful, curious background music for a cartoon science Short: pizzicato strings, glockenspiel and soft marimba over light finger snaps and a bouncy upright bass, 112 BPM, inquisitive and light. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only."
+ },
+ "dreamy": {
+  "dur": 39.68,
+  "lufs": -20.2,
+  "prompt": "Calm, dreamy background music: a soft celesta melody, a warm synth pad, gentle harp arpeggios, slow 76 BPM, floating, an underwater or night-time feeling. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only."
+ },
+ "happy": {
+  "dur": 40.07,
+  "lufs": -20.2,
+  "prompt": "Happy, upbeat cartoon background music: strummed ukulele, a glockenspiel melody, hand claps and a light kick drum, 120 BPM, sunny and carefree. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only."
+ },
+ "hero": {
+  "dur": 40.02,
+  "lufs": -20.2,
+  "prompt": "Upbeat comedic superhero background music for a cartoon: bright brass fanfare stabs, driving drums, rushing strings, 132 BPM, heroic and a little silly. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only."
+ },
+ "sneaky": {
+  "dur": 40.07,
+  "lufs": -20.2,
+  "prompt": "Sneaky, mischievous cartoon background music: tiptoeing pizzicato strings, clarinet and bassoon playing a sly melody, soft brushed snare, 96 BPM, playful and secretive. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only."
+ },
+ "uhoh": {
+  "dur": 40.05,
+  "lufs": -20.2,
+  "prompt": "Comedic suspense background music for a cartoon: low plucked pizzicato bass, a ticking woodblock, staccato bassoon and muted trumpet stabs, 104 BPM, tense but funny, the feeling that something is about to go wrong. Steady from the first second, no long intro, no big build or ending, mixed to sit quietly under a voice-over. Instrumental only."
+ }
+}

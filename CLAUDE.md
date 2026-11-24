@@ -21,8 +21,12 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   (three doodle stickers LIKE / SUBSCRIBE / COMMENT that a cursor taps, 2.6 s, quiet pops). Once per video, in a calm
   stretch right after the answer lands (about 55-80 % through), never in the first 3 s, finished before the loop push;
   top band by default (y 250), moved with `y` if something important is there. Not in thumbnails.
-- Reuse first: library poses, code-drawn props from `kit.tsx`, shared sounds. A new Higgsfield picture only when code
-  would look clearly worse; add new poses / sounds back into `kit/` (trim + measure into `src/lib/library.json`).
+- Reuse first: library poses (37: run, jump, fall, sit, knockout, swim, fly, lift, push, eat, choke, ouch, dizzy, cry...
+  - `kit/README.md`), code-drawn props from `kit.tsx`, shared sounds (113, incl. 22 animal voices and crowd / comedy
+  stings - `kit/audio/README.md`). Higgsfield was cancelled on 2026-11-24 (the user), so there are no new AI pictures:
+  a library pose or code. New sounds: synthesize them in code (`videos/*/scripts/sfx_*.py`) or the ElevenLabs
+  connector's sfx (50 credits), then add them to `kit/` with `kit/audio/prep_sfx.py`. Music: the 6 beds in
+  `kit/public/library/music/` (the Shorts run without music so far; a bed is an A/B test, not a rule).
 - Hook (fewer swipe-aways - every video; from the study of top animated "what if" Shorts, see Growth below):
   (1) frame 0 is the impossible / surprising picture ALREADY happening, big (main subject or face about half the frame),
   something moving by 0.3 s and a real sound on frame 0 (a whoosh / boing / hit, not a soft chirp) - never a still or a
@@ -302,10 +306,8 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
 - One video per session. Keep replies short. One contact sheet + one pop scan per video unless something looks off.
 
 ## Accounts
-- Higgsfield starter plan: max 4 image jobs at once; monthly credits do not roll over. Cloud login: run
-  `higgsfield auth login` in the background (default port 8765), give the user the sign-in URL from
-  `/root/higgsfield-auth-*/sign-in.html`, they paste back the localhost callback URL, curl it, then
-  `higgsfield workspace set 129a981e-8802-4e4d-88c8-4072f355ebb1`.
+- Higgsfield: cancelled by the user on 2026-11-24. The last credits went into the kit library (21 poses, 6 music beds,
+  46 sounds - `kit/README.md`, `kit/audio/README.md`). Don't use it or ask the user to log in.
 - ElevenLabs: use the connector (the saved API key is rejected).
 
 ## Progress

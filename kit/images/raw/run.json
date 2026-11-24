@@ -1,0 +1,45 @@
+[
+  {
+    "created_at": "2026-11-24T21:17:05.70047Z",
+    "display_name": "GPT Image 2.5",
+    "id": "8c311bc4-c764-4f48-bef0-087bc537502d",
+    "job_type": "gpt_image_2_5",
+    "min_result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_211705_8c311bc4-c764-4f48-bef0-087bc537502d_min.webp",
+    "params": {
+      "aspect_ratio": "2:3",
+      "background": "transparent",
+      "height": 3504,
+      "medias": [
+        {
+          "data": {
+            "id": "b1f9449e-2dc5-4dc8-a8e8-55df44887e7c",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/b1f9449e-2dc5-4dc8-a8e8-55df44887e7c_resize.jpg"
+          },
+          "role": "image"
+        },
+        {
+          "data": {
+            "id": "ae727099-687f-4b0f-815f-91453cb2ee48",
+            "type": "media_input",
+            "url": "https://d2ol7oe51mr4n9.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/ae727099-687f-4b0f-815f-91453cb2ee48_resize.jpg"
+          },
+          "role": "image"
+        }
+      ],
+      "model": "flare",
+      "prompt": "Full body, side view facing to the right, running fast in mid-stride: the front leg kicked high forward with the knee bent, the back leg pushed off far behind, the arms pumping (the near arm swung forward with a loose fist, the far arm swung back), the body leaning forward. Determined face in profile: one eye, the eyebrow angled down, mouth open. Whole body in frame with a margin. Flat 2D cartoon in exactly the same drawing style as the reference images: the same simple white character with a big round head, a small soft body, noodle arms with simple four-finger hands and short legs with rounded feet, thick smooth black outlines of even weight, flat white fill with a very soft pale-grey shade on one side, small solid black oval eyes, simple curved black eyebrows, no nose, no hair, no clothes, a pink tongue only when the mouth is open. Clean vector-like linework, flat colours, no texture, no text, no border. Isolated on a fully transparent background: no sky, no ground, no floor shadow.",
+      "quality": "high",
+      "reference_elements": [],
+      "remove_bg": false,
+      "resolution": "4k",
+      "width": 2336
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_211705_8c311bc4-c764-4f48-bef0-087bc537502d.png",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Full body, side view facing to the right, running fast in mid-stride: the front leg kicked high forward with the knee bent, the back leg pushed off far behind, the arms pumping (the near arm swung forward with a loose fist, the far arm swung back), the body leaning forward. Determined face in profile: one eye, the eyebrow angled down, mouth open. Whole body in frame with a margin.",
+      "aspect": "2:3"
+    }
+  }
+]

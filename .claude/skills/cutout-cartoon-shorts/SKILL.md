@@ -5,6 +5,12 @@ description: Turn a short script (and optionally a reference picture) into a ver
 
 # Cut-out cartoon Shorts (Higgsfield pictures + code animation)
 
+> Status 2026-11-24: Higgsfield was cancelled (the user). Its last credits went into the kit library: 37 poses of the
+> guy, 6 music beds and 113 sounds (`kit/README.md`, `kit/audio/README.md`). From now on a picture is a library pose
+> (`flip` mirrors) or code, a sound is from the library, synthesized in code or the ElevenLabs connector's sfx, and
+> music is one of the library beds. The Higgsfield steps below (setup, section 3, `seed_audio` in section 9) stay only
+> as the record of how the library was made.
+
 What this makes: a vertical Short (1080x1920 comp, 60 fps, delivered 2160x3840) where a simple flat cartoon character
 (thick black outlines, flat colours) acts out a script with a voice-over. Every character pose and expression is its own
 AI picture with a transparent background; the motion, camera, physics, effects and timing are code. Example built with
@@ -306,13 +312,15 @@ Per video:
    channel. ~1 credit per character (a 45-word script = ~250 credits). Word times + T table as in section 2.
 3. Pictures, in this order of preference:
    a. a library pose (front_calm, front_worried, front_wave, lookup, walk, point_right, shrug, think, scared, surprised,
-      laugh, present, side_stand; `flip` mirrors any of them);
+      laugh, present, side_stand, tickle_self, sweep, listen, and since 2026-11-24 run, jump, fall, sit, knockout, swim,
+      fly, lift, push, eat, choke, ouch, dizzy, facepalm, cry, thumbs_up, arms_crossed, back, sneak, phone, angry;
+      `flip` mirrors any of them; the owl / shark Shorts drew his head in code over a library body);
    b. a prop drawn in code (Box, Ball, Rope, or a small custom SVG in the same style: flat fill, one shade, 8 px ink
       outline) with an ObjectFace when it should come alive;
-   c. only when (a)/(b) would look clearly worse: a new Higgsfield picture with front_calm.png as the reference
-      (~4.25 credits). New poses go into the library (trim + measure with the prep step) so they are free next time.
-4. Sounds: the shared sfx first; a new ElevenLabs sfx (50 credits) only for a sound the library does not have, and
-   then add it to `public/library/sfx/`.
+   c. (no longer possible: Higgsfield was cancelled on 2026-11-24) a new AI picture. Draw it in code instead - the
+      recent Shorts draw the whole guy in code when the animal part has to be on his body (videos/sharkgills, starfish).
+4. Sounds: the shared sfx first (113, with onsets and hit times in `kit/audio/README.md`); a sound synthesized in code
+   or a new ElevenLabs sfx (50 credits) only for one the library does not have, then add it with `kit/audio/prep_sfx.py`.
 5. Contact sheet + pop scan, then render 1080x1920 (about 5 min on CPU; 4K on CPU takes hours - only on a GPU).
 6. Loop ending (every video): render the scene as a function of time, then wrap it in
    `<LoopOut t={t} total={DURATION} start={<Scene t={0} />}>` (kit.tsx; see Template.tsx) and add a whoosh cue at
@@ -334,7 +342,7 @@ Per video:
    next?" />` (kit.tsx) inside the scene function, top band y 270, from the last line until ~0.4 s before the loop
    push: a question about THIS video people want to answer. (The old always-on `AskBanner` is retired.)
 
-Budget per video: Higgsfield 0-10 credits, ElevenLabs ~250-400 credits. Starter plan: max 4 Higgsfield jobs at once.
+Budget per video: ElevenLabs ~250-400 credits (the voice). Higgsfield: none (cancelled 2026-11-24).
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 13. Story Shorts (several characters, dialogue)

@@ -1,0 +1,25 @@
+[
+  {
+    "created_at": "2026-11-24T21:27:40.696728Z",
+    "display_name": "Seed Audio 1.0",
+    "id": "4e645afc-a5c0-4efd-bbe5-c4d47a615906",
+    "job_type": "seed_audio",
+    "min_result_url": null,
+    "params": {
+      "batch_size": 1,
+      "expression_intensity": 5,
+      "format": "wav",
+      "loudness_rate": 0,
+      "mood": 0,
+      "pitch_rate": 0,
+      "prompt": "Sound effect only, no music, no voice: a cream pie splatting into a face, wet and messy",
+      "sample_rate": 48000,
+      "speech_rate": 0
+    },
+    "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3G9vS9S5wIpvObxAR5yeQOrDTpz/hf_20261124_212740_4e645afc-a5c0-4efd-bbe5-c4d47a615906.wav",
+    "status": "completed",
+    "_meta": {
+      "prompt": "Sound effect only, no music, no voice: a cream pie splatting into a face, wet and messy"
+    }
+  }
+]

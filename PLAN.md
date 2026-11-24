@@ -119,6 +119,17 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
 - [x] U18. (made 2026-11-23, upload 11-26: lifespan/renders/lifespan-1080x1920.mp4) What if you lived as long as these animals? The second
   LADDER test (after the flea): AGE counter 118 -> 190 tortoise -> ~400 Greenland shark -> 507 clam -> infinity immortal jellyfish; the top
   rung melts him into a blob and turns him back into a baby (AGE 0), then he grows up again = frame 0. Compare with the flea ladder (8.7K).
+- [x] U19. (made 2026-11-24, the user: "next million view idea": sharkgills/renders/sharkgills-1080x1920.mp4 - upload 11-27, one a day after
+  the queued rabbit 11-25 and lifespan 11-26) What if you could breathe like a shark? WISH: breathe underwater. BACKFIRE: a great white
+  can't pump water over its gills, so it swims with its mouth open - stop and you suffocate (Live Science; Britannica). Frame 0: he swims
+  above a smug great white, bubbles streaming out of gill slits on his cheeks; 2.15 s close-up: blue, puffed, GLUG, OXYGEN 100 -> 12 %.
+  NUMBER: 20,000 km in under nine months (Nicole, Bonfil et al. 2005, Science) on a map. Comedy hit: a fish sucked into his mouth FWOOPs out
+  of his gill. Ends: he sleeps holding the shark's dorsal fin (FREE RIDE) = frame 0.
+- Screened 2026-11-24 (shark-gills day): shark breathing (made, U19); electric eel "shoot lightning" (no study shows eels shock themselves -
+  no verified backfire); cat "always land on your feet" (cats that fall far hit their chin - broken jaws, Whitney & Mehlhaff 1987 - but a mid
+  wish, and the high fall repeats the flea's "light things fall slowly"); cheetah (still no body backfire); axolotl regrowth (the comment
+  request; staying a baby forever is no backfire); chameleon tongue (no body hurt); tardigrade (weak icon); spider webs (no hurt). NEXT:
+  screen 5-8 new wishes again (seeds: a gorilla's strength if a verified backfire exists, an elephant's trunk, the cat fall as "survive any fall").
 - [-] U5. ON HOLD - the user said not to recreate old videos (2026-11-19); only if they ask for it. RETRY (new upload,
   the old one stays up): What if you had a mantis shrimp's punch? The wish (a super punch) was
   fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the

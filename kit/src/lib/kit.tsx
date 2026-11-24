@@ -640,7 +640,12 @@ const cueDb = (c: Cue, tt: number) => {
  *  - synthesized in code for videos/polarbear (videos/polarbear/scripts/sfx_polar.py)
  *  rip.wav (2.7 s paper tear, crackly, loud from 0: a frame-0 hit, about -3 dB) rip_short.wav (0.55 s quick tear) boing.wav (0.5 s
  *  cartoon spring "bwoing", onset at 0: hops, a POP) scribble.wav (0.4 s pencil scribble: a sketch drawing itself)
- *  - synthesized in code for videos/starfish (videos/starfish/scripts/sfx_star.py) */
+ *  - synthesized in code for videos/starfish (videos/starfish/scripts/sfx_star.py)
+ *  chomp.wav (one crunchy bite, loud from 0) gnaw.wav (1.6 s, 11 bites a second) shing.wav (teeth shooting out) creak.wav (a tree about
+ *  to fall) - synthesized in code for videos/beaver (videos/beaver/scripts/sfx_beaver.py)
+ *  underwater.wav (4 s muffled underwater bed: repeat every 3.8 s at about -23 dB) bubblestream.wav (1.6 s bubbles pouring out of
+ *  gills, loud from 0: a frame-0 sound, about -17 dB) fwoop.wav (0.5 s suction pop: something shot out of a tube, about -7 dB)
+ *  - synthesized in code for videos/sharkgills (videos/sharkgills/scripts/sfx_shark.py) */
 export const SoundLayer: React.FC<{voice?: string; voiceAt?: number; cues: Cue[]}> = ({voice, voiceAt = 0.1, cues}) => (
   <>
     {voice ? <Sequence from={Math.round(voiceAt * FPS)} layout="none"><Audio src={staticFile(voice)} /></Sequence> : null}

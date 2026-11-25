@@ -117,6 +117,13 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   legs, X-ray legs that crack, a size card on bathroom scales (tape measure, KG counter, the scale bursts), a cartoon-bone leg X-ray with a
   WEIGHT vs BONES counter, and a whale-skeleton X-ray where the water drains and the ribcage squashes. `scripts/refine_words.py` (in that
   folder) maps Scribe word times onto the tight voice's loudness, chunk by chunk.
+- Shrivel + a water bear (videos/tardigrade): the code-drawn guy with a `skin` colour, wrinkles (`wr`) and a shrink about his torso
+  (`sc`) that sprays water (`DropSpray`) and turns into `Raisin` (a wrinkled purple-brown blob wearing his `Face`, tiny white hands and
+  feet, a frost overlay); a cartoon tardigrade (`Tardi`: upright four-segment body, 8 stubby clawed legs, tube snout; `tun` morphs it
+  into a dry barrel, `hot` reddens it, it can wave, keel over or hold a watering can that pours); a space set (navy sky, stars, the
+  Earth, a ringed planet, a satellite, an asteroid / meteor with a trail), a freezer with see-through ice cubes that split, a table with
+  a flower pot, a hot day (sun with a face, heat waves, a thermometer), a hair dryer, a microscope circle insert (`Microscope`),
+  `QPoof` (the kit's POOF played faster). Moods added to the guy's face: smug, sleep, hot (panting with the tongue out).
 - Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
   k 3.9 or less (a head at k 3.9 is already about half the frame wide).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),

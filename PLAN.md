@@ -131,6 +131,21 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   (square-cube law, Galileo 1638 / Haldane 1926); a blue whale only gets away with it because the sea holds it up, and on a beach its own
   weight crushes it (NatGeo, NOAA strandings). Frame 0: he high-fives a blue whale breaching straight up beside him, the same height; 2.11 s
   CRACK on the beach (X-ray legs), close-up OUCH. NUMBER: x17 taller, x5,000 heavier vs x300 stronger. Ends: "So he stays in the sea."
+- [x] U21. (made 2026-11-25, the user: "next idea": tardigrade/renders/tardigrade-1080x1920.mp4 - upload about 20 h after the blue whale,
+  which went up the same evening) What if you were as tough as a tardigrade? WISH: survive anything. BACKFIRE: it only survives dried
+  out - it loses about 95 % of its water and its body nearly stops (a "tun"); awake, one hot day can kill it (37.1 °C for 24 h kills half,
+  Neves et al. 2020, Sci. Rep.). Frame 0: he floats in open space beside a smug tardigrade, an asteroid BONKs off his head; 2.55-3.02 s
+  close-up: water sprays out of him and he shrivels into a raisin. NUMBER: WATER 100 -> 5 %, 10 DAYS in open space (FOTON-M3, Jönsson et
+  al. 2008), 30 YEARS in a freezer (Tsujimoto et al. 2016), 37 °C. Comedy hit: the tardigrade waters raisin him in a flower pot, POP.
+  Ends: "So he stays a raisin." (he blow-dries himself). ICON is the weak check (a 6-year-old can't name it) - compare with the hits.
+- Screened 2026-11-25 (tardigrade day): tardigrade (made, U21); porcupine quills (falling porcupines quill themselves, antibiotic quills,
+  Roze et al. 1990 - weak wish, armour like the turtle); tiger beetle speed (runs so fast it goes blind and feels its way with stiff
+  antennae, Gilbert 1997 / Zurek & Gilbert 2014 - the best super-speed backfire, but no icon and eyes again); axolotl (the viewer request:
+  repeated amputation stops regrowth and scars, Bryant et al. 2017 - count unknown, regrowth done twice); ant-size shrink (raindrop trap
+  - human-scale physics speculative, size just went up); gibbon swing (Tarzan -> about a third of wild gibbon skeletons have healed
+  fractures, Schultz 1944 - casts again right after the blue whale: keep for later); bear hibernation (legs again); cheetah (still no
+  body backfire). NEXT: cat's eyes (see in the dark) once eyes are 4 uploads back (after the next upload) - settle the daylight number
+  first; then the gibbon swing.
 - Screened 2026-11-25 (blue-whale day): blue whale size (made, U20); cat "always land on your feet" (high-rise syndrome - chin and jaw
   injuries; mid wish, close to "it doesn't work"); hairy frog claws (breaks its own toe bones to stab claws out through its skin, Blackburn et
   al. 2008 - the best backfire of the day but fails ICON); bee sting (rips its insides out: weak wish); cheetah (still no body backfire);

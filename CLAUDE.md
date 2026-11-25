@@ -203,6 +203,10 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   3.2K ("Can rabbits see behind them?") and shark gills 2.7K - all three queued Shorts already went up. Comments: yt-dlp hit the sign-in check
   on all 8 recent Shorts again (not bypassed). Made next: videos/bluewhale (as big as a blue whale -> your legs break with every step; shark
   formula, no captions, title "What if you were as big as a blue whale?").
+- LIVE COUNTS 2026-11-25, second check (138 subscribers, median of the latest 45: 2.7K): the same counts as above; blue whale just
+  went up (1 view). Comments: the sign-in check again on all 8 recent Shorts. Made next: videos/tardigrade (survive anything -> only as
+  a dried-up raisin, awake a hot day kills it; shark formula, no captions, title "What if you were as tough as a tardigrade?"). The
+  first pick with a weak ICON (every icon + wish pair left failed a harder check that day) - compare it with the hits.
 - LIVE COUNTS 2026-11-24 (132 subscribers, median 2.2K): starfish 24K in about two days (tied #1 with fly's eyes 24K - the fastest climber
   yet: clone yourself -> rip yourself in half); owl 23K; shark 19K; lizard 15K; camel 10K; butterfly 9.8K; bat wings 9.1K; flea jump 8.8K;
   polar bear 7.0K; dung beetle 5.1K; beaver 2.2K (a day old) and squeeze 1.6K (hours old) - the user retitled both as plain search

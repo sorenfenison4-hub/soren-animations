@@ -110,6 +110,13 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   a clam, a jellyfish, a blob, a baby, and an AGE counter with the ladder's rungs ranked under it. Sounds added: chomp, gnaw, shing, creak
   (synthesized, `videos/beaver/scripts/sfx_beaver.py`). `scripts/vsplice.py` = the starfish splice made generic: per-segment tempo and
   silence from the command line, remaps the Scribe word times.
+- Giant scale + a whale (videos/bluewhale): a chunky cartoon blue whale (`Whale`: side view, flipper that rotates for a high five,
+  blowhole `Spout`, moods incl. dizzy, `dir` -1 faces left, `sq` squash), a beach rising out of the sea (`sandY` profile; `stand()` puts the
+  guy's feet on it), a see-through front sea clipped to the water body, a tiny beach town (houses, cars and umbrellas that hop on his steps,
+  a lighthouse, a rowboat that flips), `Splash` (crown of rounded columns with drops, one merged outline), `Dust`, plaster `Cast`s on his
+  legs, X-ray legs that crack, a size card on bathroom scales (tape measure, KG counter, the scale bursts), a cartoon-bone leg X-ray with a
+  WEIGHT vs BONES counter, and a whale-skeleton X-ray where the water drains and the ribcage squashes. `scripts/refine_words.py` (in that
+  folder) maps Scribe word times onto the tight voice's loudness, chunk by chunk.
 - Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
   k 3.9 or less (a head at k 3.9 is already about half the frame wide).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),

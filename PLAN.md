@@ -125,6 +125,18 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   above a smug great white, bubbles streaming out of gill slits on his cheeks; 2.15 s close-up: blue, puffed, GLUG, OXYGEN 100 -> 12 %.
   NUMBER: 20,000 km in under nine months (Nicole, Bonfil et al. 2005, Science) on a map. Comedy hit: a fish sucked into his mouth FWOOPs out
   of his gill. Ends: he sleeps holding the shark's dorsal fin (FREE RIDE) = frame 0.
+- [x] U20. (made 2026-11-25, the user: "next idea": bluewhale/renders/bluewhale-1080x1920.mp4 - the queued rabbit, lifespan and shark gills
+  were already up on 11-25, so upload this about 20 h after the newest of them) What if you were as big as a blue whale? WISH: grow into a
+  giant. BACKFIRE: you'd break your legs with every step - 17 times taller = about 5,000 times heavier, but bones only about 300 times stronger
+  (square-cube law, Galileo 1638 / Haldane 1926); a blue whale only gets away with it because the sea holds it up, and on a beach its own
+  weight crushes it (NatGeo, NOAA strandings). Frame 0: he high-fives a blue whale breaching straight up beside him, the same height; 2.11 s
+  CRACK on the beach (X-ray legs), close-up OUCH. NUMBER: x17 taller, x5,000 heavier vs x300 stronger. Ends: "So he stays in the sea."
+- Screened 2026-11-25 (blue-whale day): blue whale size (made, U20); cat "always land on your feet" (high-rise syndrome - chin and jaw
+  injuries; mid wish, close to "it doesn't work"); hairy frog claws (breaks its own toe bones to stab claws out through its skin, Blackburn et
+  al. 2008 - the best backfire of the day but fails ICON); bee sting (rips its insides out: weak wish); cheetah (still no body backfire);
+  gorilla strength (no reliable number); elephant trunk (no wish); chameleon camouflage (social, not your body); pufferfish (breathing again).
+  NEXT: screen 5-8 new wishes (seeds: cat's eyes for night vision once eyes are 3 uploads back - settle the daylight number first; a
+  tortoise / shell-free armour twist; a kangaroo's kick; an elephant's memory).
 - Screened 2026-11-24 (shark-gills day): shark breathing (made, U19); electric eel "shoot lightning" (no study shows eels shock themselves -
   no verified backfire); cat "always land on your feet" (cats that fall far hit their chin - broken jaws, Whitney & Mehlhaff 1987 - but a mid
   wish, and the high fall repeats the flea's "light things fall slowly"); cheetah (still no body backfire); axolotl regrowth (the comment

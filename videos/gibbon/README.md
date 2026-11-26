@@ -77,3 +77,13 @@ Voice: James, eleven_v4, one take (22.4 s, 317 credits) -> `scripts/vsplice.py` 
 1-3 and 5; refined to the loudness chunks (`scripts/refine_words.py`) for lines 4, 6 and 7, where Scribe ran late.
 Sounds: all from the kit library (whoosh, whoosh_slow, monkey, slap, creak, crack, gulp, whistle, thud, zap, dizzy_birds, scanner,
 shimmer, whir, crowd_laugh, page_flip, scribble, ding, boing, tick, squeak, splat, kids_laugh, pop) - no new sounds, 0 credits.
+Render: `node scripts/render.mjs Gibbon renders/gibbon-1080x1920.mp4 1` (33 min on 4 CPUs; a sound-only render running alongside
+slowed it). The first mix had two long sounds under lines (the slow whoosh under "monkey bars in one swing", the kids' laugh under the
+last line) and some hits close to the voice, so those were shortened / lowered and every effect after frame 0 now sits 3 dB lower
+(`mixed` in GibbonVideo); the sound was rendered alone (`render.mjs Gibbon work/sound3.aac`) and remuxed: effects a median 15 dB under
+the voice while he speaks, -21.3 LUFS, peak -5.2 dBFS. Pop scan: two pose snaps (the gibbon's arms when it grabs the tree branch,
+13.62 s; his arms when he catches the bough, 18.43 s) were fixed, frames 800-822 and 1070-1110 re-rendered (`render.mjs Gibbon
+work/patch1.mp4 1 800-822`) and spliced in with ffmpeg (one re-encode at crf 14); every remaining flag is a cut, a pop-in, a hit, the
+counter, the CTA tap or the fast fall into the catch. `node scripts/check-loop.mjs Gibbon` = seamless loop (first vs last 0; frame 0 vs
+0.5 s: 32.3, moving). Thumbnails ("BONES SNAP": frame 0's swing, him grinning on gibbon arms beside the smug gibbon):
+`COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then ThumbWide).

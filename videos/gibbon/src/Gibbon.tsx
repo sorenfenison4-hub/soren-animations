@@ -745,9 +745,11 @@ const wrapGuy = (t: number): GS => {
   }
   if (t < CATCH8) {
     const u = seg(t, BOING, CATCH8);
-    const yTop = BR2 + 270;
+    const yTop = BR2 + 280;
     const y = lerp(-96, yTop, Math.sin(Math.PI * 0.5 * u));
-    return {...g0, x: x0 + 60 + 50 * u, y, rot: 0, mood: 'joy', armA: [-50, -170], armB: [50, -170], backA: false, backB: false, flat: hit(t, BOING, 1.2, 10), look: [0, -1], stick: 0};
+    const hip: P2 = [x0 + 60 + 50 * u, y], Hc: P2 = [x0 + 110, BR2];
+    return {...g0, x: hip[0], y, rot: 0, mood: 'joy', armA: armVec(hip, 0, -1, SHX, SH_Y, [Hc[0] - 60, Hc[1]]), armB: armVec(hip, 0, 1, SHX, SH_Y, Hc),
+      backA: false, backB: false, flat: hit(t, BOING, 1.2, 10), look: [0, -1], stick: 0};
   }
   const H: P2 = [x0 + 110, BR2];
   const g = guyHang(H, 1, 10 * Math.sin((t - CATCH8) * 7) * Math.exp(-(t - CATCH8) * 2), {wrap: 1, mood: 'joy'});
@@ -806,7 +808,7 @@ const gibAt = (t: number): CG | null => {
     if (t < HANG) {
       const u = seg(t, BACK0, HANG);
       const end = gibHang(H, 1, -30, 1);
-      return {...end, y: lerp(end.y - 700, end.y, u * u), armB: [30, -170], mood: 'shock'};
+      return {...end, y: lerp(end.y - 700, end.y, u * u), mood: 'shock', armA: [-60 + 14 * Math.sin(t * 10), -50]};
     }
     const phi = -30 + 40 * Math.sin((t - HANG) * 6) * Math.exp(-(t - HANG) * 1.6);
     return gibHang(H, 1, phi, 1, {mood: 'smug', look: [-1, 0.8], armA: [-60 + 14 * Math.sin(t * 10), -50]});
@@ -959,7 +961,7 @@ export const GibbonVideo: React.FC = () => {
     // THUD in close-up, the X-ray flash of the crack, a cast poofs on
     {f: 'thud.wav', at: LAND, db: -14}, {f: 'crack.wav', at: XR0 - 0.32, db: -16}, {f: 'zap.wav', at: XR0, db: -27}, {f: 'dizzy_birds.wav', at: LAND + 0.2, db: -30, to: 0.42}, {f: 'pop.wav', at: CAST, db: -24},
     // the gibbon hangs, smug; X-RAY: GIBBON - BALL JOINT, TURNS
-    {f: 'whoosh.wav', at: S3 - 0.02, db: -28}, {f: 'pop.wav', at: S3 + 0.06, db: -27}, {f: 'scanner.wav', at: S3X - 0.5, db: -26, from: 1.2}, {f: 'pop.wav', at: S3X + 0.06, db: -24},
+    {f: 'whoosh.wav', at: S3 - 0.02, db: -28}, {f: 'pop.wav', at: S3 + 0.06, db: -27}, {f: 'scanner.wav', at: S3X - 0.5, db: -28, from: 1.2}, {f: 'pop.wav', at: S3X + 0.06, db: -24},
     {f: 'shimmer.wav', at: T.ball - 0.06, db: -22}, {f: 'pop.wav', at: T.ball, db: -24}, {f: 'whir.mp3', at: T.so, db: -28, to: 1.8}, {f: 'pop.wav', at: T.turns, db: -24},
     // the gibbon shows off and misses: THUD, a matching cast, the laugh
     {f: 'whoosh.wav', at: S4 - 0.02, db: -28}, ...swingWhooshes(6.86, 0.44, 3, -29), {f: 'whoosh.wav', at: MISS - 0.05, db: -23}, {f: 'monkey.wav', at: MISS + 0.02, db: -22, from: 2.1, to: 2.9},
@@ -971,21 +973,23 @@ export const GibbonVideo: React.FC = () => {
     {f: 'whoosh.wav', at: THUMP + 0.05, db: -22}, ...ticks(T.about2, X10, 6, -28), {f: 'pop.wav', at: X10, db: -21}, {f: 'slap.wav', at: HANG, db: -22},
     ...ctaCues(T.cta),
     // the monkey bars in one swing, and on into the sandpit
-    {f: 'whoosh.wav', at: S7 - 0.02, db: -28}, {f: 'squeak.wav', at: BAR0 + 0.05, db: -26}, {f: 'whoosh_slow.wav', at: LET - 0.05, db: -21}, {f: 'pop.wav', at: T.swing2, db: -24},
-    {f: 'thud.wav', at: SAND, db: -15}, {f: 'splat.wav', at: SAND + 0.01, db: -24, to: 0.6}, {f: 'kids_laugh.wav', at: SAND + 0.08, db: -22, to: 1.6},
+    {f: 'whoosh.wav', at: S7 - 0.02, db: -28}, {f: 'squeak.wav', at: BAR0 + 0.05, db: -26}, {f: 'whoosh_slow.wav', at: LET - 0.05, db: -25, to: 1.5}, {f: 'pop.wav', at: T.swing2, db: -24},
+    {f: 'thud.wav', at: SAND, db: -15}, {f: 'splat.wav', at: SAND + 0.01, db: -24, to: 0.6}, {f: 'kids_laugh.wav', at: SAND + 0.08, db: -24, to: 0.9},
     // bubble wrap: SNAP, BOING with pops, back up to the bough
-    {f: 'whoosh.wav', at: S8 - 0.02, db: -28}, ...swingWhooshes(16.56, 0.44, 2, -30), {f: 'crack.wav', at: SNAP8 - 0.32, db: -19}, {f: 'whistle.wav', at: SNAP8 + 0.04, db: -27, to: 0.3},
+    {f: 'whoosh.wav', at: S8 - 0.02, db: -28}, ...swingWhooshes(16.56, 0.44, 2, -30), {f: 'crack.wav', at: SNAP8 - 0.32, db: -21}, {f: 'whistle.wav', at: SNAP8 + 0.04, db: -27, to: 0.3},
     {f: 'boing.wav', at: BOING, db: -17}, {f: 'pop.wav', at: BOING + 0.01, db: -22}, {f: 'pop.wav', at: BOING + 0.07, db: -22}, {f: 'pop.wav', at: BOING + 0.13, db: -22}, {f: 'pop.wav', at: BOING + 0.2, db: -24},
     {f: 'slap.wav', at: CATCH8, db: -22},
     {f: 'whoosh.wav', at: PUSH - 0.05, db: -25},
   ];
+  // every effect after frame 0 sits 3 dB lower than written above, so the voice stays clear (checked against the voice track)
+  const mixed = cues.map((c) => (c.at > 0.05 ? {...c, db: c.db - 3} : c));
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
       <LoopOut t={t} total={DURATION} start={<GibbonScene t={0} />}>
         <GibbonScene t={t} />
       </LoopOut>
       <Look />
-      <SoundLayer voice="gibbon/vo/tight.mp3" voiceAt={0.1} cues={cues} />
+      <SoundLayer voice="gibbon/vo/tight.mp3" voiceAt={0.1} cues={mixed} />
     </AbsoluteFill>
   );
 };

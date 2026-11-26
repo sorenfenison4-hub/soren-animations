@@ -79,6 +79,9 @@ word is mapped by the segment that holds its start) in `src/data/words.json`.
 New sounds, synthesized in code (`scripts/sfx_cat.py`, 0 credits) and added to the kit library: shutter.wav (phone-camera snap: two
 clicks + a flash ping), brush.wav (1.4 s toothbrushing, ~7 strokes a second). The rest from the kit library (click, shing, bonk,
 dizzy_birds, cat_hiss, cat_purr, meow, snore, crickets, crowd_laugh, ...).
-Render: `node scripts/render.mjs Cat renders/cateyes-1080x1920.mp4 1`; `node scripts/check-loop.mjs Cat` = seamless loop (first vs last
+Render: `node scripts/render.mjs Cat renders/cateyes-1080x1920.mp4 1` (25 min on 4 CPUs); the first mix had effects within 2 dB of the
+voice at frame 0, on the BONK and on the X-ray dings, so those cues were lowered, the sound rendered alone (`render.mjs Cat work/sound3.aac`)
+and remuxed (`ffmpeg -i video.mp4 -i sound3.aac -map 0:v -map 1:a -c copy`): effects ~10 dB under the voice, -21.6 LUFS, peak -3 dBFS.
+Pop scan: every flag is an intended cut, pop-in or hit; `node scripts/check-loop.mjs Cat` = seamless loop (first vs last
 0; frame 0 vs 0.5 s: 17.0, moving). Thumbnails ("BLURRY BY DAY": the frame-0 dark close-up, his glowing eyes beside the smug cat):
 `BUNDLE=work/bundle2 COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then ThumbWide).

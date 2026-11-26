@@ -866,7 +866,7 @@ export const CatVideo: React.FC = () => {
     // frame 0: the yarn ball flies in the dark, he snatches it
     {f: 'whoosh.wav', at: 0, db: -19}, {f: 'shimmer.wav', at: 0, db: -31}, {f: 'slap.wav', at: CATCH, db: -21}, {f: 'pop.wav', at: CATCH + 0.02, db: -27},
     // the cat flips the switch: lights on, pupils snap to slits
-    {f: 'click.wav', at: FLIP, db: -11}, {f: 'shing.wav', at: LIGHTS + 0.03, db: -17}, {f: 'gasp.wav', at: LIGHTS + 0.06, db: -21},
+    {f: 'click.wav', at: FLIP, db: -11}, {f: 'shing.wav', at: LIGHTS + 0.03, db: -20}, {f: 'gasp.wav', at: LIGHTS + 0.06, db: -24},
     // HIS VIEW: the blurry cat bats the second ball at us -> BONK
     {f: 'whoosh.wav', at: S2 - 0.02, db: -26}, {f: 'pop.wav', at: BAT, db: -24}, {f: 'whoosh.wav', at: BAT + 0.06, db: -21},
     {f: 'bonk.wav', at: BONK, db: -9}, {f: 'boing.wav', at: BONK + 0.02, db: -23}, {f: 'dizzy_birds.wav', at: BONK + 0.35, db: -28, to: 1.0}, {f: 'pop.wav', at: T.everything, db: -27},
@@ -883,12 +883,12 @@ export const CatVideo: React.FC = () => {
     ...ticks(BL0, BL1, 6, -27), {f: 'slide_down.wav', at: BL0 + 0.1, db: -27}, {f: 'pop.wav', at: 12.05, db: -23},
     ...ctaCues(T.cta),
     // the bathroom: he brushes his teeth with the cat's tail
-    {f: 'whoosh.wav', at: S7 - 0.02, db: -28}, {f: 'squeak.wav', at: GRAB, db: -22}, {f: 'squelch.wav', at: PASTE, db: -19},
+    {f: 'whoosh.wav', at: S7 - 0.02, db: -28}, {f: 'squeak.wav', at: GRAB, db: -22}, {f: 'squelch.wav', at: PASTE, db: -23},
     {f: 'brush.wav', at: BRUSH0, db: -17, to: 0.84}, {f: 'meow.wav', at: BRUSH0 + 0.08, db: -21, to: 0.7}, {f: 'cat_hiss.wav', at: HISS, db: -13, to: 0.9},
     {f: 'crowd_laugh.wav', at: HISS + 0.12, db: -22, to: 1.2},
     // the nap: snore + purr, night falls, the eyes pop open
-    {f: 'whoosh.wav', at: S8 - 0.02, db: -28}, {f: 'snore.mp3', at: S8 + 0.05, db: -25, to: 1.1}, {f: 'cat_purr.wav', at: S8 + 0.1, db: -29, to: 1.9},
-    {f: 'slide_down.wav', at: DUSK0, db: -27}, {f: 'crickets.mp3', at: DUSK1 - 0.3, db: -29, to: 1.0}, {f: 'shing.wav', at: OPEN, db: -15}, {f: 'shimmer.wav', at: OPEN + 0.02, db: -21},
+    {f: 'whoosh.wav', at: S8 - 0.02, db: -28}, {f: 'snore.mp3', at: S8 + 0.05, db: -29, to: 1.1}, {f: 'cat_purr.wav', at: S8 + 0.1, db: -29, to: 1.9},
+    {f: 'slide_down.wav', at: DUSK0, db: -27}, {f: 'crickets.mp3', at: DUSK1 - 0.3, db: -29, to: 1.0}, {f: 'shing.wav', at: OPEN, db: -21}, {f: 'shimmer.wav', at: OPEN + 0.02, db: -25},
     {f: 'whoosh.wav', at: PUSH - 0.05, db: -25},
   ];
   return (

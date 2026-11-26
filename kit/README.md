@@ -124,6 +124,14 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   Earth, a ringed planet, a satellite, an asteroid / meteor with a trail), a freezer with see-through ice cubes that split, a table with
   a flower pot, a hot day (sun with a face, heat waves, a thermometer), a hair dryer, a microscope circle insert (`Microscope`),
   `QPoof` (the kit's POOF played faster). Moods added to the guy's face: smug, sleep, hot (panting with the tongue out).
+- Cat eyes + a cat (videos/cateyes): `CatEye` (an almond eye that is all iris, pupil from a slit `pw` 0 to wide `pw` 1, top / bottom
+  lids, `glow`) on the code-drawn guy; night scenes by pulling every colour toward navy (`nite()`) with the eye halos drawn by a
+  second pass of the same rig in a `paper={false}` layer (`pass="glow"`); a front-view sitting orange tabby (`Cat`: raised paw to any
+  point, a striped tail that can be pulled anywhere (`tailTo`), moods smug / happy / wide / annoyed / shock / hiss with fangs, flat ears
+  and puffed fur) and `CatCurl` (asleep in a ball, eyes pop open); a living room with a light switch, an eye-chart wall, a bathroom
+  (sink, mirror, toothbrush cup, toothpaste), a nap corner with a window that goes from sun to moon; inserts: HIS VIEW (blurred POV),
+  an eye cross-section X-ray (retina + mirror layer, a light beam in and back out), a selfie polaroid, two CSS-blurred eye charts.
+  Sounds added: shutter (phone-camera snap), brush (toothbrushing) - synthesized, `videos/cateyes/scripts/sfx_cat.py`.
 - Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
   k 3.9 or less (a head at k 3.9 is already about half the frame wide).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),

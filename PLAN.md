@@ -138,6 +138,20 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   close-up: water sprays out of him and he shrivels into a raisin. NUMBER: WATER 100 -> 5 %, 10 DAYS in open space (FOTON-M3, Jönsson et
   al. 2008), 30 YEARS in a freezer (Tsujimoto et al. 2016), 37 °C. Comedy hit: the tardigrade waters raisin him in a flower pot, POP.
   Ends: "So he stays a raisin." (he blow-dries himself). ICON is the weak check (a 6-year-old can't name it) - compare with the hits.
+- [x] U22. (made 2026-11-26, the user: "next idea": cateyes/renders/cateyes-1080x1920.mp4 - upload about 20 h after the tardigrade,
+  which went up on 11-26) What if you had a cat's eyes? WISH: see in the dark. BACKFIRE: the eye is built for the dark (a mirror
+  behind the retina bounces the light through twice - the glow), so by day a cat sees about seven times blurrier than you. Frame 0:
+  a pitch-dark room in close-up, his glowing cat eyes beside the smug cat's, he snatches a yarn ball out of the air; 1.66 s the cat
+  flips the light switch, his pupils snap to slits, HIS VIEW blurs, 2.36 s a second ball BONKs his face. NUMBER: BLURRIER x1 -> x7
+  beside a sharp YOU eye chart (ONLY THE BIG E); LIGHT GOES THROUGH YOU 1 | CAT 2. Comedy hit: a selfie flash, four blazing eyes in
+  the photo (8.3 s); gag: he brushes his teeth with the cat's tail (HISS). Ends: "So now he naps all day, like the cat." (night falls,
+  both pairs of eyes pop open = frame 0). Eyes again after the rabbit (5 uploads back by then) - compare with the owl and fly's eyes.
+- Screened 2026-11-26 (cat-eyes day): cat's eyes (made, U22); porcupine quills (you'd stab yourself when you fall: 35.1 % of 37
+  skeletons had healed fractures, antibiotic quills, Roze et al. 1990 - armour wish again); gibbon swing (broken bones right after the
+  blue whale - make it after one more upload); axolotl (the viewer request - repeated amputation compromises regrowth, Bryant et al.
+  2017, no per-round count: a limit, not a hurt); crocodile bite (16,400 N, Erickson et al. 2012 - the weak jaw-opening catch doesn't
+  hurt, bites done twice); hairy-frog Wolverine claws (Blackburn et al. 2008 - fails ICON); cheetah (no body backfire); chameleon
+  colour (social). NEXT: the gibbon swing (Tarzan) once broken bones are 3 uploads back; screen 5-8 new wishes around it.
 - Screened 2026-11-25 (tardigrade day): tardigrade (made, U21); porcupine quills (falling porcupines quill themselves, antibiotic quills,
   Roze et al. 1990 - weak wish, armour like the turtle); tiger beetle speed (runs so fast it goes blind and feels its way with stiff
   antennae, Gilbert 1997 / Zurek & Gilbert 2014 - the best super-speed backfire, but no icon and eyes again); axolotl (the viewer request:
@@ -162,9 +176,9 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   fine, the opening was not: it led with "the water would boil" (cooler, not a backfire). New first line with the
   backfire: "Punch like a mantis shrimp, and the first punch would crack your knuckles." Frame 0 = the punch at full
   speed; the crack + OUCH close-up by ~3 s; then the club's spiral layers. Reuse videos/mantis, new voice take only.
-- [ ] U6. What if you had a cat's eyes? WISH: see in the dark (the owl's winning wish). BACKFIRE: blurrier in daylight -
-  but the number is NOT settled (older references 20/100-20/200, a newer estimate near 20/30): find the primary study,
-  and if it stays unclear pick another catch. Eyes again, so space it from other eye videos.
+- [x] U6. (made 2026-11-26 as U22 above: cateyes/renders/cateyes-1080x1920.mp4) What if you had a cat's eyes? WISH: see in the dark
+  (the owl's winning wish). BACKFIRE: blurrier in daylight - settled: people resolve about 60 cycles per degree, cats under 10,
+  "roughly seven times sharper" (Caves, Brandley & Johnsen 2018 / Duke); many studies 20/100-20/200, the 20/30 is one outlier.
 - Screened 2026-11-23 (four-video day): beaver teeth, octopus squeeze, rabbit eyes, lifespan ladder -> all made (U15-U18). Also looked at:
   cheetah speed (still no verified body backfire), tardigrade "survive anything" (dry up into a raisin; passive, weak icon), whale
   breath-hold (the bends / lung squeeze: facts too tangled for 20 s), dog nose (weak wish), axolotl regrowth (the one animal suggestion in

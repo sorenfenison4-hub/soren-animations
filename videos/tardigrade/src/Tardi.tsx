@@ -830,33 +830,33 @@ export const TardiVideo: React.FC = () => {
   const ticks = (a: number, b: number, n: number, db = -30): Cue[] => Array.from({length: n}, (_, i) => ({f: i % 2 ? 'tick.wav' : 'tick2.wav', at: lerp(a, b, (i + 1) / n), db: i === n - 1 ? -20 : db}));
   const cues: Cue[] = [
     // frame 0: the asteroid BONKs off his head in open space
-    {f: 'bonk.wav', at: 0, db: -5}, {f: 'whoosh.wav', at: 0, db: -15}, {f: 'shimmer.wav', at: 0.35, db: -27},
+    {f: 'bonk.wav', at: 0, db: -5}, {f: 'whoosh.wav', at: 0, db: -20}, {f: 'shimmer.wav', at: 0.35, db: -27},
     {f: 'pop.wav', at: 1.08, db: -25},
     // the shrivel: water sprays out, he wrinkles into a raisin
-    {f: 'whoosh.wav', at: S2 - 0.02, db: -30}, {f: 'gasp.wav', at: 2.47, db: -17}, {f: 'pfft.wav', at: DRY0 + 0.02, db: -9}, {f: 'splash.wav', at: DRY0 + 0.05, db: -17},
-    {f: 'slide_down.wav', at: DRY0 + 0.1, db: -15}, {f: 'crack.wav', at: DRY1 - 0.36, db: -19}, {f: 'squelch.wav', at: DRY1, db: -13}, {f: 'pop.wav', at: T.raisin, db: -22},
+    {f: 'whoosh.wav', at: S2 - 0.02, db: -30}, {f: 'gasp.wav', at: 2.47, db: -19}, {f: 'pfft.wav', at: DRY0 + 0.02, db: -17}, {f: 'splash.wav', at: DRY0 + 0.05, db: -19},
+    {f: 'slide_down.wav', at: DRY0 + 0.1, db: -19}, {f: 'crack.wav', at: DRY1 - 0.36, db: -21}, {f: 'squelch.wav', at: DRY1, db: -17}, {f: 'pop.wav', at: T.raisin, db: -22},
     // UNDER A MICROSCOPE: the drop dries, it curls up, its body nearly stops
     {f: 'zap.wav', at: S3 + 0.02, db: -24}, {f: 'pop.wav', at: S3 + 0.06, db: -24}, {f: 'pop.wav', at: 4.32, db: -24},
-    {f: 'bubbles.wav', at: DROP0, db: -19}, {f: 'pfft.wav', at: DROP0 + 0.1, db: -18}, ...ticks(DROP0, DROP1 + 0.15, 14, -31), {f: 'stretch.wav', at: TUN0, db: -24, to: 0.7},
+    {f: 'bubbles.wav', at: DROP0, db: -22}, {f: 'pfft.wav', at: DROP0 + 0.1, db: -21}, ...ticks(DROP0, DROP1 + 0.15, 14, -31), {f: 'stretch.wav', at: TUN0, db: -24, to: 0.7},
     {f: 'pop.wav', at: BODY0 - 0.1, db: -24}, ...ticks(BODY0, BODY1, 10, -31), {f: 'slide_down.wav', at: BODY0 + 0.2, db: -22}, {f: 'pop.wav', at: T.stops - 0.02, db: -20},
     // open space: the meteor BOINGs off raisin him
-    {f: 'whoosh.wav', at: S4 - 0.02, db: -30}, {f: 'shimmer.wav', at: S4 + 0.1, db: -28}, {f: 'whoosh.wav', at: METEOR - 0.45, db: -18}, {f: 'boing.wav', at: METEOR, db: -9},
+    {f: 'whoosh.wav', at: S4 - 0.02, db: -30}, {f: 'shimmer.wav', at: S4 + 0.1, db: -28}, {f: 'whoosh.wav', at: METEOR - 0.45, db: -22}, {f: 'boing.wav', at: METEOR, db: -11},
     {f: 'bonk.wav', at: METEOR, db: -16}, {f: 'pop.wav', at: T.open - 0.04, db: -22}, {f: 'pop.wav', at: T.space + 0.04, db: -22},
     // the freezer: ice forms, 30 years, CRACK, a yawn
-    {f: 'whoosh.wav', at: S5 - 0.02, db: -30}, {f: 'ice_crack.wav', at: FREEZE0, db: -14, to: 0.9}, {f: 'pop.wav', at: FREEZE0 + 0.12, db: -23},
-    {f: 'page_flip.wav', at: YR0 - 0.05, db: -22}, ...ticks(YR0, YR1, 16, -31), {f: 'crack.wav', at: ICE_CRACK - 0.32, db: -10}, {f: 'ice_crack.wav', at: ICE_CRACK, db: -16, from: 0.6, to: 1.4},
-    {f: 'yawn.wav', at: ICE_CRACK + 0.06, db: -14, to: 1.0},
+    {f: 'whoosh.wav', at: S5 - 0.02, db: -30}, {f: 'ice_crack.wav', at: FREEZE0, db: -19, to: 0.9}, {f: 'pop.wav', at: FREEZE0 + 0.12, db: -23},
+    {f: 'page_flip.wav', at: YR0 - 0.05, db: -22}, ...ticks(YR0, YR1, 16, -31), {f: 'crack.wav', at: ICE_CRACK - 0.32, db: -14}, {f: 'ice_crack.wav', at: ICE_CRACK, db: -19, from: 0.6, to: 1.4},
+    {f: 'yawn.wav', at: ICE_CRACK + 0.06, db: -17, to: 0.62},
     ...ctaCues(T.cta),
     // the watering can: POP, he springs out of the flower pot
     {f: 'whoosh.wav', at: S6 - 0.02, db: -30}, {f: 'pop.wav', at: T.just - 0.04, db: -22}, {f: 'bubbles.wav', at: POUR0 + 0.2, db: -20}, {f: 'bubbles.wav', at: POUR0 + 0.6, db: -22},
-    {f: 'stretch.wav', at: POP - 0.5, db: -20, to: 0.5}, {f: 'boing.wav', at: POP, db: -7}, {f: 'pop.wav', at: POP, db: -12}, {f: 'crowd_laugh.wav', at: POP + 0.12, db: -21, to: 1.4},
+    {f: 'stretch.wav', at: POP - 0.5, db: -20, to: 0.5}, {f: 'boing.wav', at: POP, db: -14}, {f: 'pop.wav', at: POP, db: -19}, {f: 'crowd_laugh.wav', at: POP + 0.12, db: -23, to: 1.4},
     // the hot day: 37 °C, wilting, the tardigrade keels over
-    {f: 'whoosh.wav', at: S7 - 0.02, db: -30}, {f: 'sizzle.wav', at: S7 + 0.05, db: -30, keys: [[S7, -34], [TEMP1, -24], [S8, -28]], to: 2.0},
-    {f: 'slide_up.wav', at: TEMP0, db: -20, to: 0.5}, ...ticks(TEMP0, TEMP1, 9, -32), {f: 'ding.mp3', at: TEMP1, db: -22}, {f: 'pop.wav', at: T.kill - 0.02, db: -22},
-    {f: 'slide_down.wav', at: WILT, db: -18}, {f: 'thud.wav', at: FLOP, db: -10},
+    {f: 'whoosh.wav', at: S7 - 0.02, db: -30}, {f: 'sizzle.wav', at: S7 + 0.05, db: -30, keys: [[S7, -34], [TEMP1, -29], [S8, -31]], to: 2.0},
+    {f: 'slide_up.wav', at: TEMP0, db: -23, to: 0.5}, ...ticks(TEMP0, TEMP1, 9, -32), {f: 'ding.mp3', at: TEMP1, db: -22}, {f: 'pop.wav', at: T.kill - 0.02, db: -25},
+    {f: 'slide_down.wav', at: WILT, db: -25}, {f: 'thud.wav', at: FLOP, db: -18},
     // the hair dryer: back into a raisin
-    {f: 'whoosh.wav', at: S8 - 0.02, db: -30}, {f: 'pop.wav', at: S8 + 0.04, db: -24}, {f: 'whir.mp3', at: DRYER0, db: -17, to: 1.0},
-    {f: 'pfft.wav', at: DRY2A + 0.02, db: -13}, {f: 'squelch.wav', at: DRY2B, db: -16}, {f: 'pop.wav', at: DRY2B + 0.05, db: -22},
+    {f: 'whoosh.wav', at: S8 - 0.02, db: -30}, {f: 'pop.wav', at: S8 + 0.04, db: -24}, {f: 'whir.mp3', at: DRYER0, db: -23, to: 1.0},
+    {f: 'pfft.wav', at: DRY2A + 0.02, db: -19}, {f: 'squelch.wav', at: DRY2B, db: -20}, {f: 'pop.wav', at: DRY2B + 0.05, db: -22},
     {f: 'whoosh.wav', at: PUSH - 0.05, db: -25},
   ];
   return (

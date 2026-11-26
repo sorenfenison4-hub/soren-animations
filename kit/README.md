@@ -132,6 +132,15 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   (sink, mirror, toothbrush cup, toothpaste), a nap corner with a window that goes from sun to moon; inserts: HIS VIEW (blurred POV),
   an eye cross-section X-ray (retina + mirror layer, a light beam in and back out), a selfie polaroid, two CSS-blurred eye charts.
   Sounds added: shutter (phone-camera snap), brush (toothbrushing) - synthesized, `videos/cateyes/scripts/sfx_cat.py`.
+- Swinging + a gibbon (videos/gibbon): `furGeom` / `FurArm` (a limb as one fur tube with a jagged edge, round ends, chevron fur marks;
+  long gibbon arms on the code-drawn guy, `L_ARM` 108), `brach` (brachiation along a list of handholds: the body hangs from its neck base
+  under the pivot hand on a pendulum, the free hand travels from the last handhold to the next on a curve, hold sides alternate - one
+  `Swing` drives the guy or the gibbon), `hangHip` / `armVec` (hang any body from a hand), a front-view `Gibbon` (white face ring, white
+  hands and feet, moods smug / proud / wide / shock / dizzy / calm, `fx` turns it round, `xray` draws its skeleton with a glowing wrist
+  ball and an optional healed-break `lump`), an X-ray arm with a zigzag crack (`XArm`) and an arm cast, a broken `Twig` in a hand, bubble
+  wrap on the body (`Wrap`), jungle sets (`Bough` with bark, vines and leaf clumps, `Trunk`, `Floor` with ferns, a dead twig that
+  snaps, a far parallax layer), a playground (fence, see-saw on a pivot that catapults, monkey bars with rungs and end ladders, a
+  sandbox you land in head first).
 - Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
   k 3.9 or less (a head at k 3.9 is already about half the frame wide).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),

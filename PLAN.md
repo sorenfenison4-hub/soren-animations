@@ -146,6 +146,20 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   beside a sharp YOU eye chart (ONLY THE BIG E); LIGHT GOES THROUGH YOU 1 | CAT 2. Comedy hit: a selfie flash, four blazing eyes in
   the photo (8.3 s); gag: he brushes his teeth with the cat's tail (HISS). Ends: "So now he naps all day, like the cat." (night falls,
   both pairs of eyes pop open = frame 0). Eyes again after the rabbit (5 uploads back by then) - compare with the owl and fly's eyes.
+- [x] U23. (made 2026-11-26, second session, the user: "next idea": gibbon/renders/gibbon-1080x1920.mp4 - upload about 20 h after the
+  cat's eyes, which went up on 11-26) What if you could swing like a gibbon? WISH: swing through the trees like Tarzan. BACKFIRE: swinging
+  means missing - about one in three wild gibbons had old, healed broken bones (Schultz 1944: 28 % of adult females, 37 % of adult males),
+  and you're about ten times heavier (lar gibbon 4.4-7.6 kg). Frame 0: mid-swing on long furry gibbon arms beside the smug gibbon; the
+  gibbon leaps the gap, he grabs a dead twig: SNAP 2.0 s, THUD + X-ray CRACK in close-up 2.44-2.9 s. X-RAY: GIBBON (the wrist works like a
+  ball joint, the body turns under the branch); the gibbon shows off and MISSES (laugh); 1 IN 3 + an X-ray of three gibbons, the middle one's
+  old break circled (HEALED); see-saw HEAVIER x1 -> x10 (the gibbon is catapulted into a tree); the monkey bars in ONE SWING and on into the
+  sandpit (kids laugh); "So now he swings in bubble wrap." (SNAP, BOING, back up to the bough = loop). Broken bones 3 uploads after the
+  blue whale; compare with the flea jump (movement wish, 8.8K).
+- Screened 2026-11-26 (gibbon day): gibbon swing (made, U23); porcupine quills (armour wish again); axolotl (the viewer request: a limit,
+  not a hurt); spiny mouse healing (skin tears like wet paper, Seifert et al. 2012 - fails ICON); electric eel lightning (80 % electric
+  organ: weird anatomy, eel done); wood frog freeze (weak wish / icon); naked mole rat "no pain" (only acid and chili, Park et al. 2008 -
+  "no pain" would be wrong); cheetah (no body backfire); eagle eyes (eyes right after the cat). NEXT: screen 5-8 new wishes - the list is
+  nearly used up (seeds: porcupine once armour is far back, a kangaroo's kick, a chameleon's tongue).
 - Screened 2026-11-26 (cat-eyes day): cat's eyes (made, U22); porcupine quills (you'd stab yourself when you fall: 35.1 % of 37
   skeletons had healed fractures, antibiotic quills, Roze et al. 1990 - armour wish again); gibbon swing (broken bones right after the
   blue whale - make it after one more upload); axolotl (the viewer request - repeated amputation compromises regrowth, Bryant et al.

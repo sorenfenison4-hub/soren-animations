@@ -864,19 +864,18 @@ export const CatVideo: React.FC = () => {
   const ticks = (a: number, b: number, n: number, db = -30): Cue[] => Array.from({length: n}, (_, i) => ({f: i % 2 ? 'tick.wav' : 'tick2.wav', at: lerp(a, b, (i + 1) / n), db: i === n - 1 ? -20 : db}));
   const cues: Cue[] = [
     // frame 0: the yarn ball flies in the dark, he snatches it
-    {f: 'whoosh.wav', at: 0, db: -14}, {f: 'shimmer.wav', at: 0, db: -26}, {f: 'slap.wav', at: CATCH, db: -15}, {f: 'pop.wav', at: CATCH + 0.02, db: -22},
-    {f: 'meow.wav', at: 0.62, db: -24, to: 0.8},
+    {f: 'whoosh.wav', at: 0, db: -19}, {f: 'shimmer.wav', at: 0, db: -31}, {f: 'slap.wav', at: CATCH, db: -21}, {f: 'pop.wav', at: CATCH + 0.02, db: -27},
     // the cat flips the switch: lights on, pupils snap to slits
     {f: 'click.wav', at: FLIP, db: -11}, {f: 'shing.wav', at: LIGHTS + 0.03, db: -17}, {f: 'gasp.wav', at: LIGHTS + 0.06, db: -21},
     // HIS VIEW: the blurry cat bats the second ball at us -> BONK
-    {f: 'whoosh.wav', at: S2 - 0.02, db: -26}, {f: 'pop.wav', at: BAT, db: -20}, {f: 'whoosh.wav', at: BAT + 0.06, db: -16},
-    {f: 'bonk.wav', at: BONK, db: -5}, {f: 'boing.wav', at: BONK + 0.02, db: -18}, {f: 'dizzy_birds.wav', at: BONK + 0.35, db: -23, to: 1.0}, {f: 'pop.wav', at: T.everything, db: -23},
+    {f: 'whoosh.wav', at: S2 - 0.02, db: -26}, {f: 'pop.wav', at: BAT, db: -24}, {f: 'whoosh.wav', at: BAT + 0.06, db: -21},
+    {f: 'bonk.wav', at: BONK, db: -9}, {f: 'boing.wav', at: BONK + 0.02, db: -23}, {f: 'dizzy_birds.wav', at: BONK + 0.35, db: -28, to: 1.0}, {f: 'pop.wav', at: T.everything, db: -27},
     // the cat's face in the dark, NIGHT MODE
-    {f: 'whoosh.wav', at: S4 - 0.02, db: -28}, {f: 'shimmer.wav', at: S4 + 0.05, db: -22}, {f: 'pop.wav', at: T.built - 0.02, db: -23},
+    {f: 'whoosh.wav', at: S4 - 0.02, db: -28}, {f: 'shimmer.wav', at: S4 + 0.05, db: -22}, {f: 'pop.wav', at: T.built - 0.02, db: -27},
     // X-RAY: CAT EYE - the mirror, the light goes through twice
     {f: 'zap.wav', at: S4X + 0.02, db: -23}, {f: 'pop.wav', at: S4X + 0.06, db: -23}, {f: 'shimmer.wav', at: T.mirror - 0.04, db: -20}, {f: 'pop.wav', at: T.mirror, db: -24},
-    {f: 'fwoop.wav', at: BEAM0, db: -22}, {f: 'ding.mp3', at: BEAM1 - 0.08, db: -24}, {f: 'twang.mp3', at: BEAM1, db: -26, to: 0.4}, {f: 'ding.mp3', at: BEAM2 - 0.1, db: -21},
-    {f: 'pop.wav', at: BEAM2 - 0.06, db: -22},
+    {f: 'fwoop.wav', at: BEAM0, db: -22}, {f: 'ding.mp3', at: BEAM1 - 0.08, db: -24}, {f: 'twang.mp3', at: BEAM1, db: -26, to: 0.4}, {f: 'ding.mp3', at: BEAM2 - 0.1, db: -25},
+    {f: 'pop.wav', at: BEAM2 - 0.06, db: -26},
     // the selfie flash: four glowing eyes in the photo
     {f: 'whoosh.wav', at: S5 - 0.02, db: -28}, {f: 'shutter.wav', at: FLASH, db: -10}, {f: 'pop.wav', at: PHOTO, db: -20}, {f: 'crowd_laugh.wav', at: PHOTO + 0.1, db: -21, to: 1.4},
     // by day: the eye charts, x1 -> x7

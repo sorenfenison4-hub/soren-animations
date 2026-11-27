@@ -37,8 +37,9 @@ so the comment bubble is made up (@chomp_doodle, 2.9K).
 ## Facts (verified 2026-11-27)
 - Tooth replacement: in piranhas all the teeth on one side of the head are lost as a unit and replaced together; the teeth on each
   side interlock (lateral cusps fit into the neighbours) into one saw-like blade; the replacement teeth grow in underneath, the old
-  teeth sit on them like "hats"; months later the other side is replaced (Kolmann, Cohen, Bemis, Summers, Irish & Hernandez 2019,
-  Evolution & Development; UW / GWU releases, Science News). The "five days" for a new set appears only in press, so it is not used.
+  teeth sit on them like "hats"; later the other side is replaced (Kolmann, Cohen, Bemis, Summers, Irish & Hernandez 2019,
+  Evolution & Development; UW / GWU releases, Science News). "Five days" for a new set and "months later" for the other side appear
+  only in press, so neither is used (the description says "later").
 - Bite: wild black piranhas (Serrasalmus rhombeus) bit up to more than 320 N for a 1.1 kg fish - the strongest bite force recorded
   for any bony fish (Grubich et al. 2012, Scientific Reports 2: 1009); 320 N / (1.1 kg x 9.81) = about 30 times its weight (the UW
   release and the lead author say the same).

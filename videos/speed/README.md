@@ -93,5 +93,6 @@ while he speaks; the footsteps, the launch whoosh (peaks in the gap after "On yo
 moved into pauses; the WHAM sits in the pause after "jet."; frame 0 = a hard footfall + a whoosh tail, mostly gone by the first word.
 Checks: `node scripts/check-loop.mjs Speed` = seamless loop (frame 0 vs 0.5 s: 22.8, moving); pop scan flags only the WHAM, the STOP snap,
 the LOOK pop, the panel closing, the two cuts and the loop push.
-Render: `node scripts/render.mjs Speed renders/speed-1080x1920.mp4 1`. Thumbnails ("750 KM/H": the top rung - the leg wheel, his
+Render: `node scripts/render.mjs Speed renders/speed-1080x1920.mp4 1` (46 min on 4 CPUs - the blur filters and six paper layers are slow;
+1182 frames, 19.7 s, -22.1 LUFS; the pop scan of the final file flags the same 10 intended moments). Thumbnails ("750 KM/H": the top rung - the leg wheel, his
 screaming face, the airliner with a face): `BUNDLE=work/bundle2 COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then ThumbWide).

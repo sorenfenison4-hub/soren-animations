@@ -155,6 +155,22 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   old break circled (HEALED); see-saw HEAVIER x1 -> x10 (the gibbon is catapulted into a tree); the monkey bars in ONE SWING and on into the
   sandpit (kids laugh); "So now he swings in bubble wrap." (SNAP, BOING, back up to the bough = loop). Broken bones 3 uploads after the
   blue whale; compare with the flea jump (movement wish, 8.8K).
+- [x] U24. (made 2026-11-27, the user: "next idea": piranha/renders/piranha-1080x1920.mp4 - upload about 20 h after the gibbon,
+  which went up on 11-27) What if you had a piranha's teeth? WISH: a killer bite - the strongest bite for its size of any bony fish
+  (black piranha: more than 320 N at 1.1 kg, about 30 times its weight; Grubich et al. 2012). BACKFIRE: the teeth lock together into one
+  saw blade, so they never come out one by one - every tooth on one side of the head drops out at once, then the other side (Kolmann
+  et al. 2019, Evolution & Development). Frame 0: a close-up at the dinner table, he crunches a coconut in half beside a smug piranha in
+  its bowl; 2.03 s his left side drops out in one piece, 2.30 CLUNK on the table (HALF GONE). X-RAY: PIRANHA (LOCKED, NEW SET, ONE
+  BLADE); ITS BITE x1 -> x30; a log bite-off with a crocodile (HARDER, its jaw drops); the piranha's own side drops (NEW SET); his other
+  side into the soup (SPLASH, laugh); "So now he only smiles on one side." (a hand over the gap, the new set grows in = loop). Teeth
+  8 uploads after the beaver; the shark's wish (19K) with a new catch - compare with the shark and the beaver.
+- Screened 2026-11-27 (piranha day): piranha teeth (made, U24); crab claws (crush anything -> to grow you pull your claws out through
+  your wrists, the claw muscle shrinks first (Mykles), soft for 1-3 weeks, a stuck leg can rip off in the molt (NOAA); coconut crab
+  pinch 1,765 N measured, Oka et al. 2016) - strong, but hands / arms right after the gibbon: make it 3 uploads later; pufferfish (the
+  breath-holding idea was disproved, McGee & Clark 2014 - only "tired for hours" is left); porcupine (falls again); spiny mouse healing
+  (skin about 20x weaker, Seifert et al. 2012 - fails ICON); earthworm split (myth, the starfish again); bee flight (fails FEEL IT NOW);
+  cheetah (still no body backfire); axolotl (no count, same animal as the old eel/axolotl). NEXT: the crab claws once arms are 3 uploads
+  back; screen 5-8 new wishes around it.
 - Screened 2026-11-26 (gibbon day): gibbon swing (made, U23); porcupine quills (armour wish again); axolotl (the viewer request: a limit,
   not a hurt); spiny mouse healing (skin tears like wet paper, Seifert et al. 2012 - fails ICON); electric eel lightning (80 % electric
   organ: weird anatomy, eel done); wood frog freeze (weak wish / icon); naked mole rat "no pain" (only acid and chili, Park et al. 2008 -

@@ -647,6 +647,9 @@ const cueDb = (c: Cue, tt: number) => {
  *  underwater.wav (4 s muffled underwater bed: repeat every 3.8 s at about -23 dB) bubblestream.wav (1.6 s bubbles pouring out of
  *  gills, loud from 0: a frame-0 sound, about -17 dB) fwoop.wav (0.5 s suction pop: something shot out of a tube, about -7 dB)
  *  - synthesized in code for videos/sharkgills (videos/sharkgills/scripts/sfx_shark.py)
+ *  step.wav (0.16 s running footfall: a short thump + dirt scuff, onset at 0; one per footfall, about -33 dB under a voice) honk.wav
+ *  (0.5 s cartoon car horn, loud from 0) jet.wav (2.6 s airliner roaring past, peak 1.07 s in) rustle.wav (0.9 s leaves shaken off a
+ *  tree, onset at 0) zip.wav (0.32 s quick rising zip, peak 0.17 s in) - synthesized in code for videos/speed (videos/speed/scripts/sfx_speed.py)
  *  2026-11-24, the last Higgsfield credits: 46 more sounds - animal voices (lion_roar bear_roar gorilla monkey dog_bark cat_hiss
  *  cat_purr frog_croak eagle_cry crocodile whale_song sea_lion dolphin wolf_howl rattlesnake bee_buzz mosquito horse_neigh
  *  seagulls cow_moo chicken owl_hoot), crowds (crowd_ooh crowd_aww crowd_gasp crowd_cheer kids_laugh sneeze yawn), stings

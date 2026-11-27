@@ -164,6 +164,22 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   BLADE); ITS BITE x1 -> x30; a log bite-off with a crocodile (HARDER, its jaw drops); the piranha's own side drops (NEW SET); his other
   side into the soup (SPLASH, laugh); "So now he only smiles on one side." (a hand over the gap, the new set grows in = loop). Teeth
   8 uploads after the beaver; the shark's wish (19K) with a new catch - compare with the shark and the beaver.
+- [x] U25. (made 2026-11-27, second session, the user: "next idea": speed/renders/speed-1080x1920.mp4 - upload about 20 h after the
+  piranha, which went up on 11-27) What if you could run as fast as these animals? The third LADDER (flea 8.8K, lifespan 5.1K): WISH:
+  super speed (The Flash - the biggest classic wish not done yet). Rungs: OSTRICH 70 km/h (beats the fastest human, 44) -> CHEETAH 93 km/h
+  (wild GPS collars, Wilson et al. 2013) -> TIGER BEETLE: for its size faster (about 120 body lengths a second vs a cheetah's ~20; UF Book
+  of Insect Records) = about 750 km/h for you, almost a jet. BACKFIRE: it runs so fast its eyes can't take in enough light to see (Gilbert
+  1997; Cornell 2014), so it steers with its antennae held out in front; clipped, it runs into things (Zurek & Gilbert 2014) - he has no
+  antennae: WHAM into an acacia at 10.9 s. Frame 0: he sprints with ostrich legs beside a smug ostrich (70 km/h); POOF cheetah legs beside a
+  smug cheetah and a car with a face (HONK); FOR ITS SIZE magnifier + BODY LENGTHS A SECOND bars (x6); POOF beetle legs, a whirling wheel
+  of legs, the counter rockets to 750, an airliner with a face beside him, BLUR, WHAM, flattened on the trunk (laugh); ITS VIEW (blurry,
+  STOP, LOOK); FEELS ITS WAY (antennae TAP a pebble, hop); close-up: he pats his head, NO ANTENNAE, the beetle taps his forehead (BOOP
+  BOOP); "So he's back to ostrich legs." = frame 0. Legs / running are new (the flea used legs 14 uploads back); compare with the ladders.
+- Screened 2026-11-27 (speed day): speed ladder (made, U25); racehorse speed (your lungs would bleed - most racehorses bleed into their
+  lungs when they race, exercise-induced pulmonary hemorrhage; verified, but a grim picture and a weaker speed icon - keep for later);
+  crab claws (the next upload: arms are then 3 uploads after the gibbon); snake shedding (blind for days before each shed - weak wish,
+  eyes again); bear hibernation (passive); whale breath-hold (the heart slows to a few beats a minute - breathing a third time, tangled);
+  cat "always land on your feet" (falls again, cat 3 uploads back); spider webs (still no hurt). NEXT: the crab claws.
 - Screened 2026-11-27 (piranha day): piranha teeth (made, U24); crab claws (crush anything -> to grow you pull your claws out through
   your wrists, the claw muscle shrinks first (Mykles), soft for 1-3 weeks, a stuck leg can rip off in the molt (NOAA); coconut crab
   pinch 1,765 N measured, Oka et al. 2016) - strong, but hands / arms right after the gibbon: make it 3 uploads later; pufferfish (the

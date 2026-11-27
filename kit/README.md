@@ -143,6 +143,15 @@ Reusable pieces from the elevator Short, so each new video only needs a script, 
   sandbox you land in head first).
 - Close-ups: the z=1000 Layer is skipped when the camera gets closer than 250 units, i.e. above k = 4 - keep close-ups at
   k 3.9 or less (a head at k 3.9 is already about half the frame wide).
+- Running + a speed ladder (videos/speed): a RUN CYCLE for the code-drawn guy (4 keys per leg - contact, stance, push, swing - blended
+  with a cyclic Catmull-Rom `cyc`, the legs half a stride apart, the arms pumping against them), three animal leg types in profile
+  (ostrich, cheetah, tiger beetle) and a `sit` pose, `LegWheel` (the legs at blur speed: a whirling wheel of leg spokes with feet),
+  speed integrated once into a lookup (`Xof`, `PHof`) so the land scrolls at his speed and every footfall is known (dust puffs, step
+  sounds), land bands drawn only where the camera sees that smear into streaks at top speed; co-stars: a running ostrich, a galloping
+  cheetah, a tiger beetle (antennae relaxed -> stiff forward), an airliner with a face, an acacia; panels: a magnifier with a handle
+  (`Lens`) and a view that is blurred while the animal runs and snaps sharp when it stops. Sounds added: step, honk, jet, rustle, zip
+  (synthesized, `videos/speed/scripts/sfx_speed.py`). `scripts/refine_words.py` = Scribe word times refined to the loudness chunks of
+  the tight voice (it finds `public/*/vo/tight.mp3`; `VO=` picks another file).
 - `scripts/` - run from the video folder: `node scripts/stills.mjs --bundle 0 2.5 ...` (stills at 0.5x; `BUNDLE=work/bundle2` bundles separately so stills can run while a render uses work/bundle),
   `python3 scripts/sheet.py sheet.png 5 324 <same times>` (contact sheet), `node scripts/render.mjs <CompId> renders/x.mp4`
   (CPU render, crf 16; `[scale] [from-to]` renders a frame range to patch in; an `.aac` out renders only the sound), `python3 scripts/popscan.py renders/x.mp4` (pop scan), `python3 scripts/pauses.py vo.mp3` (pauses).

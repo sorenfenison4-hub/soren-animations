@@ -319,7 +319,7 @@ Per video:
       outline) with an ObjectFace when it should come alive;
    c. (no longer possible: Higgsfield was cancelled on 2026-11-24) a new AI picture. Draw it in code instead - the
       recent Shorts draw the whole guy in code when the animal part has to be on his body (videos/sharkgills, starfish).
-4. Sounds: the shared sfx first (113, with onsets and hit times in `kit/audio/README.md`); a sound synthesized in code
+4. Sounds: the shared sfx first (120, with onsets and hit times in `kit/audio/README.md`); a sound synthesized in code
    or a new ElevenLabs sfx (50 credits) only for one the library does not have, then add it with `kit/audio/prep_sfx.py`.
 5. Contact sheet + pop scan, then render 1080x1920 (about 5 min on CPU; 4K on CPU takes hours - only on a GPU).
 6. Loop ending (every video): render the scene as a function of time, then wrap it in

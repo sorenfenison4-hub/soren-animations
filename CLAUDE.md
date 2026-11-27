@@ -22,7 +22,7 @@ Niche: **animal powers** - what if YOU had an animal's part or ability (the user
   stretch right after the answer lands (about 55-80 % through), never in the first 3 s, finished before the loop push;
   top band by default (y 250), moved with `y` if something important is there. Not in thumbnails.
 - Reuse first: library poses (37: run, jump, fall, sit, knockout, swim, fly, lift, push, eat, choke, ouch, dizzy, cry...
-  - `kit/README.md`), code-drawn props from `kit.tsx`, shared sounds (113, incl. 22 animal voices and crowd / comedy
+  - `kit/README.md`), code-drawn props from `kit.tsx`, shared sounds (120, incl. 22 animal voices and crowd / comedy
   stings - `kit/audio/README.md`). Higgsfield was cancelled on 2026-11-24 (the user), so there are no new AI pictures:
   a library pose or code. New sounds: synthesize them in code (`videos/*/scripts/sfx_*.py`) or the ElevenLabs
   connector's sfx (50 credits), then add them to `kit/` with `kit/audio/prep_sfx.py`. Music: the 6 beds in

@@ -81,6 +81,11 @@ refined to the loudness chunks with `scripts/refine_words.py 13,3,7,5,2,5,9,6,4,
 Sounds: all from the kit library (chomp, whoosh, squelch, splash, shing, pop, whistle, bonk, thud, crowd_gasp, zap, clack, whir, ding,
 crack, tick, crocodile, creak, slide_down, crowd_ooh, scribble, wrong, bubbles, splat, crowd_laugh) - no new sounds, 0 credits;
 every effect after frame 0 sits 3 dB lower (`mixed`).
-Render: `node scripts/render.mjs Piranha renders/piranha-1080x1920.mp4 1`. `node scripts/check-loop.mjs Piranha` = seamless loop
+Render: `node scripts/render.mjs Piranha renders/piranha-1080x1920.mp4 1` (10.5 min on 4 CPUs). Mix check: the `PiranhaFx`
+composition is the effects alone (`render.mjs PiranhaFx work/fx.wav`, 6 s) - compared with the voice per 50 ms, the effects sit a
+median 22 dB under it while he speaks; the frame-0 whoosh, the shings, the jaw-drop thud and slide, the ooh, the soup splash and the
+laugh were lowered where they came within ~5 dB of a word; -21.2 LUFS. Pop scan: one unintended jump (the coconut halves snapping onto
+the table at 1.42 s) fixed by blending them from the hands to the table; every other flag is a cut, a pop-in, a hit or the loop push.
+`node scripts/check-loop.mjs Piranha` = seamless loop
 (first vs last 0; frame 0 vs 0.5 s: 22.1, moving). Thumbnails ("HALF GONE": the 2.27 s backfire - his shocked face, the dropped
 side below his chin, the smug piranha): `BUNDLE=work/bundle2 COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then ThumbWide).

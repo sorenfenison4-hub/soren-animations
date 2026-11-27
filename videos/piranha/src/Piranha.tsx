@@ -720,8 +720,8 @@ export const PiranhaScene: React.FC<{t: number; camK?: CK; thumb?: boolean; thum
     const r0 = side < 0 ? 180 : 0;
     if (t >= 1.42) return {x: side < 0 ? HALF_L[0] : HALF_R[0], y: HALF_L[1], rot: side < 0 ? 270 : -90};
     const h = side < 0 ? g.hA : g.hB;
-    const u = seg(t, 1.0, 1.42);
-    return {x: h[0] + side * 14 * (1 - u), y: h[1] - 8 * (1 - u) - 22 * u, rot: lerp(r0 + side * 90, r0 + side * 10, sp) + side * lerp(0, -100, eio(u))};
+    const u = eio(seg(t, 1.0, 1.42)), rest = side < 0 ? HALF_L : HALF_R;
+    return {x: lerp(h[0] + side * 14, rest[0], u), y: lerp(h[1] - 8, rest[1], u), rot: lerp(r0 + side * 90, r0 + side * 10, sp) + side * lerp(0, -100, u)};
   };
   // the drumstick, the croc, the log
   const meat = 1 - seg(t, BITE, BITE + 0.12);
@@ -821,15 +821,14 @@ export const PiranhaScene: React.FC<{t: number; camK?: CK; thumb?: boolean; thum
   );
 };
 
-export const PiranhaVideo: React.FC = () => {
-  const t = useCurrentFrame() / FPS;
+export const piranhaCues = (): Cue[] => {
   const ticks = (a: number, b: number, n: number, db = -30): Cue[] => Array.from({length: n}, (_, i) => ({f: i % 2 ? 'tick.wav' : 'tick2.wav', at: lerp(a, b, (i + 1) / n), db: i === n - 1 ? -21 : db}));
   const cues: Cue[] = [
     // frame 0: the coconut cracks in his teeth
-    {f: 'chomp.wav', at: 0, db: -11}, {f: 'whoosh.wav', at: 0, db: -21}, {f: 'squelch.wav', at: SPLIT, db: -24}, {f: 'splash.wav', at: SPLIT + 0.04, db: -30},
-    {f: 'shing.wav', at: SHINE - 0.02, db: -22}, {f: 'pop.wav', at: 1.46, db: -30},
+    {f: 'chomp.wav', at: 0, db: -11}, {f: 'whoosh.wav', at: 0, db: -27}, {f: 'squelch.wav', at: SPLIT, db: -24}, {f: 'splash.wav', at: SPLIT + 0.04, db: -30},
+    {f: 'shing.wav', at: SHINE - 0.02, db: -30, to: 0.4}, {f: 'pop.wav', at: 1.46, db: -30},
     // his left side drops out: a beat, the fall, CLUNK on the table, the gasp
-    {f: 'whoosh.wav', at: S2 - 0.02, db: -30}, {f: 'pop.wav', at: DROP1, db: -22}, {f: 'whistle.wav', at: DROP1 + 0.02, db: -30, to: 0.25},
+    {f: 'whoosh.wav', at: S2 - 0.02, db: -30}, {f: 'pop.wav', at: DROP1, db: -26}, {f: 'whistle.wav', at: DROP1 + 0.02, db: -30, to: 0.25},
     {f: 'bonk.wav', at: CLUNK1, db: -12}, {f: 'thud.wav', at: CLUNK1, db: -20}, {f: 'bonk.wav', at: CLUNK1 + 0.3, db: -24}, {f: 'crowd_gasp.wav', at: CLUNK1 + 0.06, db: -26, to: 0.75},
     // X-RAY: the teeth click together, glow as one blade, the new set
     {f: 'zap.wav', at: S3, db: -26}, {f: 'pop.wav', at: S3 + 0.06, db: -27}, {f: 'clack.wav', at: LOCK - 0.02, db: -18}, {f: 'pop.wav', at: LOCK + 0.02, db: -26},
@@ -840,22 +839,28 @@ export const PiranhaVideo: React.FC = () => {
     // the log bite-off: the croc dents it, he snaps it, the croc's jaw drops
     {f: 'whoosh.wav', at: S5 - 0.02, db: -28}, {f: 'crocodile.wav', at: DENT - 0.25, db: -26, from: 1.9}, {f: 'creak.wav', at: DENT + 0.05, db: -28, to: 0.4},
     {f: 'crack.wav', at: SNAPL - 0.32, db: -14}, {f: 'chomp.wav', at: SNAPL, db: -19}, {f: 'chomp.wav', at: 8.62, db: -27}, {f: 'chomp.wav', at: 8.84, db: -28},
-    {f: 'slide_down.wav', at: JAWDROP, db: -25}, {f: 'thud.wav', at: JAWDROP + 0.32, db: -24}, {f: 'crowd_ooh.wav', at: JAWDROP + 0.02, db: -27, to: 1.2},
+    {f: 'slide_down.wav', at: JAWDROP, db: -29}, {f: 'thud.wav', at: JAWDROP + 0.32, db: -30}, {f: 'crowd_ooh.wav', at: JAWDROP + 0.02, db: -31, to: 1.0},
     // ONE BY ONE? - NOPE
     {f: 'whoosh.wav', at: S6 - 0.02, db: -29}, {f: 'scribble.wav', at: RING, db: -26, to: 0.45}, {f: 'pop.wav', at: ONEBY, db: -25}, {f: 'wrong.wav', at: NOPE, db: -26, to: 0.5},
     ...ctaCues(T.cta),
     // its near side drops out together; the new set slides up
     {f: 'whoosh.wav', at: S7 - 0.02, db: -30}, {f: 'pop.wav', at: T.side, db: -27}, {f: 'bonk.wav', at: PDROP, db: -18}, {f: 'bubbles.wav', at: PDROP + 0.04, db: -21},
-    {f: 'thud.wav', at: PLAND, db: -26}, {f: 'shing.wav', at: PNEW, db: -20}, {f: 'ding.mp3', at: PNEW + 0.06, db: -23},
+    {f: 'thud.wav', at: PLAND, db: -26}, {f: 'shing.wav', at: PNEW, db: -25, to: 0.4}, {f: 'ding.mp3', at: PNEW + 0.06, db: -27},
     // soup: his other side drops in - SPLASH, the laugh
     {f: 'whoosh.wav', at: S8 - 0.02, db: -29}, {f: 'pop.wav', at: DROP2, db: -22}, {f: 'whistle.wav', at: DROP2 + 0.02, db: -30, to: 0.2},
-    {f: 'splash.wav', at: SPLASH, db: -12}, {f: 'splat.wav', at: SPLASH + 0.04, db: -26, to: 0.5}, {f: 'crowd_laugh.wav', at: SPLASH + 0.08, db: -22, to: 1.3},
+    {f: 'splash.wav', at: SPLASH, db: -15}, {f: 'splat.wav', at: SPLASH + 0.04, db: -28, to: 0.5}, {f: 'crowd_laugh.wav', at: SPLASH + 0.08, db: -28, to: 0.75},
     // half a smile; the new set grows in
-    {f: 'whoosh.wav', at: S9 - 0.02, db: -30}, {f: 'pop.wav', at: T.smiles, db: -27}, {f: 'shing.wav', at: REGROW, db: -20}, {f: 'ding.mp3', at: REGROW + 0.06, db: -23},
+    {f: 'whoosh.wav', at: S9 - 0.02, db: -30}, {f: 'pop.wav', at: T.smiles, db: -27}, {f: 'shing.wav', at: REGROW, db: -26, to: 0.4}, {f: 'ding.mp3', at: REGROW + 0.06, db: -28},
     {f: 'whoosh.wav', at: PUSH - 0.05, db: -25},
   ];
   // every effect after frame 0 sits 3 dB lower than written above, so the voice stays clear
-  const mixed = cues.map((c) => (c.at > 0.05 ? {...c, db: c.db - 3} : c));
+  return cues.map((c) => (c.at > 0.05 ? {...c, db: c.db - 3} : c));
+};
+/** the sound effects alone (no voice) - for checking the mix: render.mjs PiranhaFx work/fx.wav */
+export const PiranhaFx: React.FC = () => <SoundLayer cues={piranhaCues()} />;
+export const PiranhaVideo: React.FC = () => {
+  const t = useCurrentFrame() / FPS;
+  const mixed = piranhaCues();
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
       <LoopOut t={t} total={DURATION} start={<PiranhaScene t={0} />}>

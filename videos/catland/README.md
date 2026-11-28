@@ -81,3 +81,10 @@ windows are word tails and gaps (the landing THUD after "cat", the impact in the
 `node scripts/check-loop.mjs Cat` = seamless loop (first vs last 0; frame 0 vs 0.5 s: 50.2, moving).
 Thumbnails ("CHIN FIRST": 2.5 s, his dazed face flat on the cracked pavement, the smug cat sitting beside him; no stars in the covers):
 `BUNDLE=work/bundle2 COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then ThumbWide, which renders at WideFit 0.9).
+Render: `node scripts/render.mjs Cat renders/catland-1080x1920.mp4 1` (11.9 min on 4 CPUs). The effects were lowered after the render
+started, so the sound was rebuilt instead of re-rendered: `CatFx` (the effects alone, 7 s) + the voice at 0.1 s mixed in ffmpeg
+(`aformat=sample_rates=48000:channel_layouts=stereo,adelay=100|100` on the voice, `amix=inputs=2:normalize=0`) and remuxed with
+`-c:v copy`. Final: 1080x1920, 60 fps, 18.05 s (1083 frames), -21.0 LUFS, peak -6.9 dBFS.
+Pop scan (`scripts/popscan.py`): 78 flags, all intended - the cuts, the comment bubble popping out, the landing, the impact and the
+X-ray flash on and off, the X-ray opening and closing, the cats landing and the windows opening, the slow-mo head moving down and up,
+the counters, the steps, the dash and the loop push.

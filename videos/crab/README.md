@@ -83,3 +83,10 @@ the frame-0 whoosh, the CLUNK, the DING, the BOING and the chomps were lowered w
 `node scripts/check-loop.mjs Crab` = seamless loop (first vs last 0; frame 0 vs 0.5 s: 19.5, moving).
 Thumbnails ("SOFT CLAWS": the 2.36 s backfire - his shocked face, the soft claw just out of the cracked shell above it, the smug crab):
 `BUNDLE=work/bundle2 COMP=ThumbTall SCALE=1 node scripts/stills.mjs --bundle 0` (then ThumbWide).
+Render: `node scripts/render.mjs Crab renders/crab-1080x1920.mp4 1` (22.7 min on 4 CPUs while other renders ran). The effects were
+lowered after the render started, so the sound was rebuilt instead of re-rendered: `CrabFx` (the effects alone, 7 s) + the voice at
+0.1 s mixed in ffmpeg (default mono -> stereo upmix, which matches Remotion's level: voice windows within 0.3 dB) and remuxed with
+`-c:v copy`. The Remotion render's own AAC decoded 2048 samples (42.7 ms) late with a 17.75 s audio track; the remuxed file has the
+voice exactly at 0.1 s and both streams at 17.70 s. Final: 1080x1920, 60 fps, 17.7 s, -21.4 LUFS, peak -4.8 dBFS.
+Pop scan (`scripts/popscan.py`): 60 flags, all intended - the cuts, the sticker and counter pop-ins, the CRACK / CLUNK / DING / BONK
+hits and shakes, the X-ray opening and closing, the CTA taps, the chomps, the camera pull-back to the frame-0 framing and the loop push.

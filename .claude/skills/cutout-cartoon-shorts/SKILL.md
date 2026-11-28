@@ -362,7 +362,10 @@ upload.higgsfield.ai allowed in the environment. assemble.py matches loudness (-
 come out at different levels and a peak-normalized mix of them is ~3 dB quieter than the channel. A camera that follows
 something = a key every frame with `e: 'lin'` (sparse keys with the default ease stop and go 4x a second). After the
 pop scan, fix a stretch without a full re-render: `render.mjs <Comp> work/patch.mp4 1 <from>-<to>`, splice it in with an
-ffmpeg trim + concat re-encode (crf 16); a sound-only fix = `render.mjs <Comp> work/sound.aac` + remux (`-c:v copy`).
+ffmpeg trim + concat re-encode (crf 16); a sound-only fix = `render.mjs <Comp> work/sound.aac` + remux (`-c:v copy`). Faster (videos/crab, 2026-11-27): render the
+effects-only `<Comp>Fx` composition (seconds; the full composition's sound render took over 10 min) and mix it with the voice in ffmpeg
+(`aformat=sample_rates=48000:channel_layouts=stereo,adelay=100|100` on the voice, then `amix=inputs=2:normalize=0`; the default mono ->
+stereo upmix matches Remotion's voice level), then remux. Remotion's own AAC track decoded 2048 samples (43 ms) late; the remux fixes that.
 
 ---------------------------------------------------------------------------------------------------------------------
 ## 14. Hooks and growth (what the top animated "what if" Shorts do)

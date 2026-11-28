@@ -186,6 +186,23 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   EMPTY); comedy hit: his soft claw squeezes a coconut, it squirts up and BONKs his head (laugh); the crab crunches its old shell, he
   eats his (CRUNCH x3, HARD AGAIN), the crab tosses him a coconut = frame 0. Hands / arms 3 uploads after the gibbon; the shark's
   killer-weapon wish with a new catch - compare with the shark, the beaver and the piranha.
+- [x] U27. (made 2026-11-28, the user: "next idea": catland/renders/catland-1080x1920.mp4 - upload about 20 h after the crab,
+  which went up on 11-27) What if you could land like a cat? WISH: always land on your feet - survive the fall (the superhero
+  landing). BACKFIRE: the landing smashes your chin - cats that fall from high-rises land on their paws, then the jaw hits the ground:
+  more than half hurt their face (facial trauma 57 % of 132 cats, Whitney & Mehlhaff 1987, JAVMA; 66 % orofacial injuries in 84 cats,
+  Bonner et al. 2012), while about 9 in 10 survive. Frame 0: he falls past a high-rise beside a falling smug cat, both flipping over in
+  midair; 0.70 THUD on all fours (TA-DA); 1.92 close-up: his chin slams the pavement (CRACK, an X-ray flash of his jaw cracking, CHIN
+  FIRST). X-RAY: CAT (INNER EAR, the front half then the back half TWIST, PAWS DOWN); nine cats drop out of the windows and land in two
+  rows (SURVIVED 0 -> 90 %, 9 IN 10), the smug cat drops last, onto his head (BONK, laugh); SLOW-MO: the cat's legs give, its chin taps
+  the pavement (CHIN); both sit with a plaster on the chin (FACE HURT 0 -> 57 %, MORE THAN HALF); "So now he takes the stairs." - the
+  fire escape, the cat dashes between his feet (ZOOM), TRIP, he falls = frame 0. The cat 5 uploads after the cat's eyes, falls 5 after
+  the gibbon, the hurt on the chin (no teeth: the piranha was 3 back).
+- Screened 2026-11-28 (cat day): cat landing (made, U27); axolotl "regrow anything" (the one animal request in the comments; repeated
+  amputation makes each regrowth worse until it fails, Bryant et al. 2017, npj Regenerative Medicine - verified, but arms right after the
+  crab); sperm whale breath-hold (even sperm whales' bones show the bends, Moore & Early 2004, Science - the catch comes from depth, not
+  from holding your breath: tangled); chameleon tongue (no hurt); kangaroo kick (legs right after the speed ladder, no hurt); spider webs
+  (no hurt); ant-size shrink (no animal part on him); chameleon colour (social). NEXT: the axolotl (regrow anything -> every regrowth
+  comes back worse, then not at all) once arms are 3 uploads back (after one more upload); screen 5-8 new wishes around it.
 - Screened 2026-11-27 (crab day): crab claws (made, U26); cockroach "survive anything" (a week without its head, then thirst -
   survive again after the tardigrade, grim); basilisk lizard "walk on water" (a person would need about 30 m/s - "it doesn't work",
   fails ICON); eagle eyes (the catch is the owl's again); mantis shrimp eyes (bad at telling colours apart - "it doesn't work");

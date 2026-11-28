@@ -175,6 +175,23 @@ were not). One a day at most, no same body part / animal within 3 uploads (CLAUD
   of legs, the counter rockets to 750, an airliner with a face beside him, BLUR, WHAM, flattened on the trunk (laugh); ITS VIEW (blurry,
   STOP, LOOK); FEELS ITS WAY (antennae TAP a pebble, hop); close-up: he pats his head, NO ANTENNAE, the beetle taps his forehead (BOOP
   BOOP); "So he's back to ostrich legs." = frame 0. Legs / running are new (the flea used legs 14 uploads back); compare with the ladders.
+- [x] U26. (made 2026-11-27, third session, the user: "next idea": crab/renders/crab-1080x1920.mp4 - upload about 20 h after the
+  speed ladder, which went up on 11-27) What if you had a crab's claws? WISH: crush anything with one pinch - the coconut crab pinched
+  1,765 N (= 180 kg-force), the strongest measured in any crustacean (Oka et al. 2016, PLoS ONE). BACKFIRE: a claw is shell and can't
+  grow; to molt, the claw muscle shrinks (30-60 % of its protein, Skinner 1966; mass 2-3-fold, Mykles lab) so it can be pulled back out
+  through the narrow joints, and the new claw comes out soft; coconut crabs molt in a burrow for 3-16 weeks and eat the old shell for
+  the calcium (ADW; Pacific Science). Frame 0: on a beach he cracks a coconut in a giant claw beside a smug coconut crab (CRACK); 1.92 s
+  close-up: the shell splits at the wrist, a pale soft claw slides out (FWOOP), the empty shell drops (CLUNK 2.72), SOFT. PINCH 0 -> 180
+  KG on a carnival strength tester (the crab rings the bell); X-RAY: CRAB CLAW (SHELL, CAN'T GROW; MUSCLE 100 -> 50 %, HALF, NARROW,
+  EMPTY); comedy hit: his soft claw squeezes a coconut, it squirts up and BONKs his head (laugh); the crab crunches its old shell, he
+  eats his (CRUNCH x3, HARD AGAIN), the crab tosses him a coconut = frame 0. Hands / arms 3 uploads after the gibbon; the shark's
+  killer-weapon wish with a new catch - compare with the shark, the beaver and the piranha.
+- Screened 2026-11-27 (crab day): crab claws (made, U26); cockroach "survive anything" (a week without its head, then thirst -
+  survive again after the tardigrade, grim); basilisk lizard "walk on water" (a person would need about 30 m/s - "it doesn't work",
+  fails ICON); eagle eyes (the catch is the owl's again); mantis shrimp eyes (bad at telling colours apart - "it doesn't work");
+  octopus camouflage (colour-blind: a weird fact); cat "land on your feet" (chin and jaw injuries - falls right after the gibbon);
+  racehorse speed (speed right after the speed ladder). NEXT: screen 5-8 new wishes (seeds: the cat fall once falls are far back,
+  a kangaroo's kick, a chameleon's tongue).
 - Screened 2026-11-27 (speed day): speed ladder (made, U25); racehorse speed (your lungs would bleed - most racehorses bleed into their
   lungs when they race, exercise-induced pulmonary hemorrhage; verified, but a grim picture and a weaker speed icon - keep for later);
   crab claws (the next upload: arms are then 3 uploads after the gibbon); snake shedding (blind for days before each shed - weak wish,
